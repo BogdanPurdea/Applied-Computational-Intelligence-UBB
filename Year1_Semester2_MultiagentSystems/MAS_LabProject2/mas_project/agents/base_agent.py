@@ -4,9 +4,10 @@ from models.percepts import Percept
 from models.actions import Action
 
 class Agent(ABC):
-    def __init__(self, agent_id: str, initial_state: InternalState):
+    def __init__(self, agent_id: str, initial_state: InternalState, config=None):
         self.id = agent_id
         self.state = initial_state
+        self.config = config
         self.current_percept = None
 
     def see(self, percept: Percept):

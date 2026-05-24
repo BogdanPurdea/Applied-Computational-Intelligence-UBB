@@ -9,8 +9,8 @@ class CollectorAgent(Agent):
     Utility-based deliberative agent that maximizes waste collected while minimizing energy.
     Reads Blackboard, selects optimal zones, collects, and returns to barge.
     """
-    def __init__(self, agent_id: str, initial_state):
-        super().__init__(agent_id, initial_state)
+    def __init__(self, agent_id: str, initial_state, config):
+        super().__init__(agent_id, initial_state, config)
         self.current_path = []
         self.barge_pos = Coordinate(Config.BARGE_LOCATION[0], Config.BARGE_LOCATION[1])
         self.environment_ref = None # Needed for pathfinding
@@ -32,9 +32,16 @@ class CollectorAgent(Agent):
         for zone in zones:
             path = a_star_search(self.state.position, zone, self.environment_ref)
             if path is not None:
-                cost = len(path) # Simplified cost
-                if cost < min_cost:
-                    min_cost = cost
+                # Get waste density for utility calculation
+                waste_density = self.environment_ref.get_cell(zone).density
+                
+                # Calculate utility-based cost
+                distance_cost = len(path) * self.config.weight_distance_cost
+                waste_value = waste_density * self.config.weight_waste_value
+                total_cost = distance_cost - waste_value
+                
+                if total_cost < min_cost:
+                    min_cost = total_cost
                     best_zone = zone
                     
         return best_zone

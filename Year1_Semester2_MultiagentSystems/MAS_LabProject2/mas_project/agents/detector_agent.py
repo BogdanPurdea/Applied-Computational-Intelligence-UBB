@@ -9,8 +9,8 @@ class DetectorAgent(Agent):
     Reactive/reflex agent that explores the grid, detects high-density waste zones,
     and writes their coordinates to a shared Blackboard.
     """
-    def __init__(self, agent_id: str, initial_state):
-        super().__init__(agent_id, initial_state)
+    def __init__(self, agent_id: str, initial_state, config):
+        super().__init__(agent_id, initial_state, config)
         # Random walk for exploration
         self.explore_directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]
         self.last_blackboard = None # Reference kept to write to it during next()
@@ -20,7 +20,7 @@ class DetectorAgent(Agent):
 
     def next(self):
         # Reflex behavior: if current cell has high density, write to blackboard
-        if self.current_percept and self.current_percept.current_position_density >= Config.WASTE_DENSITY_THRESHOLD:
+        if self.current_percept and self.current_percept.current_position_density >= self.config.waste_detection_threshold:
             if self.last_blackboard:
                 self.last_blackboard.write_zone(self.state.position)
 

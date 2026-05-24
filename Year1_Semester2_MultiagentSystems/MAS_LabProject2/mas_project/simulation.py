@@ -39,8 +39,8 @@ class Simulation:
                 # Validate move (no obstacle)
                 target_cell = self.environment.get_cell(action.target)
                 if not target_cell.is_obstacle:
-                    # Energy cost: 1 base + turbidity
-                    energy_cost = 1 + target_cell.turbidity
+                    # Energy cost: base from config + turbidity
+                    energy_cost = agent.config.energy_cost_per_move + target_cell.turbidity
                     if agent.state.battery >= energy_cost:
                         agent.state.record_move(action.target)
                         agent.state.battery -= energy_cost
@@ -49,12 +49,18 @@ class Simulation:
             elif action.type == ActionType.COLLECT:
                 cell = self.environment.get_cell(agent.state.position)
                 if cell.density > 0 and agent.state.current_storage < agent.state.storage_capacity:
-                    collected = min(cell.density, agent.state.storage_capacity - agent.state.current_storage)
+                    # Respect harvest_rate from config
+                    if hasattr(agent.config, 'harvest_rate'):
+                        harvest_limit = agent.config.harvest_rate
+                    else:
+                        harvest_limit = cell.density # default if not a collector
+                        
+                    collected = min(cell.density, agent.state.storage_capacity - agent.state.current_storage, harvest_limit)
                     self.environment.update_cell_density(agent.state.position, cell.density - collected)
                     agent.state.current_storage += collected
                     
                     # Energy cost for collecting
-                    energy_cost = 5
+                    energy_cost = agent.config.energy_cost_per_move * 5
                     agent.state.battery -= energy_cost
                     self.metrics.add_energy(energy_cost)
 
