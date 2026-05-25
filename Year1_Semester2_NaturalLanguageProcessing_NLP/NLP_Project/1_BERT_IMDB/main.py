@@ -1,174 +1,157 @@
 import os
-import sys
-import argparse
+import gc
 import torch
 import numpy as np
 import pandas as pd
+from sklearn.model_selection import StratifiedKFold
+from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, Trainer, TrainingArguments
-import datasets
 
-current_dir = os.path.dirname(os.path.abspath(__file__))
-parent_dir = os.path.dirname(current_dir)
-sys.path.append(parent_dir)
-
-from utils import (
-    set_seed, load_csv, split_dataset, compute_metrics,
-    save_metrics, plot_confusion_matrix, build_lime_explainer,
-    run_lime_explanations, run_shap_explanations
-)
-
-def parse_args():
-    parser = argparse.ArgumentParser(description="Train BERT on IMDB dataset")
-    default_data_path = os.path.join(current_dir, "IMDB_Dataset.csv")
-    default_output_dir = os.path.join(current_dir, "outputs", "bert_imdb")
-    parser.add_argument("--data_path", type=str, default=default_data_path, help="Path to IMDB CSV file")
-    parser.add_argument("--output_dir", type=str, default=default_output_dir, help="Output directory")
-    parser.add_argument("--epochs", type=int, default=3, help="Number of training epochs")
-    parser.add_argument("--batch_size", type=int, default=16, help="Batch size")
-    parser.add_argument("--learning_rate", type=float, default=2e-5, help="Learning rate")
-    parser.add_argument("--max_length", type=int, default=128, help="Max token length")
-    parser.add_argument("--sample_size", type=int, default=0, help="If >0, use a subset of data for quick testing")
-    parser.add_argument("--text_column", type=str, default="review", help="Name of text column in CSV")
-    parser.add_argument("--label_column", type=str, default="sentiment", help="Name of label column in CSV")
-    
-    parser.add_argument("--run_lime", type=str, default="false", choices=["true", "false"], help="Run LIME explanations")
-    parser.add_argument("--run_shap", type=str, default="false", choices=["true", "false"], help="Run SHAP explanations")
-    parser.add_argument("--num_explainer_samples", type=int, default=5, help="Number of samples to explain")
-    return parser.parse_args()
-
-def prepare_data(args):
-    df = load_csv(args.data_path, args.text_column, args.label_column, sample_size=args.sample_size)
-    
-    # Map sentiment
-    if df[args.label_column].dtype == object or df[args.label_column].dtype == str:
-        # Assuming typical IMDB: positive -> 1, negative -> 0
-        df[args.label_column] = df[args.label_column].str.lower().map({'positive': 1, 'negative': 0})
-        # Drop rows where mapping failed
-        df = df.dropna(subset=[args.label_column])
-        df[args.label_column] = df[args.label_column].astype(int)
-
-    train_texts, val_texts, test_texts, train_labels, val_labels, test_labels = split_dataset(
-        df, args.text_column, args.label_column
-    )
-    return train_texts, val_texts, test_texts, train_labels, val_labels, test_labels
-
-class SimpleDataset(torch.utils.data.Dataset):
+class IMDBDataset(torch.utils.data.Dataset):
+    """
+    Custom PyTorch Dataset class for IMDB text classification.
+    """
     def __init__(self, encodings, labels):
+        """
+        Initializes the dataset object with tokenized encodings and integer labels.
+        """
         self.encodings = encodings
         self.labels = labels
 
     def __getitem__(self, idx):
+        """
+        Retrieves a single data sample and its corresponding label at the specified index.
+        Converts the data into PyTorch tensors required for model input.
+        """
         item = {key: torch.tensor(val[idx]) for key, val in self.encodings.items()}
         item['labels'] = torch.tensor(self.labels[idx])
         return item
 
     def __len__(self):
+        """
+        Calculates and returns the total number of samples in the dataset.
+        """
         return len(self.labels)
 
-def compute_metrics_wrapper(eval_pred):
+def compute_metrics(eval_pred):
+    """
+    Calculates accuracy, precision, recall, and F1 score for the model predictions.
+    """
     logits, labels = eval_pred
     predictions = np.argmax(logits, axis=-1)
-    return compute_metrics(labels, predictions, average='binary')
+    precision, recall, f1, _ = precision_recall_fscore_support(labels, predictions, average='binary')
+    acc = accuracy_score(labels, predictions)
+    return {
+        'accuracy': acc,
+        'f1': f1,
+        'precision': precision,
+        'recall': recall
+    }
+
+def load_and_prepare_data(file_path):
+    """
+    Loads the CSV dataset, maps string sentiments to binary integers, and removes invalid rows.
+    """
+    df = pd.read_csv(file_path)
+    
+    # Map 'positive' to 1 and 'negative' to 0
+    df['sentiment'] = df['sentiment'].str.lower().map({'positive': 1, 'negative': 0})
+    df = df.dropna(subset=['sentiment'])
+    df['sentiment'] = df['sentiment'].astype(int)
+    
+    texts = df['review'].tolist()
+    labels = df['sentiment'].tolist()
+    
+    return texts, labels
 
 def main():
-    args = parse_args()
-    set_seed(42)
-    os.makedirs(args.output_dir, exist_ok=True)
-    
-    device = "cuda" if torch.cuda.is_available() else "cpu"
-    print(f"Using device: {device}")
-
-    # 1. Load Data
-    print("Loading data...")
-    train_texts, val_texts, test_texts, train_labels, val_labels, test_labels = prepare_data(args)
-
-    # 2. Tokenize
+    """
+    Executes the 5-fold cross-validation training and evaluation pipeline for BERT.
+    """
+    # Configuration parameters
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    data_path = os.path.join(script_dir, "IMDB_Dataset.csv")
     model_name = "bert-base-uncased"
+    max_length = 128  # Truncates text to speed up training; increase to 256 or 512 if hardware permits.
+    batch_size = 16   # Optimized for 8GB VRAM (RTX 4060).
+    epochs_per_fold = 2 # Reduced epochs per fold to save overall time.
+    n_splits = 5
+
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    print(f"Hardware device in use: {device}")
+
+    print("Loading dataset...")
+    texts, labels = load_and_prepare_data(data_path)
+    texts = np.array(texts)
+    labels = np.array(labels)
+
+    print("Loading tokenizer...")
     tokenizer = AutoTokenizer.from_pretrained(model_name)
-    
-    train_encodings = tokenizer(train_texts, truncation=True, padding=True, max_length=args.max_length)
-    val_encodings = tokenizer(val_texts, truncation=True, padding=True, max_length=args.max_length)
-    test_encodings = tokenizer(test_texts, truncation=True, padding=True, max_length=args.max_length)
 
-    train_dataset = SimpleDataset(train_encodings, train_labels)
-    val_dataset = SimpleDataset(val_encodings, val_labels)
-    test_dataset = SimpleDataset(test_encodings, test_labels)
+    # Initialize 5-Fold Cross Validation
+    skf = StratifiedKFold(n_splits=n_splits, shuffle=True, random_state=42)
+    fold_metrics = []
 
-    # 3. Model
-    model = AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=2)
-    
-    # 4. Train
-    training_args = TrainingArguments(
-        output_dir=os.path.join(args.output_dir, "checkpoints"),
-        num_train_epochs=args.epochs,
-        per_device_train_batch_size=args.batch_size,
-        per_device_eval_batch_size=args.batch_size,
-        learning_rate=args.learning_rate,
-        eval_strategy="epoch",
-        save_strategy="epoch",
-        load_best_model_at_end=True,
-        logging_dir=os.path.join(args.output_dir, "logs"),
-        logging_steps=10,
-        seed=42
-    )
+    for fold, (train_index, val_index) in enumerate(skf.split(texts, labels)):
+        print(f"\n========== Starting Fold {fold + 1} / {n_splits} ==========")
+        
+        train_texts, val_texts = texts[train_index].tolist(), texts[val_index].tolist()
+        train_labels, val_labels = labels[train_index].tolist(), labels[val_index].tolist()
 
-    trainer = Trainer(
-        model=model,
-        args=training_args,
-        train_dataset=train_dataset,
-        eval_dataset=val_dataset,
-        compute_metrics=compute_metrics_wrapper
-    )
+        print("Tokenizing text data...")
+        train_encodings = tokenizer(train_texts, truncation=True, padding=True, max_length=max_length)
+        val_encodings = tokenizer(val_texts, truncation=True, padding=True, max_length=max_length)
 
-    print("Starting training...")
-    trainer.train()
+        train_dataset = IMDBDataset(train_encodings, train_labels)
+        val_dataset = IMDBDataset(val_encodings, val_labels)
 
-    # 5. Evaluate
-    print("Evaluating on test set...")
-    test_results = trainer.predict(test_dataset)
-    y_pred = np.argmax(test_results.predictions, axis=1)
-    
-    metrics = compute_metrics(test_labels, y_pred, average='binary')
-    save_metrics(metrics, args.output_dir, "test_metrics.json")
-    print("Test Metrics:", metrics)
-
-    class_names = ['negative', 'positive']
-    plot_confusion_matrix(test_labels, y_pred, class_names, args.output_dir, "test_confusion_matrix.png")
-
-    # 6. Save Model
-    print("Saving final model...")
-    model.save_pretrained(args.output_dir)
-    tokenizer.save_pretrained(args.output_dir)
-
-    # 7. Interpretability
-    # Create a prediction wrapper that takes a list of strings and returns probability array
-    def predict_proba(texts):
-        encodings = tokenizer(texts, truncation=True, padding=True, max_length=args.max_length, return_tensors="pt").to(device)
+        print("Initializing model...")
+        model = AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=2)
         model.to(device)
-        model.eval()
-        with torch.no_grad():
-            outputs = model(**encodings)
-            probs = torch.nn.functional.softmax(outputs.logits, dim=-1)
-        return probs.cpu().numpy()
 
-    if args.run_lime == "true":
-        print("Running LIME explanations...")
-        lime_explainer = build_lime_explainer(class_names)
-        run_lime_explanations(
-            lime_explainer, predict_proba, test_texts, 
-            num_samples=args.num_explainer_samples, 
-            output_dir=os.path.join(args.output_dir, "lime_explanations")
+        training_args = TrainingArguments(
+            output_dir=f"./results_fold_{fold+1}",
+            num_train_epochs=epochs_per_fold,
+            per_device_train_batch_size=batch_size,
+            per_device_eval_batch_size=batch_size,
+            learning_rate=2e-5,
+            eval_strategy="epoch",
+            save_strategy="epoch",
+            load_best_model_at_end=True,
+            fp16=True, # Enables Mixed Precision to drastically speed up training on RTX 4060
+            logging_steps=50,
+            report_to="none" # Disables third-party logging to keep the console clean
         )
 
-    if args.run_shap == "true":
-        print("Running SHAP explanations...")
-        run_shap_explanations(
-            predict_proba, test_texts, 
-            num_samples=args.num_explainer_samples, 
-            output_dir=os.path.join(args.output_dir, "shap_explanations")
+        trainer = Trainer(
+            model=model,
+            args=training_args,
+            train_dataset=train_dataset,
+            eval_dataset=val_dataset,
+            compute_metrics=compute_metrics
         )
 
-    print("Done!")
+        print("Beginning training...")
+        trainer.train()
+
+        print("Evaluating fold...")
+        metrics = trainer.evaluate()
+        fold_metrics.append(metrics)
+        print(f"Fold {fold + 1} Metrics: {metrics}")
+
+        # Memory cleanup between folds to prevent Out Of Memory (OOM) errors
+        del model
+        del trainer
+        del train_dataset
+        del val_dataset
+        torch.cuda.empty_cache()
+        gc.collect()
+
+    print("\n========== Cross-Validation Complete ==========")
+    avg_accuracy = sum(m['eval_accuracy'] for m in fold_metrics) / n_splits
+    avg_f1 = sum(m['eval_f1'] for m in fold_metrics) / n_splits
+    print(f"Average Accuracy across 5 folds: {avg_accuracy:.4f}")
+    print(f"Average F1 Score across 5 folds: {avg_f1:.4f}")
 
 if __name__ == "__main__":
     main()
