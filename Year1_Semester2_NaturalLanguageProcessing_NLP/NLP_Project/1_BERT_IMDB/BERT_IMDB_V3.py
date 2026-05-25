@@ -1,5 +1,6 @@
 import os
 import gc
+import glob
 import torch
 import numpy as np
 import pandas as pd
@@ -66,118 +67,43 @@ def load_and_prepare_data(file_path):
 
 def main():
     """
-    Executes the 5-fold cross-validation training pipeline for BERT.
-    Enforces CUDA usage, exports metrics to a CSV file, and exports LIME/SHAP plots as images.
+    Executes the model interpretability pipeline using a pre-trained model.
+    Automatically locates the most recent checkpoint folder and generates explanation plots.
     """
-    # Enforces Nvidia CUDA usage.
+    # Enforces Nvidia CUDA usage for hardware acceleration.
     if not torch.cuda.is_available():
-        raise SystemError("CUDA is not available. An Nvidia GPU is required to run this optimized script.")
+        raise SystemError("CUDA is not available. An Nvidia GPU is required to run this script.")
     
     device = torch.device("cuda")
     print("Hardware device confirmed: NVIDIA CUDA")
 
-    # Defines paths relative to the script file.
+    # Defines directory paths relative to the script location.
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    data_path = os.path.join(script_dir, "IMDB_Dataset.csv")
     output_dir = os.path.join(script_dir, "outputs")
+    fold_dir = os.path.join(output_dir, "results_fold_5")
     
-    # Creates the outputs folder if it does not exist.
-    os.makedirs(output_dir, exist_ok=True)
+    # Verifies that the fold directory exists before proceeding.
+    if not os.path.exists(fold_dir):
+        raise FileNotFoundError(f"Saved model directory not found at: {fold_dir}")
+
+    # Locates all checkpoint sub-folders within the fold directory using pattern matching.
+    checkpoints = glob.glob(os.path.join(fold_dir, "checkpoint-*"))
+    if not checkpoints:
+        raise FileNotFoundError(f"No checkpoint folders found inside {fold_dir}. The model files may be missing.")
+    
+    # Sorts the checkpoint folders by number and selects the highest one.
+    saved_model_path = max(checkpoints, key=lambda x: int(x.split('-')[-1]))
+    print(f"Automatically selected the latest checkpoint: {saved_model_path}")
 
     model_name = "bert-base-uncased"
     max_length = 128
-    batch_size = 16
-    epochs_per_fold = 2
-    n_splits = 5
-
-    print("Loading dataset...")
-    texts, labels = load_and_prepare_data(data_path)
-    texts = np.array(texts)
-    labels = np.array(labels)
 
     print("Loading tokenizer...")
     tokenizer = AutoTokenizer.from_pretrained(model_name)
 
-    skf = StratifiedKFold(n_splits=n_splits, shuffle=True, random_state=42)
-    
-    # Stores metrics to export later.
-    all_fold_metrics = []
-
-    final_model = None
-
-    for fold, (train_index, val_index) in enumerate(skf.split(texts, labels)):
-        print(f"\n========== Starting Fold {fold + 1} / {n_splits} ==========")
-        
-        train_texts, val_texts = texts[train_index].tolist(), texts[val_index].tolist()
-        train_labels, val_labels = labels[train_index].tolist(), labels[val_index].tolist()
-
-        print("Tokenizing text data...")
-        train_encodings = tokenizer(train_texts, truncation=True, padding=True, max_length=max_length)
-        val_encodings = tokenizer(val_texts, truncation=True, padding=True, max_length=max_length)
-
-        train_dataset = IMDBDataset(train_encodings, train_labels)
-        val_dataset = IMDBDataset(val_encodings, val_labels)
-
-        print("Initializing model...")
-        model = AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=2)
-        model.to(device)
-
-        training_args = TrainingArguments(
-            output_dir=os.path.join(output_dir, f"results_fold_{fold+1}"),
-            num_train_epochs=epochs_per_fold,
-            per_device_train_batch_size=batch_size,
-            per_device_eval_batch_size=batch_size,
-            learning_rate=2e-5,
-            eval_strategy="epoch",
-            save_strategy="epoch",
-            load_best_model_at_end=True,
-            fp16=True, # Mixed precision enabled for Nvidia GPU
-            dataloader_num_workers=0,
-            gradient_accumulation_steps=2,
-            logging_steps=50,
-            report_to="none"
-        )
-
-        trainer = Trainer(
-            model=model,
-            args=training_args,
-            train_dataset=train_dataset,
-            eval_dataset=val_dataset,
-            compute_metrics=compute_metrics
-        )
-
-        print("Beginning training...")
-        trainer.train()
-
-        print("Evaluating fold...")
-        metrics = trainer.evaluate()
-        
-        # Formats the metrics for export.
-        formatted_metrics = {
-            'Fold': fold + 1,
-            'Accuracy': metrics['eval_accuracy'],
-            'Precision': metrics['eval_precision'],
-            'Recall': metrics['eval_recall'],
-            'F1_Score': metrics['eval_f1']
-        }
-        all_fold_metrics.append(formatted_metrics)
-        print(f"Fold {fold + 1} Metrics: {formatted_metrics}")
-
-        if fold == (n_splits - 1):
-            final_model = model
-        else:
-            del model
-            del trainer
-            torch.cuda.empty_cache()
-            gc.collect()
-
-    print("\n========== Cross-Validation Complete ==========")
-    
-    # Exports metrics to a CSV file in the outputs directory.
-    metrics_df = pd.DataFrame(all_fold_metrics)
-    metrics_csv_path = os.path.join(output_dir, "fold_metrics.csv")
-    metrics_df.to_csv(metrics_csv_path, index=False)
-    print(f"Metrics for all folds exported to: {metrics_csv_path}")
+    print(f"Loading saved model from: {saved_model_path}...")
+    final_model = AutoModelForSequenceClassification.from_pretrained(saved_model_path)
+    final_model.to(device)
 
     # ==========================================
     # Model Interpretability Section (LIME & SHAP)
@@ -188,10 +114,10 @@ def main():
     
     def predict_proba(text_list):
         """
-        Prediction function formatted specifically for LIME and SHAP APIs.
-        Accepts a list of strings and outputs a numpy array of confidence scores.
+        Calculates prediction confidence scores for a given list of input strings.
+        Formats the output as a numpy array to ensure compatibility with LIME and SHAP APIs.
         """
-        # Converts the input into a standard Python list to ensure compatibility with the Hugging Face tokenizer.
+        # Converts the input into a standard list to prevent tokenizer errors.
         if isinstance(text_list, np.ndarray):
             text_list = text_list.tolist()
         elif not isinstance(text_list, list):
@@ -203,6 +129,7 @@ def main():
         
         with torch.no_grad():
             outputs = final_model(**inputs)
+            # Applies the softmax mathematical function to convert raw scores into percentages.
             scores = torch.nn.functional.softmax(outputs.logits, dim=-1)
             
         return scores.cpu().numpy()
@@ -223,10 +150,11 @@ def main():
 
     # 2. Generate and Export SHAP Explanation Image
     print("\nRunning SHAP explanation...")
+    # The masker defines how text is broken apart for the SHAP analysis.
     shap_explainer = shap.Explainer(predict_proba, masker=shap.maskers.Text(tokenizer=r"\W+"), output_names=class_names)
     shap_values = shap_explainer([sample_review])
     
-    # Generates a bar plot for the positive class (index 1) and saves as image.
+    # Generates a bar plot for the positive class and saves it as an image file.
     shap.plots.bar(shap_values[0, :, "positive"], show=False)
     shap_output_path = os.path.join(output_dir, "shap_explanation.png")
     plt.savefig(shap_output_path, bbox_inches='tight')
