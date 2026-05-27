@@ -13,7 +13,7 @@ Modern self-driving cars use Artificial Intelligence (AI) to understand their su
 * **The AI Pipeline:** The car's computer takes sensor data and runs it through three main steps: Perception (understanding the scene), Prediction (guessing what will happen next), and Planning (deciding how to drive);
 * **Mobile Computers:** Vehicles are turning into advanced, AI-powered mobile computing centers. 
 
-### The Rise of Foundation Models
+### 📑 1.1.1 The Rise of Foundation Models
 The industry is moving from classical Machine Learning to **Foundation Models**.
 * **Definition:** A foundation model is a very large AI model. It is trained on huge amounts of data that has not been labeled by humans. Once trained, it can be reused for many different tasks;
 * **Emergence:** The model learns behaviors naturally from the data, rather than being strictly programmed to do them;
@@ -30,20 +30,20 @@ Building safe and effective AI for cars involves four main challenges: Represent
 * **Solutions:** Engineers use different methods to train the AI. They use **Self-Supervision** (where the AI learns by finding patterns in data without human labels) and **Large Language Models** to give the AI extra guidance;
 * **Inductive Bias:** This is a set of built-in assumptions that help the AI learn. Inductive bias is strictly required for the AI to learn anything useful.
 
-### 📑 1.2.1 The Safety Challenge
+### 📑 1.2.2 The Safety Challenge
 Cars must follow strict mandatory safety rules, such as ISO 26262 and ISO/PAS 21448.
 * **Inherently Safe AI:** Building an AI that perfectly avoids all hazards is impossible with today's technology;
 * **Safe Fail:** When a system breaks, it must fail safely. The car must stay on the road and safely slow down or stop. This requires real-time error detection;
 * **Safety Margins:** The AI often performs worse in the real world than it did in the lab. Engineers fix this by improving **model robustness**. This includes estimating when the AI is uncertain and detecting errors during driving.
 
-### 📑 1.2.1 The Efficiency Challenge
+### 📑 1.2.3 The Efficiency Challenge
 The computers inside cars are limited. They have low power, low internet bandwidth, and limited processing abilities. However, they still need to react in real-time. 
 * **Solutions:** Engineers shrink the AI models to make them run faster.
     * **Knowledge Distillation (KD):** A small model (the student) is trained to copy the behavior of a massive model (the teacher);
     * **Quantization:** This shrinks the math inside the AI to use less memory;
     * **Neural Architecture Search (NAS):** An automated process that finds the fastest and best shape for the AI model.
 
-### 📑 1.2.1 The Cost Challenge
+### 📑 1.2.4 The Cost Challenge
 Creating AI is very expensive.
 * **Problems:** Collecting data takes too long, legal rules (like GDPR) make data sharing hard, and development costs are unpredictable;
 * **Solutions:** * **Active Learning:** The AI asks humans to label only the most confusing or "interesting" images, saving time and money;
