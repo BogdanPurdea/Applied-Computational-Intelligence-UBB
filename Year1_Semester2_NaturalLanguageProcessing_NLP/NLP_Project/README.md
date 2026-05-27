@@ -1,98 +1,87 @@
-# NLP Experimentation Framework
+# Transformer NLP Classification Project
 
-An academic-grade, modular framework for performing Transformer-based NLP experiments, including model fine-tuning, automated evaluations, and cross-model performance comparisons.
+This project implements three distinct transformer-based classification models using PyTorch and HuggingFace Transformers.
 
-## Architecture & Structure
+## Structure
 
 ```
-nlp_transformer_classification/
-├── 1_IMDB/
-│   ├── mainBERTIMDB.py                 # Fine-tunes BERT for Sentiment Analysis
-│   ├── mainSentenceBERTIMDB.py         # Trains Sentence-BERT + MLP for Sentiment Analysis
-│   └── comparison_imdb.py              # Aggregates metrics & plots ROC comparison
-├── 2_FAKENEWS/
-│   ├── mainBERTFakeNews.py             # Fine-tunes BERT for Fake News Detection
-│   ├── mainSentenceBERTFakeNews.py     # Trains Sentence-BERT + MLP for Fake News Detection
-│   └── comparison_fakenews.py          # Aggregates metrics & plots ROC comparison
-├── 3_ROMANIAN_EMOTION/
-│   └── mainRoBERTaRED.py               # Fine-tunes Romanian RoBERTa for multi-class emotion
-├── shared/                             # Reusable framework utilities
-│   ├── utils.py                        # Logging, JSON saving, and deterministic seeding
-│   ├── dataset_utils.py                # CSV loading and Scikit-learn stratified splitting
-│   ├── visualization.py                # Confusion matrices, ROC curves, training histories
-│   ├── metrics.py                      # Accuracy, F1, Recall, Precision, ROC-AUC
-│   ├── model_utils.py                  # Sentence-BERT classifier wrapper and device detection
-│   └── explainability.py               # Native LIME and SHAP integration
-├── data/
-├── outputs/                            # Model checkpoints, metrics, and interpretability reports
-└── comparison_results/                 # Final CSV tables and comparative PNG charts
+NLP_Project/
+│
+├── 1_BERT_SA_IMDB/
+│   ├── BERT_IMDB.py                   # BERT model training and evaluation script
+│   ├── PreProcessingDataset.py        # Dataset preprocessing utility
+│   ├── IMDB_Dataset.csv               # Raw IMDB dataset
+│   ├── PreProcessed_IMDB_Dataset.csv  # Preprocessed IMDB dataset
+│   ├── test_metrics.csv               # Exported final test metrics
+│   └── Results/                       # Generated LIME and SHAP visual explanations
+│
+├── 2_DistilBERT_SA_IMDB/
+│   ├── DistilBERT_IMDB.py             # DistilBERT model training and evaluation script
+│   ├── test_metrics.csv               # Exported final test metrics
+│   └── Results/                       # Generated LIME and SHAP visual explanations
+│
+├── 3_UmBERTo_SA_FEEL-IT/
+│   ├── UmBERTo_FEEL-IT.py             # UmBERTo model training and evaluation script
+│   └── feel_it_dataset.csv            # FEEL-IT dataset for sentiment classification
+│
+├── utils.py                           # Shared utilities for explainability, metrics, and data processing
+└── README.md                          # Project documentation
 ```
 
 ## Setup & Requirements
 
-### Hardware Recommendations
-- **GPU**: NVIDIA GPU with CUDA strongly recommended. Models use `torch.cuda` automatically.
-- **Memory**: Minimum 8GB VRAM (12GB+ recommended for unfrozen Sentence-BERT and full BERT).
+### Hardware Requirements
+- **GPU Required**: Training/evaluating transformer models on CPU is exceedingly slow. A CUDA-compatible GPU is required by the scripts (NVIDIA CUDA validation is enforced);
+- Memory: Minimum 8GB VRAM is advised.
 
-### Installation
-Install the necessary dependencies:
+### Datasets
+- **IMDB Dataset**: Placed inside the respective project directories (`1_BERT_SA_IMDB/IMDB_Dataset.csv`);
+- **FEEL-IT Dataset**: Placed inside the `3_UmBERTo_SA_FEEL-IT/` directory. The FEEL-IT dataset is widely used for Italian sentiment and emotion classification [@bianchi2021feel].
+
+## Running the Models
+
+Run the scripts directly from the root directory or from their respective folders.
+
+### 1. IMDB Sentiment (BERT)
 ```bash
-pip install -r requirements.txt
+python 1_BERT_SA_IMDB/BERT_IMDB.py
 ```
 
-## Datasets
-
-Ensure datasets are downloaded and placed in the `data/` directory or specify paths via CLI.
-1. **IMDB Movie Reviews**: https://www.kaggle.com/datasets/rehanliaqat17/imbd-dataset
-2. **WELFake Dataset**: https://www.kaggle.com/datasets/saurabhshahane/fake-news-classification
-3. **Romanian Emotion Dataset**: Your local `.csv` file.
-
-## Execution
-
-Scripts support modular CLI configuration. Use `--help` on any script for details.
-
-### 1. IMDB Experimentation
-Train models:
+### 2. IMDB Sentiment (DistilBERT)
 ```bash
-python 1_IMDB/mainBERTIMDB.py --epochs 3 --run_lime true
-python 1_IMDB/mainSentenceBERTIMDB.py --epochs 5 --freeze_encoder
-```
-Compare models:
-```bash
-python 1_IMDB/comparison_imdb.py
+python 2_DistilBERT_SA_IMDB/DistilBERT_IMDB.py
 ```
 
-### 2. Fake News Experimentation
-Train models:
+### 3. Italian Sentiment Classification (UmBERTo)
 ```bash
-python 2_FAKENEWS/mainBERTFakeNews.py --epochs 3
-python 2_FAKENEWS/mainSentenceBERTFakeNews.py --epochs 5
-```
-Compare models:
-```bash
-python 2_FAKENEWS/comparison_fakenews.py
+python 3_UmBERTo_SA_FEEL-IT/UmBERTo_FEEL-IT.py
 ```
 
-### 3. Romanian Emotion Classification
-Train multi-class RoBERTa:
-```bash
-python 3_ROMANIAN_EMOTION/mainRoBERTaRED.py --epochs 3
-```
+## LIME and SHAP Explainability
 
-## Interpretability (Explainable AI)
+Interpretability methods (LIME and SHAP) are automatically run at the end of the training/evaluation scripts on a selection of samples.
+- **LIME** outputs interactive HTML files and corresponding visualization plots (PNG format) highlighting word importance;
+- **SHAP** outputs bar plot visualizations representing feature attributions.
 
-To run **LIME** (Local Interpretable Model-agnostic Explanations) and **SHAP** (SHapley Additive exPlanations), add the following flags:
-```bash
---run_lime true --run_shap true --num_explainer_samples 5
-```
-Because XAI over transformers is extremely computationally expensive, it is restricted to a small number of samples by default. HTML and PNG plots will be exported to `outputs/<model>/lime/` and `outputs/<model>/shap/`.
+All visual explanations are exported to the `Results/` directory inside each model's folder.
 
-## Output Artifacts
+## Artifacts Generated
 
-Upon completion, each model generates:
-- Full model checkpoint & tokenizer in `outputs/<model>/`
-- `metrics.json` tracking training time, inference time, GPU peak memory, and accuracy metrics.
-- `test_probs.npy` and `test_labels.npy` used for aggregation.
-- Standalone ROC curves and Confusion Matrix PNGs.
+After running, check the respective `Results/` folder (e.g. `1_BERT_SA_IMDB/Results/` or `2_DistilBERT_SA_IMDB/Results/`) for:
+- `lime_explanation_*.html`;
+- `lime_explanation_*.png`;
+- `shap_explanation_*.png`;
+- `test_metrics.csv` (exported to the model's root directory);
 
-The `comparison_*.py` scripts will aggregate these into `comparison_results/`, exporting `_model_comparison.csv` tables and unified ROC visualization plots suitable for academic presentation.
+## Known Limitations
+- CUDA GPU execution is strictly enforced; running on CPU-only machines will throw a system error;
+- LIME and SHAP explainer runs can be compute-intensive and may take some time depending on the GPU/CPU setup.
+
+@inproceedings{bianchi2021feel,
+  title     = {FEEL-IT: Emotion and Sentiment Classification for the Italian Language},
+  author    = {Bianchi, Federico and Nozza, Debora and Hovy, Dirk},
+  booktitle = {Proceedings of the 11th Workshop on Computational Approaches to Subjectivity, Sentiment and Social Media Analysis},
+  year      = {2021},
+  publisher = {Association for Computational Linguistics},
+  url       = {https://github.com/MilaNLProc/feel-it}
+}
