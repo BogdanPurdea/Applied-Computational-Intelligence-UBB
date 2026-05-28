@@ -5,7 +5,7 @@ from environment import Environment
 from blackboard import Blackboard
 from utils.metrics import Metrics
 from utils.visualization import print_grid
-from state import GlobalState
+from state import SimulationState
 from config import Config
 import time
 
@@ -15,9 +15,10 @@ class Simulation:
         self.blackboard = blackboard
         self.agents = agents
         self.metrics = metrics
-        self.global_state = GlobalState(environment, blackboard, agents)
+        self.global_state = SimulationState(environment, blackboard, agents)
 
     def step(self, current_step: int) -> bool:
+        self.environment.state.step = current_step
         self.metrics.increment_time()
         active_agents = 0
         

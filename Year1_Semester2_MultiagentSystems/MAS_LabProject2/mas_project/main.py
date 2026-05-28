@@ -8,6 +8,7 @@ from agents.detector_agent import DetectorAgent
 from agents.collector_agent import CollectorAgent
 from simulation import Simulation
 
+
 def main():
     print("Initializing Multi-Agent System...")
 
@@ -22,33 +23,36 @@ def main():
 
     # Initialize Agents
     agents = []
-    
+
     barge_pos = Coordinate(Config.BARGE_LOCATION[0], Config.BARGE_LOCATION[1])
-    
+
+    detector_cfg = Config.DEFAULT_DETECTOR_CONFIG
     for i in range(Config.NUM_DETECTORS):
         state = InternalState(
             position=Coordinate(barge_pos.x, barge_pos.y),
-            battery=Config.DETECTOR_ENERGY_CAP,
+            battery=detector_cfg.battery_capacity,
         )
-        detector = DetectorAgent(f"Detector-{i}", state)
+        detector = DetectorAgent(f"Detector-{i}", state, detector_cfg)
         detector.set_blackboard(blackboard)
         agents.append(detector)
-        
+
+    collector_cfg = Config.DEFAULT_COLLECTOR_CONFIG
     for i in range(Config.NUM_COLLECTORS):
         state = InternalState(
             position=Coordinate(barge_pos.x, barge_pos.y),
-            battery=Config.COLLECTOR_ENERGY_CAP,
-            storage_capacity=Config.COLLECTOR_STORAGE_CAP
+            battery=collector_cfg.battery_capacity,
+            storage_capacity=collector_cfg.storage_capacity,
         )
-        collector = CollectorAgent(f"Collector-{i}", state)
+        collector = CollectorAgent(f"Collector-{i}", state, collector_cfg)
         collector.set_references(env, blackboard)
         agents.append(collector)
 
     # Initialize Simulation
     sim = Simulation(env, blackboard, agents, metrics)
-    
+
     # Run
     sim.run()
+
 
 if __name__ == "__main__":
     main()
