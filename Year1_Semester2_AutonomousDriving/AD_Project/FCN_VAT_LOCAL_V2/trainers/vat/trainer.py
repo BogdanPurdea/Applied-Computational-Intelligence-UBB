@@ -4,6 +4,7 @@ import torch.nn as nn
 import torch.optim as optim
 import torch.nn.functional as F
 from tqdm import tqdm
+import matplotlib.pyplot as plt
 
 def vat_loss(model, x, logits, xi=1e-6, eps=2.5, ip=1):
     d = torch.randn_like(x)
@@ -45,6 +46,7 @@ def train_vat(model, labeled_loader, unlabeled_loader, test_loader, epochs=15, l
     criterion = nn.CrossEntropyLoss()
     
     best_acc = 0.0
+    history = {"sup_loss": [], "vat_loss": [], "train_acc": [], "test_acc": []}
     for epoch in range(1, epochs + 1):
         model.train()
         total_sup_loss = 0.0
@@ -109,5 +111,37 @@ def train_vat(model, labeled_loader, unlabeled_loader, test_loader, epochs=15, l
             
         print(f"Epoch {epoch:2d}/{epochs} | Sup Loss: {total_sup_loss/len(unlabeled_loader):.4f} | VAT Loss: {total_vat_loss/len(unlabeled_loader):.4f} | Train Acc: {train_acc*100:.2f}% | Test Acc: {test_acc*100:.2f}% {tag}")
         
+        history["sup_loss"].append(total_sup_loss/len(unlabeled_loader))
+        history["vat_loss"].append(total_vat_loss/len(unlabeled_loader))
+        history["train_acc"].append(train_acc * 100)
+        history["test_acc"].append(test_acc * 100)
+        
     print(f"\nVAT Training Complete! Best Test Accuracy: {best_acc*100:.2f}%")
+    
+    os.makedirs("training_plots", exist_ok=True)
+    prefix = save_name.replace(".pth", "")
+    plt.figure(figsize=(12, 5))
+    
+    plt.subplot(1, 2, 1)
+    plt.plot(range(1, epochs + 1), history["sup_loss"], label="Sup Loss", marker='o')
+    plt.plot(range(1, epochs + 1), history["vat_loss"], label="VAT Loss", marker='o')
+    plt.xlabel("Epoch")
+    plt.ylabel("Loss")
+    plt.title(f"{prefix} - Loss")
+    plt.legend()
+    plt.grid(True)
+    
+    plt.subplot(1, 2, 2)
+    plt.plot(range(1, epochs + 1), history["train_acc"], label="Train Acc", marker='o')
+    plt.plot(range(1, epochs + 1), history["test_acc"], label="Test Acc", marker='o')
+    plt.xlabel("Epoch")
+    plt.ylabel("Accuracy (%)")
+    plt.title(f"{prefix} - Accuracy")
+    plt.legend()
+    plt.grid(True)
+    
+    plt.tight_layout()
+    plt.savefig(os.path.join("training_plots", f"{prefix}_plots.png"))
+    plt.close()
+    
     return best_acc
