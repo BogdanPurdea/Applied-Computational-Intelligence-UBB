@@ -3,6 +3,7 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from tqdm import tqdm
+import matplotlib.pyplot as plt
 
 def train_baseline(model, labeled_loader, test_loader, epochs=15, lr=1e-3, device="cuda", save_name="baseline_best.pth"):
     print("="*50)
@@ -16,6 +17,7 @@ def train_baseline(model, labeled_loader, test_loader, epochs=15, lr=1e-3, devic
     criterion = nn.CrossEntropyLoss()
     
     best_acc = 0.0
+    history = {"train_loss": [], "train_acc": [], "test_acc": []}
     for epoch in range(1, epochs + 1):
         model.train()
         total_loss = 0.0
@@ -62,5 +64,35 @@ def train_baseline(model, labeled_loader, test_loader, epochs=15, lr=1e-3, devic
             
         print(f"Epoch {epoch:2d}/{epochs} | Train Loss: {total_loss/len(labeled_loader):.4f} | Train Acc: {train_acc*100:.2f}% | Test Acc: {test_acc*100:.2f}% {tag}")
         
+        history["train_loss"].append(total_loss/len(labeled_loader))
+        history["train_acc"].append(train_acc * 100)
+        history["test_acc"].append(test_acc * 100)
+        
     print(f"\nBaseline Training Complete! Best Test Accuracy: {best_acc*100:.2f}%")
+    
+    os.makedirs("training_plots", exist_ok=True)
+    prefix = save_name.replace(".pth", "")
+    plt.figure(figsize=(12, 5))
+    
+    plt.subplot(1, 2, 1)
+    plt.plot(range(1, epochs + 1), history["train_loss"], label="Train Loss", marker='o')
+    plt.xlabel("Epoch")
+    plt.ylabel("Loss")
+    plt.title(f"{prefix} - Loss")
+    plt.legend()
+    plt.grid(True)
+    
+    plt.subplot(1, 2, 2)
+    plt.plot(range(1, epochs + 1), history["train_acc"], label="Train Acc", marker='o')
+    plt.plot(range(1, epochs + 1), history["test_acc"], label="Test Acc", marker='o')
+    plt.xlabel("Epoch")
+    plt.ylabel("Accuracy (%)")
+    plt.title(f"{prefix} - Accuracy")
+    plt.legend()
+    plt.grid(True)
+    
+    plt.tight_layout()
+    plt.savefig(os.path.join("training_plots", f"{prefix}_plots.png"))
+    plt.close()
+    
     return best_acc
