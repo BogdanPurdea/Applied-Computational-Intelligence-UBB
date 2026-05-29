@@ -37,21 +37,22 @@ VAL_SPLIT = 0.15  # 15% of the data goes to testing/validation
 
 # Training Parameters
 BATCH_SIZE = 128
-EPOCHS = 50
+EPOCHS = 80
 LR = 1e-3
 WEIGHT_DECAY = 1e-4
 NUM_WORKERS = 0
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Model Parameters
-DROPOUT_P = 0.4
-LABEL_SMOOTHING = 0.1
+DROPOUT_P = 0.20
+LABEL_SMOOTHING = 0.03
 
 # VAT Parameters
-VAT_XI = 1e-6  # Small constant to scale the initial random noise
-VAT_EPSILON = 2.5  # The magnitude of the final adversarial perturbation
-VAT_ALPHA = 1.0  # Weight of the VAT loss in the total loss
-VAT_ITERATIONS = 1  # Number of steps to find the worst-case perturbation
+
+VAT_XI = 1e-6        # Small constant to scale the initial random noise
+VAT_EPSILON = 0.15   # The magnitude of the final adversarial perturbation
+VAT_ALPHA = 0.25     # Weight of the VAT loss in the total loss
+VAT_ITERATIONS = 1   # Number of steps to find the worst-case perturbation
 
 # Normalization Statistics (GTSRB specific)
 GTSRB_MEAN = (0.3337, 0.3064, 0.3171)
@@ -100,10 +101,9 @@ class GTSRBCSVDataset(Dataset):
 # Image Transforms
 train_transform = transforms.Compose([
     transforms.Resize((IMG_SIZE, IMG_SIZE)),
-    transforms.RandomRotation(degrees=15),
-    transforms.RandomAffine(degrees=0, translate=(0.1, 0.1), scale=(0.9, 1.1)),
-    transforms.RandomHorizontalFlip(p=0.1),
-    transforms.ColorJitter(brightness=0.4, contrast=0.4, saturation=0.3, hue=0.05),
+    transforms.RandomRotation(degrees=8),
+    transforms.RandomAffine(degrees=0, translate=(0.05, 0.05), scale=(0.95, 1.05)),
+    transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.15, hue=0.02),
     transforms.ToTensor(),
     transforms.Normalize(GTSRB_MEAN, GTSRB_STD),
 ])
