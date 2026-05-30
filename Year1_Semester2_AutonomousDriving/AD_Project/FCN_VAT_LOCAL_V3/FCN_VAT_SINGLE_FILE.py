@@ -1,5 +1,6 @@
 import os
 import time
+import json
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -11,6 +12,7 @@ from torchvision import transforms
 from PIL import Image
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
+import numpy as np
 
 # =============================================================================
 # HYPERPARAMETERS & CONFIGURATION
@@ -23,9 +25,9 @@ TEST_CSV = os.path.join(DATA_ROOT, "Test.csv")
 OUTPUT_DIR = "./output"
 PLOTS_DIR = os.path.join(OUTPUT_DIR, "plots")
 CKPT_PATH = os.path.join(OUTPUT_DIR, "gtsrb_fcn_vat_best.pth")
-CSV_PATH = os.path.join(OUTPUT_DIR, "training_history.csv")
+HISTORY_PATH = os.path.join(OUTPUT_DIR, "training_history.json")
 
-# Creates output directories if they do not exist.
+# Create output directories
 os.makedirs(PLOTS_DIR, exist_ok=True)
 
 # Dataset Parameters
@@ -36,20 +38,20 @@ VAL_SPLIT = 0.15  # 15% of the data goes to testing/validation
 
 # Training Parameters
 BATCH_SIZE = 128
-EPOCHS = 50
-LR = 1e-3
-WEIGHT_DECAY = 1e-4
+EPOCHS = 40
+LR = 7e-4
+WEIGHT_DECAY = 7e-5
 NUM_WORKERS = 0
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Model Parameters
-DROPOUT_P = 0.20
-LABEL_SMOOTHING = 0.03
+DROPOUT_P = 0.25
+LABEL_SMOOTHING = 0.05
 
 # VAT Parameters
 VAT_XI = 1e-6        # Small constant to scale the initial random noise
 VAT_EPSILON = 0.15   # The magnitude of the final adversarial perturbation
-VAT_ALPHA = 0.25     # Weight of the VAT loss in the total loss
+VAT_ALPHA = 0.20     # Weight of the VAT loss in the total loss
 VAT_ITERATIONS = 1   # Number of steps to find the worst-case perturbation
 
 # Normalization Statistics (GTSRB specific)
@@ -99,9 +101,10 @@ class GTSRBCSVDataset(Dataset):
 # Image Transforms
 train_transform = transforms.Compose([
     transforms.Resize((IMG_SIZE, IMG_SIZE)),
-    transforms.RandomRotation(degrees=8),
-    transforms.RandomAffine(degrees=0, translate=(0.05, 0.05), scale=(0.95, 1.05)),
-    transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.15, hue=0.02),
+    transforms.RandomRotation(degrees=15),
+    transforms.RandomAffine(degrees=0, translate=(0.1, 0.1), scale=(0.9, 1.1)),
+    transforms.RandomHorizontalFlip(p=0.1),
+    transforms.ColorJitter(brightness=0.4, contrast=0.4, saturation=0.3, hue=0.05),
     transforms.ToTensor(),
     transforms.Normalize(GTSRB_MEAN, GTSRB_STD),
 ])
@@ -235,34 +238,34 @@ def compute_vat_loss(model: nn.Module, x: torch.Tensor, original_logits: torch.T
     """
     Calculates the penalty for the model changing its prediction when the image is slightly perturbed.
     """
-    # Generates random noise and normalizes it.
+    # 1. Generate random noise and normalize it
     d = torch.randn_like(x).to(DEVICE)
     d = normalize_tensor(d)
 
-    # Detaches original logits to prevent updates during the noise search.
+    # Detach original logits so the model does not try to update them during the noise search
     original_probs = F.softmax(original_logits.detach(), dim=1)
 
-    # Finds the worst-case direction that maximizes divergence.
+    # 2. Find the worst-case direction (the noise that causes the biggest change)
     for _ in range(VAT_ITERATIONS):
         d.requires_grad_()
         x_perturbed = x + VAT_XI * d
         logits_perturbed = model(x_perturbed)
         probs_perturbed = F.log_softmax(logits_perturbed, dim=1)
 
-        # Calculates divergence between clean prediction and perturbed prediction.
+        # Calculate divergence between clean prediction and perturbed prediction
         adv_distance = F.kl_div(probs_perturbed, original_probs, reduction="batchmean")
         adv_distance.backward()
 
-        # Extracts the gradient to isolate the maximal error direction.
+        # Extract the gradient to see which direction maximized the error
         d_grad = d.grad
         d = normalize_tensor(d_grad).detach()
         model.zero_grad()
 
-    # Applies the final scaled perturbation.
+    # 3. Apply the final scaled perturbation
     r_adv = VAT_EPSILON * d
     x_adv = x + r_adv
 
-    # Calculates the final VAT loss.
+    # 4. Calculate the final VAT loss
     logits_adv = model(x_adv)
     probs_adv = F.log_softmax(logits_adv, dim=1)
     vat_loss = F.kl_div(probs_adv, original_probs, reduction="batchmean")
@@ -294,11 +297,14 @@ def train_one_epoch(model: nn.Module, loader: DataLoader, criterion: nn.Module, 
 
         optimizer.zero_grad()
 
+        # Supervised forward pass
         logits = model(imgs)
         supervised_loss = criterion(logits, labels)
 
+        # Semi-supervised VAT pass
         vat_loss = compute_vat_loss(model, imgs, logits)
 
+        # Combine losses
         loss = supervised_loss + (VAT_ALPHA * vat_loss)
 
         loss.backward()
@@ -341,7 +347,7 @@ def plot_training_curves(history: dict, filepath: str) -> None:
     fig.suptitle("FCN VAT - Training History", fontsize=14, fontweight="bold")
     gs = gridspec.GridSpec(1, 2, figure=fig, wspace=0.32)
 
-    # Plots Loss.
+    # Plot Loss
     ax1 = fig.add_subplot(gs[0])
     ax1.plot(epochs_range, history["train_loss"], "o-", color="#2196F3", lw=2, ms=3, label="Train Loss")
     ax1.plot(epochs_range, history["val_loss"], "s--", color="#FF5722", lw=2, ms=3, label="Val Loss")
@@ -352,7 +358,7 @@ def plot_training_curves(history: dict, filepath: str) -> None:
     ax1.legend(fontsize=9)
     ax1.grid(alpha=0.3)
 
-    # Plots Accuracy.
+    # Plot Accuracy
     ax2 = fig.add_subplot(gs[1])
     ax2.plot(epochs_range, [a * 100 for a in history["train_acc"]], "o-", color="#2196F3", lw=2, ms=3,
              label="Train Acc")
@@ -390,14 +396,14 @@ def plot_test_results(test_loss: float, test_acc: float, filepath: str) -> None:
 if __name__ == "__main__":
     print("Initializing Datasets...")
 
-    # Reads full training data.
+    # Read full training data
     full_train_df = pd.read_csv(TRAIN_CSV)
 
-    # Shuffles and splits into 85% Train / 15% Validation.
+    # Shuffle and split into 85% Train / 15% Validation
     full_train_df = full_train_df.sample(frac=1, random_state=42).reset_index(drop=True)
     val_size = int(len(full_train_df) * VAL_SPLIT)
 
-    # Saves the splits to temporary CSVs to reuse the GTSRBCSVDataset class logic.
+    # Save the splits to temporary CSVs to reuse the GTSRBCSVDataset class logic
     train_split_csv = os.path.join(OUTPUT_DIR, "temp_train_split.csv")
     val_split_csv = os.path.join(OUTPUT_DIR, "temp_val_split.csv")
     full_train_df.iloc[:-val_size].to_csv(train_split_csv, index=False)
@@ -427,58 +433,10 @@ if __name__ == "__main__":
     print(f"{'Ep':>3} | {'Tr Loss':>9} {'Tr Acc%':>8} | {'Vl Loss':>9} {'Vl Acc%':>8} | {'LR':>9} | {'Time':>6} |")
     print("-" * 72)
 
-    # Initializes the CSV file and writes the header row.
-    with open(CSV_PATH, "w") as f:
-        f.write("Ep,Tr Loss,Tr Acc%,Vl Loss,Vl Acc%,LR,Time,Saved\n")
-
-    # Iterates over each epoch in the total epoch count.
     for epoch in range(1, EPOCHS + 1):
         t0 = time.time()
 
-        model.train()
-        running_loss = 0.0
-        correct = 0
-        total = 0
-
-        # Iterates over each batch within the current epoch.
-        for step, (inputs, targets) in enumerate(train_loader, 1):
-            inputs, targets = inputs.to(DEVICE), targets.to(DEVICE)
-
-            optimizer.zero_grad()
-
-            # Computes the supervised forward pass and base loss.
-            outputs = model(inputs)
-            supervised_loss = criterion(outputs, targets)
-
-            # Computes the semi-supervised Virtual Adversarial Training loss.
-            vat_loss = compute_vat_loss(model, inputs, outputs)
-
-            # Combines the supervised and VAT losses.
-            loss = supervised_loss + (VAT_ALPHA * vat_loss)
-
-            loss.backward()
-
-            # Clips gradients to a maximum norm to prevent exploding gradients.
-            torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
-
-            optimizer.step()
-
-            running_loss += loss.item() * inputs.size(0)
-            _, predicted = outputs.max(1)
-            total += targets.size(0)
-            correct += predicted.eq(targets).sum().item()
-
-            # Prints the current step progress.
-            print(f"\rEpoch {epoch:>3} | Step {step:>4}/{len(train_loader)} | Loss: {loss.item():>7.4f}", end="",
-                  flush=True)
-
-        # Calculates final epoch metrics.
-        tr_l = running_loss / total
-        tr_a = correct / total
-
-        # Clears the step tracking line completely before printing the final epoch summary.
-        print("\r" + " " * 80 + "\r", end="", flush=True)
-
+        tr_l, tr_a = train_one_epoch(model, train_loader, criterion, optimizer)
         vl_l, vl_a = evaluate(model, val_loader, criterion)
         scheduler.step()
 
@@ -491,7 +449,6 @@ if __name__ == "__main__":
         elapsed = time.time() - t0
 
         tag = ""
-        saved_marker = ""
         if vl_a > best_val_acc:
             best_val_acc = vl_a
             torch.save({
@@ -502,11 +459,6 @@ if __name__ == "__main__":
                 "history": history,
             }, CKPT_PATH)
             tag = " * saved"
-            saved_marker = "* saved"
-
-        # Appends the epoch results to the CSV file.
-        with open(CSV_PATH, "a") as f:
-            f.write(f"{epoch},{tr_l:.4f},{tr_a * 100:.2f}%,{vl_l:.4f},{vl_a * 100:.2f}%,{cur_lr:.2e},{elapsed:.1f}s,{saved_marker}\n")
 
         print(
             f"{epoch:>3} | {tr_l:>9.4f} {tr_a * 100:>7.2f}% | "
@@ -517,10 +469,12 @@ if __name__ == "__main__":
     print("-" * 72)
     print(f"Training Complete. Best Validation Accuracy: {best_val_acc * 100:.2f}%")
 
-    # Generates the training plot using the history kept in memory.
+    # Save history and generate training plot
+    with open(HISTORY_PATH, "w") as f:
+        json.dump(history, f, indent=2)
     plot_training_curves(history, os.path.join(PLOTS_DIR, "training_curves.png"))
 
-    # Loads best weights for final test evaluation.
+    # Load best weights for final test evaluation
     print(f"Loading best checkpoint from {CKPT_PATH} for final testing...")
     ckpt = torch.load(CKPT_PATH, map_location=DEVICE)
     model.load_state_dict(ckpt["model_state"])
@@ -532,4 +486,3 @@ if __name__ == "__main__":
     print(f"Test Loss     : {test_loss:.4f}")
     print(f"Test Accuracy : {test_acc * 100:.2f}%")
     print(f"Plots saved to: {PLOTS_DIR}")
-    print(f"Training log saved to: {CSV_PATH}")
