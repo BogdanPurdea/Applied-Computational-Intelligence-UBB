@@ -45,13 +45,13 @@ NUM_WORKERS = 0
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Model Parameters
-DROPOUT_P = 0.25
-LABEL_SMOOTHING = 0.05
+DROPOUT_P = 0.05
+LABEL_SMOOTHING = 0.00
 
 # VAT Parameters
 VAT_XI = 1e-6        # Small constant to scale the initial random noise
-VAT_EPSILON = 0.15   # The magnitude of the final adversarial perturbation
-VAT_ALPHA = 0.20     # Weight of the VAT loss in the total loss
+VAT_EPSILON = 0.05   # The magnitude of the final adversarial perturbation
+VAT_ALPHA = 0.05     # Weight of the VAT loss in the total loss
 VAT_ITERATIONS = 1   # Number of steps to find the worst-case perturbation
 
 # Normalization Statistics (GTSRB specific)
