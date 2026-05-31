@@ -5,6 +5,10 @@ verify_explain.py
 Verify that all explainability pipelines (both LIME and SHAP) compile and execute successfully.
 It runs a minimal dry-run (1 example per class, tiny perturbation/eval samples) for each model
 and saves the output files to a temporary directory without modifying/overwriting the existing results.
+
+Nothing is written to the real project directories:
+- Explanation outputs (HTML, JSON) are redirected to a temporary directory.
+- Preprocessed-text pickle caches are fully suppressed at every level.
 """
 
 from __future__ import annotations
@@ -47,31 +51,45 @@ if not checkpoint_base_dir.exists():
 else:
     print(f"[setup] Using local checkpoints path: {checkpoint_base_dir}")
 
+# ---------------------------------------------------------------------------
+# Nuclear backstop: suppress ALL pickle writes at the lowest level.
+# explain_lime/explain_shap do `from dataset_xx import save_preprocessed`
+# which binds the name locally in the module — patching the dataset module
+# attribute alone is insufficient after a reload().  Suppressing the
+# underlying save_pickle_cache in dataset_utils covers every path.
+# ---------------------------------------------------------------------------
+import dataset_utils
+dataset_utils.save_pickle_cache = lambda data, path: None
+print("[setup] dataset_utils.save_pickle_cache → suppressed (no-op).")
+
 # Set up dataset mocks to use a tiny subset of 10 items and force preprocessing on-the-fly
 import dataset_en
 import dataset_ro
 import dataset_red
 
+_noop_save = lambda *args, **kwargs: None
+_noop_load = lambda *args, **kwargs: None
+
 orig_splits_imdb = dataset_en.load_splits
 dataset_en.load_splits = lambda *args, **kwargs: tuple(
     df.head(10).reset_index(drop=True) for df in orig_splits_imdb(*args, **kwargs)
 )
-dataset_en.load_preprocessed = lambda *args, **kwargs: None
-dataset_en.save_preprocessed = lambda *args, **kwargs: None
+dataset_en.load_preprocessed = _noop_load
+dataset_en.save_preprocessed = _noop_save
 
 orig_splits_ro = dataset_ro.load_splits
 dataset_ro.load_splits = lambda *args, **kwargs: tuple(
     df.head(10).reset_index(drop=True) for df in orig_splits_ro(*args, **kwargs)
 )
-dataset_ro.load_preprocessed = lambda *args, **kwargs: None
-dataset_ro.save_preprocessed = lambda *args, **kwargs: None
+dataset_ro.load_preprocessed = _noop_load
+dataset_ro.save_preprocessed = _noop_save
 
 orig_splits_red = dataset_red.load_splits
 dataset_red.load_splits = lambda *args, **kwargs: tuple(
     df.head(10).reset_index(drop=True) for df in orig_splits_red(*args, **kwargs)
 )
-dataset_red.load_preprocessed = lambda *args, **kwargs: None
-dataset_red.save_preprocessed = lambda *args, **kwargs: None
+dataset_red.load_preprocessed = _noop_load
+dataset_red.save_preprocessed = _noop_save
 
 # Monkey-patch explain_utils to bypass class balancing logic during verification
 # to avoid missing class errors in the tiny 10-item dataset subsets.
@@ -95,6 +113,19 @@ MODELS_TO_VERIFY = [
 import explain_config
 import explain_lime
 import explain_shap
+
+
+def _patch_explain_module_saves(mod) -> None:
+    """Patch save_preprocessed in the explain module's own namespace.
+
+    After importlib.reload(), the module re-executes its top-level imports
+    (e.g. ``from dataset_red import save_preprocessed``) and binds the name
+    locally.  The dataset-module-level patches above do NOT affect these local
+    bindings.  We must overwrite them here, after the reload.
+    """
+    if hasattr(mod, "save_preprocessed"):
+        mod.save_preprocessed = _noop_save
+
 
 def verify_model(model_name: str, temp_dir: Path) -> tuple[bool, bool]:
     lime_ok = False
@@ -151,10 +182,13 @@ def verify_model(model_name: str, temp_dir: Path) -> tuple[bool, bool]:
         "batch_size": 8,
     })
     
-    # 2. Reload modules to apply updated configuration and perform correct imports
+    # 2. Reload modules to apply updated configuration and perform correct imports,
+    #    then re-apply the save_preprocessed no-op to the reloaded namespace.
     try:
         importlib.reload(explain_lime)
+        _patch_explain_module_saves(explain_lime)
         importlib.reload(explain_shap)
+        _patch_explain_module_saves(explain_shap)
     except Exception as e:
         print(f"❌ Error reloading explain modules for {model_name}: {e}")
         traceback.print_exc()

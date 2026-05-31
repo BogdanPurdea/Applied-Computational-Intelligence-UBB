@@ -137,7 +137,14 @@ def main() -> None:
     test_texts = load_preprocessed("test")
     if test_texts is None:
         print("[shap] Preprocessing test set…")
-        test_texts = preprocess_batch(df_test[text_col].tolist())
+        result = preprocess_batch(df_test[text_col].tolist())
+        # preprocess_batch_red returns (texts, kept_indices) for deduplication;
+        # other preprocess_batch functions return just a list of strings.
+        if dataset_type == "red" and isinstance(result, tuple):
+            test_texts, kept_indices = result
+            test_labels = [test_labels[i] for i in kept_indices]
+        else:
+            test_texts = result
         save_preprocessed(test_texts, "test")
 
     # ── Select balanced examples ──────────────────────────────────────────
