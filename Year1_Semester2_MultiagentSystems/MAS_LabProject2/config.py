@@ -1,5 +1,6 @@
 from models.agent_config import DetectorConfig, CollectorConfig
 
+
 class Config:
     # Grid dimensions
     GRID_WIDTH = 20

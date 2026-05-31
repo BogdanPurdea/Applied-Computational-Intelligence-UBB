@@ -1,9 +1,12 @@
 from dataclasses import dataclass
 from typing import Dict, Any
 
+
 @dataclass
 class Percept:
-    # What the agent can see at its current location (and maybe adjacent ones)
+    """
+        What the agent can see at its current location
+    """
     current_position_density: int
     is_obstacle: bool
     turbidity: int

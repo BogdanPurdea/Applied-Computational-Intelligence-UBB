@@ -1,5 +1,8 @@
 class Metrics:
     def __init__(self):
+        """
+            Simulation metrics.
+        """
         self.total_harvested_plastic = 0
         self.total_energy_consumed = 0
         self.simulation_time = 0

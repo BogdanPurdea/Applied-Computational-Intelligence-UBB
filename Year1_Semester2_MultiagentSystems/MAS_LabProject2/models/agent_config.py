@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 
+
 @dataclass
 class DetectorConfig:
     battery_capacity: int = 1000
@@ -8,6 +9,7 @@ class DetectorConfig:
     sensor_range: int = 1
     waste_detection_threshold: int = 5
     exploration_strategy: str = "Random"
+
 
 @dataclass
 class CollectorConfig:

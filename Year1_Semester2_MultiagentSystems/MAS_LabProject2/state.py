@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 from typing import List, TYPE_CHECKING
 
+
 if TYPE_CHECKING:
     from environment import Environment
     from blackboard import Blackboard
@@ -14,8 +15,8 @@ class State:
 
     Captures the mutable world at a single simulation step.
     Transitions from one step to the next through agent actions:
-      - grid: the 2D cell array (densities, obstacles, turbidity)
-      - step: the current simulation step counter
+      - grid: the 2D cell array (densities, obstacles, turbidity);
+      - step: the current simulation step counter.
     """
     grid: List[List]  # List[List[Cell]] — Cell defined in environment.py
     step: int = 0
@@ -24,7 +25,7 @@ class State:
 class SimulationState:
     """
     Simulation-level aggregate: ties together the environment, blackboard,
-    all live agents, and provides cross-cutting queries for the GUI.
+    all live agents and provides cross-cutting queries for the GUI.
 
     This is a representation of the simulation parameters and live references;
     it is not modified by agent actions.
