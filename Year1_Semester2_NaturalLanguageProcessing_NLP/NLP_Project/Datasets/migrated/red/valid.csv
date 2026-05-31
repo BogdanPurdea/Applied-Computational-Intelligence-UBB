@@ -1,0 +1,544 @@
+text_id,text,agreed_label_sadness,agreed_label_surprise,agreed_label_fear,agreed_label_anger,agreed_label_neutral,agreed_label_trust,agreed_label_joy,pct_label_sadness,pct_label_surprise,pct_label_fear,pct_label_anger,pct_label_neutral,pct_label_trust,pct_label_joy,num_emotions,is_multilabel,has_short_text
+4,Gen il aud pe tata at random times during the day înjurând ca nu i merg programele și mi se face asa o mila,1,0,0,0,0,0,0,1.0,0.33,0.0,0.33,0.0,0.0,0.0,1,False,False
+14,"Are ceva ce am citit doar despre că avea: când intră în cameră, toată lumea are un nod în gât de emoție și amuțește de cât de smerit e. Contaminant de jovial.",0,1,0,0,0,0,0,0.0,0.66,0.0,0.0,0.33,0.0,0.0,1,False,False
+18,"Barna, înainte de ședința coaliției: Vom intra în logica unei coaliţii stabile şi a unui Guvern care face ce are de făcut",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,0.66,0.33,0.0,1,False,False
+30,Îmi este milă exclusiv de animale şi vegetație. Mega poluarea omenirii se răzbună chiar acasă la cei mai mari din ultimii 100 de ani.,1,0,0,0,0,0,0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,False,False
+37,"Izbucnire nervoasă a lui: "" S-a făcut ' anchetă oltenească '. I-au dat afară pe ca pe nişte borfaşi",0,0,0,1,0,0,0,0.0,0.33,0.0,0.66,0.0,0.0,0.0,1,False,False
+47,"Legende cu uriaşi îndrăgostiţi, balauri necruţători, călugări sau bătrâne bolnave de ciumă alungate din comunitate. Dincolo de istorie, localităţile maramureşene s-au născut din poveşti fantastice, transmise din…",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,0.66,0.0,0.33,1,False,False
+58,"Iubire cu năbădăi între <|PERSON|> și După ce a spus Poliției că a fost lovită, bruneta l-a iertat pe fostul tenismen...",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+63,"VIDEO: Lacrimi de durere! Mărturia sfâşietoare a unei mame infectate cu coronavirus, care nu îşi poate vedea copilul",1,0,0,0,0,0,0,1.0,0.0,0.33,0.0,0.0,0.0,0.0,1,False,False
+64,Clipe de coșmar pentru un din Tiraspol. Automobilul pe care a încercat să-l pornească a luat foc-,0,0,1,0,0,0,0,0.33,0.0,0.66,0.0,0.0,0.0,0.0,1,False,False
+77,Stimați prieteni! 🇷🇴 Avem onoarea de a felicita poporul prietenos de Ziua Națională a României! Vă dorim prosperitate și pace în beneficiul poporului român.,0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.33,0.0,0.66,1,False,False
+84,"Noi am pregatit bradul de Craciun! Te asteptam cu drag,! 🤩 arenamall arenamallbacau christmastree christmasdecor christmasiscoming la Arena Mall",0,0,0,0,1,0,0,0.0,0.33,0.0,0.0,0.66,0.0,0.33,1,False,False
+91,"Câmpia Libertății, 21:25 ✏️ Mi-am pierdut căștile. Observ un tată cu bicicletă și remorcă. În remorcă: luminițe pe acoperiș, copil bucuros, boxă din care mă salută <|PERSON|> .",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,0.66,0.0,0.33,1,False,False
+95,Locuri periculoase în municipiul Satu Mare … și nu face nimeni nimic! (Foto),0,0,0,1,0,0,0,0.0,0.0,0.33,1.0,0.0,0.0,0.0,1,False,False
+101,"L-am dat. Dar știi cum e, am mai stat puțin la taclale, fo 2540 de minuțele și ce sa vezi: stoc epuizat!",0,1,0,0,0,0,0,0.0,0.66,0.0,0.0,0.33,0.0,0.0,1,False,False
+109,sunt impostor si in viata reala nu numai pe among us pt ca ma pricep sa mi fut singura orice bucurie din viata si orice sansa oferita,1,0,0,0,0,0,0,0.66,0.0,0.0,0.33,0.0,0.0,0.0,1,False,False
+112,Un ratat un chirurg mediocru care in strainatate nu a reusit si a venit in tara si nu si a luat rezidentiatul si i l a dat prin decizie de. In tara a facut experimente ilegale si a avut multe nereusite E un frustrat vopsit plin de ticuri Un mare MINCINOS,0,0,0,1,0,0,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1,False,False
+122,"Mamă, să ai o zi frumoasă şi perfectă aşa ca tine. La multi ani de ziua mamei! Indonezia sărbătoreşte ziua mamei pe data de 22 decembrie. Ziua mamei se celebrează în toata Indonezia cu evenimente publice şi tradiţii în familie. #WonderfulIndonesia #IniDiplomasi #IndonesianWay",0,0,0,0,0,0,1,0.0,0.33,0.0,0.0,0.33,0.33,0.66,1,False,False
+124,Cred că o dezamăgire ar trebui să îți deschidă ochii mai bine decât o mie de sfaturi.✅,0,0,0,0,0,1,0,0.33,0.0,0.0,0.0,0.0,0.66,0.0,1,False,False
+134,"„Orice ziar care se respectă va folosi, măcar o dată pe zi, cuvintele: bombă, colosal, șoc, fără precedent, fabulos, grav, halucinant, îngrozitor, extraordinar, pericol, alarmă, lovitură. Faptele și cuvintele obișnuite sînt inutile.”",0,0,0,0,1,0,0,0.0,0.33,0.0,0.0,0.66,0.0,0.0,1,False,False
+143,"COVID19: Topul județelor în care coeficientul infectărilor la 14 zile, raportate la <|URL|> de, este următorul: Ilfov - 8,68, București - 6,92, Cluj - 6,40, Brașov - 4,97, Timiș - 4,96, Hunedoara - 4,49, Constanța - 4,21, Arad - 3,85, Alba - 3,78, Sibiu - 3,40.",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+145,"Eu am fost un om foarte mândru de faptul că m-am vaccinat contra Corona Virus. A fost o euforie de mare rang, printre primii din lume și asta mi-a dat o alură aparte. La toți am spus, dar nimeni nu credea. Ce conta? Am fost foarte tare, da, am fost!",0,0,0,0,0,1,1,0.0,0.0,0.0,0.0,0.0,0.66,1.0,2,True,False
+151,Gest CUTREMURĂTOR al unui bărbat infectat cu COVID-19. S-a aruncat de la etajul al trilea al spitalului unde era internat,1,1,0,0,0,0,0,0.66,1.0,0.33,0.0,0.0,0.0,0.0,2,True,False
+165,"Eu nu pot să înțeleg treaba asta cu cenzura. Uite, eu nu suport tiktok-ul. Motive cunoscute și motive de securitate. Am blocat frumos domeniile tiktok din DNS-ul meu, ca și cele ale FB, instagram ; co. Însă asta pentru că vreau eu. M",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.33,0.0,1,False,False
+166,Poluarea pe râuri a atins un nivel alarmant. Peturi și gunoaie au ajuns și în,0,0,0,1,0,0,0,0.33,0.0,0.0,0.66,0.33,0.0,0.0,1,False,False
+170,"Doliu în Biserică! Un preot a murit pe loc, la doar 33 de ani, într-un accident înfiorător!",1,0,0,0,0,0,0,1.0,0.33,0.0,0.0,0.33,0.0,0.0,1,False,False
+177,"Caz halucinant în Iași! După ce au „omorât” un bărbat, polițiștii au chemat familia acestuia să-i ridice trupul de la IML. Ce s-a descoperit, atunci când au ridicat cearșaful...",0,1,0,0,0,0,0,0.0,0.66,0.0,0.0,0.33,0.0,0.0,1,False,False
+182,"ONU, avertisment apocaliptic! Pandemia de coronavirus “va provoca o foamete de proporții biblice”...",0,0,1,0,0,0,0,0.0,0.0,0.66,0.0,0.33,0.0,0.0,1,False,False
+192,"Da, din nefericire, marea parte a intelectualității franceze în ultimele zeci de ani a fost atrasă de comunism, marxism, maoism, troțkism...",1,0,0,0,0,0,0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,False,False
+196,O vreme cam ciudata pentru Februarie😊 Dar totusi e minunat sa bei cafeaua in gradina acum👏😃 Urmeaza o vreme mai rece pe la mijlocul sapt. viitoare. Asa ca e bine ca te bucuri acum de ☀️ si noi aici la fel😊😃 Multumesc draga <|PERSON|>.🤗O noapte linistita si sapt. excelenta🌸❤️,0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1,False,False
+200,"De cand s-a suparat <|PERSON|> pe OMS, a pornit un razboi mediatic impotriva sefului OMS. Cica e comunist, pro-chinez, rau de tot. De aia avem pandemie. Eu imi amintesc ca ne spunea, asta rau, ca vine! si nu-i pasa nimanui. A venit. e de vina!",0,0,0,1,0,0,0,0.0,0.0,0.0,0.66,0.33,0.0,0.0,1,False,False
+216,Humus de avocado asezonat cu crudităţi,0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+235,Compania americana Take Two pregateste o surpriza pentru pasionatii de jocuri online! Iata ce se aude de viitoarea lansare GTA6!,0,1,0,0,0,0,0,0.0,0.66,0.0,0.0,0.33,0.0,0.33,1,False,False
+249,"Lacrimi și durere în Spania. 838 de morți în doar 24 de ore, cel mai mare număr de când a început pandemia de COVID-19...",1,0,0,0,0,0,0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,False,False
+252,Doriti sa va bucurati de o experienta culinara de neuitat in Radauti? Comandati online preparatele noastre! Va vom surprinde cu gusturi sublime! ☀ #radauti #mancare #colierirestaurant #mancare,0,0,0,0,0,1,0,0.0,0.33,0.0,0.0,0.0,0.66,0.33,1,False,False
+256,AU IZBUCNIT PROTESTE în Germania ÎMPOTRIVA LOCKDOWN. Şi în Canada. VEZI IMAGINILE-Presa Curată,0,1,0,0,1,0,0,0.0,0.66,0.0,0.0,0.66,0.0,0.0,2,True,False
+257,"Hmm, da ce se întâmpla cu creierul? Asta mă înspăimântă mai tare decât celelalte efecte",0,0,1,0,0,0,0,0.0,0.33,1.0,0.0,0.0,0.0,0.0,1,False,False
+258,"DCNews:, ENERVAT de <|PERSON|> : Mă insultaţi. Ce să luăm: aspirină sau cimitirol?.",0,0,0,1,0,0,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1,False,False
+266,"#Romania La mulți ani! Să fii curajoasă,demnă și puternică! Să păstrezi credința,datinile, istoria! Să fii prezență activă pe toate scenele lumii! Să ai conducători înțelepți ; devotați! Să ai prieteni loiali și de nădejde! Să iubești românii oriunde s-ar afla!❤️ #DiscoverRomania",0,0,0,0,0,1,1,0.0,0.0,0.0,0.0,0.33,0.66,0.66,2,True,False
+269,Criza coronavirusului amână planurile Bulgariei de a adera la zona euro <|URL|>…,0,0,0,0,1,0,0,0.0,0.33,0.0,0.0,1.0,0.0,0.0,1,False,False
+271,Se mai intampla ca oamenii care te dezamagesc sa fie chiar oamenii pt care ti-ai da si sufletul...,1,0,0,0,0,0,0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,False,False
+274,Cei de la țară sunt de invidiat în perioada asta. Las aici o zicere simpatică găsită pe fb. 😁 😁,0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.33,0.0,0.66,1,False,False
+276,"Dacă lumea nu se revoltă, înseamnă că e bine, de ce să dramatizez eu!? * Ultimul(în viață)... dintre Brătienilor.",0,0,0,0,1,1,0,0.0,0.0,0.0,0.0,0.66,0.66,0.0,2,True,False
+283,"Nenorocita aia are 30 de ani și a emigrat în Anglia la 4 ani. Ce relevanță are etnia ei albaneză in context? Procuratura engleză și-a dat seama că nu poate obține condamnarea, având în vedere dosarul medical.",0,0,0,1,0,0,0,0.0,0.0,0.0,0.66,0.33,0.0,0.0,1,False,False
+285,Meteorologii anunță o secetă PUTERNICĂ și EXTREMĂ în mai multe regiuni din România: culturile vor fi distruse <|URL|>…,0,1,1,0,0,0,0,0.0,0.66,0.66,0.0,0.0,0.0,0.0,2,True,False
+291,"Marturia ravasitoare a unui roman internat cu COVID-19: "" Stiti ce-i mai groaznic? Sa vezi cum e luat pe sus colegul de camera in plina noapte, dus la Reanimare si nu mai apare",1,0,1,0,0,0,0,1.0,0.33,1.0,0.0,0.0,0.0,0.0,2,True,False
+293,"FOTO, VIDEO| Dezastru la Bucerdea Grânoasă și Crăciunel: Ploaia puternică cu grindină a procovat inundații și a distrus culturi agricole <|URL|>",0,0,1,0,0,0,0,0.0,0.33,0.66,0.0,0.33,0.0,0.0,1,False,False
+297,"oh nuu rin:((pare rau:((ceva de genu cred ca s-ar intampla si la mine, ar veni mama cu argumentul imbatabil ""ai avut iubiti"" si i-as zice ""da, am avut;3 si atatea crushuri pe fete oio ;3"" si mama ""<|URL|> mai glumi"":((",1,0,0,0,0,0,0,1.0,0.0,0.0,0.33,0.0,0.0,0.0,1,False,False
+301,"Ieri dimi, o matahală de cocoană a făcut un imens scandal și a amenințat că reclamă Mega Img si pe salariați pt ca o biată casieră purta o mască ce nu-i acoperea,integral,<|URL|> durat vreo 10 <|URL|> sing altă pers a luat-o in răspăr. In rest, nimeni!La coada asteptau vreo 15 pers",0,0,0,1,0,0,0,0.33,0.33,0.0,0.66,0.0,0.0,0.0,1,False,False
+311,"Corect! Respect doamna <|PERSON|> ! Succes in alegeri! Administratiile locale au nevoie de fie conduse de oameni inteligenti, onesti si experimentati! Spre binele Romaniei si al tuturor romanilor!",0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.33,0.66,0.0,1,False,False
+320,Ce durere și apăsare sufletească! nu a apucat să îi îndeplinească una dintre ultimele dorințe ale tatălui ei...,1,0,0,0,0,0,0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,False,False
+324,"Sunt mândră să fiu în MONSTER pentru că încurajăm exprimarea, iubirea de sine, prietenia și încrederea în opiniile noastre. Sunt 100% sigură că măcar o dată ați văzut o postare făcută de o membră a grupului și i-ați dat dreptate",0,0,0,0,0,1,1,0.0,0.0,0.0,0.0,0.33,0.66,0.66,2,True,False
+326,"PropertyLab vă propune în exclusivitate un spațiu comercial central, situat pe strada Augustin Doinaș.- Spațiul se află la parterul unei clădiri rezidențiale cu vitrină la stradă, fiind pretabil pentru: restaurant, magazin, birou, after...",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+328,#romaniiautalent Cel Mai Extraordinar Numar Din Seara Asta!,0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.33,0.0,0.66,1,False,False
+340,"Urmează foamete, vaccinare obligatorie, moarte... Până când? Poate până la ultimul român. Criminalii care ne ucid din martie NU vor scăpa vii. Sigur!",1,0,1,1,0,0,0,0.66,0.0,0.66,0.66,0.0,0.0,0.0,3,True,False
+341,Grăsimea de pe burtă te scoate din minți? Iata ceaiul care te va scăpa de ea! -,0,0,0,0,0,1,0,0.0,0.33,0.0,0.0,0.33,0.66,0.0,1,False,False
+344,"Am tras la niste plăci de exterior, nu știu din ce material sunt. Nu merge sa tragi ca la faianță, erau denivelări și a trebuit sa fac mici rampe, că s-a lăsat solul. Chin. Acum trebuie să curăț.",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+352,Semnal de alarmă tras de distribuitorii de bunuri în criza coronavirusului: ”Ar putea apărea disfuncții majore în asigurarea cu alimente a populației”...,0,0,1,0,0,0,0,0.33,0.33,0.66,0.0,0.0,0.0,0.0,1,False,False
+358,corporatia SUA nu mai exista. <|PERSON|> e presedinte la nimic??? trezirea fratilor ca se reseteaza marele reset. #curaj #libertate #faramasca iesiti din case! #politia #armata sa fie de partea poporului si sa aresteze tradatori de neam #romania,0,0,0,1,0,0,0,0.33,0.0,0.0,0.66,0.0,0.33,0.0,1,False,False
+372,"Pleci usor pe fentele aruncate de cei care ti-au câștigat încrederea, fără să citești ce au hotarat CEDO, Comisia de la Veneția, Greco; ai fi uimit să vezi cât e de departe realitatea. De ex, <|PERSON|> n-a castigat la CEDO",0,1,0,0,0,0,0,0.33,0.66,0.0,0.0,0.0,0.0,0.0,1,False,False
+375,"? Gata, s a epuizat subiectu' 😁",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,0.66,0.0,0.33,1,False,False
+376,tocmai mi am amintit că atunci când a ieșit shadow eram într-un autocar și eram atât de extaziată că mi am lovit prietena in față,0,0,0,0,0,0,1,0.0,0.33,0.0,0.0,0.0,0.0,1.0,1,False,False
+380,"Da,bietul de el,mi se face atâta milă,cât de neajutorat este Yoshi Și într-un final,a răspuns la întrebarea mea",1,0,0,0,0,0,0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,False,False
+386,"JavaScript nu e o scuza, e o insulta în sine. C# the difference? Nu, pentru ca python(g)!",0,0,0,0,1,0,0,0.0,0.0,0.0,0.33,0.66,0.0,0.0,1,False,False
+395,"Se pare ca face tare bine ceea ce face <|PERSON|>!!! Uite Ce satisfacuta e, uite cum zambeste!!!",0,1,0,0,0,0,1,0.0,0.66,0.0,0.0,0.33,0.0,0.66,2,True,False
+399,"Penibila noastra,trebuie sa se puna in genunchi in fata unui mare Campion. Ea este doar o facatura jalnica,de presa. <|PERSON|> , despre prima întâlnire cu <|PERSON|> : „Am înlemnit!”. Cum a reacționat sportivul când românca i-a cerut un autograf",0,0,0,1,0,0,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1,False,False
+406,"Obsesia de a nu atinge nimic (clanțele, de pildă, obiecte de angoasă) e pe cale de a deveni ireversibilă. Vom avea peste tot comenzi vocale, sau vom porni aparatele pocnind din degete, cum face <|PERSON|> în Minority Report. .",0,0,1,0,0,0,0,0.33,0.0,0.66,0.0,0.33,0.0,0.33,1,False,False
+413,"Scanau sistemul de alarmă și furau din diferite mașini, parcate lângă piețe și centre comerciale. Trei, unul cercetat în dosarul „ Borman ”, reținuți",0,0,0,0,1,0,0,0.0,0.0,0.33,0.0,0.66,0.0,0.0,1,False,False
+421,Cea mai nasoala durere!,1,0,0,0,0,0,0,0.66,0.33,0.0,0.0,0.0,0.0,0.0,1,False,False
+423,"corect. Nu trebuie să-ți fie rușine, eu sunt cu tine.",0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,1,False,False
+427,"A rămâne critic față de ceea ce admiri e în primul rând onest, iar în al doilea rând igienic. - <|PERSON|> ",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,0.66,0.33,0.0,1,False,False
+429,"<|PERSON|> , despre revelionul de la TVR: ”O rușine și o insultă adresată publicului din România” <|URL|>… via",0,0,0,1,0,0,0,0.33,0.0,0.0,0.66,0.0,0.0,0.0,1,False,False
+439,"M-am trezit azi cu o uluire: frate, au trecut 8 luni de pandemie. 8! Așa că ce puteam să fac altceva dacă nu să scriu? A ieșit ceva un pic mai personal, dar a ieșit, zic. Aici:",0,1,0,0,0,0,0,0.0,0.66,0.0,0.0,0.33,0.0,0.0,1,False,False
+442,"Am scris initial. E un semnal clar. Deja este prezentat de multi drept un anti-Ataturk, hotarat sa anuleze mare parte din ""mostenirea"" lui <|PERSON|> . Inclusiv in sistemul scolar. Deci da, de acord. Se pare ca spre ast",0,0,0,0,1,0,0,0.33,0.0,0.0,0.0,0.66,0.0,0.0,1,False,False
+457,"idioților, hoților, ticăloșilor și chiar criminalilor zilei! Firește, fiecare are lista lui, dar ei au același MO (întoarcerea unei fraze pe toate fețele hocus-pocus pînă cînd spectatorul cade lat epuizat sau hipnotizat și poți să-i furi ceasul) pe baza aceleiași convigeri:",0,0,0,1,0,0,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1,False,False
+458,"<|PERSON|>,<|PERSON|> si <|PERSON|> pt o perioada,ar trebui sa se abtina de la aparitii <|URL|> contestati,oameni si-au pierdut increderea;Toti avem impresia in sinea noastra senzația ca suntem mintiti,manipulati,luati de prosti...masurile guvernului au dus la exasperare si revolta",1,0,0,1,0,0,0,0.66,0.33,0.0,1.0,0.0,0.0,0.0,2,True,False
+459,Nassim Taleb. Incompetență și erori de raționare în legătură cu purtarea măștilor faciale <|URL|>…,0,0,0,0,1,0,0,0.33,0.0,0.0,0.0,0.66,0.0,0.0,1,False,False
+470,Fericire mică! 💖,0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,0.66,0.0,0.33,1,False,True
+480,"coronavirus. Spania intră în carantină, după ce numărul cazurilor a crescut alarmant via",0,0,1,0,1,0,0,0.0,0.0,0.66,0.0,0.66,0.0,0.0,2,True,False
+487,Bun mă bucur,0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.33,0.0,0.66,1,False,True
+494,"<|PERSON|> : Revenirea economică în V, o iluzie! România se află pe marginea prăpastiei",0,0,1,0,0,0,0,0.0,0.0,1.0,0.0,0.0,0.33,0.0,1,False,False
+495,"Surpriză pentru consumatori! Bere și rom la robinet, în loc de apă potabilă. REACŢIA locatarilor-",0,1,0,0,0,0,0,0.0,0.66,0.0,0.0,0.33,0.0,0.0,1,False,False
+502,"Sint niste fosile in tara asta care dupa ce ca au nenorocit tara asta, nici nu vor sa se duca pe lumea ailalta... <|PERSON|>, <|PERSON|>, <|PERSON|>...🤬",0,0,0,1,0,0,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1,False,False
+504,ziua iubitei într-un restaurant select din Mamaia...,0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+515,Ce dezamăgire! 👎👎👎,1,0,0,0,0,0,0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,False,True
+516,"Chiar de nu ar fi profitul de sute de milioane de euro sau zeci de miliarde de euro, cum cred eu, tot ar merita efortul de a patenta invenția pentru că ar putea salva mii de vieți această siguranță în",0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.33,0.66,0.0,1,False,False
+521,"Seara frumoasă, Twitter. 🤔 🤣 🤣 🤣 🤣",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,0.66,0.0,0.33,1,False,False
+529,"Un incompetent, agramat, de profesie șmecher...",0,0,0,1,0,0,0,0.0,0.0,0.0,0.66,0.33,0.0,0.0,1,False,False
+546,"Ironie gratuită! Mie mi se pare uimitor faptul că românii renunță foarte ușor la drepturi și libertăți, acceptând stări impuse dictatorial. Este rațional să accepți masca și măsurile de precauție solicitate de experți, dar nu i",0,1,0,0,0,0,0,0.33,1.0,0.0,0.33,0.0,0.0,0.0,1,False,False
+549,"Seceta, băgată în forță majoră;;;<|URL|>",0,0,0,0,1,0,0,0.0,0.0,0.0,0.33,0.66,0.0,0.0,1,False,False
+550,"Felia aia de trepanat îi trădează handicapul psihic! Ai zice că nu el este în avantaj cu care să-i calce pragul, ci invers! Hai sictir bă și vaccineaz-o pe mă-ta cu șmenuri din astea, pentru care te umpli tu de bani",0,0,0,1,0,0,0,0.33,0.0,0.0,0.66,0.33,0.0,0.0,1,False,False
+563,"Am un vecin care locuiește singur. 94 de ani. Cardiopathic. Vara iese în pantaloni trei sferturi și teniși. L-am dacă el se teme de virusul coroana, mi-a răspuns cu un zâmbet viclean și jenat că se uită la tv puțin și încă nu înțelege ce este. El e leacul pentru CV",0,0,1,0,0,0,0,0.33,0.0,0.66,0.33,0.0,0.33,0.0,1,False,False
+569,Dap. Pana la faza cu ANL imi era simpatic <|PERSON|> . Chiar daca a fost avocatul lui <|PERSON|>. Mi-a trecut.,1,0,0,0,0,0,0,0.66,0.0,0.0,0.33,0.33,0.0,0.0,1,False,False
+572,De ce sa-i lase sa voteze 3 zile? voteze cum votam si noi. Si de ce sa aiba mai multi? Adică voteaza acolo si tragem noi aici. Sictir.,0,0,0,1,0,0,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1,False,False
+581,"Când cineva nu respectă distanța în magazin, tușește sec în timp ce-ți pui îngrijorat palma pe frunte.",0,0,0,0,1,0,0,0.0,0.0,0.33,0.0,0.66,0.0,0.0,1,False,False
+584,"Yohooo, asta imi da o incredere din ce in ce mai mare in mine, thx pt ca ati adaugat si nr de viewers ce au fost in timp de stream pt VOD! 👍",0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0,0.66,0.33,1,False,False
+588,Muzica este însă cea care înalță dincolo de erorile umane.,0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.33,0.33,0.66,1,False,False
+593,"Tocmai ce am terminat această carte și nu pot scrie in engleză pentru că tremur și mă doare sufletul. Faptul că am asociat două dintre personaje cu două din viața mea, m-a făcut să mă atașez și mai emoțional de acestă carte.",1,0,0,0,0,0,0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,False,False
+595,"nu am citit f mult pe subiect dar ciorile lor sunt f irascibile si s-a creat un haos de nedescris: 4-5 sectii de politie arse, magazine distruse. A trimis Trump national Guard si pe buna dreptate trebuie impuscati aia",0,0,0,1,0,0,0,0.0,0.0,0.0,1.0,0.33,0.0,0.0,1,False,False
+597,"Am toată admirația din lume pentru oamenii care într-adevăr își iubesc meseria și o practică cu drag și pasiune. Pentru aceia care nu o consideră o ' corvoadă ' ce îți pune pâinea cea de toate zilele pe masă, ci mai degrabă o vocație. Bravo vouă, sunteți din ce în ce mai puțini!",0,0,0,0,0,1,1,0.0,0.0,0.0,0.0,0.0,1.0,1.0,2,True,False
+608,Uimitor de talentată și frumoasă #romaniiautalent,0,0,0,0,0,0,1,0.0,0.33,0.0,0.0,0.33,0.33,0.66,1,False,False
+612,"<|PERSON|>, indignat de decizia CNCD: Se pare că 75% din PSD sunt de acord cu utilizarea formulei “ ciuma roşie ”",0,0,0,1,0,0,0,0.0,0.33,0.0,0.66,0.33,0.33,0.0,1,False,False
+620,"Doliu la Spitalul Municipal Dej. Fostul manager, <|PERSON|> , a încetat din viață <|URL|>",1,0,0,0,0,0,0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,False,False
+628,⚠ ️După ce în toată campania electorală pentru locale toată gașca liberală incepând cu s-au perindat prin P-Neamț fiind deosebit de mulțumiți 💄 fiind frustrat de pierderea șefiei CJ acuză PSD pentru această tragedie. Jalnic dar vor începe și alte acuze pnl-iste‼️,0,1,0,1,0,0,0,0.0,0.66,0.0,0.66,0.0,0.0,0.0,2,True,False
+630,Situație f neplăcută pt ea,1,0,0,0,0,0,0,0.66,0.0,0.33,0.0,0.0,0.0,0.0,1,False,False
+632,COMUNICAT DE PRESĂ: Modernizarea DJ Pădureni – Godovana lasă în urmă un nou dezastru marca PSD Bacău,0,0,0,0,1,0,0,0.33,0.0,0.0,0.0,0.66,0.0,0.0,1,False,False
+634,"Singura echipă care ar fi vrut sa joace pe acela ar fii cea care e în "" litigiu "" cu clona aia penală din liga a 3a, trist, foarte trist ce au ajuns instituțiile publice in țara asta",1,0,0,1,0,0,0,1.0,0.0,0.0,0.66,0.0,0.0,0.0,2,True,False
+637,EXCLUSIV – HALUCINANT LA SIGHET: Adevărul este dureros – Puși să stea la pozat pentru a combate realitatea dură din Spital (GALERIE FOTO) via Mare 24,1,1,0,0,0,0,0,0.66,0.66,0.0,0.0,0.33,0.0,0.0,2,True,False
+644,"Nu e o opinie:) este logică:) cauți ceva ce nu ai, nu ce ai:) asta înseamnă ca acum, când nu o ai, ești nefericit:)",0,0,0,0,0,0,1,0.33,0.0,0.0,0.0,0.33,0.33,0.66,1,False,False
+657,"Astăzi ne alegem,, conducerile județelor. Să nu lăsăm pe alții să decidă în locul nostru! Dragi români, la vot!",0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,1,False,False
+659,<|PERSON|> de la <|PERSON|> regretă totul! Vedeta a dat cărțile pe față după scandalul cu drogurile. Ce a declarat în presă?...,1,0,0,0,0,0,0,0.66,0.33,0.0,0.0,0.0,0.0,0.0,1,False,False
+664,"Las și eu ăsta aici, ca de când mă chinui sa imi aduc aminte numele filmului asta de groază. L-am căutat sa îl revăd și nu mai știam cum îl cheamă. Unul din puținele cu pe șira spinării.",0,0,0,0,1,0,0,0.0,0.33,0.0,0.0,0.66,0.0,0.0,1,False,False
+677,"Analiză. Economia nu își poate reveni complet până când oamenii nu se simt în siguranță. Urmează o perioadă neagră pentru sistemul economic al SUA, dacă autoritățile nu reușesc măcar să încetinească criza sanitară.",0,0,1,0,0,0,0,0.0,0.33,0.66,0.0,0.0,0.0,0.0,1,False,False
+680,"Comemorarea Holocaustului Romilor. <|PERSON|>: Romii au fost unui regim criminal., cu durere, că printre s-au aflat şi români...",1,0,0,0,0,0,0,1.0,0.0,0.0,0.0,0.33,0.33,0.0,1,False,False
+693,"interesant, dar generalizarea asta pe care a facut-o vorbind de parca europa e o singura tara, peste tot acelasi lucru, m-a iritat😂",0,0,0,1,0,0,0,0.33,0.0,0.0,1.0,0.0,0.0,0.0,1,False,False
+694,Initial credeam ca e ignoranta. Incep sa cred ca nu e. 😀. Inteleg neincrederea generalizata a unora. Ok. Dar datele sunt publice. Si populatie totala si rezidenta si cu drept de vot.,0,0,0,0,1,0,0,0.33,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+695,"Doliu în Biserica Ortodoxă Română. A murit preotul <|PERSON|> , participant la demonstrațiile de la Colectiv <|URL|>…",1,0,0,0,0,0,0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,False,False
+709,„ Fiți sănătoși și veseli! ” – articol de <|PERSON|> ,0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.0,0.33,1.0,1,False,False
+714,Scandal monstruos într-o comună din Dâmbovița. Medicul de familie a fost depistat pozitiv cu coronavirus și …...,0,0,0,1,0,0,0,0.0,0.33,0.0,0.66,0.0,0.0,0.0,1,False,False
+715,Ministrul Agriculturii: Aproape 1 milion de hectare sunt afectate de secetă: <|URL|> <|URL|>,0,0,0,0,1,0,0,0.33,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+729,"Situaţie delicată şi neplăcută, dar asumată...",1,0,0,0,0,0,0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,False,False
+732,Nici măcar nu știu sa fac poze la ecran cu asta 🙈 🙈 🙈 🙈 îl omor pe <|PERSON|> și ai trimit bonul sa deconteze... cine are nervi de atâtea noutăți? 🙄 🙄,0,1,0,0,0,0,0,0.0,0.66,0.0,0.33,0.33,0.0,0.33,1,False,False
+740,(video) „MerceDAS” – tehnologia prin care germanii i-au luat pe toţi din F1 prin surprindere,0,0,0,0,1,0,0,0.0,0.33,0.0,0.0,0.66,0.0,0.0,1,False,False
+747,ptr mine poti posta zilnic - ma hranesc cu veselie 👍 👍,0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1,False,False
+755,CFR Călători bagă în corzi CFR Electrificare. Pericol de faliment (II) <|URL|>…,0,0,1,0,0,0,0,0.0,0.0,1.0,0.0,0.33,0.0,0.0,1,False,False
+759,Zâmbește și râde cât de mult poți. Viața este frumoasă.. După clipe rele vin clipe bune.. După nor iese soarele.. După lacrimă vine zâmbet... Zâmbește ❤ ️ 😘,0,0,0,0,0,1,1,0.0,0.0,0.0,0.0,0.33,0.66,0.66,2,True,False
+763,"Dupa ce s-a epuizat timpul, spala-ti fata mai intai cu apa calda si apoi cu apa rece pentru a tonifia tenul. Aplica crema abia dupa ceva timp pentru ca tenul sa aiba timp sa respire. ⚠️]Aceste tratamente sunt pentru formele ușoare de acnee! Dacă aveți evoluată consultați un medic",0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.33,0.66,0.0,1,False,False
+765,"Eu sper ca demersurile lui <|PERSON|> in justitie sa dea roade si sa redevina presedinte pentru inca 4 <|URL|> mai suport pe globalisti, progresiști, feministi, socialiști, BLM-isti, Antifa-isti, hashtagisti, sorosisti...!Nu-i inghit nici cu o l",0,0,0,1,0,0,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1,False,False
+771,Amintiri din valiza LAMONZA. Episodul 163. Opera din Oslo-,0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+782,"Ar trebui, dar pentru tine este mult mai periculos. Te rog protejează-te.",0,0,1,0,0,1,0,0.0,0.0,1.0,0.0,0.0,0.66,0.0,2,True,False
+785,+1 Bucuros că am încheiat 2020 exact în aceeași formulă în care l-am început. Restul e mai puțin important. * Sănătos și voios / Cu bun gust și miros. * Ceea ce vă doresc și vouă! 👍 😁,0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.33,0.0,1.0,1,False,False
+789,HORECA este paralizată deoarece criminalii vor să pună monopolul pe mâncare. Deocamdată nu dețin puterea. Intrăm în lungă perioadă de foamete!,1,0,1,1,0,0,0,0.66,0.0,0.66,0.66,0.0,0.0,0.0,3,True,False
+793,"Mai, la concret, ce? S'au lovit de nenorocita aia de Constitutie care ii tot incurca si CCR'ul ala care inca da decizii in baza ei. Starea de urgenta au incercat sa o mascheze in Stare de alerta. Nu le'a iesit. Aia e.",0,0,0,1,1,0,0,0.0,0.0,0.0,0.66,0.66,0.0,0.0,2,True,False
+815,"🙏 "" Vei avea bucurie şi veselie şi mulţi se vor bucura de naşterea lui, căci va fi mare înaintea; şi nu va bea nici vin şi nici altă băutură tare şi va fi umplut de chiar din sânul mamei sale "" <|PERSON|> 1/14-15",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,0.66,0.0,0.33,1,False,False
+816,"<|PERSON|> se declara ""consternat"" de atacul terorist de la Nisa: Romania este alaturi de Franta in lupta impotriva extremismului",0,1,0,0,0,0,0,0.33,0.66,0.33,0.0,0.33,0.0,0.0,1,False,False
+820,Fotbalistul <|PERSON|> este în doliu: „M-ai părăsit azi și mi-ai rupt sufletul”...,1,0,0,0,0,0,0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,False,False
+829,"ăia care zic că toate-s la fel au văzut rândunică doar în taxiuri de prin Cehia. Nu fi frustrat că ți-a dat jet <|PERSON|> din Zimnicea sau că maximul carierei tale a fost de manipulant marfă, te-n plm de obosit...",0,0,0,1,0,0,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1,False,False
+832,"„ Națiunea suferă, iar cineva câștigă ”. Un al a comparat prețul legumelor cumpărate angro cu cele din magazine și",0,0,0,0,1,0,0,0.0,0.33,0.0,0.33,0.66,0.0,0.0,1,False,False
+837,"Franţa va avea în 2020 cea mai gravă recesiune de după încheierea celui de-al II-lea Război Mondial, susţine ministrul Economiei",0,0,1,0,1,0,0,0.0,0.0,0.66,0.0,0.66,0.33,0.0,2,True,False
+847,Avertisment alarmant: Coronavirusul este mai periculos decât terorismul,0,0,1,0,0,0,0,0.0,0.33,1.0,0.0,0.0,0.0,0.0,1,False,False
+848,"In primul rand va felicit pe d-voastra pentru toata cariera ce ati avut-o si o s-o mai aveti si bineanteles pe noul <|PERSON|> , in <|PERSON|> Domnul <|PERSON|> are un om de incredere,nadejde,izbanda si un adevarat tovaras in tot, sa fiti om",0,0,0,0,0,1,0,0.0,0.0,0.0,0.33,0.0,0.66,0.33,1,False,False
+853,"Un mesaj adresat guvernanților, și de știință,,, muncitorilor, săracilor, și tuturor celor care suferă, și",0,0,0,0,1,0,0,0.33,0.0,0.0,0.0,0.66,0.0,0.0,1,False,False
+855,"Domnule <|PERSON|> vă invit și pe dumneavoastră să investiți în ideea mea privind siguranța șoferilor și a pasagerilor. Sper să fiți receptiv la mesajul meu, aș vrea foarte mult să investiți în ideea mea.",0,0,0,0,1,1,0,0.0,0.0,0.0,0.0,0.66,0.66,0.0,2,True,False
+857,Livrăm bucurie și gânduri bune ❣ ❣ ❣ de mulțumiri 😇 😍 Echipa Ralitza 🤗 🤗 🤗,0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.33,0.33,0.66,1,False,False
+867,toată situația asta mă face să fiu irascibilă vreau doar sa hibernez până trece tot,0,0,0,1,0,0,0,0.33,0.0,0.0,0.66,0.0,0.0,0.0,1,False,False
+883,"Dar n-avem timp pentru puțină tandrețe, înțelegere și iubire, Când reușim să facem și asta este târziu,........ că murim.",1,0,0,0,0,0,0,0.66,0.0,0.0,0.0,0.0,0.33,0.0,1,False,False
+884,"nu am baut cafea mai multi ani la rand. acum beau, ca se zice ca face bine la ficat. dezvaluiri restituiri",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.33,0.0,1,False,False
+890,"Tabloul sumbru al agriculturii. Ministru: Avem secetă extremă în Dobrogea și Moldova. Trei milioane de hectare de culturi, compromise <|URL|>…",1,0,0,0,1,0,0,0.66,0.0,0.33,0.0,0.66,0.0,0.0,2,True,False
+892,"Când <|PERSON|> ""valora"" cât Swaroski, au apărut astea. Preț, aproximativ 25 lei. Primele loturi s-au epuizat mai repede decât pâinea caldă. N-am luat, mi s-a părut jaf. Azi am văzut că sunt la reducere: 6 lei și ceva, de la 9 lei și ceva. Well done,!",0,1,0,0,0,0,0,0.0,0.66,0.0,0.33,0.0,0.33,0.0,1,False,False
+899,"de nestăpânit. Milionarul a furat date secrete despre familia și a lui din arhiva MAI. În plus, a participat la o intervenție deghizat în polițist...",0,0,0,0,1,0,0,0.0,0.33,0.0,0.0,0.66,0.0,0.0,1,False,False
+904,"Este singura solutie, dar sansele sunt mici, fiindca romanii nu inteleg ca alta sansa nu este. Nu, imi pare rau negociatori mai buni nu vor fi, e o iluzie....degeaba. Au avut multi ani posibilitatea sa demonstreze macar unii ca ar fi buni negociatori-si ce au facut? nimic <|URL|>…",1,0,0,0,0,0,0,1.0,0.0,0.33,0.0,0.0,0.0,0.0,1,False,False
+909,"<|PERSON|>: Nașul lui <|PERSON|>, șef la „ Metalferos ”, a intimidat procurorul care instrumenta dosarul",0,0,0,0,1,0,0,0.0,0.0,0.33,0.0,0.66,0.0,0.0,1,False,False
+910,"Pentru puțin!:) Am descoperit asta într-o situație asemănătoare. A fost neplăcut prima oară, acum nu-mi mai pasă.",0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0,0.66,0.33,1,False,False
+912,Bună dimineața iubita și să ai o duminică cât mai minunată alături de cei dragi ♥️😍 #Happy31stBirthdayCanYaman,0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.0,0.33,1.0,1,False,False
+924,O nouă zi de nervi spre Rânca.: „ Ceva de groază. Nu mai vin aici! ”,0,0,0,1,0,0,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1,False,False
+928,<|PERSON|> : Miza traseismului politic în Parlamentul este de a opri întoarcerea Aeroportului și recuperarea miliardului furat,0,0,0,0,1,0,0,0.0,0.0,0.33,0.0,0.66,0.0,0.0,1,False,False
+935,Greşeala pe care o fac toate gospodinele atunci când pregătesc plăcintă cu dovleac! care e secretul,0,0,0,0,1,0,0,0.0,0.33,0.0,0.0,1.0,0.0,0.0,1,False,False
+950,Postare nouă pe blog despre vânzarea Telekom către Orange și DIGI,0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+962,Câmpulungul tinde timid către bani europeni,0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+965,"Citesc, ma informez, doar cred ca nu din aceleași surse, din păcate. Asta e, fiecare cu ale lui și adevarul suferă, fără jena.",1,0,0,0,0,0,0,0.66,0.0,0.0,0.0,0.33,0.0,0.0,1,False,False
+969,Târgu Jiu: Vântul a pus la pământ mai mulți copaci din Parcul Central: Pericol la tot pasul…,0,0,1,0,0,0,0,0.33,0.0,1.0,0.0,0.0,0.0,0.0,1,False,False
+983,"Golul 2 ne-a demoralizat, altfel egalam?",0,0,0,0,1,0,0,0.33,0.0,0.0,0.0,0.66,0.0,0.0,1,False,False
+988,"România, bombă cu ceas! Trei #cutremure au zguduit pământul în duminica neagră #Stiri #Romania",0,0,1,0,0,0,0,0.0,0.33,0.66,0.0,0.0,0.0,0.0,1,False,False
+991,<|PERSON|> sa-i odihnească in pace!Cine era unul dintre cei doi bărbaţi morţi în Marea Neagră. Avea trei brevete internaţionale de scafandru,1,0,0,0,0,0,0,0.66,0.0,0.0,0.0,0.33,0.0,0.0,1,False,False
+995,Multa muie bai . Luati-va maimuțoii si faceti un gest patriotic: dispăreți!,0,0,0,1,0,0,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1,False,False
+998,"Mult succes tinerilor absolvenți ai promoției 2020 Felicitări ES Bucuroasă, de fiecare dată, să vă revăd la Bruxelles și la București. Încântată să continuăm foarte buna noastră colaborare în 2021! 👏 👏 👏",0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1,False,False
+1001,Dezvăluiri: <|PERSON|> tremura ca varga. <|PERSON|> îl șantaja cu dosare penale,0,0,1,0,0,0,0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1,False,False
+1010,DOLIU la Teatrul ”Bacovia”! - la Teatrul ”Bacovia”!DOLIU la Teatrul ”Bacovia”!,1,0,0,0,0,0,0,0.66,0.0,0.0,0.0,0.33,0.0,0.0,1,False,False
+1014,ZipUp – ajutorul meu de nădejde în călătorii,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.33,1.0,0.0,1,False,False
+1015,"apel către români: ” Să vă amintiți, dragi români, că azi sunteți mândri de voi, susținând cu patimă nişte tâlhari politici! ”",0,0,0,1,0,0,0,0.0,0.0,0.0,0.66,0.0,0.33,0.33,1,False,False
+1026,Video: A „ încins “ hora în curtea spitalului de fericire că s-a vindecat de coronavirus: Un …,0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1,False,False
+1037,"Pai, eu stiu chestiile aste de vreo 25 de ani si nu-s speriat. Atentie, pentru a induce o schimbare, nu opozitia la actiunile descreieratilor este necesara, ci observarea si constientizarea lor. Se numeste "" dezvrajire "" si, da, p",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,0.66,0.33,0.0,1,False,False
+1043,Ați văzut tactica proștilor johannis pnl.?? <|PERSON|> aruncă vina pe medici cu raportările!!! L-au împins în față pe prostul de arabete arafat iar pe orban și johannis nu-i mai înjură nimeni!! Toți îl înjură pe arafat. Laș<|URL|> să fie basma curată!!,0,0,0,1,0,0,0,0.33,0.33,0.0,0.66,0.0,0.0,0.0,1,False,False
+1048,#DIGI #Romania: Vestea IMPRESIONANTA cu care a Surprins Lumea - #peblog #2020 #news #stiri,0,1,0,0,0,0,0,0.0,0.66,0.0,0.0,0.33,0.0,0.0,1,False,False
+1053,"<|PERSON|> condamnată pentru omor în Italia, adusă în țară. Crimă oribilă!",0,0,0,0,1,0,0,0.33,0.0,0.33,0.0,0.66,0.0,0.0,1,False,False
+1055,Mi a sfasiat inima Nu credeam ca o sa plang uitandu ma la niste poze,1,0,0,0,0,0,0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,False,False
+1057,"Dacă vrei încredere, oferă sinceritate! 👌😎 la Gepiu",0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.33,0.66,0.0,1,False,False
+1067,"Dar uite, eu cred ca numai atunci când te delectezi desenând, iese ceva ca lumea. Si daca e delectant nu inseamnă ca nu e muncă. Tot muncă e, dar una care-ți place:)",0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.0,0.33,1.0,1,False,False
+1071,"FOTO // Scandal pe ilegal de pe strada Nicolae Costin 44/1. Un medic, agresat de companiei de construcții",0,0,0,1,0,0,0,0.0,0.33,0.0,0.66,0.0,0.33,0.0,1,False,False
+1074,Israelul este îngrijorat de un risc securitar legat de vânzarea de imagini luate prin satelit de SUA,0,0,1,0,0,0,0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1,False,False
+1088,"Panică în Mongolia, alte două cazuri de ciumă bubonică: „ Au mâncat carne de marmotă ” RoMondoNews24",0,1,1,0,0,0,0,0.0,0.66,0.66,0.0,0.33,0.0,0.0,2,True,False
+1094,"Eu-s mai optimistă, așa... Aleg să văd/gândesc partea frumoasă atunci când nu am motive sau dovezi să cred. Dacă e să mă înșel, atunci îmi asum riscul.:)",0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,1,False,False
+1099,Seceta a afectat 60% din culturile agricole din Neamț <|URL|>,1,0,0,0,0,0,0,0.66,0.0,0.0,0.0,0.0,0.33,0.0,1,False,False
+1104,"La urmei e doar un biet guvernator. Sef de stat, cum ar veni. Cu o autonomie atat de mare in Federatie incat ai si Constitutie proprie. E nevoie de Federal, evident, dar pana <|URL|> tu ce ai facut. Sau, evident, dai vina pe altii pt ce tinea de tine. Tot e an electoral.",0,0,0,0,1,0,0,0.33,0.0,0.0,0.0,0.66,0.0,0.0,1,False,False
+1110,"PACHETE SPECIALE Magazinul online Balloons Shop este prietenul tău de nădejde, atunci când ai nevoie de un detaliu plin de originalitate pentru evenimentul tău.",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+1113,"După ce ne-a bagat pe gât un guvern incompetent și corupt, o minoritate politică încearcă să bage tuturor pe gât o dorință de-a neamțului, alegeri anticipate. Au avut un general la min apărării, de ce n-au instaurat dictatura militară? Era mai sincer așa. #Romania",0,0,0,1,0,0,0,0.0,0.0,0.0,1.0,0.33,0.33,0.0,1,False,False
+1122,preferate si vizitate de turisti in 2020,0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+1125,Viața nu îți da niciun preaviz și niciun advertisment înainte sa te surprindă cu un necaz care sa îți prăbușească întregul univers.,1,0,0,0,0,0,0,1.0,0.33,0.0,0.0,0.0,0.0,0.0,1,False,False
+1135,"Bună dimineața, <|PERSON|>!Un început de săptămâna frumos și minunat cu tot ce este mai frumos și mai bun!Te pup și te îmbrățișez cu drag! CanYaman BayYanlıș",0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.33,0.0,0.66,1,False,False
+1138,"Eu nu înțeleg de ce nu închid tot, sa scoată armata și politia pe străzi, jandarmeria și muie, stați în casa. La muie cu constituția și european cu drepturi",0,0,0,1,0,0,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1,False,False
+1146,"fata din scara doi etaju sapte este o persoana impecabila, speciala si de departe, perfecta. ea transmite prin puterea ei fizica de fericire, extaz si curiozitate. aceasta poate fi caracterizata indirect de catre narator si relatia cu ei, din care reiese ca-",0,0,0,0,1,0,0,0.33,0.0,0.0,0.0,0.66,0.0,0.0,1,False,False
+1147,"Bună dimineața! Azi începe weekendul, așa că merge un pic de optimism! O zi cum o doriți, doamnelor! 🌷 ☕ 🤗",0,0,0,0,0,1,1,0.0,0.0,0.0,0.0,0.0,0.66,0.66,2,True,False
+1155,"Uimitor 🤭, mi-a plăcut foarte mult!",0,1,0,0,0,0,1,0.0,0.66,0.0,0.0,0.0,0.0,1.0,2,True,False
+1156,"Au făcut de rușine America! Biata America, ce a ajuns! <|URL|>…",1,0,0,1,0,0,0,0.66,0.0,0.0,0.66,0.0,0.33,0.0,2,True,False
+1169,"Afganistan: Un cunoscut jurnalist afgan, ucis într-un atentat cu bombă la Kabul",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+1180,Senatorul <|PERSON|> :„Nimeni nu mai poate conta pe guvernarea PNL să ia măsuri responsabile”,0,0,0,1,0,0,0,0.0,0.0,0.33,0.66,0.33,0.0,0.0,1,False,False
+1183,Sunt oarecum mirată de comanda UE când OMS-ul a declarat recent că o nouă carantinare ar distruge aproape iremediabil economiile lumii. S-a produs undeva o fractură sau e simularea aparenței a două facțiuni?,0,1,0,0,0,0,0,0.33,1.0,0.0,0.0,0.0,0.0,0.0,1,False,False
+1186,"Lacrimi și durere în Spania. 838 de morți în doar 24 de ore, cel mai mare număr de când a început pandemia de COVID-19Scarlat Razvan",1,0,1,0,0,0,0,1.0,0.33,0.66,0.0,0.0,0.0,0.0,2,True,False
+1191,"Dinamo, ajutată să scape de datorii de un nume surpriză 👉",0,0,0,0,1,0,0,0.0,0.33,0.0,0.0,0.66,0.0,0.0,1,False,False
+1193,"Comunicat de presă - Sibiul fascinant-o destinație completă și sigură, la Raliul Sibiului 2020!",0,0,0,0,0,0,1,0.0,0.33,0.0,0.0,0.33,0.0,0.66,1,False,False
+1196,"Imagini dezolante de la malul mării trimise de. A rămas dezastru în urma turiștilor care și-au petrecut vacanța pe plajele din Corbu și Costinești, acolo unde sunt gunoaie la tot pasul.",1,0,0,0,0,0,0,1.0,0.0,0.0,0.33,0.0,0.0,0.0,1,False,False
+1213,"ba da nu se mai termina ora,,,, vreau sa plang deci jur ca imi ard creierii numai cand ma uit la tabla asta nenorocita, anyways time to quit school ❤",0,0,0,1,0,0,0,0.0,0.0,0.0,0.66,0.33,0.0,0.0,1,False,False
+1215,Ești specialist în promovarea online? Vrei că munca ta să fie mai mult despre optimizare și eficientizare decât despre monitorizare și verificare? Bucură-te de ajutorul tău de nădejde în promovarea online.,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.33,0.66,0.0,1,False,False
+1220,Doua femei reținute pentru furturi din magazinele DM de la Sibiu | Ora de Sibiu,0,0,0,0,1,0,0,0.0,0.33,0.0,0.0,0.66,0.0,0.0,1,False,False
+1231,"daca ma vedeti ca scriu despre ' a lu * nume * ' sa stiti ca-i o metoda de a fi gender neutral cu toata lumea BUT ALSO o metoda de a zice ma fut in tine, lb romana, fac ce vreau io, nu zic ' a anei ' nici sa ma impusti",0,0,0,1,0,0,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1,False,False
+1235,Un tată fericit... bravo 👏 👏 👏,0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1,False,False
+1240,Doliu în Biserica catolică din România 🇷🇴: a murit episcopul <|PERSON|> 🕯️ - Vatican News 🇻🇦,1,0,0,0,0,0,0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,False,False
+1241,"De sărbători, Orange PrePay vine cu 10 milioane de cadouri surpriză: net bonus și un joc cu Millidge şi Doig",0,0,0,0,1,0,0,0.0,0.33,0.0,0.0,0.66,0.0,0.0,1,False,False
+1253,Target-ul nu sunt copii... Si eu am observat o disproportie intre ceea ce se difuzeaza si reclame dar singura explicatie viabila pe care am auzit-o si careia i-am dat crezare a fost ca reclamele targeteaza mamicile. Mai toate can,0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+1259,Era cam iute la manie in ultimul timp... o fi zis ceva...,0,0,0,1,0,0,0,0.0,0.33,0.0,0.66,0.0,0.0,0.0,1,False,False
+1261,"Da, astazi am primit si eu; m-am mirat ca se livreaza duminica",0,1,0,0,0,0,0,0.0,0.66,0.0,0.0,0.0,0.0,0.33,1,False,False
+1265,Semnal de alarmă în Hunedoara. 27 de noi cazuri de infectare cu coronavirus. Se așteaptă rezultatele altor zeci de teste coronavirus Hunedoara,0,0,1,0,0,0,0,0.33,0.33,0.66,0.0,0.0,0.0,0.0,1,False,False
+1269,Optimist că va face lucruri mari...,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.33,1.0,0.0,1,False,False
+1276,Cineva s-a distrat de minune la muncă ♥️,0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1,False,False
+1280,"Shounen Onmyouji Ep. 10 - Prințesa <|PERSON|> este bântuită de o voce demonică. A doua zi, <|PERSON|> îi povestește totul lui <|PERSON|>. Demonii se folosesc de blestemul lui <|PERSON|> pentru a sparge bariera și pentru a o duce la Stăpânul lor. - AnimeKage",0,0,0,0,1,0,0,0.0,0.0,0.33,0.0,0.66,0.0,0.0,1,False,False
+1285,"Aș vrea eu sa fiu bună, va mulțumesc dacă gândiți așa. Am ajuns la concluzia că vor exista mereu "" răi născuți"",si e mai bine să-i ignor. Daca specia umană, despre care vorbi",1,0,0,0,0,0,0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,False,False
+1297,6. Destui intre cei care prefigureaza dramatice schimbari de conduita publica intrateritoriala sunt prezenti si simpatici. .,0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+1303,ma fut in ea profa de contabilitate,0,0,0,1,0,0,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1,False,False
+1307,Moțiune simplă împotriva ministrei Sănătății și a altor responsabili de „situația catastrofală”. Gla...-,0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+1327,EXCLUSIV! Ajutoare de seceta pentru culturile de primavara! Anunt DIRECT de la MADR,0,0,0,0,1,0,0,0.0,0.33,0.0,0.0,0.66,0.33,0.33,1,False,False
+1334,"Bietul om. Sa se odihnească in pace. A fost o alta victima si dovada a ororilor produse de ură, intoleranță, extremism de orice fel.",1,0,0,0,0,0,0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,False,False
+1339,"Inca o romanca cu complexul <|URL|> de capul ei, ajunsa ministru si tot cu capul plecat... Asta nu e rasism, doamna, e prostie si incompetenta poate, dar nu rasism. Esti jalnica.",0,0,0,1,0,0,0,0.33,0.33,0.0,1.0,0.0,0.0,0.0,1,False,False
+1342,"mesaj alarmant pe Facebook: ” Deşteptarea! Până să murim de virus, o să îngropăm România ”...",0,0,1,0,0,0,0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1,False,False
+1348,"Ai o problema grava,chiar daca nu recunosti,suferi de mania persecutiei! Te certi de unul singur?Vezi-ti bah nene de ale tale du-te poate ai treaba si te retin! Apropo de lamuriri, e grele pt <|URL|> cand faci misto de ei!Asta e... Csf?",0,0,0,1,0,0,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1,False,False
+1350,"Castelul de nisip (1770) America a fost zguduită, miercuri, de violențele de la Capitoliu. Suporterii lui <|PERSON|> au luat cu asalt clădirea care adăpostește sediul Congresului. Înainte de asta, a existat un miting unde <|PERSON|> le-a vorbit mai bine de o oră fanilor săi.",0,1,0,0,0,0,0,0.0,0.66,0.0,0.33,0.33,0.0,0.0,1,False,False
+1356,"Maia <|PERSON|>, despre alegătorii lui <|PERSON|> și dacă mizează pe votul celor ai candidatei Partidului ȘOR-",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+1365,de fapt n-as fi doar ok as fi mai mult decat bucuroasa euforie nivel 100 +,0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1,False,False
+1366,".... ci mai degrabă nr. bolnavilor din ATI și nr. și procentul cazurilor grave, cât și. Acum are un mesaj total schimbat, alarmist, la polul opus. Mi se pare ușor bizar",0,0,1,0,1,0,0,0.0,0.33,0.66,0.0,0.66,0.0,0.0,2,True,False
+1367,"Mergeam înainte cu singurătate, nu o ocolesc dar nu mă las doborât de ea.",1,0,0,0,0,0,0,0.66,0.0,0.0,0.0,0.0,0.33,0.0,1,False,False
+1371,Să le zică cineva celor de la CNCD că să mai ai Adobe Flash pe sait e o ofensă adusă inteligenței.,0,0,0,1,0,0,0,0.0,0.0,0.0,0.66,0.33,0.0,0.0,1,False,False
+1376,"Tipa în roșu vorbește cu accent de Europa de est. Vezi, n’am zis tipa ăla. alanegru",0,0,0,0,1,0,0,0.0,0.0,0.0,0.33,0.66,0.0,0.0,1,False,False
+1383,Viitor fără tine nu vreau! Dar nici prezent cu tine... 🥺 tu ai reușit sa distrugi ce eu m-am chinuit sa clădesc! Multumesc! 🙂,1,0,0,0,0,0,0,0.66,0.0,0.0,0.33,0.0,0.0,0.0,1,False,False
+1384,"Puțin îmi pasă a cui sluga a fost. Ceea ce m-am enervat a fost discursul aproape identic cu al lui <|PERSON|>. "" Am fost in primele linii, am luptat, am fost prezent ""... Ce, măăăă???",0,0,0,1,0,0,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1,False,False
+1388,"Poliția Locală Brașov, reorganizată. Primarul <|PERSON|> : Avem nevoie de o poliție locală eficientă și care să aibă la bază criterii de competență <|URL|>…",0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.33,0.66,0.0,1,False,False
+1392,"Fericirea, o fereastra deschisa spre cer, spre vise, spre copilărie, spre lumina și adevăr... Fericirea, umbra a viselor noastre ramase dincolo de realității vieții... Duminica binecuvântată,!",0,0,0,0,0,1,1,0.33,0.0,0.0,0.0,0.0,0.66,0.66,2,True,False
+1412,"Vor fi. Dar cand nu dovedesti ca esti un stat de incredere si nu esti capabili sa-ti indeplinesti indatoririle democratice, la ce te poti aștepta? Si fondurile europene erau tot din alt film, iar",0,0,0,0,1,0,0,0.33,0.0,0.0,0.0,0.66,0.33,0.0,1,False,False
+1414,"Un moment extraordinar in aceasta seara, felicitari #romaniiautalent",0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1,False,False
+1423,E nasol să bei singur frate. Nu o mai fac...,1,0,0,0,0,0,0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,False,False
+1427,"Părintele: Sfintele Icoane nu poartă bacterii și viruși, ele poartă dragoste - De Interes - Gânduri Ortodoxe",0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0,0.66,0.33,1,False,False
+1430,"Limbajul uman ar putea deveni perimat în numai cinci ani, crede",0,0,0,0,1,0,0,0.0,0.33,0.0,0.0,0.66,0.0,0.0,1,False,False
+1443,"Patriarhia Română, după imaginile SCANDALOASE din spațiile publicitare stradale din București și Iași: ‘ O ofensă adusă categoriei atât de onorabile a ’",0,0,0,1,0,0,0,0.0,0.33,0.0,1.0,0.0,0.0,0.0,1,False,False
+1450,"Cunosc o buna parte din proiectele USRPLUS. Proiecte care vor aduce un plus in administratia Romaniei. Imi doresc si sper sa fie puse in aplicare.Inclusiv in administratia primariei,sunt 75% proiecte foarte bune,care au trecut prin aprobarea fos",0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.33,0.66,0.33,1,False,False
+1451,Nu știu cine a pornit chestia asta dar... N ar fi trebuit sa o facă,0,0,0,0,1,0,0,0.33,0.0,0.0,0.0,0.66,0.0,0.0,1,False,False
+1453,Devine demoralizant...,1,0,0,0,0,0,0,0.66,0.0,0.0,0.0,0.33,0.0,0.0,1,False,True
+1455,"Acest a mâncat doar hrană pentru câini timp de o lună, iar câteva schimbări drastice s-au produs în corpul lui | FOTO, VIDEO",0,1,0,0,0,0,0,0.0,0.66,0.0,0.0,0.33,0.0,0.0,1,False,False
+1458,"Sunt foarte bucuros că de luni în Canare avem voie să alergăm la maxim 4 kilometri de casă şi să plimbăm o oră. În sfârşit, sper că pleacă vecinii de acasă.",0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1,False,False
+1461,"Foame în Texas.Imaginile disperării americanilor rămași fără mâncare. ""Vom avea de înfruntat o foamete cum n-a mai fost"" - în Texas.Imaginile disperării americanilor rămași fără mâncare. ""Vom avea de înfruntat o foamete cum n-a mai fost""Foame în <|URL|>",0,0,1,0,0,0,0,0.33,0.33,1.0,0.0,0.0,0.0,0.0,1,False,False
+1465,Felicitări domnule Președinte <|PERSON|>! Cinste d-voastră!Suntem mândri de dvs.,0,0,0,0,0,1,1,0.0,0.0,0.0,0.0,0.0,1.0,0.66,2,True,False
+1486,Nu stiu ce ma inspaimanta mai tare. Certitudiniile sau prostia. Iar combinatia lor este fatală...,0,0,1,0,0,0,0,0.33,0.0,0.66,0.0,0.0,0.33,0.0,1,False,False
+1491,Pare-se că mulți oameni dau crezare înscenării USL 😣,0,0,0,1,0,0,0,0.33,0.33,0.0,0.66,0.0,0.0,0.0,1,False,False
+1492,Mesaje îndurerate postate pe internet după moartea-,1,0,0,0,0,0,0,0.66,0.0,0.0,0.0,0.33,0.0,0.0,1,False,False
+1495,Declarație: Crearea unui guvern dependent de grupări oligarhice nu înseamnă stabilitate,0,0,0,0,1,0,0,0.0,0.0,0.33,0.0,0.66,0.0,0.0,1,False,False
+1496,"Ai un zambet mare, cred ca are un kilometru",0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.33,0.0,0.66,1,False,False
+1503,"Oamenii astia, biet, n au putere sa lupte, sa dea spitalul in judecata, sa mearga pana la Haga, asa trebuie facut, dar nu cred ca mai au resurse emotionale in conditiile date 😔",0,0,0,0,0,1,0,0.33,0.0,0.0,0.0,0.0,0.66,0.0,1,False,False
+1513,Mie imi este mila de el. Bietul om traia in teroare: daca se supara fosta sotie pe el?,1,0,0,0,0,0,0,0.66,0.33,0.0,0.0,0.0,0.0,0.0,1,False,False
+1514,"Omul cu plasele în mână se uită buimac la noi și ne anunță că nu știe nimic, nici indicele de infectare, nici măsurile de urgență, nici despre scenariul roșu, pentru că e duminică și are alte preocupări pe vr",0,0,0,0,1,0,0,0.0,0.33,0.0,0.0,0.66,0.0,0.33,1,False,False
+1515,"Un 38%-40% cred, totusi, ca poate fi atins. Si ar conta enorm. Pentru asta insa ai nevoie de Justitie si de politicieni de sacrifiu. Dornici sa lase ceva bun in urma, nu sa fie realesi. Deci mnah. E bun si 33% 😂👌",0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.33,0.66,0.33,1,False,False
+1526,"Starea Libertății | <|PERSON|> , indignat de greșelile gramaticale ale parlamentarilor: “ Vă grupați analfabeții cu ”",0,1,0,1,0,0,0,0.33,0.66,0.0,0.66,0.0,0.0,0.0,2,True,False
+1533,"Fabrica Baneasa din Romania, producator de paste fainoase, este una dintre cele mai mari din Europa Centrala si de Est ☑ ️",0,0,0,0,1,0,0,0.0,0.33,0.0,0.0,0.66,0.0,0.0,1,False,False
+1536,"Când e nașpa, muie arafat, când e de bine, bravo domnul <|PERSON|> MAI. In felul asta nu o să avem niciodată o țară de, doar de idioți utili.",1,0,0,1,0,0,0,0.66,0.33,0.0,0.66,0.0,0.0,0.0,2,True,False
+1544,"Am terminat de vizionat Long way up. O reclama excelenta pt. Harley Davidson si pt. Rivian. Mi-e dor de un nou proiect. Il am scris, e gata, astept doar ca planeta sa fie intr-un loc mai bun.",0,0,0,0,0,0,1,0.0,0.0,0.33,0.0,0.33,0.33,0.66,1,False,False
+1549,"Ok, hai ca mi'se intoarce stomacul pe dos. De doua zile e panica mare ca Spitalul Bals, ala pe persoana fizica a lui, e plin. Pe langa faptul ca 3sfert sunt asimptomaticii inghesuiti acolo, alea multe spitale""de suport""si campanie, la ce plm le tin goale?Hai, sictir! 🤢",0,0,0,1,0,0,0,0.33,0.0,0.0,0.66,0.0,0.0,0.0,1,False,False
+1564,: CIUDATA Descoperire Anuntata de catre NASA-,0,1,0,0,1,0,0,0.0,0.66,0.0,0.0,0.66,0.0,0.0,2,True,False
+1566,"Cand aud de, tresar necontrolat! 🥴 Ma astept la vesti de pe front, multam lui <|PERSON|> ca a anuntat doar ca o sa fie apacalda in Bucuresti! O, da stai... asta nu trebuia sa fie <|PERSON|>? 😳",0,0,1,0,0,0,0,0.0,0.33,1.0,0.0,0.0,0.0,0.0,1,False,False
+1567,"Susține antreprenorii români! 🇷 🇴 , Ziua 1️⃣1️⃣ la Restaurant Albert - Costinesti",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,0.66,0.33,0.0,1,False,False
+1572,A murit <|PERSON|> . Cinematografia română este în doliu - <|URL|>…,1,0,0,0,0,0,0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,False,False
+1581,"Străzile din Udine, Italia ❤ ️ Nu publicitate, numai de dragoste ☺ ️ 😉",0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.33,0.0,0.66,1,False,False
+1582,VIDEO subtitrat - „Noul fascism de extremă stânga cere loialitate absolută” - discurs <|PERSON|> - ILD,0,0,0,0,1,0,0,0.0,0.0,0.0,0.33,0.66,0.0,0.0,1,False,False
+1594,"„M-a mirat şi pe mine acest rezultat"".",0,1,0,0,0,0,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,1,False,False
+1595,"Ce cafea preferati? si care este atmosfera ideala(afara, in casa, ce tip de ceasca, etc) unde va place sa o savurati. Folositi-va imaginatia.",0,0,0,0,1,0,1,0.0,0.0,0.0,0.0,0.66,0.0,0.66,2,True,False
+1597,"Problemele la sistemul de direcţie se pot accentua rapid în timp. E bine ca atunci când le descoperi să efectuezi un reglaj direcţie. Dacă ai nevoie de acest serviciu, poți conta pe noi.💪",0,0,0,0,1,1,0,0.0,0.0,0.0,0.0,0.66,1.0,0.0,2,True,False
+1599,"Pe naiba,mai există parlament?ori camera deputaților?ăștia stau ascunși ca,cloțanii pe banii mulți și prin neparticiparea lor trec legi aiurea,trebuie limitați la situația actuală,hoții dracului",0,0,0,1,0,0,0,0.33,0.0,0.0,1.0,0.0,0.0,0.0,1,False,False
+1603,Doliu în Biserica catolică din România 🇷🇴: a murit episcopul <|PERSON|> 🕯️ - Vatican News 🇻🇦 <|URL|>…,1,0,0,0,0,0,0,0.66,0.0,0.0,0.0,0.33,0.0,0.0,1,False,False
+1615,"Băi, ce m-am întristat. Măcar am reușit să ajung la un concert de al lor la București.",1,0,0,0,0,0,0,0.66,0.33,0.0,0.0,0.33,0.0,0.0,1,False,False
+1622,"Eroii din prima linie, între frică și datorie: Trebuie să fim puternici",0,0,0,0,0,1,0,0.0,0.0,0.33,0.0,0.33,0.66,0.0,1,False,False
+1630,"Atenție! Codul Portocaliu de secetă hidrologică, prelungit până la 15 septembrie <|URL|>",0,1,0,0,0,0,0,0.0,1.0,0.33,0.0,0.33,0.0,0.0,1,False,False
+1639,"in materie de locuri mai inderpartate, foarte mult mi-a placut la Rio, unde am ajuns la destul de scurt timp dupa ce fusesem la Carcavelos, in Portugalia - vreo 40 de camera pe noapte cu mic dejun delicios de care aproape ca",0,0,0,0,1,0,0,0.0,0.33,0.0,0.0,0.66,0.0,0.33,1,False,False
+1654,ne-a delectat cu meciuri senzaţionale în perioada pandemiei. 🔝 Acum a venit răsplata. Felicitări! 🔵 ⚫ ️,0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.0,0.33,1.0,1,False,False
+1657,"În cel mai mare proiect de restaurare a ierbii marine din lume, oamenii de știință au observat un ecosistem de la naștere până la înflorire completă",0,0,0,0,1,0,0,0.0,0.33,0.0,0.0,0.66,0.33,0.0,1,False,False
+1664,"După acest atac terorist ucigaș fără precedent împotriva umanității, apar tot felul de filmulețe care încearcă să ne amorțească vigilență și furia prin frică și distragerea atenției că suntem duși la un abator gândit de minți criminale.",0,0,0,1,0,0,0,0.33,0.33,0.0,0.66,0.0,0.0,0.0,1,False,False
+1674,"Inainte de aceasta Maia <|PERSON|> declarase ca va participa la o singura dezbatere, pe teren neutru",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+1677,Nu e neapărat cu mari și treburi serioase. E mai mult cu melancolie și un pahar de coniac.,1,0,0,0,0,0,0,0.66,0.0,0.0,0.0,0.33,0.0,0.0,1,False,False
+1682,Mulțumesc <|PERSON|>! O zi perfectă îți doresc!,0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.0,0.33,1.0,1,False,False
+1684,"Haideți să lăsăm orgoliile în această perioadă, să îmbrățișăm competența pentru binele nostru, al tuturor – instituții de stat și mediul de business, români de acasă sau români repatriați""-Claudia <|PERSON|> – CEO și <|PERSON|> Psihoselect. <|URL|>…",0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.33,1.0,0.0,1,False,False
+1691,"Am vrut să creăm o experiență unică pentru ascultare în premieră a noului nostru EP. Un eveniment vizual, plin de emoție, realizat cu o tehnică pe care noi n-am mai văzut-o până acum. ” - despre noul EP - AmendsStripped, ce va fi lansat mâine. Listening party azi!",0,1,0,0,0,1,1,0.0,0.66,0.0,0.0,0.33,0.66,1.0,3,True,False
+1693,"Privesc uimit întregul meu trecut Și mă întreb cu ce scop am venit, Sunt demon sau un biet înger căzut? În astă lume cum am nimerit?",1,0,0,0,0,0,0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,False,False
+1696,Nu de seringile de pe plaja mi-e teama ci de cioburile sticlelor sparte de toți bețivanii din Romania. vamaveche,0,0,1,0,0,0,0,0.33,0.0,0.66,0.33,0.0,0.33,0.0,1,False,False
+1706,"Știiu, nu? Ahahahah. Săraca nu a scos un sunet tot drumul, 4 ore. Am crezut că nici n-o să mai vorbească cu mine, că-i foarte supărăcioasă. Nope, pisica asta e foarte surpriză. Și, fiind de curte, a făcut din prima la litieră. Ce",0,1,0,0,0,0,1,0.0,0.66,0.0,0.0,0.0,0.0,0.66,2,True,False
+1709,"Autoritățile, în alertă. Prutul a depășit cota de pericol în județul Botoșani. Un drum național, inundat #news #stiri #romania",0,1,0,0,0,0,0,0.0,0.66,0.0,0.0,0.33,0.0,0.0,1,False,False
+1717,"Acordul furnizează ""o nouă stabilitate şi o nouă siguranţă în ceea ce a fost odată o relaţie dificilă şi plină de sincope"", a punctat premierul britanic #BrexitDeal",0,0,0,0,1,1,0,0.0,0.0,0.0,0.0,0.66,0.66,0.0,2,True,False
+1719,"#COVID19 Până în prezent au fost plasate în carantină instituţionalizată <|URL|> de persoane care nu au respectat perioada de autoizolare. 162 de persoane aflate în carantină au părăsit locaţia în care au fost plasate, pentru acestea fiind dispusă o nouă carantină pentru 14 zile.",0,0,0,0,1,0,0,0.0,0.0,0.33,0.33,0.66,0.0,0.0,1,False,False
+1729,"prostiaucide Asa arata prostia absoluta, dar bine camuflata sub gradele universitare. Cu mahnire, ma vad nevoit sa repet: in sistemele de educatie si sanatate s-au adunat cei mai prosti dintre prosti, respectiv cei care au impresia ca ar fi destepti.",1,0,0,1,0,0,0,0.66,0.33,0.0,1.0,0.0,0.0,0.0,2,True,False
+1732,#TMI2020 Proiectul de punere în siguranta a monumentelor istorice din #România se adreseaza proprietarilor publici si privati de monumente istorice ce au nevoie de sprijin + activarea comunitatilor locale în sprijinul patrimoniului cultural.,0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,0.66,0.33,0.0,1,False,False
+1733,⚫ <|PERSON|> a încetat astăzi din viață. Clubul Universitatea Craiova transmite condoleanțe familiei îndurerate. RIP,1,0,0,0,0,0,0,1.0,0.0,0.0,0.0,0.33,0.0,0.0,1,False,False
+1737,"Bună dimineața, dragă <|PERSON|>!O zi frumoasă cu bucurii! CanYaman emană numai bunătate și dragoste!",0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.33,0.0,0.66,1,False,False
+1740,Cum au surprins locuitorii din Bălți pe cei dragi de Ziua Îndrăgostiților,0,1,0,0,0,0,0,0.0,0.66,0.0,0.0,0.33,0.0,0.33,1,False,False
+1746,"Părintele <|PERSON|> din Arizona s-a arătat într-o vedenie unei fiice duhovnicesti: „Vin necazuri mari, nu va puteti imagina cât de groaznice. Vai, ce va așteaptă, pocăiți-vă cât mai este timp”",0,0,1,0,0,0,0,0.33,0.0,0.66,0.0,0.0,0.0,0.0,1,False,False
+1754,"Succes și Sănătate multa sănătate bună <|PERSON|> a făcut dezvăluiri șocante despre viața sa. ”Celebritatea m-a epuizat și m-a consumat""- <|URL|>",1,0,0,0,1,0,0,0.66,0.33,0.0,0.0,0.66,0.33,0.0,2,True,False
+1756,"La ziarele românești nu dau <|URL|> citesc doar titlurile, drept că de două zile nu am urmărit..!! Însă totuși cred că este o farsă<|URL|> unui tâmpit ca și <|PERSON|> cu Popii...!! Au mai fost.!! Primul ministru nu știe ce fa",0,0,0,1,0,0,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1,False,False
+1773,"Primul raport la nivelul Uniunii🇪🇺 privind statul de drept: Fiecare cetățean merită să aibă acces la judecători independenți, să beneficieze de o mass-media liberă și pluralistă și să aibă încredere că drepturile sale fundamentale sunt respectate. Detalii👉",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,0.66,0.33,0.0,1,False,False
+1775,"Când am apăsat "" Programează "" a crăpat serverul:-(",1,0,0,0,0,0,0,0.66,0.0,0.0,0.0,0.33,0.0,0.0,1,False,False
+1777,„ O pildă frumoasă despre bunătate ” с помощью,0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.33,0.0,0.66,1,False,False
+1785,"eu - pentru luna aprilie a acestui an. - scriitorul lunii iulie. vom concura împreună pentru titlul de ”Scriitorul anului”. Onest, bucuros, onorat (îi știu cartea cu multe dinainte de a se naște), fără nici o glumă: dintre noi doi, ȚIN cu <|PERSON|> !",0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0,0.66,0.33,1,False,False
+1788,"Toți idioții se revoltă împotriva izolării. Doar cred că au alte soluții. Evident că n-au. Doar gură mare și frondă multă. Uită esențialul: mai bine îți economia decât pe cei dragi. Nu muriți încă o lună acasă, ocoșilor!",0,0,0,1,0,0,0,0.33,0.0,0.0,1.0,0.0,0.0,0.0,1,False,False
+1793,rusă de atletism va merge în instanţă dacă săi li se refuză participarea sub drapel neutru-,0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+1801,"Cel puţin 15 morţi și zeci de răniți, după ce un autobuz s-a răsturnat într-o prăpastie. Accidentul din Vietnam, anunțat după câteva ore din lipsa semnalului",1,0,0,0,0,0,0,0.66,0.0,0.33,0.0,0.33,0.0,0.0,1,False,False
+1806,A murit actrița <|PERSON|> de la Teatrul Bacovia,1,1,0,0,0,0,0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,2,True,False
+1809,Cataramă insistă. Sponsorizează o campanie periculoasă pe Facebook legată de coronavirus,0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+1816,<|PERSON|> „ tremură “ pentru al doilea an la rând: În ce a ajuns echipa lui şi ce spun cifrele - Adevărul,0,0,1,0,0,0,0,0.0,0.0,1.0,0.0,0.33,0.0,0.0,1,False,False
+1818,CFR Cluj și-a aflat din grupele Europa League!,0,1,0,0,0,0,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,1,False,False
+1828,"Vrei să locuiești aproape de Malul Mureșului și de parcul Europa? Îți prezint spre închiriere un apartament de 2 camere, situat la etajul 3, pe strada Călimănești. - Apartamentul beneficiază de liniște și intimitate. Are suprafața de 70 mp,...",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+1838,"despre Italia și COVID-19: E foarte grav, un dezastru! Ce l-a indignat pe <|PERSON|> stire digisport 2review",0,0,0,1,0,0,0,0.33,0.0,0.33,0.66,0.0,0.0,0.0,1,False,False
+1842,Mereu mă binedispune serialul ăsta! Episodul cu poziția lor în cadrul comunității europene e antologic. (și premonitoriu😁)!,0,0,0,0,0,0,1,0.0,0.33,0.0,0.0,0.0,0.33,1.0,1,False,False
+1845,Posibil incident terorist în Belgia: O femeie a fost împuşcată de poliţişti după ce a înjunghiat două persoane news stiri romania,1,0,1,0,0,0,0,0.66,0.33,0.66,0.0,0.0,0.0,0.0,2,True,False
+1848,"Nu îmi place când este trist sau când lacrimile ii brăzdează obrajii, îmi frânge inima 💔 💔.. Este prea special pentru atâta durere.. Oricât ai încerca să te prefaci sau sa îți joci rolul inima își are '' rolul ei '' și cr",1,0,0,0,0,0,0,0.66,0.0,0.0,0.0,0.33,0.0,0.0,1,False,False
+1851,Țara în care companiile chineze investesc miliarde pentru a scăpa de mânia lui <|PERSON|> <|URL|>…,0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+1875,"Filmul ăsta imbecil al lui <|PERSON|>, Tenet, marea superproducție post-Covid menită să salveze cinematografia și sălile de cinema este o insultă adusă inteligenței"" 😂 <|URL|>… via",0,0,0,1,0,0,0,0.0,0.33,0.0,0.66,0.33,0.0,0.0,1,False,False
+1879,"Universitatea Craiova caută prima victorie din 2021 pe terenul celor de la FC Voluntari, mâine, de la ora 17:30, în direct pe și pe pentru RCS-RDS.",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+1891,Uimitor poți avea piele de găină doar la #romaniiautalent,0,1,0,0,0,0,0,0.0,0.66,0.0,0.0,0.33,0.0,0.33,1,False,False
+1895,"Am adaugat cercei noi cu flori uscate, iar reducerile de 10% continua pana pe 11 Octombrie! 🥰 Te asteptam pe site: #dianecrafts #cercei #handmade #natura #flori #uscate #rasina #promotie #reducere #oferta #cadou #colectie #bijuterii #accesorii #cadouri",0,0,0,0,1,0,0,0.0,0.33,0.0,0.0,1.0,0.0,0.0,1,False,False
+1898,Probabil cel mai mare regret al meu e ca n am mai dat admiterea la arhi in vara anul trecut Sa ai un biz e cool dar doar când desenam stăteam de la 6 dimineața pana la 2 noaptea la birou și era enjoyable,1,0,0,0,0,0,0,0.66,0.0,0.0,0.0,0.0,0.33,0.0,1,False,False
+1905,"Externările la cerere după 10 zile ale pacienţilor asimptomatici, diagnostocaţi cu noul tip de coronavirus au stârnit un val de îngrijorare. <|URL|> de pacienţi pozitivi s-au externat de pe 25 iunie din spitalele din toată ţara. spun însă că, spre...",0,0,1,0,0,0,0,0.0,0.33,1.0,0.0,0.0,0.0,0.0,1,False,False
+1909,"Exact așa. Trăim un război psihologic, cred că o să murim mai de grabă de frica virusului, decât de virus in sine (nu neg realitatea deceselor). Televiziunea, internetul ne spală zilnic creierul.",0,0,0,1,0,0,0,0.33,0.0,0.33,0.66,0.0,0.0,0.0,1,False,False
+1910,"acționarul minoritar de la CFR Cluj, după victoria cu KuPS: „ Vreau să luăm al patrulea campionat consecutiv! ” + Anunțul legat de",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,0.66,0.33,0.0,1,False,False
+1922,"Dezastru! Județul Brașov a pierdut aproape 3000 de salariați. Suntem codași și la salarii, ne-a depășit și Mureșul <|URL|>…",1,0,0,1,0,0,0,1.0,0.0,0.33,0.66,0.0,0.0,0.0,2,True,False
+1934,"<|PERSON|>: Dacă cetățenii vor avea încredere în mine, atunci are sens să candidez pentru al doilea mandat-",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,0.66,0.33,0.0,1,False,False
+1937,"Yeeee! Încă un concurs fain unde puteți câștiga următoarea voastră lectură de vacanță, un exemplar nou-nouț din ⭐ ️Cartea Miracolelor ⭐ ️, plus 🎁 un set simpatic de semne de carte magnetice, plus 🎁 🎁 o cartolină cu autograf și dedicație special …",0,0,0,0,0,0,1,0.0,0.33,0.0,0.0,0.0,0.33,1.0,1,False,False
+1939,"Fericirea este o stare a sufletului... în care toate lucrurile sunt sub conducerea exuberantă a credinței, a speranței și a carității. ()",0,0,0,0,0,1,1,0.0,0.0,0.0,0.0,0.0,1.0,0.66,2,True,False
+1942,"S-a zguduit pământul. Un cutremur cu magnitudinea 5,3 s-a produs în Indonezia-",0,0,0,0,1,0,0,0.0,0.0,0.33,0.0,0.66,0.0,0.0,1,False,False
+1953,eu inca nu cred ca am realizat ce se intampla inca nu ma simt ok de la faza cu facultatea si nu cred ca am procesat pana la capat ce se intampla atm si ce repercusiuni pot exista pentru yuta parca sunt putin numb in momentul asta sincer but pls t,1,0,0,0,0,0,0,0.66,0.0,0.0,0.0,0.33,0.0,0.0,1,False,False
+1955,"RESIGN traitorous incompetent <|PERSON|> <|PERSON|>! <|PERSON|> delendus est! Fiat justitia,ruat coelum!",0,0,0,1,0,0,0,0.0,0.33,0.0,0.66,0.0,0.0,0.0,1,False,False
+1956,"Cand traiesc in prezent, nu simt nici-o durere a trecutului,, fata de viitor nu-mi poate face rau * * * 🍀 🌻 🍀",0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.33,0.66,0.33,1,False,False
+1962,Prăjitură keto vegan cu unt de arahide și ciocolată (de post),0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+1969,"Atac terorist într-o stațiune turistică. Un a fost ucis, iar altul este rănit-",0,0,1,0,0,0,0,0.33,0.33,0.66,0.0,0.33,0.0,0.0,1,False,False
+1977,"INTERVIU Tata de mort in Colectiv, la 5 ani dupa tragedie: "" In orice stat normal, trebuia sa fie de mult la puscarie",1,0,0,0,0,0,0,1.0,0.0,0.0,0.0,0.33,0.0,0.0,1,False,False
+1980,Mă miră fiindcă era vorba că se încălzește dar apreciez surpriza,0,1,0,0,0,0,0,0.0,1.0,0.0,0.0,0.0,0.0,0.33,1,False,False
+1991,"<|PERSON|>, revizor de Neamţ, despre un învăţător căzut în patima beţiei: „ Se bate în mijlocul satului cu nevasta ameţită ca şi dânsul şi nu mai dă pe la şcoală “",0,0,0,0,0,0,1,0.0,0.0,0.0,0.33,0.33,0.0,0.66,1,False,False
+2003,"Împacă-te cu ideea că uneori poți fi porumbelul, dar alteori ești doar biata statuie.",1,0,0,0,0,0,0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,False,False
+2009,"Gata, au dat-o pe față! <|PERSON|> a primit un mesaj surprinzător din partea lui <|PERSON|> Argint, după ce a zis că-l așteaptă pe Moș <|PERSON|>...",0,0,0,0,1,0,0,0.0,0.33,0.0,0.0,0.66,0.0,0.0,1,False,False
+2012,"Sper să-i suspende pe jegoșii ăia vreo câțiva ani buni. Nu doar că au avut comportament xenofob și neadecvat vis-a-vis de oficiali, dar și-au mai și bătut joc de cauza antirasismului.",0,0,0,1,0,0,0,0.0,0.0,0.0,0.66,0.33,0.0,0.0,1,False,False
+2015,"VIDEO A marcat și a avut o criză de nervi! <|PERSON|> , protagonistul unei faze stranii",0,1,0,0,0,0,0,0.0,0.66,0.0,0.33,0.33,0.0,0.0,1,False,False
+2021,"Nu știu, dar e gravă situația. Și ai mei se simt rău (răceala, sper), iar deja s-au speriat până și băbuțele din sat, că nu a mers aproape nimeni la Luminație...",0,0,1,0,0,0,0,0.0,0.33,1.0,0.0,0.0,0.0,0.0,1,False,False
+2030,"Dezamăgire totală pentru mai mulţi turişti români care au ales să-şi petreacă vacanţa pe litoralul bulgăresc, în staţiunea Nisipurile de Aur. Au plătit sejur la un hotel de 4 stele, dar în cameră au găsit mobila ruptă, rugină şi murdărie.",1,1,0,0,0,0,0,0.66,0.66,0.0,0.0,0.33,0.0,0.0,2,True,False
+2031,"„Jobul perfect – iluzie cu sens unic”, o campanie de informare asupra riscurilor și...",0,0,0,0,1,0,0,0.0,0.0,0.0,0.33,1.0,0.0,0.0,1,False,False
+2036,"te rog, întoarce-te că intru în depresie",1,0,0,0,0,0,0,0.66,0.0,0.0,0.0,0.33,0.0,0.0,1,False,False
+2044,"Cu drag, mereu! Succes în toate. Sănătate!",0,0,0,0,0,1,1,0.0,0.0,0.0,0.0,0.0,0.66,0.66,2,True,False
+2047,"competențe și performanță, doar în școlile noastre",0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.33,0.66,0.0,1,False,False
+2049,Îngrijorat că un pensionar viețuiește în condiții inadecvate,1,0,0,0,0,0,0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,False,False
+2054,Linia de ” cărnuri ” vegetale de la McDonald’s îți arată viitorul ideal pentru,0,0,0,0,1,0,0,0.0,0.33,0.0,0.0,0.66,0.0,0.0,1,False,False
+2059,s-au pornit ăștia pe grupul clasei bagamias ca iar ia foc caramida asta de tlf,0,0,0,1,0,0,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1,False,False
+2066,"Nu contest, sunt conștient că există. Dar nu-mi pot explica. Îs ca ardelenii ăia ce or văzut ptr prima dată girafa.... #perplex",0,0,0,0,1,0,0,0.0,0.33,0.0,0.0,0.66,0.0,0.0,1,False,False
+2070,O seară plăcută și noapte bună!,0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1,False,False
+2077,"Cum am dormit într-un IGLU? În România! (preț, locație)",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,0.66,0.33,0.0,1,False,False
+2085,Caracatițele! Aș putea să mă uit la ele ore în șir. Sunt niște cu super puteri.,0,1,0,0,0,0,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,1,False,False
+2088,"𝙊𝙧𝙛𝙚𝙡𝙞𝙣𝙖𝙩𝙪𝙡 𝙗𝙖𝙣𝙩𝙪𝙞𝙩 𝙙𝙚 𝙥𝙚 𝙨𝙩𝙧𝙖𝙙𝙖 𝙁𝙧𝙖𝙣𝙘𝙚𝙯𝙖 𝙙𝙞𝙣 𝘾𝙚𝙣𝙩𝙧𝙪 𝙑𝙚𝙘𝙝𝙞 (𝘽𝙪𝙘𝙪𝙧𝙚𝙨𝙩𝙞) Unul dintre cele mai celebre mituri urbane din București este acela al orfelinatului bântuit din Centrul Vechi. De fapt, sunt mai multe clădiri",0,0,1,0,0,0,0,0.0,0.33,1.0,0.0,0.0,0.0,0.0,1,False,False
+2101,Lugojul dezolant! Una dintre străzile centrale ale orașului cu cratere și iarbă de jumătate de metru,1,0,0,0,0,0,0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,False,False
+2102,"liga1 playoff etapa2 fcsbcraiova Aceasta este echipa trimisă în teren de în partida cu Universitatea Craiova, care va începe la 20:30, în direct la Digi Sport, ; …",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+2106,"asa i romanul, dar si cand oi da de aia buni, sa vezi ce bucuros o sa fii:))",0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.0,0.33,0.66,1,False,False
+2107,"personal decolteul ala patrat arata cel mai bine pe mine, in rest wear whatevr makes u feel confident luv xx",0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.33,1,False,False
+2117,"VIDEO EXCLUSIV – PANICĂ ÎN BAIA MARE: ” Minoră violată, ucisă și aruncată în tomberon la Combinat ” – o mare minciună LIVE PE FACEBOOK. Află de ce au intervenit mascații via din Maramures - <|PERSON|> ",0,0,0,1,0,0,0,0.33,0.33,0.33,0.66,0.0,0.0,0.0,1,False,False
+2120,"Medicii care trateaza bolnavii de coronavirus primesc cadou o saptamana de vacanta in Ibiza. ""Ne-am gandit sa le multumim celor carora le-am incredintat viata",0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.0,0.33,1.0,1,False,False
+2128,Doamne nu e nimic mai trist decat sa vad actori extrem de buni in filme extrem de proaste,1,0,0,0,0,0,0,1.0,0.0,0.0,0.33,0.0,0.0,0.0,1,False,False
+2137,incepe sa ma loveasca panica nu mai vreau,0,0,1,0,0,0,0,0.0,0.0,0.66,0.0,0.33,0.0,0.0,1,False,False
+2139,Sa fim corect informați! #coronavirus <|URL|>…,0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+2151,O aparitie interesanta si un talent cu adevarat surprinzator! #RomaniiAuTalent,0,1,0,0,0,0,0,0.0,0.66,0.0,0.0,0.0,0.0,0.33,1,False,False
+2153,"industria imigratiei face parte din industria turismului., un celebru cantaret romanesc de rock s - a ratacit la TV. a sustinut ca Covid-19 este un fals., care se presupune ca este un jurnalist neutru",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+2156,Imi cer scuze in avans pt indiscretie dar nu pot sa Nu obs. Ca de cateva zile esti intr-o Stare de melancolie. Fie de la o indragosteala fie de la o dezamagire.,1,0,0,0,0,0,0,0.66,0.33,0.0,0.0,0.0,0.0,0.0,1,False,False
+2165,coaie esti profa de sa ma fut pe de romana ce cacat ne pui sa facem,0,0,0,1,0,0,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1,False,False
+2178,eram fericită cu agust d2 dar acuma îs tristă:(,1,0,0,0,0,0,0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,False,False
+2184,"Cam timida exprimarea adeziunii totale la politica partidului, tovarase!",0,0,0,1,0,0,0,0.0,0.0,0.0,0.66,0.33,0.0,0.0,1,False,False
+2192,si daca nu as avea ce face cu ea pur si simplu se detin una m ar face fericita,0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1,False,False
+2193,"FC Argeș pierde la Sibiu, iar Academica Clinceni este matematic calificată în playoff",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+2203,Anunț surprinzător al OMS: Este posibil să scăpăm de COVID-19 fără un al doilea val,0,1,0,0,0,0,0,0.0,0.66,0.0,0.0,0.0,0.33,0.33,1,False,False
+2207,"Azi a venit postasul, nerabdatoare s-o citesc. Editia este in spaniola pentru a beneficia si sotul meu de lectura. Cand aveti drum la Madrid si un pic de timp liber, dati-mi de veste, va putem oferi o "" delectare intelectuala""cu exemplare literare",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,0.66,0.33,0.33,1,False,False
+2208,Alarmă în Washington. Capitoliul a fost închis din cauza unei ameninţări de securitate,0,0,1,0,0,0,0,0.0,0.0,0.66,0.0,0.33,0.0,0.0,1,False,False
+2209,"Efectele încălzirii globale în 2020: România, cea mai mare secetă din ultimii 60 de ani <|URL|>…",0,0,1,0,1,0,0,0.0,0.33,0.66,0.0,0.66,0.0,0.0,2,True,False
+2211,iti detaliez diseara. Acum trebuie sa-i fut pe unii IRL... tre sa intru in starea aia de dement,0,0,0,1,0,0,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1,False,False
+2230,"Nu vedeți că johannis pnl îl împing in față pe prostul de arafat..?? Arabul este o marionetă înjurat de toată lumea ca vinovat, iar neamțul și pnl se dau la fund..??",1,0,0,1,0,0,0,0.66,0.33,0.0,1.0,0.0,0.0,0.0,2,True,False
+2232,"Bilanţ tragic în Italia. Mai multe voci susţin acelaşi lucru: a fost o adevărată ""bombă biologică"". ""Lumea habar…",0,1,1,0,0,0,0,0.33,1.0,0.66,0.33,0.0,0.0,0.0,2,True,False
+2241,"Dacă insistpentruRomânia în Europa și în lume, la fel de mult insistpentruTulcea și pentru SigurantaUnuiTraiMaiBun în plan național ❗ Partea a 2-a a interviului acordat poate fi urmărită aici: 👇 🏻",0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.33,0.66,0.0,1,False,False
+2242,"Mașină ruptă în bucăți, filmată după o depășire extrem de periculoasă",1,0,0,0,0,0,0,0.66,0.33,0.33,0.0,0.0,0.0,0.0,1,False,False
+2249,"Numai el nu face covid, la cât aleargă de colo-colo ca un sclavete în campanie ce e. Al dracului imun",0,0,0,1,0,0,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1,False,False
+2260,"Optimist, pozitiv, tot timpul cu zâmbetul pe buze. De asta toate merg bine!",0,0,0,0,0,1,1,0.0,0.0,0.0,0.0,0.0,0.66,1.0,2,True,False
+2265,"Pai de ce, sa-i lăsăm dracu sa moară. Vorbită un porcușor de guineea. Hai sictir",0,0,0,1,0,0,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1,False,False
+2281,"Eu observ cu stupoare cum oameni intregi la minte, ba care se mai considera si conservatori, il cred capabil pe <|PERSON|> sa administreze Bucurestiul! 😂😂😂",0,1,0,0,0,0,0,0.0,0.66,0.0,0.0,0.33,0.33,0.0,1,False,False
+2282,"💦𝙈𝙮 𝙗𝙚𝙖𝙪𝙩𝙮 𝙢𝙤𝙧𝙣𝙞𝙣𝙜 𝙧𝙤𝙪𝙩𝙞𝙣𝙚😂 De mai bine de doua luni diminetile mele incep asa. Ce ziceti? Sunteti pro sau contra pompe de muls?🤔 V-am vorbit despre alaptre, mulgere si produsul in care eu am hotarat sa am incredere…",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.33,0.0,1,False,False
+2289,"Bună seara, oameni buni, din suflet, o seară binecuvântată vă doresc fiecăruia dintre voi, gânduri senine și vise plăcute.. 🧚 ‍ ♂ ️ 🍀 🦋 🕊 🌷",0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.33,0.0,0.66,1,False,False
+2291,"Nici la vârsta mea considerabilă nu știu să interacționez eficient cu oamenii colerici. Ba rămân calmă și mă închid în mine, ba izbucnesc și eu (mai rar, când sunt chiar plină). Oricum, urăsc când oamenii se enervează din orice rahat, urăsc conflictele, am oroare de isterici.",0,0,0,1,0,0,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1,False,False
+2294,➸ Fobofobia – Teama de a avea o fobie ➟ Nomofobia – Teama de a ramane fara telefon ➳ Fobia de telefon – de a face sau a primi apeluri ➱ Hexakosioihexekontahexafobia – Teama de numarul 666,0,0,1,0,0,0,0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1,False,False
+2302,Sunt dezamăgit de ele. Nimic. 😔,1,0,0,0,0,0,0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,False,False
+2313,"„El va șterge orice lacrimă din ochii lor. Și moartea nu va mai fi. Nu va mai fi nici tânguire, nici ţipăt, nici durere, pentru că lucrurile dintâi au trecut.”” Apocalipsa 21:4 VDC",0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.33,0.66,0.0,1,False,False
+2316,"Nu există nimic mai rău decât respingerea mamei. Este o ură îmbrăcată în catifea. Ea, mama, nu mai are iubire și pentru tine, biet copil nemernic. Ești singur, așa cum ai fost mereu.",1,0,0,0,0,0,0,0.66,0.0,0.0,0.0,0.33,0.33,0.0,1,False,False
+2323,"Îți dai seama că ești bătrân când spui exasperat: dacă nu ține nici acum, îl lipesc cu Ciba",0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.33,0.0,0.66,1,False,False
+2328,De ce intră în colaps și moare o persoană cu COVID-19 fără alte afecțiuni - Interviu,0,0,0,0,1,0,0,0.33,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+2330,"Tie iti trebuie taiat cablu de net, asa frustrat esti in realitate de vii pe twitter si ti le versi? Lumea evolueaza, Romania pls keep up",0,0,0,1,0,0,0,0.0,0.33,0.0,1.0,0.0,0.0,0.0,1,False,False
+2337,10 motive pentru care școala online e buna: 10. 9. 8. 7. 6. 5. 4. 3. 2. Pot sa ma trezesc mai târziu 1. Nu trebuie sa merg mâine la școală și sa ma vadă lumea cu bratele iritate în halul asta,0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,0.66,0.0,0.33,1,False,False
+2341,La braț și-n pas voios către un nou episod de poveste. Știm noi ce știm. 😍 romaniiautalent,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0,0.66,0.33,1,False,False
+2348,"Numele e cunoscut. Eu nu sînt frustrat, ar lumea are dreptul să cunoască fața acestui ticălos de la care s-au contaminat zeci de. Cînd faci o ticăloșie, trebuie să-ți sumi toare riscurile. Eu sînt de partea, în acs",0,0,0,1,0,0,0,0.0,0.0,0.0,1.0,0.0,0.33,0.0,1,False,False
+2349,"Masca pe figura,"" am racnit la nepot ieri. Mi-am amintit de expresia ca ordinul se executa intocmai si la timp.",0,0,0,0,1,0,0,0.0,0.0,0.0,0.33,0.66,0.0,0.0,1,False,False
+2367,"Soartă cumplită pentru, o din Vaslui. A murit din cauza unei boli grave, lăsându-și iubitul sfâșiat de durere: „ S-au iubit până în ultima secundă ”...",1,0,0,0,0,0,0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,False,False
+2368,Halucinant. În Craiova un mort tuşeşte şi e declarat #COVID19 în baza unui test în afara protocolului via,0,0,0,1,0,0,0,0.0,0.0,0.33,0.66,0.33,0.0,0.0,1,False,False
+2371,<|PERSON|> de la <|PERSON|> sare în apărarea fiicei sale! „Eu am încredere în <|PERSON|>. Ea a vorbit cu mine sincer. De unde au ieșit aceste acuzații”...,0,1,0,0,0,0,0,0.33,0.66,0.33,0.0,0.33,0.33,0.0,1,False,False
+2373,"O ce sfarsit de saptamana glorios, nu mai pot! va iubesc 🤗 😘 ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤",0,0,0,0,0,0,1,0.0,0.33,0.0,0.0,0.0,0.0,1.0,1,False,False
+2385,Cod Galben de pericol excepţional de incendiu: MADRM a atenţionat asupra necesităţii măsurilor de prevenire,0,0,0,0,1,0,0,0.0,0.0,0.33,0.0,0.66,0.0,0.0,1,False,False
+2389,Pericol de inundații în mai multe localități din județul Brașov brasov eveniment,0,0,1,0,0,0,0,0.0,0.0,0.66,0.0,0.33,0.0,0.0,1,False,False
+2392,7 detalii surprinzătoare și mai puțin cunoscute despre <|PERSON|>,0,1,0,0,0,0,0,0.0,0.66,0.0,0.0,0.33,0.0,0.0,1,False,False
+2393,Domnul este un <|PERSON|> gelos și răzbunător; Domnul Se răzbună și este plin de mânie; Domnul Se răzbună pe potrivnicii Lui și ţine mânie pe Lui. — Naum 1:2 CuvântuldeDuminică,0,0,0,0,1,0,0,0.0,0.0,0.0,0.33,0.66,0.33,0.0,1,False,False
+2404,urasc chimia👎 chimie flop chimie disband,0,0,0,1,0,0,0,0.33,0.0,0.0,0.66,0.0,0.0,0.0,1,False,False
+2405,"Exceptand reptilienii, gura pacatosului, adevar graieste!Iar planeta asta chiar e condusa de unii pe care nu-i stii, dar care pot sa te aduca, usor, sub conditia umana, daca tot te-au convins ca nu exista. Partea neplacuta",1,0,0,0,0,0,0,0.66,0.33,0.33,0.0,0.0,0.0,0.0,1,False,False
+2406,Milionarul care a lăsat un bacșiș uriaș! <|PERSON|> a rămas șocată. ”Am înmărmurit când am văzut nota de plată” <|URL|>…,0,1,0,0,0,0,0,0.0,1.0,0.0,0.0,0.0,0.0,0.33,1,False,False
+2407,"Numărul britanicilor care au părăsit Anglia pentru a se stabili în alte state europene a crescut cu 30%, după votul pro-Brexit. Cum au evoluat cifrele imigrației #news #stiri #romania",0,0,0,0,1,0,0,0.0,0.33,0.0,0.0,0.66,0.0,0.0,1,False,False
+2413,"doar mi-a placut super mult materia aia,,,,,, am facut si examene la alte serii pe bani",0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.33,0.33,0.66,1,False,False
+2417,"🤔 😷 în campanie electorală la spitalul Universitar din București nu ratează ocazia de-a îndemna electoratul către Parlamentul Lui precizând apăsat că PSD-ul va fi scos din postura eligibilității politice din România. Este ca un câine turbat în 🔗,noroc că are mască",0,0,0,1,0,0,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1,False,False
+2420,Spune-mi cati au protestat si cati au fost agresivi si iti spun cat de agresiva si violenta e miscarea blm. Ah si in Murica de azi totul e de stanga fiind o oligarhie de vreo 30 de ani. Ai auzit de termenul,0,0,0,0,1,0,0,0.0,0.0,0.0,0.33,0.66,0.0,0.0,1,False,False
+2422,<|PERSON|> : Mâine vin la Parlament. Contez pe responsabilitatea <|PERSON|> ,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.33,0.66,0.0,1,False,False
+2425,"<|PERSON|> , dezamăgit de meciul cu CFR Cluj. ”Când pleci de la 1-0, e ca și cum ai da mingea Barcelonei”",1,0,0,0,0,0,0,0.66,0.33,0.0,0.0,0.33,0.0,0.0,1,False,False
+2431,"De ce dezamăgit? Pentru că speram să citesc o opinie argumentată, din care să învăţ ceva",1,0,0,0,0,0,0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,False,False
+2432,Reteta zilei: Pulpe de pui in suc de limeta cu garnitura,0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+2436,"E bine ca se mai intorc ""creierele"", sper sa aiba eficienta K. <|PERSON|> a numit-o, luni, în funcția de consilier de stat, pe <|PERSON|> , înființând un nou Departament la Administrația Prezidențială, care se va ocupa de climă și sustenabilitate",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.33,0.0,1,False,False
+2441,"Gruparea teroristă Stat Islamic a revendicat dublul atac sinucigaş din Bagdad, soldat cu 32 de morţi și 110",0,0,1,0,0,0,0,0.33,0.0,0.66,0.0,0.0,0.0,0.0,1,False,False
+2443,"<|PERSON|> , reacție surprinzătoare după promovarea lui FC Universitatea Craiova în Liga 2. „Este foarte bine!” EXCLUSIV",0,1,0,0,0,0,0,0.0,1.0,0.0,0.0,0.0,0.0,0.33,1,False,False
+2445,"Ce înseamnă deficitul de 8,6% în 2020? Câciu, ÎNGRIJORARE. Scenariu crunt despre ce urmează - DCNews",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+2448,"Bătrânețe chinuită pentru o femeie de 71 de ani, din Polovragi",1,0,0,0,0,0,0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,False,False
+2453,iulia sunt dezamagita😔🤚,1,0,0,0,0,0,0,0.66,0.0,0.0,0.0,0.33,0.0,0.0,1,False,True
+2454,"Poate îi dezamăgesc pe unii, dar azi nu am făcut decît 130 de flotări și 12,5 km de mers pe jos (patru în casă). Atîta s-a putut:)",0,0,0,0,0,0,1,0.33,0.0,0.0,0.0,0.33,0.0,0.66,1,False,False
+2458,"”Am propus încă din februarie închiderea granițelor! NU s-a întâmplat! Iar eu constat CU STUPOARE că dăm muncitori la export, îi trimitem în ZONE CU FOCARE! UNDE este protecția pentru cetățeanul român? Mă într",0,0,0,1,0,0,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1,False,False
+2460,"Obraznicul <|PERSON|>, purtătorul de cuvânt al Patriarhiei, îl cunosc de când lingea blide la Episcopia Slobozia. Se lauda cu studii în Germania, Franța, doar și în Rusia! E un mafiot rusofil. <|PERSON|> este european, este corect, onest!",0,0,0,1,0,1,0,0.0,0.0,0.0,1.0,0.0,0.66,0.0,2,True,False
+2462,"<|USERNAME|> va cacati atata pe voi cand vedeti ca o femeie/fata este puternica, se apara si vorbeste cand o deranjeaza cv, dar bine ca va place sa tratati fetele/femeile ca pe niste sclave si dupa cand va injura cineva de mama sariti in sus",0,0,0,1,0,0,0,0.33,0.0,0.0,0.66,0.33,0.0,0.0,1,False,False
+2469,"Hei, Funcționează și la noi in România aplicația /programul de loialitate Lidl Plus din AppStore, Google Play? Lidl Plus by Lidl Digital International GmbH ; Co. KG. Am făcut cont, nu știu dacă funcționează și la noi ex: mag Lidl din Constanta (str Soveja 35-35A)",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+2471,"Caz cutremurător în Salonta: Om de afaceri chinez, acuzat că a violat timp de nouă luni o fetiță...",1,0,1,0,0,0,0,0.66,0.0,0.66,0.33,0.0,0.0,0.0,2,True,False
+2473,: Shaorma de casa,0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+2480,"PSD le-a făcut jurnaliștilor un cadou otrăvit, adoptând legea care-i scutește de impozitul pe venit. Actul e menit să închidă gura celor care vor aborda tema pensiilor speciale sau a privilegiilor din zona statului. Deci, nu. Nu am nevoie de pomana PSD sau ale oricărui alt partid",0,0,0,1,0,0,0,0.0,0.33,0.0,1.0,0.0,0.0,0.0,1,False,False
+2483,"Chiuvetele din oțel inoxidabil sunt ușor de curățat și întreținut și rezistă la abuzul de materiale potențial distructive, cum ar fi fonta. Probabil că ați observat că există o variație destul de mare a prețurilor, totuși...",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,0.66,0.33,0.0,1,False,False
+2489,"„Căci Eu ştiu gândurile pe care le am cu privire la voi, zice Domnul, gânduri de pace, şi nu de nenorocire, ca să vă dau un viitor şi o nădejde.” <|PERSON|> 29:11❤️🕊",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,0.66,0.33,0.33,1,False,False
+2490,Vin zile negre: ne paste o seceta ca cea din 1947,0,0,1,0,0,0,0,0.0,0.33,0.66,0.0,0.0,0.0,0.0,1,False,False
+2491,"Eu sunt optimist, trecem si peste asta. Ce nu ne omoara, ne face mai puternici 😀",0,0,0,0,0,1,0,0.0,0.0,0.0,0.33,0.0,0.66,0.0,1,False,False
+2493,din nou și din nou ALTFEL (decît scriu majoritatea mass-media de la noi - dopate cu ignoranță și resentiment) despre alegerile din SUA de anul acesta:,0,0,0,1,0,0,0,0.0,0.0,0.0,0.66,0.33,0.0,0.0,1,False,False
+2500,"o sa regret ca am ales sa ma duc la vara-mea in loc sa-mi fac proiectele? probabil, dar asta e o problema pentru viorica din viitor, good loser",0,0,0,0,1,0,0,0.33,0.0,0.0,0.0,0.66,0.0,0.0,1,False,False
+2506,Statele Unite vor să impună sancțiuni celui mai mare producător chinez de cipuri. Miza este ascensiunea Chinei în domeniu #news #stiri #romania,0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+2508,Cum au ajuns 80% dintre pacienţi să fie mulţumiţi de serviciile medicale:,0,0,0,0,0,1,0,0.0,0.33,0.0,0.0,0.33,0.66,0.33,1,False,False
+2510,Doliu în lumea medicală! Un cunoscut doctor sucevean s-a stins din viață...,1,0,0,0,0,0,0,1.0,0.33,0.0,0.0,0.0,0.0,0.0,1,False,False
+2517,Ia sa vedem ceva din Brăila sau Galați,0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+2520,Am citit 5 pagini și m am descurajat,1,0,0,0,0,0,0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,False,False
+2522,Eveniment neprevăzut pe Aeroportul Otopeni. Un avion a fost întors la sol din cauza unei „indicații neconforme”...,0,1,0,0,0,0,0,0.0,0.66,0.0,0.0,0.33,0.0,0.0,1,False,False
+2526,"Daca nu sti ce is aia nervi, inseamna ca nu ai vorbit cu mine",0,0,0,0,1,0,0,0.0,0.0,0.0,0.33,0.66,0.0,0.0,1,False,False
+2528,"de la Brasov - Nu dau cinstea pe rusine vía Bună dimineața prieteni, vă doresc o săptamînă frumoasă! Cu mare drag special această piesă pentru voi! Pupici!! 😘 😘",0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.0,0.33,1.0,1,False,False
+2535,"Compania Tesla, deținută de miliardarul <|PERSON|> , vine în România și face angajări",0,0,0,0,1,0,0,0.0,0.33,0.0,0.0,0.66,0.33,0.0,1,False,False
+2538,Aparent acum nu ascult muzica in alte limbi pentru ca persoana asta random de pe internet ma cunoaste personal si imi stie si toate playlist-urile,0,0,0,1,0,0,0,0.0,0.0,0.0,0.66,0.33,0.0,0.0,1,False,False
+2539,Spaima de Covid: Judecătoria Beiuş şi-a suspendat activitatea cu publicul,0,0,1,0,0,0,0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1,False,False
+2542,<|PERSON|>: Blocul ACUM mizează pe <|PERSON|> și <|PERSON|> pentru demiterea Guvernului,0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,0.66,0.33,0.0,1,False,False
+2545,"Accident teribil in Constanta, pe DN 2A. Trei oameni au murit dupa ce doua masini s-au izbit in trafic",1,0,0,0,0,0,0,0.66,0.33,0.33,0.0,0.0,0.0,0.0,1,False,False
+2550,cu alertele astea de urgență. Avem căștile în urechi. Am făcut atac de panică. Idioții naibii. Mi-au dat lacrimile și tremur fuuuuck,0,0,1,1,0,0,0,0.0,0.33,0.66,0.66,0.33,0.0,0.0,2,True,False
+2557,"Fotbal: Clubul Steaua Roşie, amendat cu <|URL|> de euro pentru insulte rasiste la adresa lui <|PERSON|>",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+2566,"#AGERPRES vă urează un An Nou fericit, cu sănătate şi prosperitate-",0,0,0,0,0,1,1,0.0,0.0,0.0,0.0,0.0,0.66,1.0,2,True,False
+2567,Laboratoarele Sanofi transmit un rezultat dezamăgitor. Medicamentul Kevzara nu a avut rezultate concludente,1,0,0,0,0,0,0,0.66,0.0,0.0,0.0,0.33,0.0,0.0,1,False,False
+2568,"Da, coaie, sunt care-și fac operații estetice pentru că nu se simt bine în pielea lor și dacă pot face asta, de ce nu?:))) ești prea frustrat, ia-te de mână cu",0,0,0,1,0,0,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1,False,False
+2577,"oamenii ăștia chiar au impresia că dacă răspunzi cu hate la hate, automat câștigi... câștigi o pulă, arăți doar că ești un frustrat care așteaptă prima ocazie să își arate /frustrările/",0,0,0,1,0,0,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1,False,False
+2578,"Pasionat de tot ce inseamna cultura si un diplomat prin excelenta, cum rar mai intalnesti. Am avut placerea sa lucrez cu dansul in cadrul UNESCO. Se va dedica scrisului, ceea ce ma bucura, intrucat tinerii au, mai mult ca oricand, astazi, nevoie de modele.",0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.33,1,False,False
+2579,Sincer sunt atât de mâhnita și frustrata și suparata pe absolut orice in momentul asta,1,0,0,0,0,0,0,0.66,0.0,0.0,0.33,0.0,0.0,0.0,1,False,False
+2581,Nu e chiar fain ca se face o mocirla oribila si nu mai e deloc frumos,0,0,0,0,1,0,0,0.33,0.0,0.0,0.0,0.66,0.0,0.0,1,False,False
+2586,"Dacă ți-am furat un zâmbet cu cafeaua mea, dă-mi-o pe a ta. coffee smile lookinsideyourcoffee",0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1,False,False
+2588,"Dinamo - FCSB LIVE VIDEO, ora 20:00,. Tot ce trebuie să știi despre marele derby! Câte bilete s-au vândut până acum stire digisport 2review",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+2589,Promisiunea făcută de <|PERSON|> unei fetițe din Râșcani a devenit dezamăgire,1,0,0,0,0,0,0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,False,False
+2593,"Tesla va exporta modelul 3 fabricat în China către Europa, marcând o altă etapă importantă pentru gigafabrica sa din Shanghai",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+2596,"<|USERNAME|> Cred ca atunci când îți pare ca cunoști “prea bine” omul, e semn ca trăiești cu o iluzie a ta (doar a ta, una ireală) despre cine este el, nu cu omul adevărat. Din cauza asta nu-l poți suporta-pentru ca interacționezi cu o iluzie",1,0,0,0,1,0,0,0.66,0.0,0.0,0.0,0.66,0.0,0.33,2,True,False
+2597,„ S-a trecut deja de linia roșie ”. a declarat că în Belarus a început un război terorist,0,0,1,0,0,0,0,0.33,0.0,0.66,0.33,0.0,0.0,0.0,1,False,False
+2604,"-Gândește-te ca persoanele respective fac asta din răutate/frustrare!-Încearcă sa vorbesti despre asta cu cineva care te înțelege, pentru a-ți da sfaturi!-Spune-le acelor persoane toxice ca nu iti pasa, nu le da importanță!-Poti într",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+2613,Sunt inca mahnit de lipsa de viziune politica in separarea recenta a invatamantului superior de activitatea de cercetare stiintifica,1,0,0,0,0,0,0,1.0,0.33,0.0,0.0,0.0,0.0,0.0,1,False,False
+2614,"Totodata și România trebuie sa devină un partener onest, dar care să știe să își negocieze corect poziția. Eliminarea Vizelor pentru cetățenii români - o normalitate dacă suntem priviți ca membrii UE și UE este privită ca un t",0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.33,0.66,0.0,1,False,False
+2616,Meniul Big Belly Brasov acoperă toate gusturile. Dacă ești vegetarian poți alege un burger vegan dacă vrei să mănânci sănătos te poți delecta cu o salată plină de vitamine 🥗 iar dacă vrei să te răsfeți încearcă shaorma cu pui crocant. 🌯 Comandă online,0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,0.66,0.33,0.0,1,False,False
+2620,Dezvăluire șocantă despre <|PERSON|> : ”M-a insultat tot drumul. Am îndurat multe” <|URL|>…,0,0,0,0,1,0,0,0.0,0.33,0.33,0.0,0.66,0.0,0.0,1,False,False
+2622,"₊˚.༄ FRUMOASA SI BESTIA mai mult de o saptamana sperand ca Bestia se va infuria si o va manca de vie, atunci cand se va reintoarce. 𝙳𝚊𝚌𝚊 𝚟𝚊 𝚙𝚕𝚊𝚌𝚞𝚝 𝚊𝚌𝚎𝚊𝚜𝚝𝚊 𝚙𝚘𝚜𝚝𝚊𝚛𝚎 𝚕𝚊𝚜𝚊𝚝𝚒 𝚞𝚗 𝚕𝚒𝚔𝚎 𝚜𝚒 𝚞𝚗 𝚌𝚘𝚖𝚎𝚗𝚝𝚊𝚛𝚒𝚞.",0,0,1,0,0,0,0,0.0,0.0,0.66,0.33,0.33,0.33,0.0,1,False,False
+2625,Un „vapor fantomă” a apărut în Irlanda după furtuna Dennis. Ce s-a întâmplat cu echipajul,0,1,0,0,0,0,0,0.0,0.66,0.33,0.0,0.33,0.0,0.0,1,False,False
+2631,Și pe mine m-a surprins prima dată apoi am realizat că ăștia-s Rammstein și n-am mai fost surprins,0,1,0,0,0,0,0,0.0,1.0,0.0,0.0,0.33,0.0,0.0,1,False,False
+2641,"Recunosc, banii sint un factor <|URL|> nimeni nu se mai ingramadeste sa investească in film, arta in general, sper <|URL|> reușească tot proiectul.",0,0,0,0,1,0,0,0.33,0.0,0.0,0.0,0.66,0.33,0.0,1,False,False
+2645,"10 miliarde de euro si aproape <|URL|> de salariati. Aceasta este miza lui Citu"", a spus <|PERSON|> .",0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+2646,"Ăia care înjură Vacanța Mare pentru că ăștia l-ar fi parodiat/criticat/ridiculizat pe #Dulapu de Revelion sunt ADEVĂRAȚII COMUNIȘTI ai neamului. Da, bă, prostu' trebuie înjurat 24/24. Nu neapărat pentru că e democrație, ci pur și simplu pentru că #Dulapu e.... prost! #BPÎRL",0,0,0,1,0,0,0,0.0,0.0,0.0,0.66,0.33,0.0,0.0,1,False,False
+2647,TRAGEDIE! Un în vârstă de 76 ani și-a pierdut viața în urma unui incendiu care a izbucnit în locuința sa-,1,0,0,0,0,0,0,0.66,0.33,0.0,0.0,0.33,0.0,0.0,1,False,False
+2653,Ca sa mă înțelegeți. Sunt pentru politici economice de centru stanga. Cultural sunt de dreapta. Deci un mix. Eu personal mi-as dori un partid de centru conservator. Pnț-ul are o șansă buna sa reintre în parlament. http,0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,False,False
+2654,"Incendiu violent, la un service auto din Craiova. Pericol de explozie",0,0,1,0,0,0,0,0.0,0.33,0.66,0.0,0.0,0.0,0.0,1,False,False
+2657,Într-o zi... riscând...poți rămâne fericit pentru totdeauna! ♡,0,0,0,0,0,0,1,0.0,0.33,0.0,0.0,0.0,0.33,0.66,1,False,False
+2658,Mi s-a parut interesant si frumos explicat. Nu am dat share sa influenţez o opinie sau alta. Mi s-a parut neutru articolul. Nu te trimite sa te vaccinezi.,0,0,0,0,1,0,0,0.0,0.0,0.0,0.0,0.66,0.33,0.0,1,False,False
+2664,Niște sentimente neplăcute,1,0,0,0,0,0,0,1.0,0.33,0.0,0.0,0.0,0.0,0.0,1,False,True
+2667,"Ce articol de prost gust și ce că publică asemenea tentative patetice de jurnalism... Titlul este cea mai nefericită alegere posibilă, iar în privința infracțiunilor, se pare că au scăzut cu 75% în perioada aceasta! h",0,0,0,1,0,0,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1,False,False
+2673,"Este întotdeauna o plăcere când un client satisfăcut ne trimite fotografii cu rezultatul muncii sale - aici, o scula emboss utilizată la trepte anti-alunecare. smtechsrl",0,0,0,0,0,1,1,0.0,0.0,0.0,0.0,0.33,0.66,1.0,2,True,False
+2674,"VIDEO | Lacrimi de durere pentru un afacerist din Mexic, nevoit să-și plătească angajații pentru ultima oară. „Sunt ultimii mei bani”",1,0,0,0,0,0,0,0.66,0.0,0.0,0.0,0.33,0.0,0.0,1,False,False
+2675,"O femeie de serviciu, pusa de primar sa candideze ca sa existe un contracandidat, a castigat alegerile: ""El a fost uimit si ea a fost uluita",0,1,0,0,0,0,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,1,False,False
+2678,DEZASTRU IN SPITALELE-LAGAR: <|PERSON|> INTERNATI FORTAT FAC CRIZE DE <|PERSON|> via,0,0,1,0,0,0,0,0.33,0.33,1.0,0.33,0.0,0.0,0.0,1,False,False
+2682,Deci considerăm comportament normal că dacă cineva tipărește o caricatură care insultă religia unui popor o să urmeze decapitări sau atentate teroriste? Câți creștini au recurs la gesturi dastea când au auzit glume cu preoți p,0,0,0,1,0,0,0,0.0,0.0,0.33,1.0,0.0,0.0,0.0,1,False,False
+2683,"„ E ca într-un film de groază ”: Mărturia unei orădence care locuieşte în Liban, după exploziile...",0,0,1,0,0,0,0,0.33,0.0,0.66,0.0,0.33,0.0,0.0,1,False,False
+2691,"Legat de ideea de mai jos, mă duce cu gândul la cât de stigmatizați și, chiar năpăstuiți fără ezitare sunt, depresie, atacuri de panică, fobii, distimie etc., în mod special mai predominant în societatea românească. Trist...",1,0,0,0,0,0,0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,False,False
+2701,"Buey, Comuna Recea, m-ati dezamagit azi... 🍻",1,0,0,0,0,0,0,0.66,0.0,0.0,0.0,0.33,0.0,0.0,1,False,False
+2705,In vremurile de pe urma se va raci dragostea multora si va fi necaz mult,1,0,0,0,0,0,0,0.66,0.0,0.33,0.0,0.0,0.0,0.0,1,False,False
+2707,Zi excelenta îți doresc!😘😘😘,0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1,False,False
+2714,"Toată lumea știe ca media e o modalitate de spălare a creierului și de manipulare în masă dar toată lumea îi dă ascultare și crezare, și ia informațiile prezentate fără să le proceseze, măcar cât de cât.",1,0,0,0,0,0,0,0.66,0.0,0.0,0.0,0.33,0.0,0.0,1,False,False
+2715,"multumesc. răspunsurile sunt cele mai importante și, aici, sunt geniale. e un HRP în cea mai bună formă a lui. un HRP năucitor pur si simplu - spun aceasta cu toată admirația.",0,0,0,0,0,0,1,0.0,0.33,0.0,0.0,0.33,0.33,0.66,1,False,False
+2718,"Azi-noapte pe la 3 am fost spaima cartierului. Vreo patru petrecăreți, probabil proaspeți bacalaureați, se hlizeau și vorbeau tare la colțul casei. O fătucă începuse să cânte ceva ”muzică” din asta de YT Homepage Romania. ”Nu-mi pasă, inima meaaa...” Așa că am răcnit sălbatic:",0,0,0,1,0,0,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1,False,False
+2722,"îngenuncheată de durere. Astăzi, ar fi împlinit 20 de ani: ” Soarta a fost prea crudă cu tine și cu noi ”...",1,0,0,0,0,0,0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,False,False
+2725,Eu sunt uimita de omul asta. A intrat la medicina din prima pe vremea aceea era extrem de greu un astfel de examen si nu era cu aranjamente. Plus ca a absolvit in ‘87 deci a prins anii grei de comunism. Cum e posibil sa fie asa tampit? 😂,0,1,0,0,0,0,0,0.0,1.0,0.0,0.33,0.0,0.0,0.0,1,False,False
+2727,S-au împlinit trei ani de la tragedia care a înfiorat România,1,0,0,0,0,0,0,1.0,0.0,0.0,0.33,0.33,0.0,0.0,1,False,False
+2728,Greseala celor care il critica pe este ca il baga in seama. Un astfel de jeg uman ar trebuie sa fie uitat de umanitate,0,0,0,1,0,0,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1,False,False
+2736,"azi, într-o ora, am primul date ever cu un tip care e mai soft decât o bezea și ma ia anxietatea grav. și pe. și e la fel de anxios ca mine. tot ce pot sa zic este urati-mi succesuri și doamne ajuta sa nu ma fac de căcat.",0,0,1,0,0,0,0,0.0,0.0,0.66,0.0,0.33,0.0,0.0,1,False,False
+2740,E jale in oras. Toată lumea e agitată,1,0,0,0,0,0,0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,False,False
+2741,Iar m-am binedispus la comentarii! Tinde să devină un obicei. <|URL|>…,0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.33,0.0,0.66,1,False,False
+2743,Bună dimineața.. 🌞... da... trebuie o revoltă a sinelui..!!,0,0,0,0,0,1,0,0.0,0.0,0.0,0.33,0.0,0.66,0.33,1,False,False
+2748,"Ce resurse ma? E mult sub teamviewer la orice. Plus ca nu iti lasa procese deschise in spate cand nu e pornit, spre deosebire de tv.",0,0,0,1,0,0,0,0.0,0.33,0.0,0.66,0.33,0.33,0.0,1,False,False
+2757,"pai de la inceputul anului suntem bombardati la tv in fiecare minut cu astfel de bulshit-uri, e jale ce se petrece, suntem mintiti si manipulati in ultimul hal.",0,0,0,1,0,0,0,0.33,0.0,0.0,0.66,0.0,0.0,0.0,1,False,False
+2761,"Să-ți fie de bine. 😍 Eram curioasă pentru că nu am mâncat praz niciodată. Îmi place ceapa mult, dar stomacul meu nu e de acord în ultimii ani",0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.33,0.33,0.66,1,False,False
+2764,"Tragedie rutieră vineri seară, pe raza comunei Adâncata, județul Suceava. O mașină s-a răsturnat în afara părții carosabile. a fost prins sub autoturism iar a decedat pe loc. Poliția rutieră a decedat. tragedierutieră",1,1,1,0,0,0,0,0.66,0.66,0.66,0.0,0.0,0.0,0.0,3,True,False
+2769,"<|PERSON|>, IN PANICA TOTALA – de la unitatea de elita DNA Ploiesti,, a fost arestat. a admis contestatia SIIJ si i-a dat lui “ Zdreanta ” mandat definitiv pe 30 de zile. S-a ajuns in punctul care ii da cosmaruri fostei sefe DNA L K",0,0,1,0,0,0,0,0.0,0.0,0.66,0.0,0.33,0.0,0.0,1,False,False
+2770,"Vom trai și vom vedea... dar trebuie sa se schimbe ceva... terenuri vândute pe sub mâna, autorizații date oricui oricum... nu e chiar așa de simplu... am încredere ca oricine a vrut sa pună primar pe ăla la tm, a știut ce fac",0,0,0,0,0,1,0,0.33,0.0,0.0,0.0,0.0,0.66,0.0,1,False,False
+2780,"Daca zice Ambasada, inseamna ca asa e?? Nici pe departe 🤮 doar noi stim ce fel de javra e <|PERSON|>! Bineinteles ca se “ pupa ” <|PERSON|>, SUA isi face nevoile in curtea României. Cine sa se impotriveasca? 💰",0,0,0,1,0,0,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1,False,False
+2784,"Extraordinar ce voce! A primit un dar nemaipomenit de la bunica lui, o moștenire unica! Felicitări din toată inima copil minunat #romaniiautalent",0,0,0,0,0,0,1,0.0,0.33,0.0,0.0,0.33,0.0,0.66,1,False,False
+2809,"muzica,, ascult la nesfarsit,,, e alinarea",0,0,0,0,0,0,1,0.33,0.0,0.0,0.0,0.0,0.0,0.66,1,False,False
+2816,"„În loc de coronavirus, foamea ne va ucide.” Planeta se va confrunta cu episoade de foamete de „proporții biblice” în părțile cele mai sărace ale lumii",0,0,1,0,0,0,0,0.33,0.0,1.0,0.0,0.0,0.0,0.0,1,False,False
+2828,"Dacă nu la Cluj, atunci unde! Povestea unui taximetrist cinstit care face Clujul mai frumos <|URL|>…",0,0,0,0,0,0,1,0.0,0.33,0.0,0.0,0.33,0.0,0.66,1,False,False
+2848,<|PERSON|> : ”Nu uita… alegerea ta va conta pentru un Pitești cum toți ni-l dorim”,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.33,0.66,0.0,1,False,False
+2853,"Mulțumesc iubita, bună dimineața, o sâmbătă minunată și plină numai de lucruri frumoase îți doresc #CanYaman #ÖzgeGürel #MrWrong #PRODUAwards2020",0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1,False,False
+2859,"COVID-19 lovește dur la PRO TV. Vedeta e în autoizolare, două emisiuni de top, în pericol",0,0,1,0,0,0,0,0.0,0.33,0.66,0.33,0.33,0.0,0.0,1,False,False
+2870,"Vrem sa functionam ca barbati de stat si mai putin ca pustani de stat "" a spus Barna",0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.33,0.66,0.0,1,False,False
+2888,ma bucur ca sufar cu cineva impreuna,1,0,0,0,0,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.66,2,True,False
+2897,au dezvăluit că s-au înmulțit alarmant cazurile de anxietate și depresie din cauza pandemiei de coronavirus,0,0,1,0,0,0,0,0.33,0.0,0.66,0.0,0.33,0.0,0.0,1,False,False
+2905,same și mai ales că uneori la unele magazine piuie la mine din cauza cartelelor din portofel??? și mă pis pe mine de la anxietate de fiecare data,0,1,1,0,0,0,0,0.0,0.66,1.0,0.0,0.0,0.0,0.0,2,True,False
+2916,"E un semn scurt și voios de prosperitate, vitalitate și noroc la zaruri în solitudine",0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.33,0.66,0.33,1,False,False
+2918,Distractie placuta Nina sa ai o zi superba 🤗,0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1,False,False
+2921,De la <|PERSON|> avem o carte #DeSezon: <|URL|> „Cadoul perfect pentru Crăciun. Plin de situații amuzante. Cărticica asta sigur îi va binedispune pe cititorii care o vor găsi sub brad.” — The Times #TwasTheNightshiftBeforeChristmas #RomanianEdition,0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.33,0.33,0.66,1,False,False
+2928,Pandemia va aduce o foamete de proporţii Biblice,0,0,1,0,0,0,0,0.33,0.0,1.0,0.0,0.0,0.0,0.0,1,False,False
+2929,"Exit Festival, singurul mare eveniment european care nu a fost anulat: „ Între frică şi optimism, alegem a doua variantă “",0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.0,0.33,0.66,1,False,False
+2936,"Incident de groază, surprins chiar la intrarea unui pasaj subteran din capitală-",0,0,1,0,0,0,0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1,False,False
+2952,numai eu stiu cum imi tremura chilotii cand fac update-uri la un site la care nu s-au facut update-uri mai mult de un an.,0,0,1,0,0,0,0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1,False,False
+2955,"1. De ce privești mereu în jos Cănd încercarea vine? /: Ridică-ți ochii spre <|PERSON|>, EI e chiar lângă tine.: / 2. De ești lovit, batjocorit Cănd ai făcut ce-i bine, /: Rămâi statornic,… <|URL|>…",0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,1,False,False
+2960,Familia lui s-a mărit ”! Anunțul emoționant făcut de: “ Binecuvântată ”...,0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.33,0.0,0.66,1,False,False
+3014,Felicitări tuturor! Cinste lor!,0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1,False,False
+3023,"Bună dimineața, prieteni! Multă #sănătate! Suntem din ce în ce mai marcați de criza sanitară, mai stresați, mai irascibili, mai îngrijorați de ziua de mâine, dar cu un zâmbet și respectând regulile impuse de #pandemie vom putea de…<|URL|> <|URL|>",0,0,0,0,0,0,1,0.33,0.0,0.0,0.0,0.33,0.0,1.0,1,False,False
+3073,"parcă îs mai bucuros de <|PERSON|>, nu știu de ce:))) numa că îi foarte succesibil accidentărilor, sper să nu fie cazu prea des sau prea lung",0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.0,0.33,0.66,1,False,False
+3081,"mai rămâne juma de an în închisoare. Cică adevărurile prezentate de organizația pe care a fondat-o, Wikileaks, ar fi incomode pentru unii. Neplăcut.",1,1,0,0,0,0,0,0.66,0.66,0.0,0.0,0.0,0.0,0.0,2,True,False
+3114,REQUEST amuzament nu strică... 😁 😅,0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.33,0.0,0.66,1,False,False
+3121,"Weekendul ne bate la ușă, așadar, vă așteptăm cu drag în Munții Apuseni să vă bucurați de minunăția de culori 🍂 și să vă relaxați după o săptămână plină!",0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.0,0.33,1.0,1,False,False
+3143,"Sofia, multa putere sa-ti dea <|PERSON|>! Te imbratisez cu drag! 🤗 🤗 🤗",0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.0,0.33,1.0,1,False,False
+3201,ULTIMA ORĂ! Alertă cu bombă în București,0,1,1,0,0,0,0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,2,True,False
+3329,"Alea nu sunt. Dacă ai venit aici sa te simți ofensat la orice alta idee (înjurăturile sunt de block, atat), mai bine stai pe Facebook in grupul de mămici. Luptă și lovește cu barda înapoi, dacă te țin curelele, nu da block",0,0,0,1,1,0,0,0.0,0.0,0.0,1.0,0.66,0.0,0.0,2,True,False
+3394,"Știu că sunteți supărați pe presă. Și eu sunt, în fiecare zi. Dar am avut dreptate să am încredere în <|PERSON|>. De acum încolo, o să am chiar și mai multă încredere. Pentru că de foarte multă vreme nu am mai văzut la televizor noblețea autentică a gestului de a cere iertare.",1,0,0,0,0,1,0,0.66,0.0,0.0,0.0,0.0,0.66,0.0,2,True,False
+3416,"Este intradevar socant cum a putut concentra PSD ul atita prostie, mediocritate, minciuna si prosta crestere. USR ul ramine ultima speranta a rominilor si sper sa nu fim inselati in asteptari....",0,1,0,1,0,0,0,0.0,0.66,0.0,1.0,0.0,0.33,0.0,2,True,False
+3464,"<|PERSON|> : Cum să fii candidat la Primaria Roman, să copii ideea cuiva și să o prezinți ca pe o mare realizare? Sunt consternat să constat că formațiunea/candidatul care ar trebui să ne ofere speranțe la un trai m...",0,1,0,1,0,0,0,0.33,0.66,0.0,1.0,0.0,0.0,0.0,2,True,False

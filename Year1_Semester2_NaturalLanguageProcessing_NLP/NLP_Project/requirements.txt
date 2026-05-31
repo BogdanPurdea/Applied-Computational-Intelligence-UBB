@@ -9,3 +9,10 @@ seaborn
 lime
 shap
 accelerate
+sentence-transformers
+kagglehub
+emoji
+contractions
+ipywidgets
+evaluate
+tqdm
