@@ -57,7 +57,7 @@ def compute_metrics(eval_pred):
     }
 
 
-def load_and_prepare_data(file_path, sample_size=10000, random_state=42):
+def load_and_prepare_data(file_path, sample_size=50000, random_state=42):
     """
     Loads the preprocessed WELFake dataset and optionally reduces it to a
     stratified sample while preserving the 0/1 label distribution.
@@ -126,13 +126,13 @@ def main():
     )
 
     output_dir = os.path.join(script_dir, "output_WELFake")
-    training_output_dir = os.path.join(output_dir, "distilbert_training_results")
+    training_output_dir = os.path.join(output_dir, "bert_training_results")
 
     # Creates the output directory if it does not exist.
     os.makedirs(output_dir, exist_ok=True)
 
     # Initializes the model identifier and training parameters.
-    model_name = "distilbert-base-uncased"
+    model_name = "bert-base-uncased"
     max_length = 512   # 128/256/512, Process more of the input
     batch_size = 16
     epochs = 2

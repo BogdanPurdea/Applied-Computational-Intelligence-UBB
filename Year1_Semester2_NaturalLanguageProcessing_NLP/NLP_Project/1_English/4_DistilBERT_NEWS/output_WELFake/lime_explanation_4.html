@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_divJQ00MTJTPIWK8AW"></div>
+        <div class="lime top_div" id="top_divIJ74A8E57P226YT"></div>
         
         <script>
-        var top_div = d3.select('#top_divJQ00MTJTPIWK8AW').classed('lime top_div', true);
+        var top_div = d3.select('#top_divIJ74A8E57P226YT').classed('lime top_div', true);
         
             var pp_div = top_div.append('div')
                                 .classed('lime predict_proba', true);
             var pp_svg = pp_div.append('svg').style('width', '100%');
-            var pp = new lime.PredictProba(pp_svg, ["negative", "positive"], [0.0029121784027665854, 0.9970878958702087]);
+            var pp = new lime.PredictProba(pp_svg, ["negative", "positive"], [0.9997097849845886, 0.00029023445677012205]);
             
         
         var exp_div;
             var exp = new lime.Explanation(["negative", "positive"]);
         
                 exp_div = top_div.append('div').classed('lime explanation', true);
-                exp.show([["Video", 0.002712907380953464], ["Trump", 0.0014903180048372602], ["AMAZING", 0.0011465415038637917], ["Does", 0.001002324224886602], ["Deplorablesâ", 0.0007554578973249046], ["Les", 0.0005489797004470297], ["â", -0.0005288942575989507]], 1, exp_div);
+                exp.show([["Clinton", -0.2613257453206999], ["2017", -0.16432507244585356], ["could", -0.10754275530832151], ["sweeping", -0.09488496397857767], ["struggles", -0.09212658964842758], ["startups", -0.07738742587134297], ["A", -0.06931276218712577], ["on", -0.06821148030220796], ["to", -0.06144827165861243], ["have", -0.052578100061184], ["in", -0.04176363268500155], ["consequences", -0.038584940797091974], ["barrage", -0.024442710075065273], ["media", 0.01653675146793567], ["contain", 0.01617900883374896], ["cash", -0.013277926717482938], ["verdict", -0.010092264518680949], ["for", -0.009476249568760002], ["tech", 0.003260519546142132], ["foreign", 0.00257805732909419]], 1, exp_div);
                 
         var raw_div = top_div.append('div');
-            exp.show_raw_text([["Video", 52, 0.002712907380953464], ["Trump", 18, 0.0014903180048372602], ["AMAZING", 0, 0.0011465415038637917], ["Does", 24, 0.001002324224886602], ["Deplorables\u00e2", 36, 0.0007554578973249046], ["Les", 32, 0.0005489797004470297], ["\u00e2", 29, -0.0005288942575989507]], 1, "AMAZING ENTRANCE! Trump Does \u00e2\u0080\u009cLes Deplorables\u00e2\u0080\u009d [Video]", raw_div, true);
+            exp.show_raw_text([["Clinton", 0, -0.2613257453206999], ["2017", 72, -0.16432507244585356], ["could", 77, -0.10754275530832151], ["sweeping", 88, -0.09488496397857767], ["struggles", 8, -0.09212658964842758], ["startups", 119, -0.07738742587134297], ["A", 59, -0.06931276218712577], ["on", 43, -0.06821148030220796], ["to", 18, -0.06144827165861243], ["have", 83, -0.052578100061184], ["in", 69, -0.04176363268500155], ["consequences", 97, -0.038584940797091974], ["barrage", 35, -0.024442710075065273], ["media", 29, 0.01653675146793567], ["contain", 21, 0.01617900883374896], ["cash", 54, -0.013277926717482938], ["verdict", 61, -0.010092264518680949], ["for", 110, -0.009476249568760002], ["tech", 114, 0.003260519546142132], ["foreign", 46, 0.00257805732909419]], 1, "Clinton struggles to contain media barrage on foreign cash A verdict in 2017 could have sweeping consequences for tech startups.", raw_div, true);
             
         </script>
         </body></html>

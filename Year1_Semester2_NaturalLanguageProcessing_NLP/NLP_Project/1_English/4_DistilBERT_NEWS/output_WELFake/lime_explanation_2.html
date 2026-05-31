@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_div2O9Q0BFDW4AMF7P"></div>
+        <div class="lime top_div" id="top_divXYBATZHS4OBB26J"></div>
         
         <script>
-        var top_div = d3.select('#top_div2O9Q0BFDW4AMF7P').classed('lime top_div', true);
+        var top_div = d3.select('#top_divXYBATZHS4OBB26J').classed('lime top_div', true);
         
             var pp_div = top_div.append('div')
                                 .classed('lime predict_proba', true);
             var pp_svg = pp_div.append('svg').style('width', '100%');
-            var pp = new lime.PredictProba(pp_svg, ["negative", "positive"], [0.0031175725162029266, 0.996882438659668]);
+            var pp = new lime.PredictProba(pp_svg, ["negative", "positive"], [0.0001039106646203436, 0.9998960494995117]);
             
         
         var exp_div;
             var exp = new lime.Explanation(["negative", "positive"]);
         
                 exp_div = top_div.append('div').classed('lime explanation', true);
-                exp.show([["VIDEO", 0.0034940791603431933], ["video", 0.0026748692109694753], ["My", 0.001456876022993317], ["Think", 0.0013847551791915183], ["Democratâ", -0.0010141522880603563], ["watch", 0.000781070962183095], ["Dogâ", -0.0005119504289582086], ["s", 0.00043175246478726497], ["I", 0.000379389161946561], ["MUST", 0.0002587683639318202], ["A", -5.5547455100615784e-05]], 1, exp_div);
+                exp.show([["Video", 7.589658039395433e-05], ["Grandkids", 3.4720810271048966e-05], ["PRICELESS", 2.7604841369662518e-05], ["GRANDPA", 2.251883229596784e-05], ["TRUMP", 2.1103045627791328e-05], ["The", -1.4747326757389195e-05], ["House", 8.776147456735736e-06], ["Leaves", 6.05381478413795e-06], ["White", 4.521760735981846e-06], ["With", -9.088502371451839e-07]], 1, exp_div);
                 
         var raw_div = top_div.append('div');
-            exp.show_raw_text([["VIDEO", 37, 0.0034940791603431933], ["video", 57, 0.0026748692109694753], ["My", 11, 0.001456876022993317], ["Think", 5, 0.0013847551791915183], ["Democrat\u00e2", 24, -0.0010141522880603563], ["watch", 51, 0.000781070962183095], ["Dog\u00e2", 14, -0.0005119504289582086], ["s", 20, 0.00043175246478726497], ["I", 3, 0.000379389161946561], ["MUST", 46, 0.0002587683639318202], ["A", 22, -5.5547455100615784e-05], ["A", 44, -5.5547455100615784e-05]], 1, "\u00e2\u0080\u009cI Think My Dog\u00e2\u0080\u0099s A Democrat\u00e2\u0080\u009d [VIDEO] A MUST watch video!", raw_div, true);
+            exp.show_raw_text([["Video", 68, 7.589658039395433e-05], ["Grandkids", 57, 3.4720810271048966e-05], ["PRICELESS", 0, 2.7604841369662518e-05], ["GRANDPA", 11, 2.251883229596784e-05], ["TRUMP", 19, 2.1103045627791328e-05], ["The", 32, -1.4747326757389195e-05], ["The", 53, -1.4747326757389195e-05], ["House", 42, 8.776147456735736e-06], ["Leaves", 25, 6.05381478413795e-06], ["White", 36, 4.521760735981846e-06], ["With", 48, -9.088502371451839e-07]], 1, "PRICELESS! GRANDPA TRUMP Leaves The White House With The Grandkids [Video]", raw_div, true);
             
         </script>
         </body></html>
