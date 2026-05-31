@@ -10,7 +10,8 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification, Trai
 from lime.lime_text import LimeTextExplainer
 import shap
 
-class IMDBDataset(torch.utils.data.Dataset):
+
+class WELFakeDataset(torch.utils.data.Dataset):
     """
     Custom PyTorch Dataset class for IMDB text classification.
     Manages the formatting of text encodings and labels for the training pipeline.
@@ -56,18 +57,47 @@ def compute_metrics(eval_pred):
     }
 
 
-def load_and_prepare_data(file_path):
+def load_and_prepare_data(file_path, sample_size=10000, random_state=42):
     """
-    Loads a CSV dataset, maps string sentiments to binary integers, and removes invalid rows.
-    Utilizes the python engine to safely skip rows with broken formatting.
+    Loads the preprocessed WELFake dataset and optionally reduces it to a
+    stratified sample while preserving the 0/1 label distribution.
+    Expected columns: text, label, sentiment.
     """
-    df = pd.read_csv(file_path, engine='python', on_bad_lines='skip')
-    df['sentiment'] = df['sentiment'].str.lower().map({'positive': 1, 'negative': 0})
-    df = df.dropna(subset=['sentiment'])
-    df['sentiment'] = df['sentiment'].astype(int)
+    df = pd.read_csv(file_path, encoding="utf-8", low_memory=False)
 
-    texts = df['review'].tolist()
-    labels = df['sentiment'].tolist()
+    required_columns = {"text", "label"}
+    missing_columns = required_columns - set(df.columns)
+
+    if missing_columns:
+        raise ValueError(
+            f"Missing required columns: {missing_columns}. "
+            f"Found columns: {df.columns.tolist()}"
+        )
+
+    df = df.dropna(subset=["text", "label"])
+
+    df["label"] = pd.to_numeric(df["label"], errors="coerce")
+    df = df[df["label"].isin([0, 1])]
+    df["label"] = df["label"].astype(int)
+
+    if sample_size is not None and len(df) > sample_size:
+        df, _ = train_test_split(
+            df,
+            train_size=sample_size,
+            random_state=random_state,
+            stratify=df["label"]
+        )
+
+    df = df.reset_index(drop=True)
+
+    print("\n========== Sampled Dataset Summary ==========")
+    print(f"Total records used: {len(df)}")
+    print(df["label"].value_counts().sort_index())
+    print("============================================\n")
+
+    texts = df["text"].astype(str).tolist()
+    labels = df["label"].tolist()
+
     return texts, labels
 
 
@@ -87,8 +117,15 @@ def main():
 
     # Defines directory paths relative to the script location.
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    preprocessed_data_path = os.path.join(script_dir, "PreProcessed_IMDB_Dataset.csv")
-    output_dir = os.path.join(script_dir, "output_V9")
+    parent_dir = os.path.dirname(os.path.dirname(script_dir))
+
+    preprocessed_data_path = os.path.join(
+        parent_dir,
+        "Datasets",
+        "PreProcessed_WELFake_Dataset.csv"
+    )
+
+    output_dir = os.path.join(script_dir, "output_WELFake")
     training_output_dir = os.path.join(output_dir, "distilbert_training_results")
 
     # Creates the output directory if it does not exist.
@@ -146,9 +183,9 @@ def main():
     val_encodings = tokenizer(val_texts, truncation=True, padding=True, max_length=max_length)
     test_encodings = tokenizer(test_texts, truncation=True, padding=True, max_length=max_length)
 
-    train_dataset = IMDBDataset(train_encodings, train_labels)
-    val_dataset = IMDBDataset(val_encodings, val_labels)
-    test_dataset = IMDBDataset(test_encodings, test_labels)
+    train_dataset = WELFakeDataset(train_encodings, train_labels)
+    val_dataset = WELFakeDataset(val_encodings, val_labels)
+    test_dataset = WELFakeDataset(test_encodings, test_labels)
 
     # Loads the fine-tuned model from the checkpoint or initializes a base model for training.
     if not requires_training:
@@ -174,7 +211,7 @@ def main():
         fp16=True,
         dataloader_num_workers=0,
         gradient_accumulation_steps=2,
-        logging_steps=200,
+        logging_steps=100,
         report_to="none"
     )
 
