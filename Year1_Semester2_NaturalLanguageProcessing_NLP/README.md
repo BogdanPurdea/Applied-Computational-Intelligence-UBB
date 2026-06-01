@@ -249,7 +249,7 @@ Uses neural networks with many layers to extract features and classify data dire
     * **Masked Language Modeling (MLM):** Randomly hides 15% of the input words and trains the model to predict them using both the left and right context;
     * **Next Sentence Prediction (NSP):** Trains the model to predict the likelihood that one sentence logically follows another;
 * **Model Variations:**
-    * **RoBERTa:** Improves BERT by removing the NSP task and using much more data;
+    * **RoBERT:** Improves BERT by removing the NSP task and using much more data;
     * **DistilBERT:** A smaller, compressed version of BERT that trains faster;
     * **Romanian BERTs:** Specific Transformer models exist for Romanian (e.g., Romanian DistilBERT) and are evaluated on tasks like Emotion Detection and Named Entity Recognition.
  

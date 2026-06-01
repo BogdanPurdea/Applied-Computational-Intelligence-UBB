@@ -31,7 +31,7 @@
 * **[CoRoLa](http://www.racai.ro/p/corola/)** - Reference corpus of the Romanian language;
 * **[RoWordNet](https://relate.racai.ro/index.php?path=rown/query)** - Lexical database.
 
-### 📑 Repositories & Datasets (RoBERTa, NLP-Cube, RoWordNet)
+### 📑 Repositories & Datasets (RoBERT, NLP-Cube, RoWordNet)
 * **[AndyTheFactory / romanian-nlp-datasets](https://github.com/AndyTheFactory/romanian-nlp-datasets)**;
 * **[Stefan Dumitrescu Repo](https://github.com/dumitrescustefan)**;
 * **[Alegzandra / Romanian-NLP-tools](https://github.com/Alegzandra/Romanian-NLP-tools)**.
