@@ -5,6 +5,10 @@ verify_training.py
 Verify that all training (fine-tuning) pipelines compile and run successfully.
 It runs a minimal dry-run (1 epoch, batch size 2, 10 samples) for each script
 and saves checkpoints and metrics to a temporary directory.
+
+Nothing is written to the real project directories:
+- Checkpoints and metrics are redirected to a temporary directory.
+- Preprocessed-text pickle caches are fully suppressed (no disk writes).
 """
 
 from __future__ import annotations
@@ -30,15 +34,27 @@ if str(project_root / "2_Romanian" / "shared") not in sys.path:
 
 # Add each training pipeline directory to path to import them directly
 sys.path.insert(0, str(project_root / "1_English" / "4_DistilBERT_SA_Practical"))
-sys.path.insert(0, str(project_root / "1_English" / "5_SentenceBERT_Practical"))
+sys.path.insert(0, str(project_root / "1_English" / "5_DistilBERT_SA_Practical"))
+sys.path.insert(0, str(project_root / "1_English" / "6_SentenceBERT_Practical"))
 sys.path.insert(0, str(project_root / "2_Romanian" / "1_BERT_Sentiment_Articles"))
-sys.path.insert(0, str(project_root / "2_Romanian" / "2_RoBERTa_Emotion_RED"))
-sys.path.insert(0, str(project_root / "2_Romanian" / "3_RoBERTa_Conv_Emotion_RED"))
-sys.path.insert(0, str(project_root / "2_Romanian" / "4_RoBERTa_Ensemble_Emotion_RED"))
+sys.path.insert(0, str(project_root / "2_Romanian" / "2_RoBERT_Emotion_RED"))
+sys.path.insert(0, str(project_root / "2_Romanian" / "3_RoBERT_Conv_Emotion_RED"))
+sys.path.insert(0, str(project_root / "2_Romanian" / "4_RoBERT_Ensemble_Emotion_RED"))
 
 print("=" * 70)
 print("Training Pipeline Verification Script (Dry-Run)")
 print("=" * 70)
+
+# ---------------------------------------------------------------------------
+# Nuclear backstop: suppress ALL pickle writes at the lowest level
+# ---------------------------------------------------------------------------
+# dataset_utils.save_pickle_cache is called by every save_preprocessed
+# implementation. Neutralising it here prevents any pickle reaching disk
+# regardless of how the higher-level function was imported.
+import dataset_utils
+_real_save_pickle = dataset_utils.save_pickle_cache
+dataset_utils.save_pickle_cache = lambda data, path: None
+print("[setup] dataset_utils.save_pickle_cache → suppressed (no-op).")
 
 # ---------------------------------------------------------------------------
 # Setup Dataset Mocks (to run training instantly with a tiny data subset)
@@ -49,24 +65,30 @@ import dataset_ro
 import dataset_red
 import dataset_en
 
+_noop_save = lambda *args, **kwargs: None
+_noop_load = lambda *args, **kwargs: None
+
 # We will load a tiny subset (10 samples) and bypass loading cached preprocessed pickles
 orig_splits_imdb = dataset_en.load_splits
 dataset_en.load_splits = lambda *args, **kwargs: tuple(
     df.head(10).reset_index(drop=True) for df in orig_splits_imdb(*args, **kwargs)
 )
-dataset_en.load_preprocessed = lambda *args, **kwargs: None
+dataset_en.load_preprocessed = _noop_load
+dataset_en.save_preprocessed = _noop_save
 
 orig_splits_ro = dataset_ro.load_splits
 dataset_ro.load_splits = lambda *args, **kwargs: tuple(
     df.head(10).reset_index(drop=True) for df in orig_splits_ro(*args, **kwargs)
 )
-dataset_ro.load_preprocessed = lambda *args, **kwargs: None
+dataset_ro.load_preprocessed = _noop_load
+dataset_ro.save_preprocessed = _noop_save
 
 orig_splits_red = dataset_red.load_splits
 dataset_red.load_splits = lambda *args, **kwargs: tuple(
     df.head(10).reset_index(drop=True) for df in orig_splits_red(*args, **kwargs)
 )
-dataset_red.load_preprocessed = lambda *args, **kwargs: None
+dataset_red.load_preprocessed = _noop_load
+dataset_red.save_preprocessed = _noop_save
 
 print("✅ Dataset mocks set up successfully.")
 
@@ -81,6 +103,16 @@ import train_robert_conv as t_conv
 import train_robert_ensemble as t_ens
 import train_sbert as t_sbert
 print("✅ All training scripts imported successfully.")
+
+# Patch save_preprocessed in each training module's own namespace.
+# Training scripts do `from dataset_xx import save_preprocessed` which binds
+# the function locally — patching the dataset module attribute above is NOT
+# enough.  We must also overwrite the reference inside each train module.
+for _mod in (t_bert, t_distil, t_robert, t_conv, t_ens, t_sbert):
+    if hasattr(_mod, "save_preprocessed"):
+        _mod.save_preprocessed = _noop_save
+print("[setup] Patched save_preprocessed in all training module namespaces.")
+
 
 # ---------------------------------------------------------------------------
 # Execute Verification

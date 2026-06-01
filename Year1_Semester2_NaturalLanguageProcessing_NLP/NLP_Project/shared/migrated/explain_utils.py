@@ -54,7 +54,7 @@ def load_explainability_model(model_name: str, ckpt_dir: Path | str, device: tor
         # Add path for dataset_red and train_robert_conv
         project_root = Path(__file__).resolve().parents[2]
         import sys
-        robert_conv_dir = str(project_root / "2_Romanian" / "3_RoBERTa_Conv_Emotion_RED")
+        robert_conv_dir = str(project_root / "2_Romanian" / "3_RoBERT_Conv_Emotion_RED")
         ro_shared_dir = str(project_root / "2_Romanian" / "shared")
         if robert_conv_dir not in sys.path:
             sys.path.insert(0, robert_conv_dir)
