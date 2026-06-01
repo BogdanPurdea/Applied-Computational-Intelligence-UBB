@@ -10,6 +10,49 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification, Trai
 from lime.lime_text import LimeTextExplainer
 import shap
 
+# --- FIX: Transformers CamemBERT Tokenizer Bug Workaround ---
+import transformers.models.camembert.tokenization_camembert as tk_camembert
+
+_original_init = tk_camembert.CamembertTokenizer.__init__
+
+
+def _patched_camembert_init(self, *args, **kwargs):
+    """
+    Intercepts the initialization of the CamembertTokenizer to correct the format of the vocabulary.
+    Recent versions of the transformers library pass the vocabulary as a dictionary,
+    but the tokenizer expects a list of tuples. This function converts the data type
+    to prevent unpacking errors during initialization.
+    """
+
+    def format_vocabulary(vocab_data):
+        """
+        Converts vocabulary data into a list of tuples containing the token and a default score of 0.0.
+        """
+        if isinstance(vocab_data, dict):
+            return [(token, 0.0) for token in vocab_data.keys()]
+        if isinstance(vocab_data, list) and len(vocab_data) > 0 and isinstance(vocab_data[0], str):
+            return [(token, 0.0) for token in vocab_data]
+        return vocab_data
+
+    # Processes the vocabulary if it is passed as a keyword argument.
+    if 'vocab' in kwargs and kwargs['vocab'] is not None:
+        kwargs['vocab'] = format_vocabulary(kwargs['vocab'])
+
+    # Processes the vocabulary if it is passed as a positional argument (index 10).
+    args_list = list(args)
+    if len(args_list) > 10 and args_list[10] is not None:
+        args_list[10] = format_vocabulary(args_list[10])
+
+    _original_init(self, *args_list, **kwargs)
+
+
+# Overrides the default initialization method with the patched version.
+tk_camembert.CamembertTokenizer.__init__ = _patched_camembert_init
+
+
+# ------------------------------------------------------------
+
+
 # Version 2 with fix
 
 class ItalianReviewDataset(torch.utils.data.Dataset):
@@ -96,7 +139,7 @@ def main():
         "Datasets",
         "PreProcessed_FEEL-IT_Dataset.csv"
     )
-    output_dir = os.path.join(script_dir, "output_umberto_V2")
+    output_dir = os.path.join(script_dir, "output_umberto")
     training_output_dir = os.path.join(output_dir, "umberto_training_results")
 
     # Creates the output directory if it does not exist.
@@ -144,10 +187,10 @@ def main():
     # Loads the tokenizer. If a saved model exists, loads the tokenizer from the checkpoint.
     if saved_model_path:
         print(f"Loading saved tokenizer from {saved_model_path}...")
-        tokenizer = AutoTokenizer.from_pretrained(saved_model_path)
+        tokenizer = AutoTokenizer.from_pretrained(saved_model_path, use_fast=True)
     else:
         print(f"Loading base tokenizer for {model_name}...")
-        tokenizer = AutoTokenizer.from_pretrained(model_name)
+        tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
 
     print("Tokenizing text data...")
     train_encodings = tokenizer(train_texts, truncation=True, padding=True, max_length=max_length)
@@ -176,7 +219,7 @@ def main():
         per_device_train_batch_size=batch_size,
         per_device_eval_batch_size=batch_size,
         learning_rate=2e-5,
-        evaluation_strategy="epoch",
+        eval_strategy="epoch",
         save_strategy="epoch",
         load_best_model_at_end=True,
         fp16=True,
@@ -285,7 +328,8 @@ def main():
         return np.vstack(all_logits)
 
     # Initializes the SHAP explainer once outside the processing loop to improve efficiency.
-    shap_explainer = shap.Explainer(predict_proba, masker=shap.maskers.Text(tokenizer=tokenizer), output_names=class_names)
+    shap_explainer = shap.Explainer(predict_proba, masker=shap.maskers.Text(tokenizer=tokenizer),
+                                    output_names=class_names)
 
     # Extracts up to five review strings from the dataset that have a length of 256 characters or fewer.
     sample_reviews = [text for text in prep_texts if len(text) <= 256][:5]
@@ -345,7 +389,8 @@ def main():
         shap_html = shap.plots.text(shap_values[0, :, predicted_class_index], display=False)
         shap_html_path = os.path.join(output_dir, f"shap_explanation_{index}.html")
         with open(shap_html_path, "w", encoding="utf-8") as f:
-            f.write(f"<html><head><meta charset='utf-8'><title>SHAP Explanation {index}</title></head><body style='padding: 20px;'>{shap_html}</body></html>")
+            f.write(
+                f"<html><head><meta charset='utf-8'><title>SHAP Explanation {index}</title></head><body style='padding: 20px;'>{shap_html}</body></html>")
         print(f"SHAP HTML exported to: {shap_html_path}")
 
     print("\nProcess finished successfully.")
