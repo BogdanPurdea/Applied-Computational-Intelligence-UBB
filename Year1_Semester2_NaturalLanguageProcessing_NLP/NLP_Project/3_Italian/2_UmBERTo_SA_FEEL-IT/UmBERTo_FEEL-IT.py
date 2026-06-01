@@ -89,7 +89,13 @@ def main():
 
     # Defines directory paths relative to the script location.
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    preprocessed_data_path = os.path.join(script_dir, "PreProcessed_FEEL-IT_Dataset.csv")
+    parent_dir = os.path.dirname(os.path.dirname(script_dir))
+
+    preprocessed_data_path = os.path.join(
+        parent_dir,
+        "Datasets",
+        "PreProcessed_FEEL-IT_Dataset.csv"
+    )
     output_dir = os.path.join(script_dir, "output_umberto_V2")
     training_output_dir = os.path.join(output_dir, "umberto_training_results")
 
@@ -334,6 +340,13 @@ def main():
         plt.savefig(shap_output_path, bbox_inches='tight')
         plt.close()
         print(f"SHAP plot exported to: {shap_output_path}")
+
+        # Exports full interactive SHAP HTML
+        shap_html = shap.plots.text(shap_values[0, :, predicted_class_index], display=False)
+        shap_html_path = os.path.join(output_dir, f"shap_explanation_{index}.html")
+        with open(shap_html_path, "w", encoding="utf-8") as f:
+            f.write(f"<html><head><meta charset='utf-8'><title>SHAP Explanation {index}</title></head><body style='padding: 20px;'>{shap_html}</body></html>")
+        print(f"SHAP HTML exported to: {shap_html_path}")
 
     print("\nProcess finished successfully.")
 
