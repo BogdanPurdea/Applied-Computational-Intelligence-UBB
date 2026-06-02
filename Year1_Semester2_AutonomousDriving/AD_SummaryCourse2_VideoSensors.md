@@ -33,7 +33,7 @@ The most common model used to represent color is the RGB model. RGB stands for R
 
 ---
 
-## 📖 2.2 Camera Calibration
+## 📖 2.3 Camera Calibration
 
 Computer vision attempts to extract 3D real-world information from 2D flat image data. To do this, the system must use a mathematical model to transform 3D points into 2D pixels. Calibration is the process of finding the exact parameters for this model to ensure the real world projects correctly onto the image plane.
 Calibration happens in two ways:
@@ -41,7 +41,7 @@ Calibration happens in two ways:
 * **Static Calibration:** This occurs before the camera is used on the road. The camera is pointed at a static target with a known visual pattern. The software detects where the pattern is in the image and compares it to where it expects the pattern to be. This comparison computes both the internal and external parameters;
 * **Online Calibration:** This happens continuously while the car is driving. The camera's physical position can shift dynamically due to external influences, such as a heavy baggage load altering the car's tilt. The system detects this de-calibration and adjusts the math automatically. The geometric model is not fixed; it changes over time.
 
-### 📑 2.2.1 Intrinsic Parameters
+### 📑 2.3.1 Intrinsic Parameters
 
 Intrinsic parameters describe the internal geometry and optical traits of the camera itself. There are five intrinsic parameters:
 * **Camera Center ($O$):** The physical origin point of the camera;
@@ -59,7 +59,7 @@ Using similar triangles, a 3D point $P(x, y, z)$ projects to 2D image coordinate
 * Horizontal coordinate: $\frac{u - u_0}{f_x} = \frac{x}{z}$ 
 * Vertical coordinate: $\frac{v - v_0}{f_y} = \frac{y}{z}$ 
 
-### 📑 2.2.2 Extrinsic Parameters
+### 📑 2.3.2 Extrinsic Parameters
 
 Extrinsic parameters describe the camera's position and orientation relative to the real world. By convention, the origin of this world coordinate system is the center of the car's rear axis.
 These parameters are represented by:
@@ -74,7 +74,7 @@ $$ \begin{bmatrix} u \\ v \\ 1 \end{bmatrix} \sim K \cdot \left( R \cdot \begin{
 
 ---
 
-## 📖 2.3 Distortions
+## 📖 2.4 Distortions
 
 Distortion is an unwanted alteration of the original image. In the presence of distortions, the standard perspective projection model is no longer valid.
 
@@ -114,7 +114,7 @@ $$
 
 ---
 
-## 📖 2.4 Projective Geometry
+## 📖 2.5 Projective Geometry
 
 Projective geometry is a branch of mathematics that studies the properties of objects that remain invariant (unchanged) under projective transformations. It is a very useful tool in computer vision.
 * **Euclidean geometry** describes objects "as they are". Their true sizes and parallel lines are maintained regardless of how they move;
@@ -125,7 +125,7 @@ Projective geometry rules can only be applied after lens distortions have been m
 
 ---
 
-## 📖 2.5 3D Reconstruction
+## 📖 2.6 3D Reconstruction
 
 3D reconstruction is the process of calculating the 3D shape and position of real objects entirely from flat 2D images.
 
@@ -136,7 +136,7 @@ This can be accomplished using two types of setups:
 
 Before depth can be calculated, the images must undergo rectification. Rectification is a mathematical process that aligns the images so that matching points appear on the exact same horizontal scan-line.
 
-### 📑 2.5.1 Disparity and Depth Calculation
+### 📑 2.6.1 Disparity and Depth Calculation
 
 Disparity is the physical displacement (distance) between a point's location in the left image and its location in the right image. By measuring disparity, the system can determine how far away an object is.
 * If an object is close, the disparity is large;
@@ -145,7 +145,7 @@ Disparity is the physical displacement (distance) between a point's location in 
 To calculate the exact depth ($z$), the software uses the focal length in pixels ($f_x$), the baseline distance between the two cameras ($b$), and the disparity ($d$):
 $$z = \frac{f_x \cdot b}{d}$$
 
-### 📑 2.5.2 The Inverse Problem
+### 📑 2.6.2 The Inverse Problem
 
 Once the depth ($z$) is known, the system solves the inverse problem to find the actual real-world $x$ and $y$ coordinates. It reverses the standard projection formulas:
 * Horizontal position: $x = \frac{(u - u_0) \cdot z}{f_x}$ 
