@@ -241,4 +241,143 @@ $$\text{IoU} = \frac{\text{Area}_I}{\text{Area}_U}$$
 
 ------------------------------------------------------------------------
 
-## 📖 7.3 
+## 📖 7.3 Definitions of Technical Terms
+
+Calculate the final output of the bounding box decoder if the Fully Connected (FC) layer predicts a value of exactly zero for all its outputs.
+
+Before performing the calculation, let us define the variables used in the diagram.
+
+* **Fully Connected (FC) Layer**: The final part of the neural network that outputs raw numerical predictions;
+* **Network Predictions ($d_x, d_y, d_w, d_h$)**: The raw numbers guessed by the network. They represent instructions on how to shift the center and scale the size of the box;
+* **Crop Dimensions ($w^{\text{crop}}, h^{\text{crop}}$)**: The width and height of the initial region (the "crop") the network is analyzing;
+* **Decoder**: The set of mathematical formulas that translate the raw network predictions into final, usable coordinates;
+* **Final Output ($x, y, w, h$)**: The center coordinates ($x, y$) and the exact width and height ($w, h$) of the final bounding box.
+
+------------------------------------------------------------------------
+
+## 📖 7.4 Step-by-Step Mathematical Computation
+
+**Goal:** Calculate the final values for $x, y, w$, and $h$ given that the network predictions ($d_x, d_y, d_w, d_h$) are all equal to $0$.
+
+**Step 1: Write down the decoder formulas provided in the image.**
+
+$$x = w^{\text{crop}} \cdot (d_x + 0.5)$$
+
+$$y = h^{\text{crop}} \cdot (d_y + 0.5)$$
+
+$$w = w^{\text{crop}} \cdot e^{d_w}$$
+
+$$h = h^{\text{crop}} \cdot e^{d_h}$$
+
+**Step 2: Substitute $0$ for all the network prediction variables.**
+
+$$x = w^{\text{crop}} \cdot (0 + 0.5)$$
+
+$$y = h^{\text{crop}} \cdot (0 + 0.5)$$
+
+$$w = w^{\text{crop}} \cdot e^0$$
+
+$$h = h^{\text{crop}} \cdot e^0$$
+
+**Step 3: Simplify the equations.**
+Remember that any non-zero number raised to the power of $0$ is exactly $1$ (so, $e^0 = 1$).
+
+$$x = 0.5 \cdot w^{\text{crop}}$$
+
+$$y = 0.5 \cdot h^{\text{crop}}$$
+
+$$w = w^{\text{crop}} \cdot 1 = w^{\text{crop}}$$
+
+$$h = h^{\text{crop}} \cdot 1 = h^{\text{crop}}$$
+
+**Conclusion:** If the FC layer predicts zeroes, the final bounding box has its center exactly in the middle of the original crop ($50\%$ of the width and $50\%$ of the height), and its dimensions are exactly equal to the original crop's dimensions. In plain terms, predicting zeroes means the network chooses not to adjust the initial box at all.
+
+
+------------------------------------------------------------------------
+
+<!-- --------------------------------------------------------------- -->
+<!-- -------------------- COURSE 8 SEGMENTATION -------------------- -->
+<!-- --------------------------------------------------------------- -->
+
+# 🔖 **Course 8 - Segmentation and Depth**
+
+## 📖 8.1 Definitions of Technical Terms
+
+Demonstrating that the Shift-and-Stitch method is mathematically equivalent to using Dilated Convolutions.
+
+* **Max Pooling**: A mathematical filter that slides a window over data and only keeps the largest number in that window;
+* **Stride ($s$)**: The number of positions a filter jumps forward each time it moves;
+* **Convolution**: A mathematical operation where a small grid of weights (the kernel) slides over data, multiplying and adding numbers together to find patterns;
+* **Shift-and-Stitch**: A technique used to prevent losing detail when using a stride greater than $1$. It shifts the input data slightly, runs the network multiple times, and weaves (interleaves) the final results together;
+* **Dilated Convolution**: A convolution filter that spreads out its points by skipping spaces. It covers a wider area without requiring more parameters;
+* **Dilation Rate ($r$)**: The number of steps between each point in a dilated convolution filter.
+
+------------------------------------------------------------------------
+
+## 📖 8.2 Part 1: The 1D Case
+
+**Goal:** Prove that running Shift-and-Stitch (with a max pool stride of $s$) produces the exact same final output as setting the max pool stride to $1$ and using a dilated convolution with a rate of $r = s$.
+
+Let $x$ be the 1D input data sequence. Let $w$ be the weights of the convolution kernel. Let $k$ be the size of the max pool window.
+
+### The Shift-and-Stitch Equation
+
+In Shift-and-Stitch, we shift the input data by a distance $\Delta$ (where $\Delta$ ranges from $0$ to $s-1$).
+The max pool layer uses a stride of $s$. The output of the max pool at step $j$ for a shift $\Delta$ is:
+
+$$\text{Pool}[j] = \max(x[j \cdot s + \Delta : j \cdot s + \Delta + k])$$
+
+The standard convolution applies the weights $w$ to this pooled result.
+When we "stitch" (interleave) the results back together, the final output is mapped to a high-resolution position $t$, where $t = j \cdot s + \Delta$. We can write the stitched output $z[t]$ as:
+
+$$z[t] = \sum_{a} w[a] \cdot \max(x[t + a \cdot s : t + a \cdot s + k])$$
+
+### The Dilated Convolution Equation
+
+In the second approach, the max pool layer is changed to have a stride of exactly $1$. Therefore, the output of the pool layer at any position $t$ is:
+
+$$m[t] = \max(x[t : t + k])$$
+
+Next, we apply a dilated convolution to $m$. The dilation rate is set to the original stride ($r = s$). The formula for a dilated convolution is:
+
+$$y[t] = \sum_{a} w[a] \cdot m[t + a \cdot s]$$
+
+We substitute our definition of $m$ into this equation:
+
+$$y[t] = \sum_{a} w[a] \cdot \max(x[t + a \cdot s : t + a \cdot s + k])$$
+
+**Conclusion for 1D:** The final equation for $y[t]$ (Dilated Convolution) exactly matches the final equation for $z[t]$ (Shift-and-Stitch). They calculate the exact same numbers.
+
+------------------------------------------------------------------------
+
+## 📖 8.3 Part 2: The 2D Case
+
+**Goal:** Expand the 1D proof to 2D images.
+
+The logic remains identical. The only difference is that our position index $t$ becomes a 2D coordinate $(u, v)$ representing width and height. Our convolution weight index $a$ becomes a 2D grid $(a, b)$.
+
+### The Shift-and-Stitch Equation (2D)
+
+The input is shifted by $(\Delta_u, \Delta_v)$. We weave the outputs into a high-resolution 2D grid at position $(u, v)$. The stride $s$ applies to both directions.
+
+$$z[u, v] = \sum_{a} \sum_{b} w[a, b] \cdot \max(x[u + a \cdot s : u + a \cdot s + k, v + b \cdot s : v + b \cdot s + k])$$
+
+### The Dilated Convolution Equation (2D)
+
+First, we run the 2D max pool with a stride of $1$ in both directions.
+
+$$m[u, v] = \max(x[u : u + k, v : v + k])$$
+
+Next, we run the 2D dilated convolution with a rate of $r = s$.
+
+$$y[u, v] = \sum_{a} \sum_{b} w[a, b] \cdot m[u + a \cdot s, v + b \cdot s]$$
+
+Substitute the definition of $m[u, v]$ into the equation:
+
+$$y[u, v] = \sum_{a} \sum_{b} w[a, b] \cdot \max(x[u + a \cdot s : u + a \cdot s + k, v + b \cdot s : v + b \cdot s + k])$$
+
+**Conclusion for 2D:** The formula for $y[u, v]$ perfectly matches $z[u, v]$. The outputs are mathematically identical. The dilated convolution computes the Shift-and-Stitch result in a single pass.
+
+------------------------------------------------------------------------
+
+## 📖 8.4 
