@@ -380,4 +380,125 @@ $$y[u, v] = \sum_{a} \sum_{b} w[a, b] \cdot \max(x[u + a \cdot s : u + a \cdot s
 
 ------------------------------------------------------------------------
 
-## 📖 8.4 
+## 📖 8.4 Here is the analytical solution for the homework task presented in your new image.
+
+## Definitions of Technical Terms
+
+* **Transposed Convolution Layer**: A mathematical operation that increases the size of an image. It is often used to scale up data in neural networks;
+* **Kernel**: A small grid of numbers (weights) that multiplies with the input data;
+* **$W_K, H_K$**: The width and height of the kernel. Here, it is a $2 \times 2$ grid.
+
+* **Stride ($s_x, s_y$)**: The distance the kernel jumps in the output for every one step in the input. Here, a stride of $2$ means the output grid moves $2$ pixels at a time;
+* **Padding ($p_x, p_y$)**: Empty border pixels (usually zeros) added to the data. Here, it is $0$;
+* **Bilinear Interpolation**: A method to guess missing pixels when making an image larger. It works by smoothly blending (averaging) the values of adjacent, neighboring pixels;
+* **Nearest-Neighbor Interpolation**: A simpler method to make an image larger. It just copies the exact value of the single closest pixel without any blending.
+
+------------------------------------------------------------------------
+
+## 📖 8.5 Step-by-Step Solution
+
+**Goal:** Determine what numbers to put inside the $2 \times 2$ kernel to make it act like a bilinear interpolation operator.
+
+**Step 1: Analyze the overlap.**
+We have a $2 \times 2$ kernel. It moves with a stride of $2$.
+Because the stride distance equals the kernel size, the kernel jumps completely past its previous position.
+The output regions never overlap.
+
+**Step 2: Understand the limitation.**
+True bilinear interpolation requires overlapping regions. To calculate a smooth blend between two pixels, the math must look at both input pixels at the same time.
+Because our setup has zero overlap, every single pixel in the new, larger image is generated from exactly *one* pixel in the small input image. You cannot mix two numbers if you can only look at one number.
+
+**Step 3: Find the closest possible behavior.**
+Because we cannot blend, the only logical action is to distribute the single input pixel evenly across the new $2 \times 2$ output block.
+To do this, we set every value in the kernel to exactly $1$.
+
+$$
+W =
+\begin{bmatrix}
+1 & 1 \\
+1 & 1
+\end{bmatrix}
+$$
+
+**Conclusion:** It is mathematically impossible to simulate true bilinear interpolation with a $2 \times 2$ kernel and a stride of $2$.
+If you set all kernel values to $1$, the layer will simulate nearest-neighbor interpolation instead (it will repeat the pixels as square blocks). As established in the original Fully Convolutional Networks (FCN) research paper, you must use a larger $4 \times 4$ kernel to simulate true bilinear interpolation with a stride of $2$. This larger size allows the outputs to overlap and blend.
+
+------------------------------------------------------------------------
+
+## 📖 8.6 Definitions of Technical Terms
+
+Mathematical proof demonstrating that the scale-invariant loss function does not change when predictions are multiplied by a scalar factor.
+
+* **Loss Function ($D$)**: A mathematical formula that calculates how wrong a model's predictions are compared to the true answers. A lower score is better;
+* **Scalar Factor ($c$)**: A single, constant number used to multiply other values (for example, scaling a measurement to be twice as large means $c = 2$);
+* **Invariant**: Unchanging. If a formula is invariant to scale, its final answer stays exactly the same even if you multiply the inputs by a scalar factor;
+* **Model Prediction ($y_i$)**: The depth guessed by the model for a specific point $i$;
+* **Ground Truth ($y_i^*$)**: The actual, true depth for that point;
+* **Number of Points ($n$)**: The total count of data points being evaluated;
+* **Logarithm ($\log$)**: A math function. The specific rule we need here is that the logarithm of two numbers multiplied together equals the sum of their individual logarithms: $\log(A \cdot B) = \log(A) + \log(B)$;
+* **Summation ($\sum$)**: A symbol that means "add all these items together";
+* **Alpha ($\alpha$)**: In this formula, it is a helper variable that calculates the average difference between the logs of the true values and the guessed values.
+
+------------------------------------------------------------------------
+
+## 📖 8.7 Step-by-Step Proof
+
+**Goal:** We want to prove that multiplying the prediction $y$ by a scalar factor $c$ results in the exact same loss value. Mathematically, we must show that $D(c \cdot y, y^*) = D(y, y^*)$.
+
+**Step 1: Write down the expanded logarithm for the scaled prediction.**
+When we replace our prediction $y_i$ with the scaled prediction $c \cdot y_i$, we can use the multiplication rule for logarithms to expand it.
+
+$$\log(c \cdot y_i) = \log c + \log y_i$$
+
+**Step 2: Calculate the new $\alpha$ term.**
+Let us see what happens to the helper formula $\alpha$ when we use the scaled prediction. We substitute $\log(c \cdot y_i)$ into the definition of $\alpha$.
+
+$$\alpha_{\text{new}} = \frac{1}{n} \sum_{i=1}^n (\log y_i^* - \log(c \cdot y_i))$$
+
+**Step 3: Expand the new $\alpha$ term.**
+We replace the scaled log with the expanded version from Step 1.
+
+$$\alpha_{\text{new}} = \frac{1}{n} \sum_{i=1}^n (\log y_i^* - (\log c + \log y_i))$$
+
+$$\alpha_{\text{new}} = \frac{1}{n} \sum_{i=1}^n (\log y_i^* - \log y_i - \log c)$$
+
+**Step 4: Separate the constant from the sum.**
+The value $\log c$ is a constant. It does not change for different points $i$. If you add the same constant $n$ times and then divide by $n$, you just get the constant back. We can pull it out of the summation entirely.
+
+$$\alpha_{\text{new}} = \left( \frac{1}{n} \sum_{i=1}^n (\log y_i^* - \log y_i) \right) - \log c$$
+
+Notice that the complex part in the parentheses is the exact definition of our original $\alpha(y, y^*)$.
+
+$$\alpha_{\text{new}} = \alpha(y, y^*) - \log c$$
+
+**Step 5: Substitute the new values into the main loss function.**
+Now we look at the core part of the main loss function $D$, which is the term inside the square: $(\log y_i - \log y_i^* + \alpha(y, y^*))$. Let us write this term using our scaled prediction $\log(c \cdot y_i)$ and our $\alpha_{\text{new}}$.
+
+$$\text{Inner Term} = \log(c \cdot y_i) - \log y_i^* + \alpha_{\text{new}}$$
+
+**Step 6: Expand and simplify the inner term.**
+We replace the terms with their expanded definitions from Step 1 and Step 4.
+
+$$\text{Inner Term} = (\log c + \log y_i) - \log y_i^* + (\alpha(y, y^*) - \log c)$$
+
+We can drop the parentheses and rearrange the order of the pieces.
+
+$$\text{Inner Term} = \log y_i - \log y_i^* + \alpha(y, y^*) + \log c - \log c$$
+
+The positive $\log c$ and the negative $\log c$ cancel each other out completely.
+
+$$\text{Inner Term} = \log y_i - \log y_i^* + \alpha(y, y^*)$$
+
+**Conclusion:** After canceling out the scale factor $c$, the inner term perfectly matches the original, unscaled inner term. Because the inner calculations are identical, the final sum and the final loss $D$ are identical. This proves the loss function is mathematically invariant to scalar multiplication.
+
+
+
+------------------------------------------------------------------------
+
+<!-- --------------------------------------------------------------- -->
+<!-- ------------------------- COURSE 9 TVA ------------------------ -->
+<!-- --------------------------------------------------------------- -->
+
+# 🔖 **Course 9 - Transformers and Visual Attention**
+
+## 📖 9.1 
