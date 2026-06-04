@@ -6,7 +6,6 @@
 
 ## 📖 5.1 Definitions of Technical Terms
 
-Before doing the math, let us define the symbols and terms used in the equations.
 * **Model Parameters ($\theta$)**: The internal settings of the model that change during training. Think of them like tuning knobs on a radio;
 * **Data Distribution ($p_{\text{data}}$)**: The true, real-world probability of the data;
 * **Model Distribution ($p_{\text{model}}$)**: The probability guessed by our model based on its current parameters;
@@ -19,6 +18,8 @@ Before doing the math, let us define the symbols and terms used in the equations
 ------------------------------------------------------------------------
 
 ## 📖 5.2 Step-by-Step Proof
+
+Prove that maximizing the expected log-likelihood is mathematically equivalent to minimizing the expected Kullback-Leibler (KL) divergence.
 
 **Goal:** We want to show that finding the parameters $\theta$ that minimize the expected KL divergence leads to the exact same formula as maximizing the log-likelihood.
 
@@ -60,10 +61,6 @@ $$ \theta^* = \text{argmax}*\theta \mathbb{E}*{x, y \sim p_{\text{data}}(x, y)} 
 
 ## 📖 6.1 Definitions of Technical Terms
 
-Prove that finding the model settings that minimize the Negative Log-Likelihood (NLL) for a Gaussian distribution is exactly the same as minimizing the squared difference between the predictions and the true data (Ordinary Least Squares).
-
-Before we start the math, let us define the pieces of the equation.
-
 * **Model Parameters ($\theta$)**: The internal settings of the model. We want to find the best settings;
 * **Model Prediction ($\mu(x, \theta)$)**: The output guessed by our model for a given input ($x$) and current settings ($\theta$);
 * **True Target ($y$)**: The actual, correct answer we want our model to predict;
@@ -75,6 +72,8 @@ Before we start the math, let us define the pieces of the equation.
 ------------------------------------------------------------------------
 
 ## 📖 6.2 Step-by-Step Proof
+
+Prove that finding the model settings that minimize the Negative Log-Likelihood (NLL) for a Gaussian distribution is exactly the same as minimizing the squared difference between the predictions and the true data (Ordinary Least Squares).
 
 **Goal:** We will start with the complex top equation (Negative Log-Likelihood) and use basic algebra to turn it into the simple bottom equation (Ordinary Least Squares).
 
@@ -171,8 +170,6 @@ $$b' = \frac{\gamma}{\sigma} (b - \mu) + \beta$$
 
 ## 📖 6.5 Definitions of Technical Terms
 
-Mathematical solution to find the speedup of the convolutional layer over the fully connected layer.
-
 * **Time Complexity**: A way to measure how much work a computer must do to finish a task. We usually measure it by counting the number of basic math operations;
 * **MACs (Multiply-Accumulate)**: A standard computer operation that multiplies two numbers and adds the result to a running total. We count MACs to measure the total work;
 * **Fully Connected Layer**: A standard neural network design where every single output node connects to every single input node;
@@ -184,6 +181,8 @@ Mathematical solution to find the speedup of the convolutional layer over the fu
 ------------------------------------------------------------------------
 
 ## 📖 6.6 Step-by-Step Solution
+
+Mathematical solution to find the speedup of the convolutional layer over the fully connected layer.
 
 **Goal:** We need to calculate the ratio between the total work required by a Fully Connected (FC) layer and the total work required by a Convolutional (CONV) layer.
 
@@ -282,10 +281,6 @@ $$\text{IoU} = \frac{\text{Area}_I}{\text{Area}_U}$$
 
 ## 📖 7.3 Definitions of Technical Terms
 
-Calculate the final output of the bounding box decoder if the Fully Connected (FC) layer predicts a value of exactly zero for all its outputs.
-
-Before performing the calculation, let us define the variables used in the diagram.
-
 * **Fully Connected (FC) Layer**: The final part of the neural network that outputs raw numerical predictions;
 * **Network Predictions ($d_x, d_y, d_w, d_h$)**: The raw numbers guessed by the network. They represent instructions on how to shift the center and scale the size of the box;
 * **Crop Dimensions ($w^{\text{crop}}, h^{\text{crop}}$)**: The width and height of the initial region (the "crop") the network is analyzing;
@@ -295,6 +290,8 @@ Before performing the calculation, let us define the variables used in the diagr
 ------------------------------------------------------------------------
 
 ## 📖 7.4 Step-by-Step Mathematical Computation
+
+Calculate the final output of the bounding box decoder if the Fully Connected (FC) layer predicts a value of exactly zero for all its outputs.
 
 **Goal:** Calculate the final values for $x, y, w$, and $h$ given that the network predictions ($d_x, d_y, d_w, d_h$) are all equal to $0$.
 
@@ -342,8 +339,6 @@ $$h = h^{\text{crop}} \cdot 1 = h^{\text{crop}}$$
 
 ## 📖 8.1 Definitions of Technical Terms
 
-Demonstrating that the Shift-and-Stitch method is mathematically equivalent to using Dilated Convolutions.
-
 * **Max Pooling**: A mathematical filter that slides a window over data and only keeps the largest number in that window;
 * **Stride ($s$)**: The number of positions a filter jumps forward each time it moves;
 * **Convolution**: A mathematical operation where a small grid of weights (the kernel) slides over data, multiplying and adding numbers together to find patterns;
@@ -354,6 +349,8 @@ Demonstrating that the Shift-and-Stitch method is mathematically equivalent to u
 ------------------------------------------------------------------------
 
 ## 📖 8.2 Part 1: The 1D Case
+
+Demonstrating that the Shift-and-Stitch method is mathematically equivalent to using Dilated Convolutions.
 
 **Goal:** Prove that running Shift-and-Stitch (with a max pool stride of $s$) produces the exact same final output as setting the max pool stride to $1$ and using a dilated convolution with a rate of $r = s$.
 
@@ -466,8 +463,6 @@ If you set all kernel values to $1$, the layer will simulate nearest-neighbor in
 
 ## 📖 8.6 Definitions of Technical Terms
 
-Mathematical proof demonstrating that the scale-invariant loss function does not change when predictions are multiplied by a scalar factor.
-
 * **Loss Function ($D$)**: A mathematical formula that calculates how wrong a model's predictions are compared to the true answers. A lower score is better;
 * **Scalar Factor ($c$)**: A single, constant number used to multiply other values (for example, scaling a measurement to be twice as large means $c = 2$);
 * **Invariant**: Unchanging. If a formula is invariant to scale, its final answer stays exactly the same even if you multiply the inputs by a scalar factor;
@@ -481,6 +476,8 @@ Mathematical proof demonstrating that the scale-invariant loss function does not
 ------------------------------------------------------------------------
 
 ## 📖 8.7 Step-by-Step Proof
+
+Mathematical proof demonstrating that the scale-invariant loss function does not change when predictions are multiplied by a scalar factor.
 
 **Goal:** We want to prove that multiplying the prediction $y$ by a scalar factor $c$ results in the exact same loss value. Mathematically, we must show that $D(c \cdot y, y^*) = D(y, y^*)$.
 
@@ -541,8 +538,6 @@ $$\text{Inner Term} = \log y_i - \log y_i^* + \alpha(y, y^*)$$
 
 ## 📖 9.1 Definitions of Technical Terms
 
-Mathematical solution to the Generalized Intersection over Union (GIoU).
-
 * **Bounding Box ($b$ or $\hat{b}$)**: A rectangular border drawn around an object;
 * **Intersection ($I$)**: The overlapping area shared by two bounding boxes. The formula is $|b \cap \hat{b}|$;
 * **Union ($U$)**: The total combined area covered by both bounding boxes. The formula is $|b \cup \hat{b}|$;
@@ -557,6 +552,8 @@ $$\text{GIoU} = \text{IoU} - \frac{C - U}{C}$$
 ------------------------------------------------------------------------
 
 ## 📖 9.2 Prove GIoU is a lower bound of IoU
+
+Mathematical solution to the Generalized Intersection over Union (GIoU).
 
 **Goal:** We must mathematically show that the value of GIoU is always less than or equal to the value of IoU ($\text{GIoU} \le \text{IoU}$).
 
