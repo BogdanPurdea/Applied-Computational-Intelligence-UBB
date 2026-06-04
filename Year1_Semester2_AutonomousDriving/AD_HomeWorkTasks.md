@@ -169,3 +169,76 @@ $$b' = \frac{\gamma}{\sigma} (b - \mu) + \beta$$
 
 **Conclusion:** By calculating $W'$ and $b'$ using these formulas after training is complete, you can safely remove the Batch Normalization layer entirely. The new single layer will produce the exact same output $y$ for any input $x$.
 
+Here is the mathematical and programmatic solution for the Intersection over Union (IoU) homework task.
+
+To build a strong foundation, let us first define the specific technical terms involved in this calculation.
+
+
+------------------------------------------------------------------------
+
+<!-- --------------------------------------------------------------- -->
+<!-- ------------------------ COURSE 7 ICOD ------------------------ -->
+<!-- --------------------------------------------------------------- -->
+
+# 🔖 **Course 7 - Image Classification and Object Detection**
+
+## 📖 7.1 Definitions of Technical Terms
+
+* **Bounding Box**: A rectangular border drawn around an object within an image to identify its location;
+* **Coordinates**: Numbers that specify an exact location. For this task, we use the top-left corner $(x^{\text{min}}, y^{\text{min}})$ and the bottom-right corner $(x^{\text{max}}, y^{\text{max}})$ to define a box;
+* **Intersection**: The shared area where two bounding boxes overlap;
+* **Union**: The total, combined area covered by both bounding boxes, counting the overlapping region only once;
+* **Intersection over Union (IoU)**: A standard metric used to evaluate how closely two bounding boxes match. It is a ratio that ranges from $0$ (no overlap) to $1$ (perfect match).
+
+------------------------------------------------------------------------
+
+## 📖 7.2 Step-by-Step Mathematical Computation
+
+**Goal:** We need to find the IoU for two bounding boxes, $B_1$ and $B_2$, using their top-left and bottom-right coordinates.
+
+Let the coordinates be defined as:
+
+* $B_1 = (x_{1}^{\text{min}}, y_{1}^{\text{min}}, x_{1}^{\text{max}}, y_{1}^{\text{max}})$
+* $B_2 = (x_{2}^{\text{min}}, y_{2}^{\text{min}}, x_{2}^{\text{max}}, y_{2}^{\text{max}})$
+
+**Step 1: Find the coordinates of the intersection rectangle.**
+The top-left corner of the intersection is the largest minimum coordinate. The bottom-right corner is the smallest maximum coordinate.
+
+$$x_{I}^{\text{min}} = \max(x_{1}^{\text{min}}, x_{2}^{\text{min}})$$
+
+$$y_{I}^{\text{min}} = \max(y_{1}^{\text{min}}, y_{2}^{\text{min}})$$
+
+$$x_{I}^{\text{max}} = \min(x_{1}^{\text{max}}, x_{2}^{\text{max}})$$
+
+$$y_{I}^{\text{max}} = \min(y_{1}^{\text{max}}, y_{2}^{\text{max}})$$
+
+**Step 2: Calculate the dimensions of the intersection.**
+We subtract the minimums from the maximums. We must use a $\max(0, \text{value})$ function because if the boxes do not overlap at all, the subtraction could result in a negative distance, which is physically impossible for a length.
+
+$$\text{Width}_I = \max(0, x_{I}^{\text{max}} - x_{I}^{\text{min}})$$
+
+$$\text{Height}_I = \max(0, y_{I}^{\text{max}} - y_{I}^{\text{min}})$$
+
+**Step 3: Calculate the area of the intersection.**
+
+$$\text{Area}_I = \text{Width}_I \cdot \text{Height}_I$$
+
+**Step 4: Calculate the areas of the individual bounding boxes.**
+
+$$\text{Area}_{B1} = (x_{1}^{\text{max}} - x_{1}^{\text{min}}) \cdot (y_{1}^{\text{max}} - y_{1}^{\text{min}})$$
+
+$$\text{Area}_{B2} = (x_{2}^{\text{max}} - x_{2}^{\text{min}}) \cdot (y_{2}^{\text{max}} - y_{2}^{\text{min}})$$
+
+**Step 5: Calculate the Union area.**
+If we simply add the two areas together, we count the overlapping intersection area twice. Therefore, we must subtract one instance of the intersection area.
+
+$$\text{Area}_U = \text{Area}_{B1} + \text{Area}_{B2} - \text{Area}_I$$
+
+**Step 6: Compute the final IoU score.**
+Divide the intersection by the union.
+
+$$\text{IoU} = \frac{\text{Area}_I}{\text{Area}_U}$$
+
+------------------------------------------------------------------------
+
+## 📖 7.3 
