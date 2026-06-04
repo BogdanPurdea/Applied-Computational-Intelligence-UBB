@@ -119,8 +119,6 @@ $$\theta^* = \arg \min_{\theta} \mathbb{E}_{x,y} \left[ (y - \mu(x, \theta))^2 \
 
 ## 📖 6.3 Definitions of Technical Terms
 
-Let us define the symbols used in the diagram before starting the math.
-
 * **Weights ($W$)**: Numbers in a neural network that multiply the input data to change its scale;
 * **Bias ($b$)**: A number added to the network's calculation to shift the result up or down;
 * **Fully Connected Layer**: A standard neural network operation that applies a linear transformation. It multiplies inputs by Weights and adds a Bias;
@@ -169,10 +167,51 @@ $$b' = \frac{\gamma}{\sigma} (b - \mu) + \beta$$
 
 **Conclusion:** By calculating $W'$ and $b'$ using these formulas after training is complete, you can safely remove the Batch Normalization layer entirely. The new single layer will produce the exact same output $y$ for any input $x$.
 
-Here is the mathematical and programmatic solution for the Intersection over Union (IoU) homework task.
+------------------------------------------------------------------------
 
-To build a strong foundation, let us first define the specific technical terms involved in this calculation.
+## 📖 6.5 Definitions of Technical Terms
 
+Mathematical solution to find the speedup of the convolutional layer over the fully connected layer.
+
+* **Time Complexity**: A way to measure how much work a computer must do to finish a task. We usually measure it by counting the number of basic math operations;
+* **MACs (Multiply-Accumulate)**: A standard computer operation that multiplies two numbers and adds the result to a running total. We count MACs to measure the total work;
+* **Fully Connected Layer**: A standard neural network design where every single output node connects to every single input node;
+* **Number of Inputs ($N_{\text{in}}$)**: The total count of starting data points. In your image, $N_{\text{in}}$ is **5** (the $x$ nodes);
+* **Number of Outputs ($N_{\text{out}}$)**: The total count of final points calculated by the layer. In your image, $N_{\text{out}}$ is **3** (the $y$ nodes);
+* **Kernel Width ($N_w$)**: The limited size of the window a convolutional layer uses to look at the data. Instead of looking at everything, it only looks at $N_w$ items at a time. In your image, $N_w$ is **3** (the weights $w_1, w_2, w_3$);
+* **Speedup**: A mathematical ratio that shows how many times faster a new method is compared to an old baseline method.
+
+------------------------------------------------------------------------
+
+## 📖 6.6 Step-by-Step Solution
+
+**Goal:** We need to calculate the ratio between the total work required by a Fully Connected (FC) layer and the total work required by a Convolutional (CONV) layer.
+
+**Step 1: Calculate the work for the Fully Connected layer.**
+In a Fully Connected layer, every single output node must look at every single input node. To find the total number of connections (and therefore the total MACs), we multiply the number of inputs by the number of outputs.
+
+$$\text{Work}_{\text{FC}} = N_{\text{in}} \cdot N_{\text{out}}$$
+
+**Step 2: Identify the work for the Convolutional layer.**
+The image provides the time complexity for the CONV layer. Because the layer slides a small window of size $N_w$, each output only requires $N_w$ operations, regardless of the total input size.
+
+$$\text{Work}_{\text{CONV}} = N_w \cdot N_{\text{out}}$$
+
+**Step 3: Set up the speedup ratio.**
+Speedup is calculated by dividing the old, slower method by the new, faster method.
+
+$$\text{Speedup} = \frac{\text{Work}_{\text{FC}}}{\text{Work}_{\text{CONV}}}$$
+
+**Step 4: Substitute the formulas and simplify.**
+We replace the work terms with the formulas we defined in Step 1 and Step 2.
+
+$$\text{Speedup} = \frac{N_{\text{in}} \cdot N_{\text{out}}}{N_w \cdot N_{\text{out}}}$$
+
+Notice that the number of outputs ($N_{\text{out}}$) is present in both the top and the bottom of the fraction. They cancel each other out completely.
+
+$$\text{Speedup} = \frac{N_{\text{in}}}{N_w}$$
+
+**Conclusion:** The exact speedup is $\frac{N_{\text{in}}}{N_w}$. This means the convolutional layer is faster by a factor equal to the total number of inputs divided by the kernel width. For example, if you have an input size of **1000** pixels and a small kernel size of **10**, the convolutional layer will be **100** times faster than a fully connected layer.
 
 ------------------------------------------------------------------------
 
@@ -492,7 +531,6 @@ $$\text{Inner Term} = \log y_i - \log y_i^* + \alpha(y, y^*)$$
 **Conclusion:** After canceling out the scale factor $c$, the inner term perfectly matches the original, unscaled inner term. Because the inner calculations are identical, the final sum and the final loss $D$ are identical. This proves the loss function is mathematically invariant to scalar multiplication.
 
 
-
 ------------------------------------------------------------------------
 
 <!-- --------------------------------------------------------------- -->
@@ -501,4 +539,112 @@ $$\text{Inner Term} = \log y_i - \log y_i^* + \alpha(y, y^*)$$
 
 # 🔖 **Course 9 - Transformers and Visual Attention**
 
-## 📖 9.1 
+## 📖 9.1 Definitions of Technical Terms
+
+Mathematical solution to the Generalized Intersection over Union (GIoU).
+
+* **Bounding Box ($b$ or $\hat{b}$)**: A rectangular border drawn around an object;
+* **Intersection ($I$)**: The overlapping area shared by two bounding boxes. The formula is $|b \cap \hat{b}|$;
+* **Union ($U$)**: The total combined area covered by both bounding boxes. The formula is $|b \cup \hat{b}|$;
+* **Intersection over Union (IoU)**: A score measuring how much two boxes overlap. The formula is $\frac{I}{U}$;
+* **Enclosing Box ($C$)**: The smallest possible single rectangle that completely surrounds both bounding boxes. Its area is denoted as $|B(b, \hat{b})|$;
+* **Generalized Intersection over Union (GIoU)**: An extended metric that penalizes boxes for being far apart. It subtracts the empty space inside the enclosing box from the standard IoU;
+* **Distance Metric**: A mathematical way to measure the distance between two objects. It must follow strict rules: it cannot be negative, it must equal exactly zero when objects are identical, and it must be symmetric;
+* **Scale Invariant**: A property meaning a value stays exactly the same even if you make the objects larger or smaller.
+
+$$\text{GIoU} = \text{IoU} - \frac{C - U}{C}$$
+
+------------------------------------------------------------------------
+
+## 📖 9.2 Prove GIoU is a lower bound of IoU
+
+**Goal:** We must mathematically show that the value of GIoU is always less than or equal to the value of IoU ($\text{GIoU} \le \text{IoU}$).
+
+**Step 1: Analyze the enclosing box.**
+By definition, the enclosing box $C$ completely covers the union $U$. Therefore, the area of $C$ must always be greater than or equal to the area of $U$.
+
+$$C \ge U$$
+
+**Step 2: Analyze the subtracted term.**
+Because $C \ge U$, the difference $(C - U)$ must be a positive number or zero. The area of $C$ is also a positive number. Therefore, dividing them results in a positive number or zero.
+
+$$\frac{C - U}{C} \ge 0$$
+
+**Conclusion:** The GIoU formula takes the base IoU score and subtracts a number that is zero or positive. When you subtract a non-negative value from a starting number, the final result can never be larger than the starting number. Thus, GIoU is a lower bound.
+
+------------------------------------------------------------------------
+
+## 📖 9.3 Prove the range of GIoU is [-1, 1]
+
+**Goal:** We must show that the highest possible score is $1$ and the lowest possible score is $-1$.
+
+**Step 1: Find the upper bound.**
+We proved in Part 1 that $\text{GIoU} \le \text{IoU}$. The highest possible IoU score is $1$ (when two boxes perfectly overlap). In a perfect overlap, the intersection, the union, and the enclosing box are all the exact same area ($I = U = C$).
+
+$$\text{GIoU} = \frac{U}{U} - \frac{C - C}{C} = 1 - 0 = 1$$
+
+The upper bound is $1$.
+
+**Step 2: Find the lower bound.**
+Assume the two boxes do not touch and move infinitely far apart. Because they do not touch, their intersection area $I$ is exactly $0$. This makes the base IoU exactly $0$.
+
+$$\text{GIoU} = 0 - \frac{C - U}{C}$$
+
+$$\text{GIoU} = -\frac{C - U}{C} = \frac{U}{C} - 1$$
+
+As the boxes move infinitely far apart, the size of the union $U$ stays constant, but the enclosing box $C$ grows infinitely large. When dividing a fixed number by infinity, the result approaches $0$.
+
+$$\frac{U}{C} \rightarrow 0$$
+
+$$\text{GIoU} = 0 - 1 = -1$$
+
+The lower bound is $-1$.
+
+**Conclusion:** The range of all possible GIoU values is $[-1, 1]$.
+
+------------------------------------------------------------------------
+
+## 📖 9.3 Prove 1 - GIoU is a metric
+
+**Goal:** We must show that $\mathcal{L}_{\text{GIoU}} = 1 - \text{GIoU}$ satisfies the core rules of a mathematical distance metric. Let $d(x, y)$ represent our distance formula.
+
+**Rule 1: Non-negativity ($d(x, y) \ge 0$)**
+In Part 2, we proved the maximum value of GIoU is $1$. Therefore, $1 - \text{GIoU}$ will always be $0$ or greater. This rule is satisfied.
+
+**Rule 2: Identity of Indiscernibles ($d(x, y) = 0$ if and only if $x = y$)**
+If Box A and Box B are identical, their GIoU is exactly $1$. The distance calculation is $1 - 1 = 0$. If the distance is $0$, the boxes must be perfectly aligned. This rule is satisfied.
+
+**Rule 3: Symmetry ($d(x, y) = d(y, x)$)**
+The GIoU formula uses intersection and union operations. The intersection of Box A and Box B produces the exact same area as the intersection of Box B and Box A. The calculation does not change if you swap the order. This rule is satisfied.
+
+------------------------------------------------------------------------
+
+## 📖 9.4 Prove GIoU is invariant to scale
+
+**Goal:** We must show that multiplying the dimensions of both boxes by a constant scale factor ($k$) does not change the final GIoU score.
+
+**Step 1: Scale the areas.**
+When you scale the width and height of a shape by a factor of $k$, the total 2D area scales by $k^2$. We apply this rule to our three main variables. Let the new variables be marked with a prime symbol.
+
+$$I' = k^2 \cdot I$$
+
+$$U' = k^2 \cdot U$$
+
+$$C' = k^2 \cdot C$$
+
+**Step 2: Substitute into the GIoU formula.**
+
+$$\text{GIoU}' = \frac{I'}{U'} - \frac{C' - U'}{C'}$$
+
+$$\text{GIoU}' = \frac{k^2 \cdot I}{k^2 \cdot U} - \frac{(k^2 \cdot C) - (k^2 \cdot U)}{k^2 \cdot C}$$
+
+**Step 3: Factor and cancel.**
+We pull the $k^2$ factor out of the parentheses in the numerator.
+
+$$\text{GIoU}' = \frac{k^2(I)}{k^2(U)} - \frac{k^2(C - U)}{k^2(C)}$$
+
+Because $k^2$ appears in both the top and bottom of each fraction, they cancel each other out entirely.
+
+$$\text{GIoU}' = \frac{I}{U} - \frac{C - U}{C}$$
+
+**Conclusion:** The $k^2$ scaling factor mathematically disappears, returning the exact same formula we started with. The metric is invariant to scale.
