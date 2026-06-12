@@ -1,0 +1,2 @@
+column_name,inferred_type,unique_values,missing_count,missing_pct,min,max,mean,median,std,skewness,kurtosis
+"quantity, tonn",numeric,18,0,0.0,0.001,0.8,0.016534868916025233,0.01,0.03888069221004367,17.31431324941897,336.2945248741608

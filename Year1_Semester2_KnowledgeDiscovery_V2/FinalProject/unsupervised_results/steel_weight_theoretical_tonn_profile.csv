@@ -1,0 +1,2 @@
+column_name,inferred_type,unique_values,missing_count,missing_pct,min,max,mean,median,std,skewness,kurtosis
+"steel_weight_theoretical, tonn",numeric,330,0,0.0,126.841,189.3,164.37839724521095,163.696,5.149403972374756,-0.27032546464462426,2.3107613152423996

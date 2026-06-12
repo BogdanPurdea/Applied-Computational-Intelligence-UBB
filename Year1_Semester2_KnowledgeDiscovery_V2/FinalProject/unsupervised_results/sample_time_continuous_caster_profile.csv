@@ -1,0 +1,2 @@
+column_name,inferred_type,unique_values,missing_count,missing_pct
+sample_time_continuous_caster,categorical,2453,0,0.0

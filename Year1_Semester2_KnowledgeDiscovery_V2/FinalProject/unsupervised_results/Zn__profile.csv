@@ -1,0 +1,2 @@
+column_name,inferred_type,unique_values,missing_count,missing_pct,min,max,mean,median,std,skewness,kurtosis
+"Zn, %",numeric,57,0,0.0,0.0,0.0078,0.0009605069737832052,0.0,0.0011784314394229303,1.1262077927414558,1.112549066472793

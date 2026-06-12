@@ -1,0 +1,2 @@
+column_name,inferred_type,unique_values,missing_count,missing_pct,min,max,mean,median,std,skewness,kurtosis
+"Ni, %",numeric,313,0,0.0,0.0017,0.0889,0.01719160831066613,0.0175,0.0066734174683135425,0.9530573390693229,7.260188729912416

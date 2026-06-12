@@ -1,0 +1,2 @@
+column_name,inferred_type,unique_values,missing_count,missing_pct,min,max,mean,median,std,skewness,kurtosis
+"metal_residue_grab1, tonn",numeric,3,0,0.0,0.4,50.0,0.4230105908906765,0.4,0.9846551285864132,46.74269088734233,2277.8925315133906

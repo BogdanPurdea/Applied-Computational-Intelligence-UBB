@@ -1,0 +1,56 @@
+Feature,Spearman_RUL_Corr,Type,Missing_Pct
+"resistance, tonn",0.6839326786733366,numeric,0.0
+"Zn, %",0.19600910926979082,numeric,0.0
+num_crystallizer,0.1339570605882508,numeric,0.0
+"Nb, %",0.12708601274922543,numeric,0.0
+"Mg, %",0.10798082083909032,numeric,0.0
+cast_in_row,0.10415720359060461,numeric,0.0
+"As, %",0.09826598999265355,numeric,0.0
+"Al, %",0.09325831130011694,numeric,0.0
+"Ni, %",0.0903140232998629,numeric,0.0
+"Ca, %",0.08842202815459649,numeric,0.0
+"Mo, %",0.08391174217220054,numeric,0.0
+"workpiece_weight, tonn",0.081865269166753,numeric,0.0
+"Ti, %",0.08164189841799831,numeric,0.0
+"steel_weight, tonn",0.0797364642189784,numeric,0.0
+"steel_weight_theoretical, tonn",0.07949373660778715,numeric,0.0
+"N, %",0.07825766840646624,numeric,0.0
+"crystallizer_movement, mm",0.0688461905850574,numeric,0.0
+"water_consumption_secondary_cooling_zone_num1, liter/minute",0.065066373282312,numeric,0.0
+"temperature_measurement2, Celsius deg.",0.06371253401588095,numeric,0.0
+"water_consumption_secondary_cooling_zone_num2, liter/minute",0.05735364221130876,numeric,0.0
+"Si, %",0.05494539851597771,numeric,0.0
+"temperature_measurement1, Celsius deg.",0.05331059342861917,numeric,0.0
+"Sn, %",0.05219901495558374,numeric,0.0
+"C, %",0.05164344302456013,numeric,0.0
+"Mn,%",0.04450890792623276,numeric,0.0
+"swing_frequency, amount/minute",0.043068493379202065,numeric,0.0
+"water_consumption_secondary_cooling_zone_num3, liter/minute",0.04181986436667302,numeric,0.0
+"Pb, %",0.04139364444681473,numeric,0.0
+"water_consumption, liter/minute",0.03812436002330109,numeric,0.0
+"quantity, tonn",0.03292596598410768,numeric,0.0
+"Cu, %",0.028880957368035583,numeric,0.0
+"water_temperature_delta, Celsius deg.",0.022517668291756977,numeric,0.0
+"steel_temperature_grab1, Celsius deg.",0.020923824587696156,numeric,0.0
+"alloy_speed, meter/minute",0.020633987001601108,numeric,0.0
+"residuals_grab2, tonn",0.015196065840497057,numeric,0.0
+"V, %",0.012504762599207618,numeric,0.0
+"S, %",0.012033509996858665,numeric,0.0
+"metal_residue_grab1, tonn",0.011962260804007275,numeric,0.0
+"P, %",0.00810888897949149,numeric,0.0
+"Ce, %",0.006645729017669945,numeric,0.0
+"technical_trim, tonn",0.004695419589154755,numeric,0.0
+"Cr, %",0.0031041365555715744,numeric,0.0
+workpiece_slice_geometry,0.0,categorical,0.0
+steel_type,0.0,categorical,0.0
+doc_requirement,0.0,categorical,0.0
+alloy_type,0.0,categorical,0.0
+date,0.0,temporal,0.0
+grab1_num,0.0,identifier,1.5625904276867875
+grab2_num,0.0,identifier,0.09259795127032815
+time_temperature_measurement2,0.0,categorical,0.0
+sample_time_continuous_caster,0.0,categorical,0.0
+time_temperature_measurement1,0.0,categorical,0.0
+kind,0.0,categorical,0.0
+sleeve,0.0,identifier,0.0
+num_stream,0.0,categorical,0.0

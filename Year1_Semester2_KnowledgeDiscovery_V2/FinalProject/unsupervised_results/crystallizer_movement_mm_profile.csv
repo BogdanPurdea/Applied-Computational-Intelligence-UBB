@@ -1,0 +1,2 @@
+column_name,inferred_type,unique_values,missing_count,missing_pct,min,max,mean,median,std,skewness,kurtosis
+"crystallizer_movement, mm",numeric,7,0,0.0,5.0,13.0,9.03848602349673,7.0,2.689591935651267,0.6347874055108492,-1.4909097096825004

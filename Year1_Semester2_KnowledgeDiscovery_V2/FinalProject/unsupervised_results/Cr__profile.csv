@@ -1,0 +1,2 @@
+column_name,inferred_type,unique_values,missing_count,missing_pct,min,max,mean,median,std,skewness,kurtosis
+"Cr, %",numeric,534,0,0.0,0.0166,0.1042,0.045957977892239134,0.0443,0.01168832981767787,0.9140540787535655,1.8913534172647273

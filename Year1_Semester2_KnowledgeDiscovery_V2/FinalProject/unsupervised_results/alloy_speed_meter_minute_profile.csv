@@ -1,0 +1,2 @@
+column_name,inferred_type,unique_values,missing_count,missing_pct,min,max,mean,median,std,skewness,kurtosis
+"alloy_speed, meter/minute",numeric,3,0,0.0,1.0,3.0,2.1214190636032177,2.0,0.33536600249451304,2.085703556238089,3.2330355020607806

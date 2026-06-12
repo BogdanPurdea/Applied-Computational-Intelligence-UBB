@@ -1,0 +1,2 @@
+column_name,inferred_type,unique_values,missing_count,missing_pct,min,max,mean,median,std,skewness,kurtosis
+"Cu, %",numeric,449,0,0.0,0.0075,0.084,0.03465588286359164,0.0361,0.010083962308489606,-0.3888645647982681,0.12634901661856857

@@ -1,0 +1,2 @@
+column_name,inferred_type,unique_values,missing_count,missing_pct,min,max,mean,median,std,skewness,kurtosis
+"water_consumption_secondary_cooling_zone_num1, liter/minute",numeric,33,0,0.0,120.0,390.0,313.50975172174316,320.0,24.882174137636262,-2.1245595361431455,9.539038273226755

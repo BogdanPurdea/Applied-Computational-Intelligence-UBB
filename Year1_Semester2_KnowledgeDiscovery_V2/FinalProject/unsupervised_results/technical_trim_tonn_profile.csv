@@ -1,0 +1,2 @@
+column_name,inferred_type,unique_values,missing_count,missing_pct,min,max,mean,median,std,skewness,kurtosis
+"technical_trim, tonn",numeric,11,0,0.0,0.61,32.5,1.3622724115978935,1.345,0.7163963959185686,42.844800371856756,1856.5115659870808

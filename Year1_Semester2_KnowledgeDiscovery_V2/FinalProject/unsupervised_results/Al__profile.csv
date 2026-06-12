@@ -1,0 +1,2 @@
+column_name,inferred_type,unique_values,missing_count,missing_pct,min,max,mean,median,std,skewness,kurtosis
+"Al, %",numeric,51,0,0.0,0.0013,0.0193,0.002789461195671046,0.0027,0.0008168808347409868,4.395989332829959,65.5539267694969

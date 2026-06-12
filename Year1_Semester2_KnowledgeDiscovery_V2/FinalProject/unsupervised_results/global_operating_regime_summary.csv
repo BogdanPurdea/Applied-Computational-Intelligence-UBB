@@ -1,0 +1,2 @@
+Operating_Regime,mean_RUL,count,kmeans_clusters
+stable casting regime,208547.90954337636,17279,"[np.int32(4), np.int32(0), np.int32(1), np.int32(3), np.int32(2)]"

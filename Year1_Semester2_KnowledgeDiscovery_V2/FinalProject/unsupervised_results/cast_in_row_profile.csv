@@ -1,0 +1,2 @@
+column_name,inferred_type,unique_values,missing_count,missing_pct,min,max,mean,median,std,skewness,kurtosis
+cast_in_row,numeric,62,0,0.0,0.0,61.0,20.181376237050756,18.0,13.464429623315143,0.6038851754568616,-0.3290308915050897
