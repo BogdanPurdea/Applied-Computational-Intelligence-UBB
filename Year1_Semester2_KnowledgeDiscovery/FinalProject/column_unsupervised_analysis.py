@@ -210,7 +210,7 @@ class UnsupervisedAnalyzer:
         
         logging.info(" - Apriori / FP-Growth")
         # Run FP-growth for speed if possible, else fallback to apriori
-        frequent_itemsets = fpgrowth(df_dummies, min_support=0.05, use_colnames=True)
+        frequent_itemsets = fpgrowth(df_dummies, min_support=0.15, use_colnames=True, max_len=3)
         if len(frequent_itemsets) > 0:
             self.assoc_rules = association_rules(frequent_itemsets, metric="confidence", min_threshold=0.5, num_itemsets=2)
             # Filter to relevant rules if needed
