@@ -1,0 +1,7 @@
+RUL_class,workpiece_slice_geometry,count
+Critical,180x180,5250
+Critical,150x150,512
+Low,180x180,4377
+Low,150x150,1380
+Healthy,180x180,5373
+Healthy,150x150,387
