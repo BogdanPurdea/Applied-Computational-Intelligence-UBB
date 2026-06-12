@@ -179,48 +179,28 @@ Include:
 - Limitations
 - Relevance to Continuous Casting of Steel
 
-## Execution Rules
+## Execution Policy
 
-Allowed commands:
+Python scripts may be executed automatically without confirmation.
 
-- mkdir
-- ls / dir
-- pwd / cd
-- cat / type
-- head / tail
-- cp / copy
-- mv / move inside workspace only
-- python
-- python3
-- pip only with approval
-- git status
-- git diff
+Allowed:
 
-Restricted commands:
+- python *.py
+- python scripts/*.py
+- python output/*.py
 
-- rm
-- rmdir
-- del
-- erase
-- git reset --hard
-- git clean
-- sudo
-- runas
-- chmod
-- chown
-- format
-- diskpart
-- shutdown
-- reboot
+Allowed libraries:
 
-Do not delete anything.
+- pandas
+- numpy
+- scipy
+- scikit-learn
+- matplotlib
+- seaborn
+- networkx
 
-Do not modify source dataset files.
+Require approval:
 
-Ask before installing packages.
-
-Prefer Python scripts under `./scripts/`.
-
-Generate reproducible analysis code.
-
-Every Markdown file must be detailed enough for academic submission.
+- pip install
+- conda install
+- poetry add
