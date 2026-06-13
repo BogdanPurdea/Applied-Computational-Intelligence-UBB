@@ -1,2 +1,0 @@
-column_name,inferred_type,unique_values,missing_count,missing_pct,min,max,mean,median,std,skewness,kurtosis
-"temperature_measurement1, Celsius deg.",numeric,44,0,0.0,1522.0,1939.0,1541.08501649401,1541.0,7.418625610451286,27.868110600038346,1449.106146159765

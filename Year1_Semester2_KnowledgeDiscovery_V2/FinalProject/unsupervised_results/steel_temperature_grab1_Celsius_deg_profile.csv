@@ -1,2 +1,0 @@
-column_name,inferred_type,unique_values,missing_count,missing_pct,min,max,mean,median,std,skewness,kurtosis
-"steel_temperature_grab1, Celsius deg.",numeric,56,0,0.0,567.0,1667.0,1566.837316974362,1567.0,23.872696598820752,-38.20641487170545,1600.0196905169316

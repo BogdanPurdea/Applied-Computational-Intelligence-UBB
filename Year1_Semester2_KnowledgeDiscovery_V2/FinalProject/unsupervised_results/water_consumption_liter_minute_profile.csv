@@ -1,2 +1,0 @@
-column_name,inferred_type,unique_values,missing_count,missing_pct,min,max,mean,median,std,skewness,kurtosis
-"water_consumption, liter/minute",numeric,5,0,0.0,1255.0,2155.0,2127.1233867700676,2155.0,71.81219354191484,-2.6896547389110896,10.848251529878706

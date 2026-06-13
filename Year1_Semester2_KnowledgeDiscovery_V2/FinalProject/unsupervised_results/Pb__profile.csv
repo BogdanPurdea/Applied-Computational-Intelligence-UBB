@@ -1,2 +1,0 @@
-column_name,inferred_type,unique_values,missing_count,missing_pct,min,max,mean,median,std,skewness,kurtosis
-"Pb, %",numeric,37,0,0.0,0.0,0.0053,0.0022097112101394758,0.0027,0.0016895940353638876,-0.27215591527677946,-1.413110653114355

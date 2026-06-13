@@ -1,2 +1,0 @@
-column_name,inferred_type,unique_values,missing_count,missing_pct,min,max,mean,median,std,skewness,kurtosis
-"water_temperature_delta, Celsius deg.",numeric,4,0,0.0,6.0,9.0,8.958041553330633,9.0,0.28874998790241035,-8.343177274054842,76.00909076801643

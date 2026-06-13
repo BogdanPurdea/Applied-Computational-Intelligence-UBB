@@ -1,2 +1,0 @@
-column_name,inferred_type,unique_values,missing_count,missing_pct,min,max,mean,median,std,skewness,kurtosis
-"resistance, tonn",numeric,8076,0,0.0,24.0,8473135.0,6860.136581978124,5733.0,91184.11169402668,92.6564288832551,8600.093581412415

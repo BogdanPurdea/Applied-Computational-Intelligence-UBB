@@ -1,2 +1,0 @@
-column_name,inferred_type,unique_values,missing_count,missing_pct,min,max,mean,median,std,skewness,kurtosis
-"Ti, %",numeric,22,0,0.0,0.0005,0.007,0.0009668325713293593,0.0009,0.0002975730191700554,4.568752514561908,63.25645016570299

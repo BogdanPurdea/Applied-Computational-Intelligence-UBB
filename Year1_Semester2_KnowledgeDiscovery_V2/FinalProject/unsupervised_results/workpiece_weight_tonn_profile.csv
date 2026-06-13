@@ -1,2 +1,0 @@
-column_name,inferred_type,unique_values,missing_count,missing_pct,min,max,mean,median,std,skewness,kurtosis
-"workpiece_weight, tonn",numeric,221,0,0.0,73.779,184.32,163.37346831413853,163.296,5.71126859997764,-3.1433992868243528,39.95395256765701
