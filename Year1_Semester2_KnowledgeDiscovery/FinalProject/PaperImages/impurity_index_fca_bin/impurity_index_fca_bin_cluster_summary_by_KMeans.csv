@@ -1,0 +1,10 @@
+KMeans,impurity_index_fca_bin,count
+0,Low,264
+0,High,222
+0,Medium,137
+1,High,5508
+1,Medium,5349
+1,Low,3875
+2,Low,1720
+2,Medium,331
+2,High,97

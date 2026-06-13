@@ -1,0 +1,7 @@
+OneClassSVM,impurity_index_fca_bin,count
+-1,High,175
+-1,Low,130
+-1,Medium,36
+1,Medium,5781
+1,Low,5729
+1,High,5652

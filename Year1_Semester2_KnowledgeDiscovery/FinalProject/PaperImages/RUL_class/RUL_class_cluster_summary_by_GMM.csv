@@ -1,0 +1,13 @@
+GMM,RUL_class,count
+0,Healthy,2188
+0,Critical,58
+0,Medium,37
+0,Low,31
+1,Healthy,2158
+1,Medium,157
+1,Critical,105
+1,Low,79
+2,Healthy,11034
+2,Medium,651
+2,Critical,511
+2,Low,494

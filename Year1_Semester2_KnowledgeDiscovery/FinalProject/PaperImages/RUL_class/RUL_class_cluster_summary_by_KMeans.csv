@@ -1,0 +1,13 @@
+KMeans,RUL_class,count
+0,Healthy,579
+0,Critical,37
+0,Medium,6
+0,Low,1
+1,Healthy,12753
+1,Medium,807
+1,Critical,599
+1,Low,573
+2,Healthy,2048
+2,Critical,38
+2,Medium,32
+2,Low,30

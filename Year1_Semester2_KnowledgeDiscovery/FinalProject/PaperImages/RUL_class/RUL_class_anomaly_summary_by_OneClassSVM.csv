@@ -1,0 +1,9 @@
+OneClassSVM,RUL_class,count
+-1,Healthy,285
+-1,Critical,36
+-1,Medium,14
+-1,Low,6
+1,Healthy,15095
+1,Medium,831
+1,Critical,638
+1,Low,598

@@ -1,0 +1,7 @@
+OneClassSVM,RUL_fca_bin,count
+-1,High,126
+-1,Medium,108
+-1,Low,107
+1,Low,5728
+1,Medium,5726
+1,High,5708

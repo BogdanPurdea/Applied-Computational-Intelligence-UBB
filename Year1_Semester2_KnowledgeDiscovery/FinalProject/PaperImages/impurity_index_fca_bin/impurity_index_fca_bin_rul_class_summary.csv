@@ -1,0 +1,13 @@
+RUL_class,impurity_index_fca_bin,count
+Critical,High,240
+Critical,Medium,232
+Critical,Low,202
+Healthy,Low,5205
+Healthy,High,5101
+Healthy,Medium,5074
+Low,Medium,226
+Low,High,208
+Low,Low,170
+Medium,Medium,285
+Medium,Low,282
+Medium,High,278
