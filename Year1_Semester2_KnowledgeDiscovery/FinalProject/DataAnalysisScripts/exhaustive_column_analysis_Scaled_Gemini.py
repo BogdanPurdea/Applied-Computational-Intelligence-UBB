@@ -40,7 +40,7 @@ def execute_analysis_pipeline() -> None:
     regression and classification models, running unsupervised clustering, 
     extracting association rules, and compiling the output into a report.
     """
-    # Create required directories for output files
+    # Create required directories for outputGem files
     os.makedirs("outputGem", exist_ok=True)
     os.makedirs("plotsGem", exist_ok=True)
 
@@ -125,10 +125,10 @@ def execute_analysis_pipeline() -> None:
             sns.histplot(df_clean[col].dropna(), kde=True)
             plt.title(f'Distribution of {col}')
             plt.tight_layout()
-            plot_path = f"plots/{col.replace(' ', '_').replace(',', '_').replace('/', '_')}.png"
+            plot_path = f"plotsGem/{col.replace(' ', '_').replace(',', '_').replace('/', '_')}.png"
             plt.savefig(plot_path)
             plt.close()
-            md_sec.append(f"\n![Distribution](plots/{os.path.basename(plot_path)})")
+            md_sec.append(f"\n![Distribution](plotsGem/{os.path.basename(plot_path)})")
             
         elif col_type == "Categorical / Identifier-like":
             freqs = df_clean[col].value_counts(normalize=True).head(5).to_dict()
@@ -140,10 +140,10 @@ def execute_analysis_pipeline() -> None:
             df_clean[col].value_counts().head(10).plot(kind='bar')
             plt.title(f'Top Categories of {col}')
             plt.tight_layout()
-            plot_path = f"plots/{col.replace(' ', '_').replace(',', '_').replace('/', '_')}.png"
+            plot_path = f"plotsGem/{col.replace(' ', '_').replace(',', '_').replace('/', '_')}.png"
             plt.savefig(plot_path)
             plt.close()
-            md_sec.append(f"\n![Categories](plots/{os.path.basename(plot_path)})")
+            md_sec.append(f"\n![Categories](plotsGem/{os.path.basename(plot_path)})")
             
         else:
             val_dates = pd.to_datetime(df_clean[col], errors='coerce')
@@ -252,7 +252,7 @@ def execute_analysis_pipeline() -> None:
             reg_results.append({'Model': name, 'MAE': np.nan, 'RMSE': np.nan, 'R2': np.nan, 'MAPE': np.nan})
 
     df_reg_metrics = pd.DataFrame(reg_results)
-    df_reg_metrics.to_csv("output/model_comparison.csv", index=False)
+    df_reg_metrics.to_csv("outputGem/model_comparison.csv", index=False)
 
     # Step 4: Supervised Learning (Classification)
     print("Step 4: Training Classifiers...")
@@ -297,7 +297,7 @@ def execute_analysis_pipeline() -> None:
             clf_results.append({'Model': name, 'Accuracy': np.nan, 'Precision': np.nan, 'Recall': np.nan, 'F1-score': np.nan})
 
     df_clf_metrics = pd.DataFrame(clf_results)
-    df_clf_metrics.to_csv("output/model_comparison_classifier.csv", index=False)
+    df_clf_metrics.to_csv("outputGem/model_comparison_classifier.csv", index=False)
 
     # Step 5: Feature Importance Ranking
     print("Step 5: Ranking Features...")
@@ -305,7 +305,7 @@ def execute_analysis_pipeline() -> None:
     rf.fit(X, y)
     importances = rf.feature_importances_
     df_feat_imp = pd.DataFrame({'Feature': X.columns, 'Importance': importances}).sort_values(by='Importance', ascending=False)
-    df_feat_imp.to_csv("output/feature_importance.csv", index=False)
+    df_feat_imp.to_csv("outputGem/feature_importance.csv", index=False)
 
     # Step 6: Unsupervised Clustering & PCA
     print("Step 6: Running Clustering & PCA...")
@@ -319,7 +319,7 @@ def execute_analysis_pipeline() -> None:
     plt.scatter(X_pca[:, 0], X_pca[:, 1], c=kmeans.labels_, cmap='viridis', s=5)
     plt.title('Operating Regimes in Latent Space (PCA)')
     plt.tight_layout()
-    plt.savefig("plots/kmeans_operating_regimes.png")
+    plt.savefig("plotsGem/kmeans_operating_regimes.png")
     plt.close()
 
     # Step 7: Association Rules
@@ -342,7 +342,7 @@ def execute_analysis_pipeline() -> None:
 
     freq_items = apriori(df_assoc, min_support=0.01, use_colnames=True)
     rules = association_rules(freq_items, metric="confidence", min_threshold=0.3)
-    rules.to_csv("output/association_rules.csv", index=False)
+    rules.to_csv("outputGem/association_rules.csv", index=False)
 
     # Step 8: Compile Markdown Report
     print("Step 8: Assembling Final Markdown & HTML Reports...")
@@ -367,12 +367,12 @@ def execute_analysis_pipeline() -> None:
     report_content.append("\n## Individual Column Analysis Reports")
     report_content.extend(reports)
 
-    # Construct final file output structure
-    md_report_path = "output/column_analysis_report.md"
+    # Construct final file outputGem structure
+    md_report_path = "outputGem/column_analysis_report.md"
     with open(md_report_path, "w", encoding="utf-8") as f:
         f.write("\n".join(report_content))
 
-    html_report_path = "output/column_analysis_report.html"
+    html_report_path = "outputGem/column_analysis_report.html"
     html_content = f"<html><head><title>Exhaustive Report</title><style>body {{ font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }} pre {{ background: #f4f4f4; padding: 10px; }} table {{ border-collapse: collapse; width: 100%; }} th, td {{ border: 1px solid #ddd; padding: 8px; text-align: left; }} th {{ background-color: #f2f2f2; }}</style></head><body>"
     html_content += "\n".join(report_content).replace("\n# ", "\n<h1>").replace("\n## ", "\n<h2>").replace("\n### ", "\n<h3>").replace("- ", "<li>").replace("\n", "<br>")
     html_content += "</body></html>"
@@ -383,9 +383,9 @@ def execute_analysis_pipeline() -> None:
     print("Generated files:")
     print(f"  - {md_report_path}")
     print(f"  - {html_report_path}")
-    print("  - output/model_comparison.csv")
-    print("  - output/feature_importance.csv")
-    print("  - output/association_rules.csv")
+    print("  - outputGem/model_comparison.csv")
+    print("  - outputGem/feature_importance.csv")
+    print("  - outputGem/association_rules.csv")
 
 
 if __name__ == "__main__":
