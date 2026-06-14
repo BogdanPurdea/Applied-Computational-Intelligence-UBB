@@ -53,7 +53,6 @@ class DatasetPreprocessor:
         Retains the original text-based time columns.
         Returns the DataFrame with appended temporal features.
         """
-        # Convert the primary date column, coercing errors to NaT
         df["date_parsed"] = pd.to_datetime(df["date"], errors="coerce")
 
         time_columns = [
@@ -62,25 +61,21 @@ class DatasetPreprocessor:
             "sample_time_continuous_caster"
         ]
 
-        # Standardize empty time values
         for col in time_columns:
             if col in df.columns:
                 df[col] = df[col].astype(str).str.strip().replace("nan", np.nan)
 
-        # Create a unified timestamp column
         df["timestamp"] = pd.to_datetime(
             df["date"].astype(str) + " " + df["sample_time_continuous_caster"].astype(str),
             errors="coerce"
         )
 
-        # Extract numeric date components
         df["year"] = df["timestamp"].dt.year
         df["month"] = df["timestamp"].dt.month
         df["day"] = df["timestamp"].dt.day
         df["hour"] = df["timestamp"].dt.hour
         df["weekday"] = df["timestamp"].dt.weekday
 
-        # Group hours into distinct work shifts
         df["shift"] = pd.cut(
             df["hour"],
             bins=[-1, 7, 15, 23],
@@ -133,7 +128,6 @@ class DatasetPreprocessor:
         for col in categorical_cols:
             encoded_col = f"{col}_encoded"
             encoder = LabelEncoder()
-            # Convert to string to ensure the encoder can process mixed types or 0s
             df[encoded_col] = encoder.fit_transform(df[col].astype(str))
             self.label_encoders[col] = encoder
 
@@ -143,23 +137,22 @@ class DatasetPreprocessor:
         """
         Applies StandardScaler to numerical columns.
         Appends the scaled results as new columns with the '_scaled' suffix.
-        Excludes specific target and identifier columns from scaling.
+        Excludes specific identifier columns from scaling. RUL is included for scaling.
         Returns the updated DataFrame.
         """
         numeric_cols = df.select_dtypes(include=[np.number]).columns.tolist()
 
+        # Target column RUL is removed from this list so that RUL_scaled is created.
         exclude_cols = [
-            "RUL",
             "sleeve",
             "num_crystallizer",
             "num_stream"
         ]
 
-        # Filter out excluded columns and already scaled/encoded columns
         numeric_cols = [
-            col for col in numeric_cols 
-            if col not in exclude_cols 
-            and not col.endswith("_encoded") 
+            col for col in numeric_cols
+            if col not in exclude_cols
+            and not col.endswith("_encoded")
             and not col.endswith("_scaled")
         ]
 
@@ -186,10 +179,10 @@ class DatasetPreprocessor:
         ]
 
         numeric_cols = [
-            col for col in numeric_cols 
-            if col not in exclude_cols 
-            and not col.endswith("_encoded") 
-            and not col.endswith("_scaled") 
+            col for col in numeric_cols
+            if col not in exclude_cols
+            and not col.endswith("_encoded")
+            and not col.endswith("_scaled")
             and not col.endswith("_fca_bin")
         ]
 
@@ -197,7 +190,6 @@ class DatasetPreprocessor:
             fca_col = f"{col}_fca_bin"
 
             try:
-                # Divide data into 3 equal-sized quantiles
                 df[fca_col] = pd.qcut(
                     df[col],
                     q=3,
@@ -205,10 +197,8 @@ class DatasetPreprocessor:
                     duplicates="drop"
                 )
             except Exception:
-                # Fallback if the column lacks variance (e.g., filled entirely with 0s)
                 df[fca_col] = "Constant"
 
-        # Discretize the specific RUL target variable
         if "RUL" in df.columns:
             df["RUL_class"] = pd.cut(
                 df["RUL"],
@@ -296,7 +286,6 @@ class DatasetPreprocessor:
         print(f"Final shape: {df.shape}")
         print(f"Saved preprocessed dataset to: {self.output_path}")
 
-# Script execution sequence
 if __name__ == "__main__":
     script_dir = Path(__file__).resolve().parent
 
