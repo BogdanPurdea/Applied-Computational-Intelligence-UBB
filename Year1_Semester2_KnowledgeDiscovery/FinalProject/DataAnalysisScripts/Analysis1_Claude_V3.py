@@ -1,31 +1,23 @@
 """
-CCM Knowledge Discovery / Data Mining Pipeline
+CCM Knowledge Discovery / Data Mining Pipeline  –  Claude V3
 
-Purpose:
-    - Load CCM mould sleeve dataset.
-    - Generate first-layer descriptive knowledge.
-    - Apply supervised ML:
-        1. RUL regression
-        2. RUL_class classification
-        3. Decision tree rule extraction
-    - Apply unsupervised ML:
-        1. K-Means clustering
-        2. DBSCAN clustering
-        3. PCA projection
-        4. Isolation Forest anomaly detection
-    - Apply association rule mining on FCA/bin columns.
-    - Export CSV, TXT, and PNG plots.
+Adapted for the new preprocessed dataset format where:
+  - All numeric sensor columns are already StandardScaler-normalised (_scaled suffix).
+  - FCA discretisation bins (_fca_bin suffix) are pre-computed.
+  - RUL (raw, integer) and RUL_class are present as direct targets.
+  - workpiece_slice_geometry is available only as workpiece_slice_geometry_encoded.
+  - shift is a text column (Night / Morning / Afternoon).
 
 Expected folder structure:
     script_folder/
-    ├── ccm_knowledge_discovery.py
+    ├── Analysis1_Claude_V3.py
     ├── Dataset/
-    │   └── PreProcessedDataset.csv
-    └── KnowledgeDiscovery_Outputs/
-        └── first_layer_kd/
+    │   └── PreProcessedDataset.csv          <- new preprocessed format
+    └── Analysis1_Outputs_Claude_V3/
+        └── plots/
 
 Run:
-    python ccm_knowledge_discovery.py
+    python Analysis1_Claude_V3.py
 """
 
 from pathlib import Path
@@ -92,6 +84,9 @@ TOP_N_FEATURES = 25
 TOP_N_CORRELATIONS = 25
 TOP_N_ASSOCIATION_RULES = 20
 
+# Cap on FCA/bin columns passed to Apriori to avoid OOM on large transaction matrices.
+MAX_APRIORI_COLUMNS = 20
+
 
 # ============================================================
 # Utility functions
@@ -149,13 +144,18 @@ def remove_leakage_columns(df: pd.DataFrame, task: str, strict_no_resistance: bo
     """
     Removes target leakage columns.
 
-    Important:
-        RUL is derived from resistance. If strict_no_resistance=True,
-        resistance columns are also removed to create a cleaner prognostic model.
+    New preprocessed format notes:
+        - RUL_scaled is a linear function of RUL → always dropped from features.
+        - RUL_fca_bin is a binned version of RUL → always dropped from features.
+        - RUL_class leaks the regression target for regression tasks.
+        - RUL leaks the classification target for classification tasks.
+        - strict_no_resistance=True additionally removes all resistance-related
+          columns for a cleaner prognostic experiment.
     """
 
     cols_to_drop = []
 
+    # Columns that directly leak the target regardless of task
     leakage_exact = [
         "RUL_scaled",
         "RUL_fca_bin",
@@ -356,16 +356,19 @@ def generate_eda_plots(df: pd.DataFrame, output_dir: str):
             path=os.path.join(plot_dir, "eda_rul_class_distribution.png"),
         )
 
-    if "workpiece_slice_geometry" in df.columns and TARGET_REGRESSION in df.columns:
-        geometry_rul = df.groupby("workpiece_slice_geometry")[TARGET_REGRESSION].mean().sort_values(ascending=False)
+    # workpiece_slice_geometry is not present in the new format (encoded only) — skipped.
+    # Use workpiece_slice_geometry_encoded as a numeric proxy for the groupby.
+    if "workpiece_slice_geometry_encoded" in df.columns and TARGET_REGRESSION in df.columns:
+        geom_rul = df.groupby("workpiece_slice_geometry_encoded")[TARGET_REGRESSION].mean().sort_values(ascending=False)
         plot_bar_from_series(
-            geometry_rul,
-            title="Average RUL by Workpiece Geometry",
+            geom_rul,
+            title="Average RUL by Workpiece Geometry (encoded)",
             xlabel="Average RUL",
-            ylabel="Geometry",
-            path=os.path.join(plot_dir, "eda_average_rul_by_geometry.png"),
+            ylabel="Geometry Code",
+            path=os.path.join(plot_dir, "eda_average_rul_by_geometry_encoded.png"),
         )
 
+    # shift is a text column in the new format — groupby works directly.
     if "shift" in df.columns and TARGET_REGRESSION in df.columns:
         shift_rul = df.groupby("shift")[TARGET_REGRESSION].mean().sort_values(ascending=False)
         plot_bar_from_series(
@@ -421,15 +424,16 @@ def generate_eda_plots(df: pd.DataFrame, output_dir: str):
                 path=os.path.join(plot_dir, "eda_top_correlations_with_rul.png"),
             )
 
+    # New format has no raw sensor columns — use the pre-scaled versions for scatter plots.
     candidate_scatter_cols = [
-        "resistance, tonn",
-        "water_consumption, liter/minute",
-        "water_temperature_delta, Celsius deg.",
-        "total_cooling_consumption",
-        "average_cooling_consumption",
-        "temperature_difference",
-        "impurity_index",
-        "steel_temperature_grab1, Celsius deg.",
+        "resistance, tonn_scaled",
+        "water_consumption, liter/minute_scaled",
+        "water_temperature_delta, Celsius deg._scaled",
+        "total_cooling_consumption_scaled",
+        "average_cooling_consumption_scaled",
+        "temperature_difference_scaled",
+        "impurity_index_scaled",
+        "steel_temperature_grab1, Celsius deg._scaled",
     ]
 
     if TARGET_REGRESSION in df.columns:
@@ -801,10 +805,24 @@ def run_decision_tree_rules(df: pd.DataFrame, output_dir: str, strict_no_resista
 # ============================================================
 
 def prepare_unsupervised_matrix(df: pd.DataFrame):
+    """
+    Builds the numeric feature matrix used for clustering, PCA and anomaly detection.
+
+    Excluded columns (leakage / identifiers):
+        - RUL, RUL_scaled, RUL_fca_bin  → direct or derived target
+        - RUL_class                      → classification target
+        - sleeve, num_crystallizer, num_stream → raw equipment IDs
+          (already excluded by select_dtypes since they remain numeric but
+          are high-cardinality identifiers — kept here for explicitness)
+    """
     exclude_cols = [
         TARGET_REGRESSION,
         TARGET_CLASSIFICATION,
+        "RUL_scaled",
         "RUL_fca_bin",
+        "sleeve",
+        "num_crystallizer",
+        "num_stream",
     ]
 
     X = df.drop(columns=[c for c in exclude_cols if c in df.columns], errors="ignore")
@@ -1085,6 +1103,16 @@ def run_association_rule_mining(df: pd.DataFrame, output_dir: str):
         print("[WARNING] Not enough FCA/bin columns for association rule mining.")
         return
 
+    # ---- Memory guard -------------------------------------------------------
+    # With 100+ fca_bin columns × 17 k rows the apriori dense matrix exceeds
+    # 128 GiB. Prioritise RUL-related columns then fill up to the cap.
+    target_cols = [c for c in bin_cols if "RUL" in c or TARGET_CLASSIFICATION in c]
+    other_cols  = [c for c in bin_cols if c not in target_cols]
+    bin_cols = (target_cols + other_cols)[:MAX_APRIORI_COLUMNS]
+    print(f"[INFO] Association rule mining on {len(bin_cols)} FCA/bin columns "
+          f"(capped at {MAX_APRIORI_COLUMNS}).")
+    # -------------------------------------------------------------------------
+
     data = df[bin_cols].copy()
     data = data.fillna("Missing").astype(str)
 
@@ -1096,9 +1124,12 @@ def run_association_rule_mining(df: pd.DataFrame, output_dir: str):
 
     transactions = transactions.astype(bool)
 
+    min_sup = 0.08
+    print(f"[INFO] Running Apriori with min_support={min_sup} on "
+          f"{transactions.shape[1]} one-hot columns...")
     frequent_itemsets = apriori(
         transactions,
-        min_support=0.05,
+        min_support=min_sup,
         use_colnames=True,
     )
 
@@ -1204,10 +1235,11 @@ def generate_first_layer_knowledge_report(df: pd.DataFrame, output_dir: str):
         lines.append(str(df[TARGET_CLASSIFICATION].value_counts(dropna=False)))
         lines.append("")
 
-    if "workpiece_slice_geometry" in df.columns and TARGET_REGRESSION in df.columns:
-        lines.append("Average RUL by Workpiece Geometry")
+    # workpiece_slice_geometry not present in new format; use encoded proxy.
+    if "workpiece_slice_geometry_encoded" in df.columns and TARGET_REGRESSION in df.columns:
+        lines.append("Average RUL by Workpiece Geometry (encoded code)")
         lines.append("-" * 70)
-        lines.append(str(df.groupby("workpiece_slice_geometry")[TARGET_REGRESSION].agg(["count", "mean", "median", "min", "max"])))
+        lines.append(str(df.groupby("workpiece_slice_geometry_encoded")[TARGET_REGRESSION].agg(["count", "mean", "median", "min", "max"])))
         lines.append("")
 
     if "sleeve" in df.columns and TARGET_REGRESSION in df.columns:
@@ -1284,7 +1316,7 @@ if __name__ == "__main__":
     SCRIPT_DIR = Path(__file__).resolve().parent
 
     INPUT_FILE = SCRIPT_DIR / "Dataset" / "PreProcessedDataset.csv"
-    OUTPUT_DIR = SCRIPT_DIR / "Analysis1_Outputs_GPT_V2"
+    OUTPUT_DIR = SCRIPT_DIR / "Analysis1_Outputs_Claude_V3"
 
     # ------------------------------------------------------------
     # Configuration
