@@ -46,6 +46,20 @@ class DatasetPreprocessor:
         """
         return df.replace(r"^\s*$", np.nan, regex=True)
 
+    def deduplicate(self, df: pd.DataFrame) -> pd.DataFrame:
+        """
+        Removes exact duplicate rows, keeping only the first occurrence.
+        Deduplication is performed on the original raw columns (before any
+        derived / encoded / scaled columns are added) so that only genuinely
+        identical source records are dropped.
+        Returns the deduplicated DataFrame and prints a removal summary.
+        """
+        before = len(df)
+        df = df.drop_duplicates(keep="first").reset_index(drop=True)
+        removed = before - len(df)
+        print(f"[Deduplication] Removed {removed} duplicate row(s). Rows remaining: {len(df)}")
+        return df
+
     def parse_temporal_data(self, df: pd.DataFrame) -> pd.DataFrame:
         """
         Converts date and time columns into combined timestamp objects.
@@ -251,6 +265,78 @@ class DatasetPreprocessor:
 
         return df
 
+    # Exact output column order required by the downstream pipeline.
+    OUTPUT_COLUMNS: list = [
+        "RUL", "sleeve", "num_crystallizer", "num_stream", "timestamp", "shift",
+        "steel_type_encoded", "doc_requirement_encoded", "workpiece_slice_geometry_encoded",
+        "alloy_type_encoded", "kind_encoded", "shift_encoded",
+        "workpiece_weight, tonn_scaled", "cast_in_row_scaled",
+        "steel_weight_theoretical, tonn_scaled", "slag_weight_close_grab1, tonn_scaled",
+        "metal_residue_grab1, tonn_scaled", "steel_weight, tonn_scaled",
+        "residuals_grab2, tonn_scaled", "technical_trim, tonn_scaled",
+        "grab1_num_scaled", "steel_temperature_grab1, Celsius deg._scaled",
+        "grab2_num_scaled", "resistance, tonn_scaled",
+        "swing_frequency, amount/minute_scaled", "crystallizer_movement, mm_scaled",
+        "alloy_speed, meter/minute_scaled", "water_consumption, liter/minute_scaled",
+        "water_temperature_delta, Celsius deg._scaled",
+        "water_consumption_secondary_cooling_zone_num1, liter/minute_scaled",
+        "water_consumption_secondary_cooling_zone_num2, liter/minute_scaled",
+        "water_consumption_secondary_cooling_zone_num3, liter/minute_scaled",
+        "quantity, tonn_scaled",
+        "temperature_measurement1, Celsius deg._scaled",
+        "temperature_measurement2, Celsius deg._scaled",
+        "Ce, %_scaled", "C, %_scaled", "Si, %_scaled", "Mn,%_scaled",
+        "S, %_scaled", "P, %_scaled", "Cr, %_scaled", "Ni, %_scaled",
+        "Cu, %_scaled", "As, %_scaled", "Mo, %_scaled", "Nb, %_scaled",
+        "Sn, %_scaled", "Ti, %_scaled", "V, %_scaled", "Al, %_scaled",
+        "Ca, %_scaled", "N, %_scaled", "Pb, %_scaled", "Mg, %_scaled",
+        "Zn, %_scaled", "RUL_scaled",
+        "temperature_difference_scaled", "total_cooling_consumption_scaled",
+        "average_cooling_consumption_scaled", "impurity_index_scaled",
+        "workpiece_weight, tonn_fca_bin", "cast_in_row_fca_bin",
+        "steel_weight_theoretical, tonn_fca_bin", "slag_weight_close_grab1, tonn_fca_bin",
+        "metal_residue_grab1, tonn_fca_bin", "steel_weight, tonn_fca_bin",
+        "residuals_grab2, tonn_fca_bin", "technical_trim, tonn_fca_bin",
+        "grab1_num_fca_bin", "steel_temperature_grab1, Celsius deg._fca_bin",
+        "grab2_num_fca_bin", "resistance, tonn_fca_bin",
+        "swing_frequency, amount/minute_fca_bin", "crystallizer_movement, mm_fca_bin",
+        "alloy_speed, meter/minute_fca_bin", "water_consumption, liter/minute_fca_bin",
+        "water_temperature_delta, Celsius deg._fca_bin",
+        "water_consumption_secondary_cooling_zone_num1, liter/minute_fca_bin",
+        "water_consumption_secondary_cooling_zone_num2, liter/minute_fca_bin",
+        "water_consumption_secondary_cooling_zone_num3, liter/minute_fca_bin",
+        "quantity, tonn_fca_bin",
+        "temperature_measurement1, Celsius deg._fca_bin",
+        "temperature_measurement2, Celsius deg._fca_bin",
+        "Ce, %_fca_bin", "C, %_fca_bin", "Si, %_fca_bin", "Mn,%_fca_bin",
+        "S, %_fca_bin", "P, %_fca_bin", "Cr, %_fca_bin", "Ni, %_fca_bin",
+        "Cu, %_fca_bin", "As, %_fca_bin", "Mo, %_fca_bin", "Nb, %_fca_bin",
+        "Sn, %_fca_bin", "Ti, %_fca_bin", "V, %_fca_bin", "Al, %_fca_bin",
+        "Ca, %_fca_bin", "N, %_fca_bin", "Pb, %_fca_bin", "Mg, %_fca_bin",
+        "Zn, %_fca_bin", "RUL_fca_bin",
+        "year_fca_bin", "month_fca_bin", "day_fca_bin", "hour_fca_bin",
+        "weekday_fca_bin",
+        "temperature_difference_fca_bin", "total_cooling_consumption_fca_bin",
+        "average_cooling_consumption_fca_bin", "impurity_index_fca_bin",
+        "RUL_class",
+    ]
+
+    def select_output_columns(self, df: pd.DataFrame) -> pd.DataFrame:
+        """
+        Retains and reorders DataFrame columns to exactly match OUTPUT_COLUMNS.
+        Columns listed in OUTPUT_COLUMNS that are absent from the DataFrame are
+        skipped with a warning so the script never raises a KeyError.
+        Returns the filtered, reordered DataFrame.
+        """
+        available = [col for col in self.OUTPUT_COLUMNS if col in df.columns]
+        missing   = [col for col in self.OUTPUT_COLUMNS if col not in df.columns]
+        if missing:
+            print(f"[Column selection] WARNING – {len(missing)} requested column(s) not found "
+                  f"and will be omitted: {missing}")
+        print(f"[Column selection] Keeping {len(available)} of {len(self.OUTPUT_COLUMNS)} "
+              f"requested columns.")
+        return df[available]
+
     def save_data(self, df: pd.DataFrame) -> None:
         """
         Writes the processed DataFrame to a CSV file at the specified output path.
@@ -269,6 +355,11 @@ class DatasetPreprocessor:
 
         df = self.clean_column_names(df)
         df = self.normalize_missing_values(df)
+
+        # Deduplication is done on raw columns before any derived features are
+        # added so that only genuinely identical source records are removed.
+        df = self.deduplicate(df)
+
         df = self.parse_temporal_data(df)
         df = self.convert_numeric_columns(df)
 
@@ -280,6 +371,9 @@ class DatasetPreprocessor:
         df = self.discretize_for_fca(df)
 
         df = self.fill_missing_data(df)
+
+        # Keep only the required output columns in the specified order.
+        df = self.select_output_columns(df)
 
         self.save_data(df)
 
