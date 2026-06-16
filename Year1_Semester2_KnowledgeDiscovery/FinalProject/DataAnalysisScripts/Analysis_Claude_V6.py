@@ -1,28 +1,32 @@
 """
-CCM Knowledge Discovery / Data Mining Pipeline  –  Claude V4
+CCM Knowledge Discovery / Data Mining Pipeline  –  Claude V6
 
-Changes from V3:
-  - Association rule mining: row-samples to 5 000 rows, raises min_support to
-    0.15, and caps itemset size at max_len=3. This prevents the exponential
-    candidate explosion that caused V3 to hang indefinitely on 43 one-hot columns.
+Changes from V5:
+  - Fixed DBSCAN visualisation:
+      * Auto-estimate eps from the knee of the k-distance graph so DBSCAN
+        actually produces meaningful clusters instead of all-noise or one
+        giant cluster.
+      * Fixed broken annotate() call in k-distance plot (missing xytext arg).
+      * Richer DBSCAN PCA 2D scatter: distinct colours per cluster, noise
+        points rendered as grey '×' with its own legend entry, cluster
+        centroids annotated, point counts shown, and a separate noise-only
+        highlight plot.
+      * Added a DBSCAN RUL box-plot (mirrors the K-Means one from V5).
+      * Graceful fallback when DBSCAN finds 0 clusters (pure noise).
+  - All other sections (EDA, regression, classification, decision tree, PCA,
+    K-Means, Isolation Forest, association rules) are identical to V5 and
+    kept intact.
 
-Adapted for the new preprocessed dataset format where:
-  - All numeric sensor columns are already StandardScaler-normalised (_scaled suffix).
-  - FCA discretisation bins (_fca_bin suffix) are pre-computed.
-  - RUL (raw, integer) and RUL_class are present as direct targets.
-  - workpiece_slice_geometry is available only as workpiece_slice_geometry_encoded.
-  - shift is a text column (Night / Morning / Afternoon).
-
-Expected folder structure:
+Expected folder structure (same as V5, outputs go to V6 folder):
     script_folder/
-    ├── Analysis1_Claude_V4.py
+    ├── Analysis_Claude_V6.py
     ├── Dataset/
     │   └── PreProcessedDataset.csv
-    └── Analysis1_Outputs_Claude_V4/
+    └── Analysis1_Outputs_Claude_V6/
         └── plots/
 
 Run:
-    python Analysis1_Claude_V4.py
+    python Analysis_Claude_V6.py
 """
 
 from pathlib import Path
@@ -36,6 +40,10 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+import matplotlib.cm as cm
+import matplotlib.colors as mcolors
+from matplotlib.patches import Patch
+from mpl_toolkits.mplot3d import Axes3D  # noqa: F401
 
 from sklearn.model_selection import train_test_split
 from sklearn.compose import ColumnTransformer
@@ -53,6 +61,8 @@ from sklearn.metrics import (
     f1_score,
     classification_report,
     confusion_matrix,
+    silhouette_score,
+    silhouette_samples,
 )
 
 from sklearn.ensemble import (
@@ -64,6 +74,7 @@ from sklearn.ensemble import (
 from sklearn.tree import DecisionTreeClassifier, export_text
 from sklearn.cluster import KMeans, DBSCAN
 from sklearn.decomposition import PCA
+from sklearn.neighbors import NearestNeighbors
 
 warnings.filterwarnings("ignore")
 
@@ -89,6 +100,16 @@ TOP_N_FEATURES = 25
 TOP_N_CORRELATIONS = 25
 TOP_N_ASSOCIATION_RULES = 20
 
+# K-Means search range for elbow / silhouette curves
+KMEANS_K_RANGE = range(2, 11)
+# Final K chosen for the main clustering run
+KMEANS_N_CLUSTERS = 4
+
+# DBSCAN – min_samples is fixed; eps is AUTO-estimated from the k-distance knee.
+# You can override eps by setting DBSCAN_EPS_OVERRIDE to a positive float.
+DBSCAN_MIN_SAMPLES = 10
+DBSCAN_EPS_OVERRIDE = None   # e.g. 2.5 — set to None to auto-detect
+
 # Cap on FCA/bin columns passed to Apriori to avoid OOM on large transaction matrices.
 MAX_APRIORI_COLUMNS = 20
 # Maximum rows sampled for Apriori (keeps candidate generation fast on large datasets).
@@ -99,7 +120,20 @@ APRIORI_MAX_LEN    = 3       # hard cap on itemset size; kills combinatorial exp
 
 
 # ============================================================
-# Utility functions
+# Colour palettes (consistent across all cluster plots)
+# ============================================================
+
+_CLUSTER_CMAP = "tab10"
+_NOISE_COLOR = "#B0BEC5"   # light grey for noise / anomaly points
+
+def _cluster_colours(n_colours: int):
+    """Return a list of *n_colours* distinct colours from the qualitative tab10 cmap."""
+    cmap = plt.get_cmap(_CLUSTER_CMAP)
+    return [cmap(i % 10) for i in range(n_colours)]
+
+
+# ============================================================
+# Utility functions  (unchanged from V4/V5)
 # ============================================================
 
 def create_output_dir(path: str) -> None:
@@ -267,7 +301,7 @@ def export_feature_importance(pipeline: Pipeline, output_path: str) -> pd.DataFr
 
 
 # ============================================================
-# Plotting: generic helpers
+# Plotting: generic helpers  (unchanged from V4/V5)
 # ============================================================
 
 def plot_bar_from_series(series: pd.Series, title: str, xlabel: str, ylabel: str, path: str, top_n: int = None):
@@ -339,7 +373,7 @@ def plot_line_from_dataframe(df: pd.DataFrame, x_col: str, y_col: str, title: st
 
 
 # ============================================================
-# EDA plots
+# EDA plots  (unchanged from V4/V5)
 # ============================================================
 
 def generate_eda_plots(df: pd.DataFrame, output_dir: str):
@@ -366,8 +400,6 @@ def generate_eda_plots(df: pd.DataFrame, output_dir: str):
             path=os.path.join(plot_dir, "eda_rul_class_distribution.png"),
         )
 
-    # workpiece_slice_geometry is not present in the new format (encoded only) — skipped.
-    # Use workpiece_slice_geometry_encoded as a numeric proxy for the groupby.
     if "workpiece_slice_geometry_encoded" in df.columns and TARGET_REGRESSION in df.columns:
         geom_rul = df.groupby("workpiece_slice_geometry_encoded")[TARGET_REGRESSION].mean().sort_values(ascending=False)
         plot_bar_from_series(
@@ -378,7 +410,6 @@ def generate_eda_plots(df: pd.DataFrame, output_dir: str):
             path=os.path.join(plot_dir, "eda_average_rul_by_geometry_encoded.png"),
         )
 
-    # shift is a text column in the new format — groupby works directly.
     if "shift" in df.columns and TARGET_REGRESSION in df.columns:
         shift_rul = df.groupby("shift")[TARGET_REGRESSION].mean().sort_values(ascending=False)
         plot_bar_from_series(
@@ -434,7 +465,6 @@ def generate_eda_plots(df: pd.DataFrame, output_dir: str):
                 path=os.path.join(plot_dir, "eda_top_correlations_with_rul.png"),
             )
 
-    # New format has no raw sensor columns — use the pre-scaled versions for scatter plots.
     candidate_scatter_cols = [
         "resistance, tonn_scaled",
         "water_consumption, liter/minute_scaled",
@@ -479,7 +509,7 @@ def generate_eda_plots(df: pd.DataFrame, output_dir: str):
 
 
 # ============================================================
-# Supervised learning: RUL regression
+# Supervised learning: RUL regression  (unchanged from V4/V5)
 # ============================================================
 
 def run_rul_regression(df: pd.DataFrame, output_dir: str, strict_no_resistance: bool = False):
@@ -566,7 +596,6 @@ def run_rul_regression(df: pd.DataFrame, output_dir: str, strict_no_resistance: 
         output_path=os.path.join(output_dir, "rul_regression_feature_importance.csv"),
     )
 
-    # Plot: actual vs predicted
     plot_scatter(
         predictions_df["actual_RUL"],
         predictions_df["predicted_RUL"],
@@ -576,7 +605,6 @@ def run_rul_regression(df: pd.DataFrame, output_dir: str, strict_no_resistance: 
         path=os.path.join(plot_dir, "regression_actual_vs_predicted_rul.png"),
     )
 
-    # Plot: residual distribution
     plot_histogram(
         predictions_df["error"],
         title="RUL Regression Error Distribution",
@@ -585,7 +613,6 @@ def run_rul_regression(df: pd.DataFrame, output_dir: str, strict_no_resistance: 
         path=os.path.join(plot_dir, "regression_error_distribution.png"),
     )
 
-    # Plot: feature importance
     if not importance_df.empty:
         top_features = importance_df.head(TOP_N_FEATURES).set_index("feature")["importance"]
         plot_bar_from_series(
@@ -598,7 +625,7 @@ def run_rul_regression(df: pd.DataFrame, output_dir: str, strict_no_resistance: 
 
 
 # ============================================================
-# Supervised learning: RUL_class classification
+# Supervised learning: RUL_class classification  (unchanged from V4/V5)
 # ============================================================
 
 def run_rul_classification(df: pd.DataFrame, output_dir: str, strict_no_resistance: bool = False):
@@ -718,7 +745,6 @@ def run_rul_classification(df: pd.DataFrame, output_dir: str, strict_no_resistan
     plt.colorbar()
     save_current_plot(os.path.join(plot_dir, "classification_confusion_matrix.png"))
 
-    # Plot: feature importance
     if not importance_df.empty:
         top_features = importance_df.head(TOP_N_FEATURES).set_index("feature")["importance"]
         plot_bar_from_series(
@@ -749,7 +775,7 @@ def run_rul_classification(df: pd.DataFrame, output_dir: str, strict_no_resistan
 
 
 # ============================================================
-# Decision tree rule extraction
+# Decision tree rule extraction  (unchanged from V4/V5)
 # ============================================================
 
 def run_decision_tree_rules(df: pd.DataFrame, output_dir: str, strict_no_resistance: bool = False):
@@ -811,19 +837,12 @@ def run_decision_tree_rules(df: pd.DataFrame, output_dir: str, strict_no_resista
 
 
 # ============================================================
-# Unsupervised matrix preparation
+# Unsupervised matrix preparation  (unchanged from V4/V5)
 # ============================================================
 
 def prepare_unsupervised_matrix(df: pd.DataFrame):
     """
     Builds the numeric feature matrix used for clustering, PCA and anomaly detection.
-
-    Excluded columns (leakage / identifiers):
-        - RUL, RUL_scaled, RUL_fca_bin  → direct or derived target
-        - RUL_class                      → classification target
-        - sleeve, num_crystallizer, num_stream → raw equipment IDs
-          (already excluded by select_dtypes since they remain numeric but
-          are high-cardinality identifiers — kept here for explicitness)
     """
     exclude_cols = [
         TARGET_REGRESSION,
@@ -852,35 +871,803 @@ def prepare_unsupervised_matrix(df: pd.DataFrame):
 
 
 # ============================================================
-# Unsupervised learning: clustering
+# Helper: 2D / 3D PCA projection (shared by clustering & anomaly)
+# ============================================================
+
+def _get_pca2d(X_scaled: np.ndarray) -> tuple:
+    """
+    Returns (pca_model, components_array) with 2 principal components.
+    Components shape: (n_samples, 2).
+    """
+    pca = PCA(n_components=2, random_state=RANDOM_STATE)
+    components = pca.fit_transform(X_scaled)
+    return pca, components
+
+
+def _get_pca3d(X_scaled: np.ndarray) -> np.ndarray:
+    """Returns 3D PCA components array."""
+    n_components = min(3, X_scaled.shape[1])
+    pca = PCA(n_components=n_components, random_state=RANDOM_STATE)
+    components = pca.fit_transform(X_scaled)
+    return pca, components
+
+
+# ============================================================
+# K-Means rich visualisations  (from V5, unchanged)
+# ============================================================
+
+def _plot_kmeans_elbow(X_scaled: np.ndarray, k_range, plot_dir: str):
+    """Inertia (within-cluster SSE) elbow curve."""
+    print("[INFO]   Computing K-Means elbow curve...")
+    inertias = []
+    for k in k_range:
+        km = KMeans(n_clusters=k, random_state=RANDOM_STATE, n_init=10)
+        km.fit(X_scaled)
+        inertias.append(km.inertia_)
+
+    fig, ax = plt.subplots(figsize=(9, 5))
+    ax.plot(list(k_range), inertias, marker="o", linewidth=2, color="#2196F3")
+    ax.fill_between(list(k_range), inertias, alpha=0.15, color="#2196F3")
+    ax.set_title("K-Means – Elbow Curve (Inertia)", fontsize=14, fontweight="bold")
+    ax.set_xlabel("Number of Clusters (k)")
+    ax.set_ylabel("Inertia (Within-Cluster SSE)")
+    ax.grid(True, linestyle="--", alpha=0.5)
+    save_current_plot(os.path.join(plot_dir, "kmeans_elbow_curve.png"))
+
+
+def _plot_kmeans_silhouette_curve(X_scaled: np.ndarray, k_range, plot_dir: str):
+    """Average silhouette score for each k."""
+    print("[INFO]   Computing K-Means silhouette scores...")
+    sil_scores = []
+    max_sil_rows = 5_000
+    if X_scaled.shape[0] > max_sil_rows:
+        rng = np.random.default_rng(RANDOM_STATE)
+        idx = rng.choice(X_scaled.shape[0], max_sil_rows, replace=False)
+        Xs = X_scaled[idx]
+    else:
+        Xs = X_scaled
+
+    for k in k_range:
+        km = KMeans(n_clusters=k, random_state=RANDOM_STATE, n_init=10)
+        labels = km.fit_predict(Xs)
+        score = silhouette_score(Xs, labels)
+        sil_scores.append(score)
+
+    fig, ax = plt.subplots(figsize=(9, 5))
+    ax.plot(list(k_range), sil_scores, marker="s", linewidth=2, color="#4CAF50")
+    ax.fill_between(list(k_range), sil_scores, alpha=0.15, color="#4CAF50")
+    ax.set_title("K-Means – Silhouette Score vs k", fontsize=14, fontweight="bold")
+    ax.set_xlabel("Number of Clusters (k)")
+    ax.set_ylabel("Average Silhouette Score")
+    ax.grid(True, linestyle="--", alpha=0.5)
+    save_current_plot(os.path.join(plot_dir, "kmeans_silhouette_curve.png"))
+
+
+def _plot_kmeans_silhouette_diagram(X_scaled: np.ndarray, labels: np.ndarray, k: int, plot_dir: str):
+    """Per-sample silhouette coefficient diagram (like sklearn example)."""
+    print("[INFO]   Plotting K-Means silhouette diagram...")
+    max_rows = 5_000
+    if X_scaled.shape[0] > max_rows:
+        rng = np.random.default_rng(RANDOM_STATE)
+        idx = rng.choice(X_scaled.shape[0], max_rows, replace=False)
+        Xs = X_scaled[idx]
+        ls = labels[idx]
+    else:
+        Xs = X_scaled
+        ls = labels
+
+    sample_sil = silhouette_samples(Xs, ls)
+    colours = _cluster_colours(k)
+
+    fig, ax = plt.subplots(figsize=(10, 7))
+    y_lower = 10
+    for i in range(k):
+        cluster_vals = np.sort(sample_sil[ls == i])
+        size_cluster = cluster_vals.shape[0]
+        y_upper = y_lower + size_cluster
+        ax.fill_betweenx(
+            np.arange(y_lower, y_upper),
+            0,
+            cluster_vals,
+            facecolor=colours[i],
+            alpha=0.8,
+            label=f"Cluster {i}",
+        )
+        ax.text(-0.05, y_lower + 0.5 * size_cluster, str(i), fontsize=9)
+        y_lower = y_upper + 10
+
+    avg_score = np.mean(sample_sil)
+    ax.axvline(x=avg_score, color="red", linestyle="--", label=f"Mean = {avg_score:.3f}")
+    ax.set_title(f"K-Means Silhouette Diagram  (k={k})", fontsize=14, fontweight="bold")
+    ax.set_xlabel("Silhouette Coefficient")
+    ax.set_ylabel("Cluster")
+    ax.legend(loc="lower right", fontsize=8)
+    ax.grid(True, axis="x", linestyle="--", alpha=0.4)
+    save_current_plot(os.path.join(plot_dir, "kmeans_silhouette_diagram.png"))
+
+
+def _plot_kmeans_pca2d(components: np.ndarray, labels: np.ndarray, pca, k: int,
+                       rul_values, plot_dir: str):
+    """2D PCA scatter coloured by K-Means cluster."""
+    print("[INFO]   Plotting K-Means 2D PCA scatter...")
+    colours = _cluster_colours(k)
+
+    fig, ax = plt.subplots(figsize=(10, 7))
+    for i in range(k):
+        mask = labels == i
+        ax.scatter(
+            components[mask, 0], components[mask, 1],
+            s=14, alpha=0.65, color=colours[i], label=f"Cluster {i}",
+        )
+
+    ax.set_title("K-Means Clusters – PCA 2D Projection", fontsize=14, fontweight="bold")
+    ax.set_xlabel(f"PC1 ({pca.explained_variance_ratio_[0]:.2%} variance)")
+    ax.set_ylabel(f"PC2 ({pca.explained_variance_ratio_[1]:.2%} variance)")
+    ax.legend(title="Cluster", fontsize=9, loc="best")
+    ax.grid(True, linestyle="--", alpha=0.3)
+    save_current_plot(os.path.join(plot_dir, "kmeans_pca2d_scatter.png"))
+
+    # Also colour by continuous RUL if available
+    if rul_values is not None and len(rul_values) == len(components):
+        fig, ax = plt.subplots(figsize=(10, 7))
+        sc = ax.scatter(
+            components[:, 0], components[:, 1],
+            c=rul_values, cmap="plasma", s=14, alpha=0.65,
+        )
+        plt.colorbar(sc, ax=ax, label="RUL")
+        # Overlay cluster centroids (recomputed in PCA space)
+        for i in range(k):
+            mask = labels == i
+            cx, cy = components[mask, 0].mean(), components[mask, 1].mean()
+            ax.scatter(cx, cy, marker="X", s=180, color="black", zorder=5,
+                       edgecolors="white", linewidths=0.8)
+            ax.text(cx, cy + 0.1, f"C{i}", fontsize=9, ha="center", color="black",
+                    fontweight="bold")
+        ax.set_title("K-Means Clusters – PCA 2D coloured by RUL", fontsize=14, fontweight="bold")
+        ax.set_xlabel(f"PC1 ({pca.explained_variance_ratio_[0]:.2%} variance)")
+        ax.set_ylabel(f"PC2 ({pca.explained_variance_ratio_[1]:.2%} variance)")
+        ax.grid(True, linestyle="--", alpha=0.3)
+        save_current_plot(os.path.join(plot_dir, "kmeans_pca2d_rul_heatmap.png"))
+
+
+def _plot_kmeans_pca3d(components3d: np.ndarray, labels: np.ndarray, k: int, plot_dir: str):
+    """3D PCA scatter coloured by K-Means cluster."""
+    if components3d.shape[1] < 3:
+        return
+    print("[INFO]   Plotting K-Means 3D PCA scatter...")
+    colours = _cluster_colours(k)
+
+    fig = plt.figure(figsize=(12, 8))
+    ax = fig.add_subplot(111, projection="3d")
+    for i in range(k):
+        mask = labels == i
+        ax.scatter(
+            components3d[mask, 0], components3d[mask, 1], components3d[mask, 2],
+            s=10, alpha=0.55, color=colours[i], label=f"Cluster {i}",
+        )
+    ax.set_title("K-Means Clusters – PCA 3D Projection", fontsize=13, fontweight="bold")
+    ax.set_xlabel("PC1")
+    ax.set_ylabel("PC2")
+    ax.set_zlabel("PC3")
+    ax.legend(title="Cluster", fontsize=8)
+    save_current_plot(os.path.join(plot_dir, "kmeans_pca3d_scatter.png"))
+
+
+def _plot_kmeans_centroid_heatmap(X_scaled: np.ndarray, labels: np.ndarray,
+                                   feature_names: list, k: int, plot_dir: str):
+    """Cluster centroid heatmap (top-N most variable features)."""
+    print("[INFO]   Plotting K-Means centroid heatmap...")
+    n_features_show = min(20, len(feature_names))
+
+    centroids = np.array([X_scaled[labels == i].mean(axis=0) for i in range(k)])
+
+    # pick features with highest variance across centroids
+    feature_var = centroids.var(axis=0)
+    top_idx = np.argsort(feature_var)[::-1][:n_features_show]
+    centroid_subset = centroids[:, top_idx]
+    feat_subset = [feature_names[i] for i in top_idx]
+
+    fig, ax = plt.subplots(figsize=(max(8, n_features_show * 0.5), k + 2))
+    im = ax.imshow(centroid_subset, aspect="auto", cmap="RdBu_r")
+    ax.set_xticks(range(n_features_show))
+    ax.set_xticklabels([f[:25] for f in feat_subset], rotation=60, ha="right", fontsize=8)
+    ax.set_yticks(range(k))
+    ax.set_yticklabels([f"Cluster {i}" for i in range(k)])
+    ax.set_title("K-Means Centroid Heatmap\n(Top features by inter-cluster variance)",
+                 fontsize=13, fontweight="bold")
+    plt.colorbar(im, ax=ax, label="Normalised mean value")
+    save_current_plot(os.path.join(plot_dir, "kmeans_centroid_heatmap.png"))
+
+
+def _plot_kmeans_rul_boxplot(labels: np.ndarray, rul_values, k: int, plot_dir: str):
+    """Box-plot of RUL distribution per K-Means cluster."""
+    if rul_values is None:
+        return
+    print("[INFO]   Plotting K-Means RUL box-plot per cluster...")
+    data_by_cluster = [rul_values[labels == i] for i in range(k)]
+    data_by_cluster = [d[~np.isnan(d)] for d in data_by_cluster]
+
+    colours = _cluster_colours(k)
+
+    fig, ax = plt.subplots(figsize=(10, 6))
+    bp = ax.boxplot(data_by_cluster, patch_artist=True, notch=False)
+
+    for patch, colour in zip(bp["boxes"], colours):
+        patch.set_facecolor(colour)
+        patch.set_alpha(0.75)
+
+    ax.set_xticks(range(1, k + 1))
+    ax.set_xticklabels([f"Cluster {i}" for i in range(k)])
+    ax.set_title("RUL Distribution per K-Means Cluster", fontsize=14, fontweight="bold")
+    ax.set_xlabel("K-Means Cluster")
+    ax.set_ylabel("RUL")
+    ax.grid(True, axis="y", linestyle="--", alpha=0.5)
+    save_current_plot(os.path.join(plot_dir, "kmeans_rul_boxplot.png"))
+
+
+# ============================================================
+# DBSCAN helpers  (V6: fixed + enhanced)
+# ============================================================
+
+def _estimate_dbscan_eps(X_scaled: np.ndarray, min_samples: int,
+                         plot_dir: str) -> float:
+    """
+    Compute the k-distance graph, find the 'knee' automatically, and return
+    the suggested eps value.
+
+    The knee is located at the point of maximum curvature in the sorted
+    k-distance curve (second-difference method).  We also save the plot with
+    a vertical line showing the chosen knee index.
+
+    FIX vs V5:
+      - Added xytext parameter to annotate() so the arrow renders properly.
+      - The knee index is computed and printed for transparency.
+      - Returns the numeric eps value so run_clustering() can use it.
+    """
+    print("[INFO]   Computing DBSCAN k-distance curve and estimating eps...")
+
+    max_rows = 5_000
+    if X_scaled.shape[0] > max_rows:
+        rng = np.random.default_rng(RANDOM_STATE)
+        idx = rng.choice(X_scaled.shape[0], max_rows, replace=False)
+        Xs = X_scaled[idx]
+    else:
+        Xs = X_scaled
+
+    nbrs = NearestNeighbors(n_neighbors=min_samples).fit(Xs)
+    distances, _ = nbrs.kneighbors(Xs)
+    # k-th nearest neighbour distances, sorted descending (classic DBSCAN plot)
+    kth_distances = np.sort(distances[:, -1])[::-1]
+
+    # ---- Auto-detect knee (maximum second derivative) ----
+    if len(kth_distances) >= 5:
+        # Smooth slightly before differentiating to avoid noise spikes
+        smooth_window = max(3, len(kth_distances) // 100)
+        smoothed = np.convolve(
+            kth_distances,
+            np.ones(smooth_window) / smooth_window,
+            mode="valid",
+        )
+        second_diff = np.diff(np.diff(smoothed))
+        # The knee is where the curve bends the most — largest 2nd derivative
+        # We look only in the first 60 % of the sorted curve (right half =
+        # dense points; left half = sparse outliers)
+        search_end = max(1, int(len(second_diff) * 0.6))
+        knee_idx = int(np.argmax(second_diff[:search_end]))
+        # Map back to original kth_distances index (offset by convolution shrink)
+        knee_idx = min(knee_idx + smooth_window, len(kth_distances) - 1)
+    else:
+        knee_idx = len(kth_distances) // 2
+
+    eps_auto = float(kth_distances[knee_idx])
+    print(f"[INFO]   DBSCAN knee at index {knee_idx}, auto-estimated eps = {eps_auto:.4f}")
+
+    # ---- Plot ----
+    fig, ax = plt.subplots(figsize=(10, 5))
+    x_vals = np.arange(len(kth_distances))
+    ax.plot(x_vals, kth_distances, linewidth=1.5, color="#FF5722",
+            label=f"{min_samples}-NN distance")
+    ax.axhline(y=eps_auto, color="#1565C0", linestyle="--", linewidth=1.5,
+               label=f"Auto eps ≈ {eps_auto:.3f}")
+    ax.axvline(x=knee_idx, color="#1565C0", linestyle=":", linewidth=1.2, alpha=0.7)
+
+    # Annotate the knee point — xytext is offset so the arrow is visible
+    ax.annotate(
+        f"Knee  (eps ≈ {eps_auto:.3f})",
+        xy=(knee_idx, eps_auto),
+        xytext=(knee_idx + max(10, int(len(kth_distances) * 0.05)),
+                eps_auto + (kth_distances[0] - kth_distances[-1]) * 0.12),
+        fontsize=9,
+        color="#1565C0",
+        arrowprops=dict(arrowstyle="->", color="#1565C0", lw=1.5),
+    )
+
+    ax.set_title(f"DBSCAN – k-Distance Graph  (k={min_samples})\n"
+                 f"Auto-estimated eps = {eps_auto:.4f}",
+                 fontsize=13, fontweight="bold")
+    ax.set_xlabel("Points sorted by k-NN distance (descending)")
+    ax.set_ylabel(f"Distance to {min_samples}-th Nearest Neighbour")
+    ax.legend(fontsize=9)
+    ax.grid(True, linestyle="--", alpha=0.4)
+    save_current_plot(os.path.join(plot_dir, "dbscan_kdistance_plot.png"))
+
+    return eps_auto
+
+
+def _plot_dbscan_pca2d(components: np.ndarray, labels: np.ndarray,
+                        pca, eps: float, min_samples: int, plot_dir: str):
+    """
+    2D PCA scatter coloured by DBSCAN cluster with noise points highlighted.
+
+    FIX vs V5:
+      - Noise points rendered as large grey '×' markers in the FOREGROUND so
+        they are clearly visible even when clusters overlap them.
+      - Each cluster gets an annotated centroid marker with the cluster id and
+        point count.
+      - A dedicated second figure shows ONLY noise vs non-noise for clarity.
+      - Handles the edge case of zero clusters (pure noise).
+    """
+    print("[INFO]   Plotting DBSCAN 2D PCA scatter...")
+
+    unique_labels = sorted(set(labels))
+    cluster_labels = [l for l in unique_labels if l != -1]
+    n_clusters = len(cluster_labels)
+
+    colours = _cluster_colours(max(n_clusters, 1))
+
+    # Map cluster id → colour
+    colour_map = {}
+    for ci, lbl in enumerate(cluster_labels):
+        colour_map[lbl] = colours[ci % len(colours)]
+
+    noise_mask = labels == -1
+    n_noise = int(noise_mask.sum())
+    n_total = len(labels)
+
+    # ------------------------------------------------------------------
+    # Figure 1: Full scatter (clusters + noise)
+    # ------------------------------------------------------------------
+    fig, ax = plt.subplots(figsize=(12, 8))
+
+    if n_clusters == 0:
+        # Pure noise — draw all points in grey
+        ax.scatter(
+            components[:, 0], components[:, 1],
+            s=18, alpha=0.6, color=_NOISE_COLOR,
+            marker="x", label=f"Noise (n={n_total})",
+        )
+        ax.set_title(
+            f"DBSCAN – PCA 2D  (eps={eps:.3f}, min_samples={min_samples})\n"
+            f"⚠ All {n_total} points classified as NOISE — try a larger eps",
+            fontsize=13, fontweight="bold", color="#B71C1C",
+        )
+    else:
+        # Draw cluster points first (background)
+        for lbl in cluster_labels:
+            mask = labels == lbl
+            cnt = int(mask.sum())
+            ax.scatter(
+                components[mask, 0], components[mask, 1],
+                s=15, alpha=0.60,
+                color=colour_map[lbl],
+                label=f"Cluster {lbl}  (n={cnt})",
+            )
+            # Annotate centroid
+            cx = components[mask, 0].mean()
+            cy = components[mask, 1].mean()
+            ax.scatter(cx, cy, marker="D", s=120, color=colour_map[lbl],
+                       edgecolors="black", linewidths=0.8, zorder=6)
+            ax.text(cx, cy, f" C{lbl}", fontsize=8, fontweight="bold",
+                    color="black", zorder=7, va="center")
+
+        # Draw noise points on TOP (foreground) so they are always visible
+        if n_noise > 0:
+            ax.scatter(
+                components[noise_mask, 0], components[noise_mask, 1],
+                s=22, alpha=0.75, color=_NOISE_COLOR,
+                marker="x", linewidths=0.8,
+                label=f"Noise  (n={n_noise}, {n_noise/n_total:.1%})",
+                zorder=5,
+            )
+
+        noise_pct = f"{n_noise/n_total:.1%}" if n_noise > 0 else "0 %"
+        ax.set_title(
+            f"DBSCAN Clusters – PCA 2D Projection\n"
+            f"eps={eps:.3f}  |  min_samples={min_samples}  |  "
+            f"{n_clusters} cluster(s)  |  noise: {noise_pct}",
+            fontsize=13, fontweight="bold",
+        )
+
+    ax.set_xlabel(f"PC1 ({pca.explained_variance_ratio_[0]:.2%} variance)")
+    ax.set_ylabel(f"PC2 ({pca.explained_variance_ratio_[1]:.2%} variance)")
+    ax.legend(title="DBSCAN label", fontsize=8, loc="best", markerscale=1.5,
+              framealpha=0.85)
+    ax.grid(True, linestyle="--", alpha=0.3)
+    save_current_plot(os.path.join(plot_dir, "dbscan_pca2d_scatter.png"))
+
+    # ------------------------------------------------------------------
+    # Figure 2: Noise-highlight only (non-noise dimmed, noise bright red)
+    # ------------------------------------------------------------------
+    if n_noise > 0 and n_clusters > 0:
+        fig2, ax2 = plt.subplots(figsize=(12, 8))
+        # All cluster points dimmed
+        ax2.scatter(
+            components[~noise_mask, 0], components[~noise_mask, 1],
+            s=12, alpha=0.25, color="#90CAF9",
+            label=f"Clustered points  (n={n_total - n_noise})",
+        )
+        # Noise points highlighted
+        ax2.scatter(
+            components[noise_mask, 0], components[noise_mask, 1],
+            s=30, alpha=0.90, color="#EF5350",
+            marker="x", linewidths=1.2,
+            label=f"Noise / outliers  (n={n_noise})",
+        )
+        ax2.set_title(
+            f"DBSCAN – Noise Points Highlighted\n"
+            f"eps={eps:.3f}  |  min_samples={min_samples}  |  "
+            f"noise rate: {n_noise/n_total:.1%}",
+            fontsize=13, fontweight="bold",
+        )
+        ax2.set_xlabel(f"PC1 ({pca.explained_variance_ratio_[0]:.2%} variance)")
+        ax2.set_ylabel(f"PC2 ({pca.explained_variance_ratio_[1]:.2%} variance)")
+        ax2.legend(fontsize=9, loc="best", framealpha=0.85)
+        ax2.grid(True, linestyle="--", alpha=0.3)
+        save_current_plot(os.path.join(plot_dir, "dbscan_noise_highlight_scatter.png"))
+
+
+def _plot_dbscan_cluster_sizes(labels: np.ndarray, plot_dir: str):
+    """Bar chart of DBSCAN cluster sizes (noise shown separately)."""
+    print("[INFO]   Plotting DBSCAN cluster sizes...")
+    unique_labels, counts = np.unique(labels, return_counts=True)
+    label_names = ["Noise" if l == -1 else f"Cluster {l}" for l in unique_labels]
+    bar_colours = [_NOISE_COLOR if l == -1 else plt.get_cmap("tab10")(i % 10)
+                   for i, l in enumerate(unique_labels)]
+
+    fig, ax = plt.subplots(figsize=(max(8, len(unique_labels)), 5))
+    bars = ax.bar(label_names, counts, color=bar_colours, edgecolor="white", linewidth=0.8)
+    for bar, cnt in zip(bars, counts):
+        ax.text(bar.get_x() + bar.get_width() / 2, bar.get_height() + max(counts) * 0.01,
+                str(cnt), ha="center", va="bottom", fontsize=9, fontweight="bold")
+    ax.set_title("DBSCAN Cluster Sizes (incl. Noise)", fontsize=14, fontweight="bold")
+    ax.set_xlabel("Cluster")
+    ax.set_ylabel("Number of Points")
+    ax.grid(True, axis="y", linestyle="--", alpha=0.4)
+    save_current_plot(os.path.join(plot_dir, "dbscan_cluster_sizes_bar.png"))
+
+
+def _plot_dbscan_rul_per_cluster(labels: np.ndarray, rul_values, plot_dir: str):
+    """Average RUL per DBSCAN cluster (noise excluded from mean, shown separately)."""
+    if rul_values is None:
+        return
+    print("[INFO]   Plotting DBSCAN average RUL per cluster...")
+    unique_labels = sorted(set(labels))
+    means, label_names = [], []
+    for lbl in unique_labels:
+        mask = labels == lbl
+        vals = rul_values[mask]
+        vals = vals[~np.isnan(vals)]
+        if len(vals) > 0:
+            means.append(vals.mean())
+            label_names.append("Noise" if lbl == -1 else f"Cluster {lbl}")
+
+    bar_colours = [_NOISE_COLOR if "Noise" in n else plt.get_cmap("tab10")(i % 10)
+                   for i, n in enumerate(label_names)]
+
+    fig, ax = plt.subplots(figsize=(max(8, len(label_names)), 5))
+    bars = ax.bar(label_names, means, color=bar_colours, edgecolor="white", linewidth=0.8)
+    for bar, val in zip(bars, means):
+        ax.text(bar.get_x() + bar.get_width() / 2, bar.get_height() + max(means) * 0.01,
+                f"{val:.1f}", ha="center", va="bottom", fontsize=9, fontweight="bold")
+    ax.set_title("DBSCAN – Average RUL per Cluster", fontsize=14, fontweight="bold")
+    ax.set_xlabel("Cluster")
+    ax.set_ylabel("Average RUL")
+    ax.grid(True, axis="y", linestyle="--", alpha=0.4)
+    save_current_plot(os.path.join(plot_dir, "dbscan_average_rul_per_cluster.png"))
+
+
+def _plot_dbscan_rul_boxplot(labels: np.ndarray, rul_values, plot_dir: str):
+    """
+    Box-plot of RUL distribution per DBSCAN cluster.
+    Noise group is included but styled distinctly (grey, hatched).
+
+    V6 NEW – mirrors the K-Means RUL box-plot.
+    """
+    if rul_values is None:
+        return
+    print("[INFO]   Plotting DBSCAN RUL box-plot per label...")
+    unique_labels = sorted(set(labels))
+    data_groups, tick_labels, colours, hatches = [], [], [], []
+
+    cluster_labels_only = [l for l in unique_labels if l != -1]
+    cluster_colours = _cluster_colours(max(len(cluster_labels_only), 1))
+    ci = 0
+
+    for lbl in unique_labels:
+        mask = labels == lbl
+        vals = rul_values[mask]
+        vals = vals[~np.isnan(vals)]
+        if len(vals) == 0:
+            continue
+        data_groups.append(vals)
+        if lbl == -1:
+            tick_labels.append("Noise")
+            colours.append(_NOISE_COLOR)
+            hatches.append("//")
+        else:
+            tick_labels.append(f"Cluster {lbl}")
+            colours.append(cluster_colours[ci % len(cluster_colours)])
+            hatches.append("")
+            ci += 1
+
+    if len(data_groups) < 2:
+        return   # nothing meaningful to compare
+
+    fig, ax = plt.subplots(figsize=(max(8, len(data_groups) * 1.2), 6))
+    bp = ax.boxplot(data_groups, patch_artist=True, notch=False)
+
+    for patch, colour, hatch in zip(bp["boxes"], colours, hatches):
+        patch.set_facecolor(colour)
+        patch.set_alpha(0.75)
+        patch.set_hatch(hatch)
+
+    ax.set_xticks(range(1, len(tick_labels) + 1))
+    ax.set_xticklabels(tick_labels, rotation=15, ha="right")
+    ax.set_title("RUL Distribution per DBSCAN Label\n(Noise shown with hatching)",
+                 fontsize=14, fontweight="bold")
+    ax.set_xlabel("DBSCAN Label")
+    ax.set_ylabel("RUL")
+    ax.grid(True, axis="y", linestyle="--", alpha=0.5)
+    save_current_plot(os.path.join(plot_dir, "dbscan_rul_boxplot.png"))
+
+
+# ============================================================
+# Isolation Forest rich visualisations  (from V5, unchanged)
+# ============================================================
+
+def _plot_iforest_pca2d_scatter(components: np.ndarray, pca,
+                                 is_anomaly: np.ndarray, scores: np.ndarray,
+                                 plot_dir: str):
+    print("[INFO]   Plotting Isolation Forest PCA 2D scatter...")
+
+    # --- Panel 1: Normal vs Anomaly ---
+    fig, ax = plt.subplots(figsize=(10, 7))
+    normal_mask = is_anomaly == 0
+    anomaly_mask = is_anomaly == 1
+    ax.scatter(components[normal_mask, 0], components[normal_mask, 1],
+               s=12, alpha=0.5, color="#42A5F5", label="Normal")
+    ax.scatter(components[anomaly_mask, 0], components[anomaly_mask, 1],
+               s=28, alpha=0.9, color="#EF5350", marker="^", label="Anomaly",
+               edgecolors="darkred", linewidths=0.5)
+    ax.set_title("Isolation Forest – Anomalies on PCA 2D Projection",
+                 fontsize=14, fontweight="bold")
+    ax.set_xlabel(f"PC1 ({pca.explained_variance_ratio_[0]:.2%} variance)")
+    ax.set_ylabel(f"PC2 ({pca.explained_variance_ratio_[1]:.2%} variance)")
+    ax.legend(fontsize=10)
+    ax.grid(True, linestyle="--", alpha=0.3)
+    save_current_plot(os.path.join(plot_dir, "iforest_pca2d_anomaly_scatter.png"))
+
+    # --- Panel 2: Score heatmap ---
+    fig, ax = plt.subplots(figsize=(10, 7))
+    sc = ax.scatter(components[:, 0], components[:, 1],
+                    c=scores, cmap="RdYlGn", s=14, alpha=0.7,
+                    vmin=scores.min(), vmax=scores.max())
+    plt.colorbar(sc, ax=ax, label="Anomaly Score (higher = more normal)")
+    ax.set_title("Isolation Forest – Anomaly Score on PCA 2D",
+                 fontsize=14, fontweight="bold")
+    ax.set_xlabel(f"PC1 ({pca.explained_variance_ratio_[0]:.2%} variance)")
+    ax.set_ylabel(f"PC2 ({pca.explained_variance_ratio_[1]:.2%} variance)")
+    ax.grid(True, linestyle="--", alpha=0.3)
+    save_current_plot(os.path.join(plot_dir, "iforest_pca2d_score_heatmap.png"))
+
+
+def _plot_iforest_score_distribution(scores: np.ndarray, is_anomaly: np.ndarray, plot_dir: str):
+    print("[INFO]   Plotting Isolation Forest score distribution...")
+    normal_scores = scores[is_anomaly == 0]
+    anomaly_scores = scores[is_anomaly == 1]
+
+    fig, ax = plt.subplots(figsize=(10, 5))
+    ax.hist(normal_scores, bins=50, alpha=0.6, color="#42A5F5",
+            label=f"Normal (n={len(normal_scores)})", density=True)
+    ax.hist(anomaly_scores, bins=30, alpha=0.7, color="#EF5350",
+            label=f"Anomaly (n={len(anomaly_scores)})", density=True)
+    ax.axvline(normal_scores.mean(), color="#1565C0", linestyle="--", linewidth=1.5,
+               label=f"Normal mean={normal_scores.mean():.3f}")
+    ax.axvline(anomaly_scores.mean(), color="#B71C1C", linestyle="--", linewidth=1.5,
+               label=f"Anomaly mean={anomaly_scores.mean():.3f}")
+    ax.set_title("Isolation Forest – Anomaly Score Distribution by Class",
+                 fontsize=14, fontweight="bold")
+    ax.set_xlabel("Decision Function Score")
+    ax.set_ylabel("Density")
+    ax.legend(fontsize=9)
+    ax.grid(True, axis="y", linestyle="--", alpha=0.4)
+    save_current_plot(os.path.join(plot_dir, "iforest_score_distribution_by_class.png"))
+
+
+def _plot_iforest_violin(scores: np.ndarray, is_anomaly: np.ndarray, plot_dir: str):
+    print("[INFO]   Plotting Isolation Forest violin plot...")
+    normal_scores = scores[is_anomaly == 0]
+    anomaly_scores = scores[is_anomaly == 1]
+
+    fig, ax = plt.subplots(figsize=(8, 6))
+    parts = ax.violinplot([normal_scores, anomaly_scores],
+                          positions=[1, 2], showmedians=True, showextrema=True)
+
+    colours = ["#42A5F5", "#EF5350"]
+    for i, pc in enumerate(parts["bodies"]):
+        pc.set_facecolor(colours[i])
+        pc.set_alpha(0.75)
+    parts["cmedians"].set_color("black")
+    parts["cmaxes"].set_color("grey")
+    parts["cmins"].set_color("grey")
+    parts["cbars"].set_color("grey")
+
+    ax.set_xticks([1, 2])
+    ax.set_xticklabels(["Normal", "Anomaly"])
+    ax.set_title("Isolation Forest – Score Violin Plot", fontsize=14, fontweight="bold")
+    ax.set_ylabel("Decision Function Score")
+    ax.grid(True, axis="y", linestyle="--", alpha=0.4)
+    save_current_plot(os.path.join(plot_dir, "iforest_score_violin.png"))
+
+
+def _plot_iforest_anomaly_by_rul_class(is_anomaly: np.ndarray, rul_class_values, plot_dir: str):
+    if rul_class_values is None:
+        return
+    print("[INFO]   Plotting Isolation Forest anomaly rate per RUL_class...")
+    tmp = pd.DataFrame({"is_anomaly": is_anomaly, "rul_class": rul_class_values})
+    tmp = tmp.dropna(subset=["rul_class"])
+    tmp["rul_class"] = tmp["rul_class"].astype(str)
+
+    grouped = tmp.groupby("rul_class")["is_anomaly"].value_counts(normalize=True).unstack(fill_value=0)
+    grouped.columns = ["Normal" if c == 0 else "Anomaly" for c in grouped.columns]
+    if "Normal" not in grouped.columns:
+        grouped["Normal"] = 0
+    if "Anomaly" not in grouped.columns:
+        grouped["Anomaly"] = 0
+    grouped = grouped[["Normal", "Anomaly"]]
+
+    fig, ax = plt.subplots(figsize=(max(8, len(grouped) * 0.8), 6))
+    grouped.plot(kind="bar", stacked=True, ax=ax,
+                 color=["#42A5F5", "#EF5350"], edgecolor="white", linewidth=0.5)
+    ax.set_title("Isolation Forest – Anomaly Proportion per RUL_class",
+                 fontsize=14, fontweight="bold")
+    ax.set_xlabel("RUL Class")
+    ax.set_ylabel("Proportion")
+    ax.set_ylim(0, 1.05)
+    ax.legend(title="State", fontsize=10)
+    plt.xticks(rotation=30, ha="right")
+    ax.grid(True, axis="y", linestyle="--", alpha=0.4)
+    save_current_plot(os.path.join(plot_dir, "iforest_anomaly_proportion_per_rul_class.png"))
+
+
+def _plot_iforest_rul_vs_score(scores: np.ndarray, rul_values, is_anomaly: np.ndarray, plot_dir: str):
+    if rul_values is None:
+        return
+    print("[INFO]   Plotting Isolation Forest RUL vs score scatter...")
+    valid = ~np.isnan(rul_values)
+    r = rul_values[valid]
+    s = scores[valid]
+    a = is_anomaly[valid]
+
+    fig, ax = plt.subplots(figsize=(10, 6))
+    ax.scatter(r[a == 0], s[a == 0], s=12, alpha=0.5, color="#42A5F5", label="Normal")
+    ax.scatter(r[a == 1], s[a == 1], s=28, alpha=0.85, color="#EF5350", marker="^",
+               label="Anomaly", edgecolors="darkred", linewidths=0.5)
+    ax.set_title("Isolation Forest – RUL vs Anomaly Score", fontsize=14, fontweight="bold")
+    ax.set_xlabel("RUL")
+    ax.set_ylabel("Anomaly Score (higher = more normal)")
+    ax.legend(fontsize=10)
+    ax.grid(True, linestyle="--", alpha=0.3)
+    save_current_plot(os.path.join(plot_dir, "iforest_rul_vs_score_scatter.png"))
+
+
+# ============================================================
+# Unsupervised learning: clustering  (V6 — fixed DBSCAN suite)
 # ============================================================
 
 def run_clustering(df: pd.DataFrame, output_dir: str):
-    print("\n[INFO] Running unsupervised clustering...")
+    print("\n[INFO] Running unsupervised clustering (K-Means + DBSCAN with rich plots)...")
 
     plot_dir = create_plot_dir(output_dir)
 
-    _, X_scaled = prepare_unsupervised_matrix(df)
+    X_df, X_scaled = prepare_unsupervised_matrix(df)
 
     if X_scaled.shape[1] == 0:
         print("[WARNING] No numerical columns available for clustering.")
         return
 
-    kmeans = KMeans(
-        n_clusters=4,
-        random_state=RANDOM_STATE,
-        n_init=10,
-    )
+    feature_names = list(X_df.columns)
 
+    # -----------------------------------------------------------------
+    # RUL array for downstream plots (None if column absent)
+    # -----------------------------------------------------------------
+    rul_values = df[TARGET_REGRESSION].values.astype(float) if TARGET_REGRESSION in df.columns else None
+
+    # -----------------------------------------------------------------
+    # Shared PCA projections
+    # -----------------------------------------------------------------
+    pca2d, components2d = _get_pca2d(X_scaled)
+    pca3d, components3d = _get_pca3d(X_scaled)
+
+    # =================================================================
+    # K-Means
+    # =================================================================
+    print("\n[INFO] --- K-Means clustering ---")
+
+    _plot_kmeans_elbow(X_scaled, KMEANS_K_RANGE, plot_dir)
+    _plot_kmeans_silhouette_curve(X_scaled, KMEANS_K_RANGE, plot_dir)
+
+    kmeans = KMeans(n_clusters=KMEANS_N_CLUSTERS, random_state=RANDOM_STATE, n_init=10)
     kmeans_labels = kmeans.fit_predict(X_scaled)
 
-    dbscan = DBSCAN(
-        eps=2.5,
-        min_samples=10,
+    _plot_kmeans_silhouette_diagram(X_scaled, kmeans_labels, KMEANS_N_CLUSTERS, plot_dir)
+    _plot_kmeans_pca2d(components2d, kmeans_labels, pca2d, KMEANS_N_CLUSTERS, rul_values, plot_dir)
+    _plot_kmeans_pca3d(components3d, kmeans_labels, KMEANS_N_CLUSTERS, plot_dir)
+    _plot_kmeans_centroid_heatmap(X_scaled, kmeans_labels, feature_names, KMEANS_N_CLUSTERS, plot_dir)
+    _plot_kmeans_rul_boxplot(kmeans_labels, rul_values, KMEANS_N_CLUSTERS, plot_dir)
+
+    cluster_counts = pd.Series(kmeans_labels).value_counts().sort_index()
+    plot_bar_from_series(
+        cluster_counts,
+        title="K-Means Cluster Sizes",
+        xlabel="Count",
+        ylabel="Cluster",
+        path=os.path.join(plot_dir, "clustering_kmeans_cluster_sizes.png"),
     )
 
+    if rul_values is not None:
+        avg_rul = pd.Series(rul_values).groupby(pd.Series(kmeans_labels)).mean().sort_values(ascending=False)
+        plot_bar_from_series(
+            avg_rul,
+            title="Average RUL by K-Means Cluster",
+            xlabel="Average RUL",
+            ylabel="K-Means Cluster",
+            path=os.path.join(plot_dir, "clustering_average_rul_by_kmeans_cluster.png"),
+        )
+
+    # =================================================================
+    # DBSCAN  (V6: auto-eps + fixed plots)
+    # =================================================================
+    print("\n[INFO] --- DBSCAN clustering ---")
+
+    # Step 1: estimate eps from k-distance plot (or use override)
+    if DBSCAN_EPS_OVERRIDE is not None and DBSCAN_EPS_OVERRIDE > 0:
+        eps = float(DBSCAN_EPS_OVERRIDE)
+        print(f"[INFO]   Using manual eps override: {eps}")
+        # Still produce the k-distance plot for reference
+        _estimate_dbscan_eps(X_scaled, DBSCAN_MIN_SAMPLES, plot_dir)
+    else:
+        eps = _estimate_dbscan_eps(X_scaled, DBSCAN_MIN_SAMPLES, plot_dir)
+
+    # Step 2: fit DBSCAN
+    dbscan = DBSCAN(eps=eps, min_samples=DBSCAN_MIN_SAMPLES)
     dbscan_labels = dbscan.fit_predict(X_scaled)
 
+    n_clusters_found = len(set(dbscan_labels) - {-1})
+    n_noise_found = int((dbscan_labels == -1).sum())
+    print(f"[INFO]   DBSCAN result: {n_clusters_found} cluster(s), "
+          f"{n_noise_found} noise point(s) "
+          f"({n_noise_found / len(dbscan_labels):.1%} of data)")
+
+    # Step 3: rich plots
+    _plot_dbscan_pca2d(components2d, dbscan_labels, pca2d, eps, DBSCAN_MIN_SAMPLES, plot_dir)
+    _plot_dbscan_cluster_sizes(dbscan_labels, plot_dir)
+    _plot_dbscan_rul_per_cluster(dbscan_labels, rul_values, plot_dir)
+    _plot_dbscan_rul_boxplot(dbscan_labels, rul_values, plot_dir)
+
+    # Legacy plot (V4/V5 compatibility)
+    dbscan_counts = pd.Series(dbscan_labels).value_counts().sort_index()
+    plot_bar_from_series(
+        dbscan_counts,
+        title="DBSCAN Cluster Sizes",
+        xlabel="Count",
+        ylabel="DBSCAN Cluster",
+        path=os.path.join(plot_dir, "clustering_dbscan_cluster_sizes.png"),
+    )
+
+    # =================================================================
+    # Save combined results CSV
+    # =================================================================
     result = pd.DataFrame(
         {
             "kmeans_cluster": kmeans_labels,
@@ -896,6 +1683,7 @@ def run_clustering(df: pd.DataFrame, output_dir: str):
 
     result.to_csv(os.path.join(output_dir, "clustering_results.csv"), index=False)
 
+    # K-Means summary CSV
     if TARGET_REGRESSION in result.columns:
         summary = result.groupby("kmeans_cluster").agg(
             count=("kmeans_cluster", "size"),
@@ -905,48 +1693,15 @@ def run_clustering(df: pd.DataFrame, output_dir: str):
             max_RUL=(TARGET_REGRESSION, "max"),
         )
     else:
-        summary = result.groupby("kmeans_cluster").agg(
-            count=("kmeans_cluster", "size"),
-        )
+        summary = result.groupby("kmeans_cluster").agg(count=("kmeans_cluster", "size"))
 
     summary.to_csv(os.path.join(output_dir, "kmeans_cluster_summary.csv"))
-
-    # Plot: cluster counts
-    cluster_counts = result["kmeans_cluster"].value_counts().sort_index()
-    plot_bar_from_series(
-        cluster_counts,
-        title="K-Means Cluster Sizes",
-        xlabel="Count",
-        ylabel="Cluster",
-        path=os.path.join(plot_dir, "clustering_kmeans_cluster_sizes.png"),
-    )
-
-    # Plot: average RUL by cluster
-    if TARGET_REGRESSION in result.columns:
-        avg_rul = result.groupby("kmeans_cluster")[TARGET_REGRESSION].mean().sort_values(ascending=False)
-        plot_bar_from_series(
-            avg_rul,
-            title="Average RUL by K-Means Cluster",
-            xlabel="Average RUL",
-            ylabel="K-Means Cluster",
-            path=os.path.join(plot_dir, "clustering_average_rul_by_kmeans_cluster.png"),
-        )
-
-    # Plot: DBSCAN cluster sizes
-    dbscan_counts = result["dbscan_cluster"].value_counts().sort_index()
-    plot_bar_from_series(
-        dbscan_counts,
-        title="DBSCAN Cluster Sizes",
-        xlabel="Count",
-        ylabel="DBSCAN Cluster",
-        path=os.path.join(plot_dir, "clustering_dbscan_cluster_sizes.png"),
-    )
 
     print("[RESULT] Clustering results and plots exported.")
 
 
 # ============================================================
-# PCA
+# PCA  (unchanged from V4/V5)
 # ============================================================
 
 def run_pca(df: pd.DataFrame, output_dir: str):
@@ -987,7 +1742,6 @@ def run_pca(df: pd.DataFrame, output_dir: str):
 
     explained.to_csv(os.path.join(output_dir, "pca_explained_variance.csv"), index=False)
 
-    # Plot: PCA scatter
     plt.figure(figsize=(10, 7))
 
     if TARGET_CLASSIFICATION in pca_df.columns:
@@ -1004,7 +1758,6 @@ def run_pca(df: pd.DataFrame, output_dir: str):
     plt.ylabel(f"PC2 ({pca.explained_variance_ratio_[1]:.2%} variance)")
     save_current_plot(os.path.join(plot_dir, "pca_2d_projection.png"))
 
-    # Plot: explained variance
     plt.figure(figsize=(8, 5))
     plt.bar(explained["component"], explained["explained_variance_ratio"])
     plt.title("PCA Explained Variance Ratio")
@@ -1016,15 +1769,15 @@ def run_pca(df: pd.DataFrame, output_dir: str):
 
 
 # ============================================================
-# Anomaly detection
+# Anomaly detection  (V5 — full visual suite, unchanged)
 # ============================================================
 
 def run_anomaly_detection(df: pd.DataFrame, output_dir: str):
-    print("\n[INFO] Running anomaly detection...")
+    print("\n[INFO] Running anomaly detection (Isolation Forest with rich plots)...")
 
     plot_dir = create_plot_dir(output_dir)
 
-    _, X_scaled = prepare_unsupervised_matrix(df)
+    X_df, X_scaled = prepare_unsupervised_matrix(df)
 
     if X_scaled.shape[1] == 0:
         print("[WARNING] No numeric columns available for anomaly detection.")
@@ -1036,17 +1789,20 @@ def run_anomaly_detection(df: pd.DataFrame, output_dir: str):
         random_state=RANDOM_STATE,
     )
 
-    labels = iso.fit_predict(X_scaled)
+    raw_labels = iso.fit_predict(X_scaled)
     scores = iso.decision_function(X_scaled)
+    is_anomaly = (raw_labels == -1).astype(int)
+
+    rul_values = df[TARGET_REGRESSION].values.astype(float) if TARGET_REGRESSION in df.columns else None
+    rul_class_values = df[TARGET_CLASSIFICATION].values if TARGET_CLASSIFICATION in df.columns else None
 
     anomaly_df = pd.DataFrame(
         {
-            "anomaly_label": labels,
+            "anomaly_label": raw_labels,
             "anomaly_score": scores,
+            "is_anomaly": is_anomaly,
         }
     )
-
-    anomaly_df["is_anomaly"] = anomaly_df["anomaly_label"].map({1: 0, -1: 1})
 
     if TARGET_REGRESSION in df.columns:
         anomaly_df[TARGET_REGRESSION] = df[TARGET_REGRESSION].values
@@ -1056,7 +1812,14 @@ def run_anomaly_detection(df: pd.DataFrame, output_dir: str):
 
     anomaly_df.to_csv(os.path.join(output_dir, "anomaly_detection_results.csv"), index=False)
 
-    # Plot: anomaly score distribution
+    pca2d, components2d = _get_pca2d(X_scaled)
+
+    _plot_iforest_pca2d_scatter(components2d, pca2d, is_anomaly, scores, plot_dir)
+    _plot_iforest_score_distribution(scores, is_anomaly, plot_dir)
+    _plot_iforest_violin(scores, is_anomaly, plot_dir)
+    _plot_iforest_anomaly_by_rul_class(is_anomaly, rul_class_values, plot_dir)
+    _plot_iforest_rul_vs_score(scores, rul_values, is_anomaly, plot_dir)
+
     plot_histogram(
         anomaly_df["anomaly_score"],
         title="Isolation Forest Anomaly Score Distribution",
@@ -1065,7 +1828,6 @@ def run_anomaly_detection(df: pd.DataFrame, output_dir: str):
         path=os.path.join(plot_dir, "anomaly_score_distribution.png"),
     )
 
-    # Plot: anomaly count
     anomaly_counts = anomaly_df["is_anomaly"].map({0: "Normal", 1: "Anomaly"}).value_counts()
     plot_bar_from_series(
         anomaly_counts,
@@ -1075,7 +1837,6 @@ def run_anomaly_detection(df: pd.DataFrame, output_dir: str):
         path=os.path.join(plot_dir, "anomaly_normal_vs_anomaly_count.png"),
     )
 
-    # Plot: RUL by anomaly state
     if TARGET_REGRESSION in anomaly_df.columns:
         avg_rul = anomaly_df.groupby("is_anomaly")[TARGET_REGRESSION].mean()
         avg_rul.index = avg_rul.index.map({0: "Normal", 1: "Anomaly"})
@@ -1091,7 +1852,7 @@ def run_anomaly_detection(df: pd.DataFrame, output_dir: str):
 
 
 # ============================================================
-# Association rule mining
+# Association rule mining  (unchanged from V4/V5)
 # ============================================================
 
 def run_association_rule_mining(df: pd.DataFrame, output_dir: str):
@@ -1113,15 +1874,11 @@ def run_association_rule_mining(df: pd.DataFrame, output_dir: str):
         print("[WARNING] Not enough FCA/bin columns for association rule mining.")
         return
 
-    # ---- Memory guard -------------------------------------------------------
-    # With 100+ fca_bin columns × 17 k rows the apriori dense matrix exceeds
-    # 128 GiB. Prioritise RUL-related columns then fill up to the cap.
     target_cols = [c for c in bin_cols if "RUL" in c or TARGET_CLASSIFICATION in c]
     other_cols  = [c for c in bin_cols if c not in target_cols]
     bin_cols = (target_cols + other_cols)[:MAX_APRIORI_COLUMNS]
     print(f"[INFO] Association rule mining on {len(bin_cols)} FCA/bin columns "
           f"(capped at {MAX_APRIORI_COLUMNS}).")
-    # -------------------------------------------------------------------------
 
     data = df[bin_cols].copy()
     data = data.fillna("Missing").astype(str)
@@ -1134,10 +1891,6 @@ def run_association_rule_mining(df: pd.DataFrame, output_dir: str):
 
     transactions = transactions.astype(bool)
 
-    # ---- Row sampling -------------------------------------------------------
-    # mlxtend apriori builds a dense boolean matrix of shape
-    # (n_rows, n_one_hot_cols). With 17 k rows and 43 columns the candidate
-    # enumeration never terminates. We sample a stratified subset.
     if len(transactions) > APRIORI_MAX_ROWS:
         transactions = transactions.sample(
             n=APRIORI_MAX_ROWS,
@@ -1146,7 +1899,6 @@ def run_association_rule_mining(df: pd.DataFrame, output_dir: str):
         )
         print(f"[INFO] Sampled {APRIORI_MAX_ROWS} rows for Apriori "
               f"(from {len(df)} total).")
-    # -------------------------------------------------------------------------
 
     print(f"[INFO] Running Apriori: min_support={APRIORI_MIN_SUPPORT}, "
           f"max_len={APRIORI_MAX_LEN}, "
@@ -1199,7 +1951,6 @@ def run_association_rule_mining(df: pd.DataFrame, output_dir: str):
         index=False,
     )
 
-    # Plot: top rules by lift
     top_rules = rules.head(TOP_N_ASSOCIATION_RULES).copy()
 
     if not top_rules.empty:
@@ -1232,7 +1983,7 @@ def run_association_rule_mining(df: pd.DataFrame, output_dir: str):
 
 
 # ============================================================
-# First-layer text report
+# First-layer text report  (unchanged from V4/V5)
 # ============================================================
 
 def generate_first_layer_knowledge_report(df: pd.DataFrame, output_dir: str):
@@ -1261,7 +2012,6 @@ def generate_first_layer_knowledge_report(df: pd.DataFrame, output_dir: str):
         lines.append(str(df[TARGET_CLASSIFICATION].value_counts(dropna=False)))
         lines.append("")
 
-    # workpiece_slice_geometry not present in new format; use encoded proxy.
     if "workpiece_slice_geometry_encoded" in df.columns and TARGET_REGRESSION in df.columns:
         lines.append("Average RUL by Workpiece Geometry (encoded code)")
         lines.append("-" * 70)
@@ -1342,7 +2092,7 @@ if __name__ == "__main__":
     SCRIPT_DIR = Path(__file__).resolve().parent
 
     INPUT_FILE = SCRIPT_DIR / "Dataset" / "PreProcessedDataset.csv"
-    OUTPUT_DIR = SCRIPT_DIR / "Analysis1_Outputs_Claude_V4"
+    OUTPUT_DIR = SCRIPT_DIR / "Analysis1_Outputs_Claude_V6"
 
     # ------------------------------------------------------------
     # Configuration
