@@ -2364,7 +2364,7 @@
             </ndimVector>
         </node>
         <node id="2">
-            <position x="6.0" y="80.0" />
+            <position x="-13.804756164550781" y="146.09190368652344" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -2392,7 +2392,7 @@
             </ndimVector>
         </node>
         <node id="3">
-            <position x="-134.0" y="180.0" />
+            <position x="-150.6680450439453" y="202.26165771484375" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -2420,7 +2420,7 @@
             </ndimVector>
         </node>
         <node id="4">
-            <position x="-52.0" y="350.0" />
+            <position x="10.847078323364258" y="270.4501953125" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
