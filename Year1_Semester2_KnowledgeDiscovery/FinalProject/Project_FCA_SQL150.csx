@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <conceptualSchema version="TJ1.0">
     <databaseConnection>
-        <embed url="/E:/_3_Master/Applied-Computational-Intelligence-UBB/Year1_Semester2_KnowledgeDiscovery/FinalProject/PreProcessedDataset_150_ShiftBalanced.sql" />
+        <embed url="/E:/_3_Master/Applied-Computational-Intelligence-UBB/Year1_Semester2_KnowledgeDiscovery/FinalProject/PreProcessedDataset_Max_Shift_Balanced.sql" />
         <table name="PREPROCESSEDDATASET" />
         <key name="TIMESTAMP" />
     </databaseConnection>
