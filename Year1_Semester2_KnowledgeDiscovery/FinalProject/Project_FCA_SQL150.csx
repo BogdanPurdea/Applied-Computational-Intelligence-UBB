@@ -7,7 +7,7 @@
     </databaseConnection>
     <diagram title="Nominal_Scale_RUL_Class">
         <node id="0">
-            <position x="-17.0" y="60.0" />
+            <position x="-70.14863586425781" y="143.33262634277344" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -36,7 +36,7 @@
             </ndimVector>
         </node>
         <node id="1">
-            <position x="0.0" y="0.0" />
+            <position x="-3.664118528366089" y="-51.51198196411133" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -63,7 +63,7 @@
             </ndimVector>
         </node>
         <node id="2">
-            <position x="-147.0" y="170.0" />
+            <position x="-210.55361938476562" y="76.89154052734375" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -92,7 +92,7 @@
             </ndimVector>
         </node>
         <node id="3">
-            <position x="80.5" y="82.5" />
+            <position x="239.52001953125" y="247.65573120117188" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -121,7 +121,7 @@
             </ndimVector>
         </node>
         <node id="4">
-            <position x="-50.5" y="362.5" />
+            <position x="-168.56576538085938" y="289.53375244140625" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -146,7 +146,7 @@
             </ndimVector>
         </node>
         <node id="5">
-            <position x="33.0" y="50.0" />
+            <position x="72.79137420654297" y="175.0752716064453" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -191,7 +191,7 @@
     </diagram>
     <diagram title="Nominal_Scale_Thermall_Stress_Temperature">
         <node id="0">
-            <position x="76.0" y="90.0" />
+            <position x="-32.98371887207031" y="-355.06298828125" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -219,7 +219,7 @@
             </ndimVector>
         </node>
         <node id="1">
-            <position x="-134.0" y="180.0" />
+            <position x="-330.1842041015625" y="-156.65135192871094" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -247,7 +247,7 @@
             </ndimVector>
         </node>
         <node id="2">
-            <position x="6.0" y="80.0" />
+            <position x="-102.98371887207031" y="-365.06298828125" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -275,7 +275,7 @@
             </ndimVector>
         </node>
         <node id="3">
-            <position x="-52.0" y="350.0" />
+            <position x="-248.1842041015625" y="13.348648071289062" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -299,7 +299,7 @@
             </ndimVector>
         </node>
         <node id="4">
-            <position x="0.0" y="0.0" />
+            <position x="-108.98371887207031" y="-445.06298828125" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -1071,118 +1071,6 @@
             <vector x="-134.0" y="180.0" />
         </projectionBase>
     </diagram>
-    <diagram title="NomSca_Cooling_Efficiency_Water_Consumption">
-        <node id="0">
-            <position x="-56.0" y="240.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>PREPROCESSEDDATASET.WATER_CONSUMPTION_LITER_MINUTE_FCA_BIN = 'Constant'</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>Constant</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="1">
-            <position x="0.0" y="0.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>NOT (PREPROCESSEDDATASET.WATER_CONSUMPTION_LITER_MINUTE_FCA_BIN = 'Constant')</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <edge from="1" to="0" />
-        <projectionBase>
-            <vector x="-56.0" y="240.0" />
-        </projectionBase>
-    </diagram>
-    <diagram title="NomSca_Cooling_Efficiency_Water_TempDelta">
-        <node id="0">
-            <position x="-56.0" y="240.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>PREPROCESSEDDATASET.WATER_TEMPERATURE_DELTA_CELSIUS_DEG_FCA_BIN = 'Constant'</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>Constant</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="1">
-            <position x="0.0" y="0.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>NOT (PREPROCESSEDDATASET.WATER_TEMPERATURE_DELTA_CELSIUS_DEG_FCA_BIN = 'Constant')</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <edge from="1" to="0" />
-        <projectionBase>
-            <vector x="-56.0" y="240.0" />
-        </projectionBase>
-    </diagram>
     <diagram title="NomSca_Load_Steel_Weight">
         <node id="0">
             <position x="-52.0" y="350.0" />
@@ -1475,62 +1363,6 @@
             <vector x="76.0" y="90.0" />
             <vector x="6.0" y="80.0" />
             <vector x="-134.0" y="180.0" />
-        </projectionBase>
-    </diagram>
-    <diagram title="NomSca_Load_Quantity_Ton">
-        <node id="0">
-            <position x="-56.0" y="240.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>PREPROCESSEDDATASET.QUANTITY_TONN_FCA_BIN = 'Constant'</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>Constant</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="1">
-            <position x="0.0" y="0.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>NOT (PREPROCESSEDDATASET.QUANTITY_TONN_FCA_BIN = 'Constant')</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <edge from="1" to="0" />
-        <projectionBase>
-            <vector x="-56.0" y="240.0" />
         </projectionBase>
     </diagram>
     <diagram title="NomSca_Load_Cast_In_Row">
