@@ -1680,5 +1680,801 @@
             <vector x="-134.0" y="180.0" />
         </projectionBase>
     </diagram>
+    <diagram title="NomSca_Impurity_Index">
+        <node id="0">
+            <position x="-134.0" y="180.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>PREPROCESSEDDATASET.IMPURITY_INDEX_FCA_BIN = 'Low'</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>Low</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>0.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="1">
+            <position x="-52.0" y="350.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent />
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>1.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="2">
+            <position x="6.0" y="80.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>PREPROCESSEDDATASET.IMPURITY_INDEX_FCA_BIN = 'High'</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>High</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>1.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="3">
+            <position x="0.0" y="0.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>NOT (PREPROCESSEDDATASET.IMPURITY_INDEX_FCA_BIN = 'Medium') AND NOT (PREPROCESSEDDATASET.IMPURITY_INDEX_FCA_BIN = 'Low') AND NOT (PREPROCESSEDDATASET.IMPURITY_INDEX_FCA_BIN = 'High')</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>0.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="4">
+            <position x="76.0" y="90.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>PREPROCESSEDDATASET.IMPURITY_INDEX_FCA_BIN = 'Medium'</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>Medium</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>0.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <edge from="3" to="0" />
+        <edge from="0" to="1" />
+        <edge from="2" to="1" />
+        <edge from="4" to="1" />
+        <edge from="3" to="2" />
+        <edge from="3" to="4" />
+        <projectionBase>
+            <vector x="76.0" y="90.0" />
+            <vector x="6.0" y="80.0" />
+            <vector x="-134.0" y="180.0" />
+        </projectionBase>
+    </diagram>
+    <diagram title="NomSca_Composition_Carbon">
+        <node id="0">
+            <position x="0.0" y="0.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object contextPosition="3">NOT (PREPROCESSEDDATASET.C_FCA_BIN = 'Medium') AND NOT (PREPROCESSEDDATASET.C_FCA_BIN = 'Low') AND NOT (PREPROCESSEDDATASET.C_FCA_BIN = 'High')</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>0.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="1">
+            <position x="-52.0" y="350.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent />
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>1.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="2">
+            <position x="6.0" y="80.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object contextPosition="0">PREPROCESSEDDATASET.C_FCA_BIN = 'High'</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute contextPosition="0">High</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>0.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="3">
+            <position x="-134.0" y="180.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object contextPosition="2">PREPROCESSEDDATASET.C_FCA_BIN = 'Low'</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute contextPosition="2">Low</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>1.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="4">
+            <position x="76.0" y="90.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object contextPosition="1">PREPROCESSEDDATASET.C_FCA_BIN = 'Medium'</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute contextPosition="1">Medium</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>0.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <edge from="2" to="1" />
+        <edge from="3" to="1" />
+        <edge from="4" to="1" />
+        <edge from="0" to="2" />
+        <edge from="0" to="3" />
+        <edge from="0" to="4" />
+        <projectionBase>
+            <vector x="6.0" y="80.0" />
+            <vector x="-134.0" y="180.0" />
+            <vector x="76.0" y="90.0" />
+        </projectionBase>
+    </diagram>
+    <diagram title="NomSca_Composition_Chromium">
+        <node id="0">
+            <position x="6.0" y="80.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>PREPROCESSEDDATASET.CR_FCA_BIN = 'High'</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>High</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>1.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="1">
+            <position x="-52.0" y="350.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent />
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>1.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="2">
+            <position x="-134.0" y="180.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>PREPROCESSEDDATASET.CR_FCA_BIN = 'Low'</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>Low</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>0.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="3">
+            <position x="0.0" y="0.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>NOT (PREPROCESSEDDATASET.CR_FCA_BIN = 'Medium') AND NOT (PREPROCESSEDDATASET.CR_FCA_BIN = 'Low') AND NOT (PREPROCESSEDDATASET.CR_FCA_BIN = 'High')</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>0.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="4">
+            <position x="76.0" y="90.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>PREPROCESSEDDATASET.CR_FCA_BIN = 'Medium'</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>Medium</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>0.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <edge from="3" to="0" />
+        <edge from="0" to="1" />
+        <edge from="2" to="1" />
+        <edge from="4" to="1" />
+        <edge from="3" to="2" />
+        <edge from="3" to="4" />
+        <projectionBase>
+            <vector x="76.0" y="90.0" />
+            <vector x="6.0" y="80.0" />
+            <vector x="-134.0" y="180.0" />
+        </projectionBase>
+    </diagram>
+    <diagram title="OrdSca_ExcBound_Stream">
+        <node id="0">
+            <position x="0.0" y="0.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>(NUM_STREAM&lt;=1)</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="1">
+            <position x="-280.0" y="1200.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>(NUM_STREAM&gt;5) AND (NUM_STREAM&lt;=6)</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>&gt;5</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="2">
+            <position x="-224.0" y="960.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>(NUM_STREAM&gt;4) AND (NUM_STREAM&lt;=5)</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>&gt;4</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="3">
+            <position x="-168.0" y="720.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>(NUM_STREAM&gt;3) AND (NUM_STREAM&lt;=4)</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>&gt;3</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="4">
+            <position x="-56.0" y="240.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>(NUM_STREAM&gt;1) AND (NUM_STREAM&lt;=2)</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>&gt;1</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="5">
+            <position x="-112.0" y="480.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>(NUM_STREAM&gt;2) AND (NUM_STREAM&lt;=3)</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>&gt;2</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="6">
+            <position x="-336.0" y="1440.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>(NUM_STREAM&gt;6)</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>&gt;6</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+            </ndimVector>
+        </node>
+        <edge from="2" to="1" />
+        <edge from="3" to="2" />
+        <edge from="5" to="3" />
+        <edge from="0" to="4" />
+        <edge from="4" to="5" />
+        <edge from="1" to="6" />
+        <projectionBase>
+            <vector x="-56.0" y="240.0" />
+        </projectionBase>
+    </diagram>
+    <diagram title="OrdSca_IncBound_Crystalizer">
+        <node id="0">
+            <position x="-56.0" y="240.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>(NUM_CRYSTALLIZER&gt;1) AND (NUM_CRYSTALLIZER&lt;=6)</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>&gt;1</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="1">
+            <position x="-280.0" y="1200.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>(NUM_CRYSTALLIZER&gt;24)</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>&gt;24</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="2">
+            <position x="0.0" y="0.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>(NUM_CRYSTALLIZER&lt;=1)</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="3">
+            <position x="-224.0" y="960.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>(NUM_CRYSTALLIZER&gt;18) AND (NUM_CRYSTALLIZER&lt;=24)</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>&gt;18</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="4">
+            <position x="-168.0" y="720.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>(NUM_CRYSTALLIZER&gt;12) AND (NUM_CRYSTALLIZER&lt;=18)</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>&gt;12</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="5">
+            <position x="-112.0" y="480.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>(NUM_CRYSTALLIZER&gt;6) AND (NUM_CRYSTALLIZER&lt;=12)</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>&gt;6</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <edge from="2" to="0" />
+        <edge from="3" to="1" />
+        <edge from="4" to="3" />
+        <edge from="5" to="4" />
+        <edge from="0" to="5" />
+        <projectionBase>
+            <vector x="-56.0" y="240.0" />
+        </projectionBase>
+    </diagram>
 </conceptualSchema>
 
