@@ -4,7 +4,7 @@ import math
 import os
 
 TABLE_NAME = "PreProcessedDataset"
-TARGET_ROWS = 150
+TARGET_ROWS = 170000
 REQUIRED_SHIFTS = {"Morning", "Afternoon", "Night"}
 
 def sanitize_column(name: str) -> str:
@@ -78,7 +78,7 @@ def main():
     # -----------------------------
     df_final.columns = [sanitize_column(c) for c in df_final.columns]
 
-    output_sql = csv_file.replace(".csv", "_150_ShiftBalanced.sql")
+    output_sql = csv_file.replace(".csv", "_Max_Shift_Balanced.sql")
 
     with open(output_sql, "w", encoding="utf-8") as f:
 

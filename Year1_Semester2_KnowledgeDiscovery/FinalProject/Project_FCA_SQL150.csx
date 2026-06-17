@@ -5,6 +5,7 @@
         <table name="PREPROCESSEDDATASET" />
         <key name="TIMESTAMP" />
     </databaseConnection>
+    <queries />
     <diagram title="Nominal_Scale_RUL_Class">
         <node id="0">
             <position x="-70.14863586425781" y="143.33262634277344" />
