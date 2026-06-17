@@ -2625,560 +2625,6 @@
     </diagram>
     <diagram title="GrdSca_ThermalStress_x_Cooling">
         <node id="0">
-            <position x="-168.0" y="960.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="24">((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-2.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=0.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="1">
-            <position x="48.0" y="560.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="26">((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-6.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-4.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="2">
-            <position x="-332.0" y="1480.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="13">((TEMPERATURE_DIFFERENCE_SCALED&gt;4.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;1.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="3">
-            <position x="100.0" y="680.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="14">((TEMPERATURE_DIFFERENCE_SCALED&gt;4.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-6.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-4.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="4">
-            <position x="-56.0" y="320.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="8">((TEMPERATURE_DIFFERENCE_SCALED&gt;-2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-6.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-4.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="5">
-            <position x="208.0" y="480.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="29">((TEMPERATURE_DIFFERENCE_SCALED&gt;4.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-6.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute contextPosition="8">TEMPERATURE_DIFFERENCE_SCALED &gt;4.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="6">
-            <position x="0.0" y="0.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="28">((TEMPERATURE_DIFFERENCE_SCALED&lt;=-2.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-6.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="7">
-            <position x="-276.0" y="1160.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="20">((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;0.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=1.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="8">
-            <position x="156.0" y="360.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="17">((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-6.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute contextPosition="5">TEMPERATURE_DIFFERENCE_SCALED &gt;2.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="9">
-            <position x="-324.0" y="600.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="25">((TEMPERATURE_DIFFERENCE_SCALED&lt;=-2.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-2.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=0.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute contextPosition="7">TOTAL_COOLING_CONSUMPTION_SCALED &gt;-2.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="10">
-            <position x="52.0" y="120.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="2">((TEMPERATURE_DIFFERENCE_SCALED&gt;-2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-6.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute contextPosition="1">TEMPERATURE_DIFFERENCE_SCALED &gt;-2.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="11">
-            <position x="-116.0" y="1080.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="19">((TEMPERATURE_DIFFERENCE_SCALED&gt;4.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-2.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=0.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="12">
-            <position x="-272.0" y="720.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="11">((TEMPERATURE_DIFFERENCE_SCALED&gt;-2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-2.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=0.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="13">
-            <position x="-108.0" y="200.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="10">((TEMPERATURE_DIFFERENCE_SCALED&lt;=-2.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-6.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-4.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute contextPosition="3">TOTAL_COOLING_CONSUMPTION_SCALED &gt;-6.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="14">
-            <position x="-488.0" y="1120.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="15">((TEMPERATURE_DIFFERENCE_SCALED&gt;-2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;1.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="15">
-            <position x="-328.0" y="1040.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="16">((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;0.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=1.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="16">
-            <position x="-380.0" y="920.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="22">((TEMPERATURE_DIFFERENCE_SCALED&gt;-2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;0.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=1.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="17">
             <position x="-112.0" y="640.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
@@ -3194,1037 +2640,16 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object contextPosition="0">((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-4.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-2.0))</object>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;-2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=-1.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-5.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-4.0))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
             <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="18">
-            <position x="-4.0" y="440.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="6">((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-6.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-4.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="19">
-            <position x="-540.0" y="1000.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="21">((TEMPERATURE_DIFFERENCE_SCALED&lt;=-2.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;1.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute contextPosition="6">TOTAL_COOLING_CONSUMPTION_SCALED &gt;1.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="20">
-            <position x="104.0" y="240.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="1">((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-6.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute contextPosition="0">TEMPERATURE_DIFFERENCE_SCALED &gt;0.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="21">
-            <position x="-8.0" y="880.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="5">((TEMPERATURE_DIFFERENCE_SCALED&gt;4.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-4.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-2.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="22">
-            <position x="-436.0" y="1240.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="23">((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;1.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="23">
-            <position x="-216.0" y="400.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="3">((TEMPERATURE_DIFFERENCE_SCALED&lt;=-2.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-4.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-2.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute contextPosition="2">TOTAL_COOLING_CONSUMPTION_SCALED &gt;-4.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="24">
-            <position x="-224.0" y="1280.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="9">((TEMPERATURE_DIFFERENCE_SCALED&gt;4.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;0.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=1.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="25">
-            <position x="-60.0" y="760.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="18">((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-4.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-2.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="26">
-            <position x="-384.0" y="1360.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="7">((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;1.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="27">
-            <position x="-220.0" y="840.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="4">((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-2.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=0.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="28">
-            <position x="-432.0" y="800.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="12">((TEMPERATURE_DIFFERENCE_SCALED&lt;=-2.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;0.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=1.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute contextPosition="4">TOTAL_COOLING_CONSUMPTION_SCALED &gt;0.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="29">
-            <position x="-164.0" y="520.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="27">((TEMPERATURE_DIFFERENCE_SCALED&gt;-2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-4.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-2.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <edge from="25" to="0" />
-        <edge from="27" to="0" />
-        <edge from="18" to="1" />
-        <edge from="8" to="1" />
-        <edge from="24" to="2" />
-        <edge from="26" to="2" />
-        <edge from="1" to="3" />
-        <edge from="5" to="3" />
-        <edge from="13" to="4" />
-        <edge from="10" to="4" />
-        <edge from="8" to="5" />
-        <edge from="0" to="7" />
-        <edge from="15" to="7" />
-        <edge from="20" to="8" />
-        <edge from="23" to="9" />
-        <edge from="6" to="10" />
-        <edge from="0" to="11" />
-        <edge from="21" to="11" />
-        <edge from="29" to="12" />
-        <edge from="9" to="12" />
-        <edge from="6" to="13" />
-        <edge from="19" to="14" />
-        <edge from="16" to="14" />
-        <edge from="27" to="15" />
-        <edge from="16" to="15" />
-        <edge from="12" to="16" />
-        <edge from="28" to="16" />
-        <edge from="18" to="17" />
-        <edge from="29" to="17" />
-        <edge from="4" to="18" />
-        <edge from="20" to="18" />
-        <edge from="28" to="19" />
-        <edge from="10" to="20" />
-        <edge from="3" to="21" />
-        <edge from="25" to="21" />
-        <edge from="14" to="22" />
-        <edge from="15" to="22" />
-        <edge from="13" to="23" />
-        <edge from="7" to="24" />
-        <edge from="11" to="24" />
-        <edge from="1" to="25" />
-        <edge from="17" to="25" />
-        <edge from="7" to="26" />
-        <edge from="22" to="26" />
-        <edge from="17" to="27" />
-        <edge from="12" to="27" />
-        <edge from="9" to="28" />
-        <edge from="4" to="29" />
-        <edge from="23" to="29" />
-        <projectionBase>
-            <vector x="52.0" y="120.0" />
-            <vector x="52.0" y="120.0" />
-            <vector x="-108.0" y="200.0" />
-            <vector x="52.0" y="120.0" />
-            <vector x="-108.0" y="200.0" />
-            <vector x="-108.0" y="200.0" />
-            <vector x="52.0" y="120.0" />
-            <vector x="-108.0" y="200.0" />
-            <vector x="-108.0" y="200.0" />
-        </projectionBase>
-    </diagram>
-    <diagram title="GrdSca_ProductionLoad_x_ThermalStress">
-        <node id="0">
-            <position x="-440.0" y="1680.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;0.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=2.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;4.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>4.0</coordinate>
-                <coordinate>6.0</coordinate>
+                <coordinate>2.0</coordinate>
+                <coordinate>2.0</coordinate>
             </ndimVector>
         </node>
         <node id="1">
-            <position x="-652.0" y="1640.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;2.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>2.0</coordinate>
-                <coordinate>7.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="2">
-            <position x="-488.0" y="1120.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-1.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=0.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>1.0</coordinate>
-                <coordinate>5.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="3">
-            <position x="48.0" y="560.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-7.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-5.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>3.0</coordinate>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="4">
-            <position x="-276.0" y="1160.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-2.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-1.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>3.0</coordinate>
-                <coordinate>4.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="5">
-            <position x="-220.0" y="840.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-4.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-2.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>2.0</coordinate>
-                <coordinate>3.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="6">
-            <position x="-272.0" y="720.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-4.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-2.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>1.0</coordinate>
-                <coordinate>3.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="7">
-            <position x="-596.0" y="1320.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;0.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=2.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>1.0</coordinate>
-                <coordinate>6.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="8">
-            <position x="100.0" y="680.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-7.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-5.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;4.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>4.0</coordinate>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="9">
-            <position x="-4.0" y="440.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-7.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-5.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>2.0</coordinate>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="10">
-            <position x="-108.0" y="200.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-7.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-5.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&lt;=-2.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>STEEL_WEIGHT_TONN_SCALED &gt;-7.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="11">
-            <position x="-648.0" y="1200.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;0.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=2.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&lt;=-2.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>STEEL_WEIGHT_TONN_SCALED &gt;0.5</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>6.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="12">
-            <position x="156.0" y="360.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&lt;=-7.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>TEMPERATURE_DIFFERENCE_SCALED &gt;2.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>3.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="13">
-            <position x="-168.0" y="960.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-4.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-2.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>3.0</coordinate>
-                <coordinate>3.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="14">
-            <position x="-540.0" y="1000.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-1.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=0.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&lt;=-2.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>STEEL_WEIGHT_TONN_SCALED &gt;-1.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>5.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="15">
-            <position x="-328.0" y="1040.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-2.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-1.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>2.0</coordinate>
-                <coordinate>4.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="16">
-            <position x="-756.0" y="1400.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;2.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&lt;=-2.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>STEEL_WEIGHT_TONN_SCALED &gt;2.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>7.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="17">
-            <position x="-548.0" y="1880.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;2.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;4.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>4.0</coordinate>
-                <coordinate>7.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="18">
-            <position x="-332.0" y="1480.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-1.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=0.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;4.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>4.0</coordinate>
-                <coordinate>5.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="19">
-            <position x="-436.0" y="1240.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-1.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=0.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>2.0</coordinate>
-                <coordinate>5.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="20">
-            <position x="-544.0" y="1440.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;0.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=2.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>2.0</coordinate>
-                <coordinate>6.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="21">
-            <position x="-224.0" y="1280.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-2.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-1.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;4.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>4.0</coordinate>
-                <coordinate>4.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="22">
             <position x="-704.0" y="1520.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
@@ -4240,7 +2665,7 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;2.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0))</object>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.1)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-7.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-5.5))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
@@ -4249,8 +2674,8 @@
                 <coordinate>7.0</coordinate>
             </ndimVector>
         </node>
-        <node id="23">
-            <position x="-116.0" y="1080.0" />
+        <node id="2">
+            <position x="-60.0" y="760.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -4265,121 +2690,42 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-4.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-2.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;4.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>4.0</coordinate>
-                <coordinate>3.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="24">
-            <position x="-112.0" y="640.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-5.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-4.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>2.0</coordinate>
-                <coordinate>2.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="25">
-            <position x="104.0" y="240.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&lt;=-7.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>TEMPERATURE_DIFFERENCE_SCALED &gt;0.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>2.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="26">
-            <position x="208.0" y="480.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&lt;=-7.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;4.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>TEMPERATURE_DIFFERENCE_SCALED &gt;4.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>4.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="27">
-            <position x="-492.0" y="1560.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;0.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=2.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.0))</object>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;-2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=-1.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-4.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-2.5))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
             <ndimVector>
                 <coordinate>3.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="3">
+            <position x="-440.0" y="1680.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=3.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-2.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
                 <coordinate>6.0</coordinate>
             </ndimVector>
         </node>
-        <node id="28">
-            <position x="52.0" y="120.0" />
+        <node id="4">
+            <position x="-540.0" y="1000.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -4394,18 +2740,268 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&lt;=-7.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0))</object>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-7.0))</object>
                 </objectContingent>
                 <attributeContingent>
-                    <attribute>TEMPERATURE_DIFFERENCE_SCALED &gt;-2.0</attribute>
+                    <attribute>TEMPERATURE_DIFFERENCE_SCALED &gt;1.0</attribute>
                 </attributeContingent>
             </concept>
             <ndimVector>
-                <coordinate>1.0</coordinate>
                 <coordinate>0.0</coordinate>
+                <coordinate>5.0</coordinate>
             </ndimVector>
         </node>
-        <node id="29">
+        <node id="5">
+            <position x="-596.0" y="1320.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=3.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-7.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-5.5))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>6.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="6">
+            <position x="-336.0" y="1920.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=3.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;0.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=1.5))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>6.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="7">
+            <position x="-392.0" y="2240.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.1)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;1.5))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>7.0</coordinate>
+                <coordinate>7.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="8">
+            <position x="-64.0" y="1200.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;-1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-1.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="9">
+            <position x="-812.0" y="1720.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;4.1)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-7.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-5.5))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>8.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="10">
+            <position x="-552.0" y="2320.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;4.1)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;0.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=1.5))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>8.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="11">
+            <position x="-332.0" y="1480.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-2.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="12">
+            <position x="-388.0" y="1800.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=3.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-1.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>6.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="13">
+            <position x="-280.0" y="1600.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-1.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="14">
+            <position x="-224.0" y="1280.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=1.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-2.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="15">
             <position x="-600.0" y="1760.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
@@ -4421,13 +3017,369 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;2.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.0))</object>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.1)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-4.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-2.5))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
             <ndimVector>
                 <coordinate>3.0</coordinate>
                 <coordinate>7.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="16">
+            <position x="208.0" y="480.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&lt;=-3.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-2.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>TOTAL_COOLING_CONSUMPTION_SCALED &gt;-2.5</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="17">
+            <position x="-328.0" y="1040.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=1.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-5.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-4.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="18">
+            <position x="-652.0" y="1640.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.1)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-5.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-4.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>7.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="19">
+            <position x="-548.0" y="1880.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.1)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-2.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>7.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="20">
+            <position x="-108.0" y="200.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;-3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=-2.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-7.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>TEMPERATURE_DIFFERENCE_SCALED &gt;-3.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="21">
+            <position x="-4.0" y="440.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;-3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=-2.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-5.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-4.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="22">
+            <position x="-604.0" y="2200.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;4.1)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-1.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>8.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="23">
+            <position x="-756.0" y="1400.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.1)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-7.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>TEMPERATURE_DIFFERENCE_SCALED &gt;3.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>7.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="24">
+            <position x="40.0" y="1440.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;-1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;1.5))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>7.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="25">
+            <position x="-492.0" y="1560.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=3.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-4.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-2.5))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>6.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="26">
+            <position x="-380.0" y="920.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=1.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-7.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-5.5))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="27">
+            <position x="-708.0" y="1960.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;4.1)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-4.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-2.5))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>8.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="28">
+            <position x="96.0" y="1120.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;-2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=-1.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;0.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=1.5))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="29">
+            <position x="-656.0" y="2080.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;4.1)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-2.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>8.0</coordinate>
             </ndimVector>
         </node>
         <node id="30">
@@ -4446,7 +3398,7 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-7.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-5.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0))</object>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;-3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=-2.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-7.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-5.5))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
@@ -4456,7 +3408,7 @@
             </ndimVector>
         </node>
         <node id="31">
-            <position x="-60.0" y="760.0" />
+            <position x="-284.0" y="2040.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -4471,41 +3423,16 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-5.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-4.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.0))</object>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=3.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;1.5))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
             <ndimVector>
-                <coordinate>3.0</coordinate>
-                <coordinate>2.0</coordinate>
+                <coordinate>7.0</coordinate>
+                <coordinate>6.0</coordinate>
             </ndimVector>
         </node>
         <node id="32">
-            <position x="-384.0" y="1360.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-1.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=0.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>3.0</coordinate>
-                <coordinate>5.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="33">
             <position x="-164.0" y="520.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
@@ -4521,17 +3448,42 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-5.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-4.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0))</object>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;-2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=-1.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-7.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-5.5))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
             <ndimVector>
                 <coordinate>1.0</coordinate>
                 <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="33">
+            <position x="-172.0" y="1400.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=1.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-1.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>4.0</coordinate>
             </ndimVector>
         </node>
         <node id="34">
-            <position x="-324.0" y="600.0" />
+            <position x="312.0" y="720.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -4546,19 +3498,19 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-4.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-2.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&lt;=-2.0))</object>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&lt;=-3.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;0.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=1.5))</object>
                 </objectContingent>
                 <attributeContingent>
-                    <attribute>STEEL_WEIGHT_TONN_SCALED &gt;-4.0</attribute>
+                    <attribute>TOTAL_COOLING_CONSUMPTION_SCALED &gt;0.0</attribute>
                 </attributeContingent>
             </concept>
             <ndimVector>
+                <coordinate>6.0</coordinate>
                 <coordinate>0.0</coordinate>
-                <coordinate>3.0</coordinate>
             </ndimVector>
         </node>
         <node id="35">
-            <position x="-8.0" y="880.0" />
+            <position x="-228.0" y="1720.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -4573,269 +3525,17 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-5.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-4.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;4.0))</object>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;0.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=1.5))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
             <ndimVector>
-                <coordinate>4.0</coordinate>
-                <coordinate>2.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="36">
-            <position x="-216.0" y="400.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-5.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-4.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&lt;=-2.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>STEEL_WEIGHT_TONN_SCALED &gt;-5.5</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>2.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="37">
-            <position x="0.0" y="0.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&lt;=-7.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&lt;=-2.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="38">
-            <position x="-380.0" y="920.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-2.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-1.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>1.0</coordinate>
-                <coordinate>4.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="39">
-            <position x="-432.0" y="800.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-2.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-1.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&lt;=-2.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>STEEL_WEIGHT_TONN_SCALED &gt;-2.5</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>4.0</coordinate>
-            </ndimVector>
-        </node>
-        <edge from="18" to="0" />
-        <edge from="27" to="0" />
-        <edge from="20" to="1" />
-        <edge from="22" to="1" />
-        <edge from="14" to="2" />
-        <edge from="38" to="2" />
-        <edge from="9" to="3" />
-        <edge from="12" to="3" />
-        <edge from="13" to="4" />
-        <edge from="15" to="4" />
-        <edge from="24" to="5" />
-        <edge from="6" to="5" />
-        <edge from="34" to="6" />
-        <edge from="33" to="6" />
-        <edge from="2" to="7" />
-        <edge from="11" to="7" />
-        <edge from="26" to="8" />
-        <edge from="3" to="8" />
-        <edge from="25" to="9" />
-        <edge from="30" to="9" />
-        <edge from="37" to="10" />
-        <edge from="14" to="11" />
-        <edge from="25" to="12" />
-        <edge from="5" to="13" />
-        <edge from="31" to="13" />
-        <edge from="39" to="14" />
-        <edge from="5" to="15" />
-        <edge from="38" to="15" />
-        <edge from="11" to="16" />
-        <edge from="0" to="17" />
-        <edge from="29" to="17" />
-        <edge from="21" to="18" />
-        <edge from="32" to="18" />
-        <edge from="2" to="19" />
-        <edge from="15" to="19" />
-        <edge from="7" to="20" />
-        <edge from="19" to="20" />
-        <edge from="4" to="21" />
-        <edge from="23" to="21" />
-        <edge from="7" to="22" />
-        <edge from="16" to="22" />
-        <edge from="35" to="23" />
-        <edge from="13" to="23" />
-        <edge from="9" to="24" />
-        <edge from="33" to="24" />
-        <edge from="28" to="25" />
-        <edge from="12" to="26" />
-        <edge from="20" to="27" />
-        <edge from="32" to="27" />
-        <edge from="37" to="28" />
-        <edge from="1" to="29" />
-        <edge from="27" to="29" />
-        <edge from="10" to="30" />
-        <edge from="28" to="30" />
-        <edge from="24" to="31" />
-        <edge from="3" to="31" />
-        <edge from="4" to="32" />
-        <edge from="19" to="32" />
-        <edge from="30" to="33" />
-        <edge from="36" to="33" />
-        <edge from="36" to="34" />
-        <edge from="31" to="35" />
-        <edge from="8" to="35" />
-        <edge from="10" to="36" />
-        <edge from="6" to="38" />
-        <edge from="39" to="38" />
-        <edge from="34" to="39" />
-        <projectionBase>
-            <vector x="52.0" y="120.0" />
-            <vector x="-108.0" y="200.0" />
-        </projectionBase>
-    </diagram>
-    <diagram title="GriSca_Impurity_x_ThermalStress">
-        <node id="0">
-            <position x="-4.0" y="440.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((IMPURITY_INDEX_SCALED&gt;-2.0) AND (IMPURITY_INDEX_SCALED&lt;=-1.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>2.0</coordinate>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="1">
-            <position x="-8.0" y="880.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((IMPURITY_INDEX_SCALED&gt;-1.0) AND (IMPURITY_INDEX_SCALED&lt;=0.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;4.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>4.0</coordinate>
-                <coordinate>2.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="2">
-            <position x="-488.0" y="1120.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((IMPURITY_INDEX_SCALED&gt;2.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>1.0</coordinate>
+                <coordinate>6.0</coordinate>
                 <coordinate>5.0</coordinate>
             </ndimVector>
         </node>
-        <node id="3">
-            <position x="100.0" y="680.0" />
+        <node id="36">
+            <position x="-444.0" y="2120.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -4850,66 +3550,16 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((IMPURITY_INDEX_SCALED&gt;-2.0) AND (IMPURITY_INDEX_SCALED&lt;=-1.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;4.0))</object>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.1)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;0.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=1.5))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
             <ndimVector>
-                <coordinate>4.0</coordinate>
-                <coordinate>1.0</coordinate>
+                <coordinate>6.0</coordinate>
+                <coordinate>7.0</coordinate>
             </ndimVector>
         </node>
-        <node id="4">
-            <position x="-60.0" y="760.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((IMPURITY_INDEX_SCALED&gt;-1.0) AND (IMPURITY_INDEX_SCALED&lt;=0.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>3.0</coordinate>
-                <coordinate>2.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="5">
-            <position x="48.0" y="560.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((IMPURITY_INDEX_SCALED&gt;-2.0) AND (IMPURITY_INDEX_SCALED&lt;=-1.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>3.0</coordinate>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="6">
+        <node id="37">
             <position x="-116.0" y="1080.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
@@ -4925,7 +3575,7 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((IMPURITY_INDEX_SCALED&gt;0.0) AND (IMPURITY_INDEX_SCALED&lt;=1.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;4.0))</object>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;-1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-2.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-1.0))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
@@ -4934,8 +3584,8 @@
                 <coordinate>3.0</coordinate>
             </ndimVector>
         </node>
-        <node id="7">
-            <position x="-328.0" y="1040.0" />
+        <node id="38">
+            <position x="204.0" y="920.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -4950,17 +3600,119 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((IMPURITY_INDEX_SCALED&gt;1.0) AND (IMPURITY_INDEX_SCALED&lt;=2.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0))</object>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;-3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=-2.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;0.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=1.5))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="39">
+            <position x="152.0" y="800.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;-3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=-2.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-1.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="40">
+            <position x="260.0" y="600.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&lt;=-3.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-1.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>TOTAL_COOLING_CONSUMPTION_SCALED &gt;-1.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="41">
+            <position x="-68.0" y="1640.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=1.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;1.5))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>7.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="42">
+            <position x="-760.0" y="1840.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;4.1)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-5.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-4.0))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
             <ndimVector>
                 <coordinate>2.0</coordinate>
-                <coordinate>4.0</coordinate>
+                <coordinate>8.0</coordinate>
             </ndimVector>
         </node>
-        <node id="8">
-            <position x="-384.0" y="1360.0" />
+        <node id="43">
+            <position x="148.0" y="1240.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -4975,17 +3727,17 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((IMPURITY_INDEX_SCALED&gt;2.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.0))</object>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;-2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=-1.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;1.5))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
             <ndimVector>
-                <coordinate>3.0</coordinate>
-                <coordinate>5.0</coordinate>
+                <coordinate>7.0</coordinate>
+                <coordinate>2.0</coordinate>
             </ndimVector>
         </node>
-        <node id="9">
-            <position x="-220.0" y="840.0" />
+        <node id="44">
+            <position x="-544.0" y="1440.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -5000,17 +3752,17 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((IMPURITY_INDEX_SCALED&gt;0.0) AND (IMPURITY_INDEX_SCALED&lt;=1.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0))</object>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=3.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-5.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-4.0))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
             <ndimVector>
                 <coordinate>2.0</coordinate>
-                <coordinate>3.0</coordinate>
+                <coordinate>6.0</coordinate>
             </ndimVector>
         </node>
-        <node id="10">
-            <position x="208.0" y="480.0" />
+        <node id="45">
+            <position x="-8.0" y="880.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -5025,44 +3777,17 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((IMPURITY_INDEX_SCALED&lt;=-2.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;4.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>TEMPERATURE_DIFFERENCE_SCALED &gt;4.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>4.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="11">
-            <position x="-224.0" y="1280.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((IMPURITY_INDEX_SCALED&gt;1.0) AND (IMPURITY_INDEX_SCALED&lt;=2.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;4.0))</object>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;-2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=-1.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-2.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-1.0))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
             <ndimVector>
                 <coordinate>4.0</coordinate>
-                <coordinate>4.0</coordinate>
+                <coordinate>2.0</coordinate>
             </ndimVector>
         </node>
-        <node id="12">
-            <position x="-272.0" y="720.0" />
+        <node id="46">
+            <position x="-488.0" y="1120.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -5077,44 +3802,17 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((IMPURITY_INDEX_SCALED&gt;0.0) AND (IMPURITY_INDEX_SCALED&lt;=1.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0))</object>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-7.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-5.5))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
             <ndimVector>
                 <coordinate>1.0</coordinate>
-                <coordinate>3.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="13">
-            <position x="-540.0" y="1000.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((IMPURITY_INDEX_SCALED&gt;2.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&lt;=-2.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>IMPURITY_INDEX_SCALED &gt;2.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
                 <coordinate>5.0</coordinate>
             </ndimVector>
         </node>
-        <node id="14">
-            <position x="-168.0" y="960.0" />
+        <node id="47">
+            <position x="-496.0" y="2000.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -5129,17 +3827,17 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((IMPURITY_INDEX_SCALED&gt;0.0) AND (IMPURITY_INDEX_SCALED&lt;=1.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.0))</object>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.1)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-1.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=0.0))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
             <ndimVector>
-                <coordinate>3.0</coordinate>
-                <coordinate>3.0</coordinate>
+                <coordinate>5.0</coordinate>
+                <coordinate>7.0</coordinate>
             </ndimVector>
         </node>
-        <node id="15">
-            <position x="-380.0" y="920.0" />
+        <node id="48">
+            <position x="-120.0" y="1520.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -5154,16 +3852,16 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((IMPURITY_INDEX_SCALED&gt;1.0) AND (IMPURITY_INDEX_SCALED&lt;=2.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0))</object>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=1.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;0.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=1.5))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
             <ndimVector>
-                <coordinate>1.0</coordinate>
+                <coordinate>6.0</coordinate>
                 <coordinate>4.0</coordinate>
             </ndimVector>
         </node>
-        <node id="16">
+        <node id="49">
             <position x="-432.0" y="800.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
@@ -5179,10 +3877,10 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((IMPURITY_INDEX_SCALED&gt;1.0) AND (IMPURITY_INDEX_SCALED&lt;=2.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&lt;=-2.0))</object>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=1.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-7.0))</object>
                 </objectContingent>
                 <attributeContingent>
-                    <attribute>IMPURITY_INDEX_SCALED &gt;1.0</attribute>
+                    <attribute>TEMPERATURE_DIFFERENCE_SCALED &gt;0.0</attribute>
                 </attributeContingent>
             </concept>
             <ndimVector>
@@ -5190,8 +3888,8 @@
                 <coordinate>4.0</coordinate>
             </ndimVector>
         </node>
-        <node id="17">
-            <position x="104.0" y="240.0" />
+        <node id="50">
+            <position x="-176.0" y="1840.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -5206,70 +3904,16 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((IMPURITY_INDEX_SCALED&lt;=-2.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>TEMPERATURE_DIFFERENCE_SCALED &gt;0.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>2.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="18">
-            <position x="-164.0" y="520.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((IMPURITY_INDEX_SCALED&gt;-1.0) AND (IMPURITY_INDEX_SCALED&lt;=0.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0))</object>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;1.5))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
             <ndimVector>
-                <coordinate>1.0</coordinate>
-                <coordinate>2.0</coordinate>
+                <coordinate>7.0</coordinate>
+                <coordinate>5.0</coordinate>
             </ndimVector>
         </node>
-        <node id="19">
-            <position x="-216.0" y="400.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((IMPURITY_INDEX_SCALED&gt;-1.0) AND (IMPURITY_INDEX_SCALED&lt;=0.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&lt;=-2.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>IMPURITY_INDEX_SCALED &gt;-1.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>2.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="20">
+        <node id="51">
             <position x="0.0" y="0.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
@@ -5285,7 +3929,7 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((IMPURITY_INDEX_SCALED&lt;=-2.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&lt;=-2.0))</object>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&lt;=-3.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-7.0))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
@@ -5294,8 +3938,8 @@
                 <coordinate>0.0</coordinate>
             </ndimVector>
         </node>
-        <node id="21">
-            <position x="-436.0" y="1240.0" />
+        <node id="52">
+            <position x="-864.0" y="1600.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -5310,69 +3954,44 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((IMPURITY_INDEX_SCALED&gt;2.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>2.0</coordinate>
-                <coordinate>5.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="22">
-            <position x="-56.0" y="320.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((IMPURITY_INDEX_SCALED&gt;-2.0) AND (IMPURITY_INDEX_SCALED&lt;=-1.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="23">
-            <position x="156.0" y="360.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((IMPURITY_INDEX_SCALED&lt;=-2.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.0))</object>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;4.1)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-7.0))</object>
                 </objectContingent>
                 <attributeContingent>
-                    <attribute>TEMPERATURE_DIFFERENCE_SCALED &gt;2.0</attribute>
+                    <attribute>TEMPERATURE_DIFFERENCE_SCALED &gt;4.1</attribute>
                 </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>8.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="53">
+            <position x="-384.0" y="1360.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-4.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-2.5))</object>
+                </objectContingent>
+                <attributeContingent />
             </concept>
             <ndimVector>
                 <coordinate>3.0</coordinate>
-                <coordinate>0.0</coordinate>
+                <coordinate>5.0</coordinate>
             </ndimVector>
         </node>
-        <node id="24">
-            <position x="52.0" y="120.0" />
+        <node id="54">
+            <position x="-500.0" y="2440.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -5387,70 +4006,41 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((IMPURITY_INDEX_SCALED&lt;=-2.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>TEMPERATURE_DIFFERENCE_SCALED &gt;-2.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="25">
-            <position x="-108.0" y="200.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((IMPURITY_INDEX_SCALED&gt;-2.0) AND (IMPURITY_INDEX_SCALED&lt;=-1.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&lt;=-2.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>IMPURITY_INDEX_SCALED &gt;-2.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="26">
-            <position x="-112.0" y="640.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((IMPURITY_INDEX_SCALED&gt;-1.0) AND (IMPURITY_INDEX_SCALED&lt;=0.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0))</object>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;4.1)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;1.5))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
             <ndimVector>
-                <coordinate>2.0</coordinate>
-                <coordinate>2.0</coordinate>
+                <coordinate>7.0</coordinate>
+                <coordinate>8.0</coordinate>
             </ndimVector>
         </node>
-        <node id="27">
+        <node id="55">
+            <position x="-168.0" y="960.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;-1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-4.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-2.5))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="56">
             <position x="-324.0" y="600.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
@@ -5466,10 +4056,10 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((IMPURITY_INDEX_SCALED&gt;0.0) AND (IMPURITY_INDEX_SCALED&lt;=1.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&lt;=-2.0))</object>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;-1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-7.0))</object>
                 </objectContingent>
                 <attributeContingent>
-                    <attribute>IMPURITY_INDEX_SCALED &gt;0.0</attribute>
+                    <attribute>TEMPERATURE_DIFFERENCE_SCALED &gt;-1.0</attribute>
                 </attributeContingent>
             </concept>
             <ndimVector>
@@ -5477,8 +4067,8 @@
                 <coordinate>3.0</coordinate>
             </ndimVector>
         </node>
-        <node id="28">
-            <position x="-332.0" y="1480.0" />
+        <node id="57">
+            <position x="156.0" y="360.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -5493,96 +4083,68 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((IMPURITY_INDEX_SCALED&gt;2.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;4.0))</object>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&lt;=-3.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-4.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-2.5))</object>
                 </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>4.0</coordinate>
-                <coordinate>5.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="29">
-            <position x="-276.0" y="1160.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((IMPURITY_INDEX_SCALED&gt;1.0) AND (IMPURITY_INDEX_SCALED&lt;=2.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.0))</object>
-                </objectContingent>
-                <attributeContingent />
+                <attributeContingent>
+                    <attribute>TOTAL_COOLING_CONSUMPTION_SCALED &gt;-4.0</attribute>
+                </attributeContingent>
             </concept>
             <ndimVector>
                 <coordinate>3.0</coordinate>
-                <coordinate>4.0</coordinate>
+                <coordinate>0.0</coordinate>
             </ndimVector>
         </node>
-        <edge from="22" to="0" />
-        <edge from="17" to="0" />
-        <edge from="3" to="1" />
-        <edge from="4" to="1" />
-        <edge from="13" to="2" />
-        <edge from="15" to="2" />
-        <edge from="10" to="3" />
-        <edge from="5" to="3" />
-        <edge from="5" to="4" />
-        <edge from="26" to="4" />
-        <edge from="0" to="5" />
-        <edge from="23" to="5" />
-        <edge from="14" to="6" />
-        <edge from="1" to="6" />
-        <edge from="15" to="7" />
-        <edge from="9" to="7" />
-        <edge from="21" to="8" />
-        <edge from="29" to="8" />
-        <edge from="26" to="9" />
-        <edge from="12" to="9" />
-        <edge from="23" to="10" />
-        <edge from="6" to="11" />
-        <edge from="29" to="11" />
-        <edge from="18" to="12" />
-        <edge from="27" to="12" />
-        <edge from="16" to="13" />
-        <edge from="4" to="14" />
-        <edge from="9" to="14" />
-        <edge from="16" to="15" />
-        <edge from="12" to="15" />
-        <edge from="27" to="16" />
-        <edge from="24" to="17" />
-        <edge from="22" to="18" />
-        <edge from="19" to="18" />
-        <edge from="25" to="19" />
-        <edge from="2" to="21" />
-        <edge from="7" to="21" />
-        <edge from="24" to="22" />
-        <edge from="25" to="22" />
-        <edge from="17" to="23" />
-        <edge from="20" to="24" />
-        <edge from="20" to="25" />
-        <edge from="0" to="26" />
-        <edge from="18" to="26" />
-        <edge from="19" to="27" />
-        <edge from="8" to="28" />
-        <edge from="11" to="28" />
-        <edge from="14" to="29" />
-        <edge from="7" to="29" />
-        <projectionBase>
-            <vector x="52.0" y="120.0" />
-            <vector x="-108.0" y="200.0" />
-        </projectionBase>
-    </diagram>
-    <diagram title="GriSca_Cooling_x_RUL">
-        <node id="0">
+        <node id="58">
+            <position x="100.0" y="680.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;-3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=-2.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-2.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="59">
+            <position x="-220.0" y="840.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;-1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-5.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-4.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="60">
             <position x="-436.0" y="1240.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
@@ -5598,7 +4160,7 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-4.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-3.0)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-5.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-4.0))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
@@ -5607,8 +4169,8 @@
                 <coordinate>5.0</coordinate>
             </ndimVector>
         </node>
-        <node id="1">
-            <position x="-108.0" y="200.0" />
+        <node id="61">
+            <position x="44.0" y="1000.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -5623,15 +4185,456 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-6.0)) AND ((RUL_SCALED&gt;0.0) AND (RUL_SCALED&lt;=1.0))</object>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;-2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=-1.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-1.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="62">
+            <position x="48.0" y="560.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;-3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=-2.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-4.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-2.5))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="63">
+            <position x="-216.0" y="400.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;-2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=-1.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-7.0))</object>
                 </objectContingent>
                 <attributeContingent>
-                    <attribute>RUL_SCALED &gt;0.0</attribute>
+                    <attribute>TEMPERATURE_DIFFERENCE_SCALED &gt;-2.0</attribute>
                 </attributeContingent>
             </concept>
             <ndimVector>
                 <coordinate>0.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="64">
+            <position x="364.0" y="840.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&lt;=-3.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;1.5))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>TOTAL_COOLING_CONSUMPTION_SCALED &gt;1.5</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>7.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="65">
+            <position x="-276.0" y="1160.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=1.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-4.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-2.5))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="66">
+            <position x="256.0" y="1040.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;-3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=-2.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;1.5))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>7.0</coordinate>
                 <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="67">
+            <position x="-648.0" y="1200.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=3.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-7.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>TEMPERATURE_DIFFERENCE_SCALED &gt;2.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>6.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="68">
+            <position x="-272.0" y="720.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;-1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-7.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-5.5))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="69">
+            <position x="104.0" y="240.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&lt;=-3.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-5.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-4.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>TOTAL_COOLING_CONSUMPTION_SCALED &gt;-5.5</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="70">
+            <position x="52.0" y="120.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&lt;=-3.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-7.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-5.5))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>TOTAL_COOLING_CONSUMPTION_SCALED &gt;-7.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="71">
+            <position x="-12.0" y="1320.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TEMPERATURE_DIFFERENCE_SCALED&gt;-1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0)) AND ((TOTAL_COOLING_CONSUMPTION_SCALED&gt;0.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=1.5))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <edge from="21" to="0" />
+        <edge from="32" to="0" />
+        <edge from="5" to="1" />
+        <edge from="23" to="1" />
+        <edge from="0" to="2" />
+        <edge from="62" to="2" />
+        <edge from="11" to="3" />
+        <edge from="25" to="3" />
+        <edge from="49" to="4" />
+        <edge from="67" to="5" />
+        <edge from="46" to="5" />
+        <edge from="12" to="6" />
+        <edge from="35" to="6" />
+        <edge from="31" to="7" />
+        <edge from="36" to="7" />
+        <edge from="37" to="8" />
+        <edge from="61" to="8" />
+        <edge from="52" to="9" />
+        <edge from="1" to="9" />
+        <edge from="22" to="10" />
+        <edge from="36" to="10" />
+        <edge from="14" to="11" />
+        <edge from="53" to="11" />
+        <edge from="3" to="12" />
+        <edge from="13" to="12" />
+        <edge from="33" to="13" />
+        <edge from="11" to="13" />
+        <edge from="37" to="14" />
+        <edge from="65" to="14" />
+        <edge from="18" to="15" />
+        <edge from="25" to="15" />
+        <edge from="57" to="16" />
+        <edge from="59" to="17" />
+        <edge from="26" to="17" />
+        <edge from="1" to="18" />
+        <edge from="44" to="18" />
+        <edge from="3" to="19" />
+        <edge from="15" to="19" />
+        <edge from="51" to="20" />
+        <edge from="30" to="21" />
+        <edge from="69" to="21" />
+        <edge from="29" to="22" />
+        <edge from="47" to="22" />
+        <edge from="67" to="23" />
+        <edge from="43" to="24" />
+        <edge from="71" to="24" />
+        <edge from="44" to="25" />
+        <edge from="53" to="25" />
+        <edge from="49" to="26" />
+        <edge from="68" to="26" />
+        <edge from="42" to="27" />
+        <edge from="15" to="27" />
+        <edge from="38" to="28" />
+        <edge from="61" to="28" />
+        <edge from="27" to="29" />
+        <edge from="19" to="29" />
+        <edge from="20" to="30" />
+        <edge from="70" to="30" />
+        <edge from="6" to="31" />
+        <edge from="50" to="31" />
+        <edge from="63" to="32" />
+        <edge from="30" to="32" />
+        <edge from="8" to="33" />
+        <edge from="14" to="33" />
+        <edge from="40" to="34" />
+        <edge from="13" to="35" />
+        <edge from="48" to="35" />
+        <edge from="6" to="36" />
+        <edge from="47" to="36" />
+        <edge from="55" to="37" />
+        <edge from="45" to="37" />
+        <edge from="34" to="38" />
+        <edge from="39" to="38" />
+        <edge from="58" to="39" />
+        <edge from="40" to="39" />
+        <edge from="16" to="40" />
+        <edge from="48" to="41" />
+        <edge from="24" to="41" />
+        <edge from="9" to="42" />
+        <edge from="18" to="42" />
+        <edge from="28" to="43" />
+        <edge from="66" to="43" />
+        <edge from="60" to="44" />
+        <edge from="5" to="44" />
+        <edge from="58" to="45" />
+        <edge from="2" to="45" />
+        <edge from="4" to="46" />
+        <edge from="26" to="46" />
+        <edge from="12" to="47" />
+        <edge from="19" to="47" />
+        <edge from="33" to="48" />
+        <edge from="71" to="48" />
+        <edge from="56" to="49" />
+        <edge from="35" to="50" />
+        <edge from="41" to="50" />
+        <edge from="23" to="52" />
+        <edge from="60" to="53" />
+        <edge from="65" to="53" />
+        <edge from="7" to="54" />
+        <edge from="10" to="54" />
+        <edge from="59" to="55" />
+        <edge from="2" to="55" />
+        <edge from="63" to="56" />
+        <edge from="69" to="57" />
+        <edge from="16" to="58" />
+        <edge from="62" to="58" />
+        <edge from="0" to="59" />
+        <edge from="68" to="59" />
+        <edge from="17" to="60" />
+        <edge from="46" to="60" />
+        <edge from="39" to="61" />
+        <edge from="45" to="61" />
+        <edge from="21" to="62" />
+        <edge from="57" to="62" />
+        <edge from="20" to="63" />
+        <edge from="34" to="64" />
+        <edge from="17" to="65" />
+        <edge from="55" to="65" />
+        <edge from="38" to="66" />
+        <edge from="64" to="66" />
+        <edge from="4" to="67" />
+        <edge from="32" to="68" />
+        <edge from="56" to="68" />
+        <edge from="70" to="69" />
+        <edge from="51" to="70" />
+        <edge from="28" to="71" />
+        <edge from="8" to="71" />
+        <projectionBase>
+            <vector x="52.0" y="120.0" />
+            <vector x="-108.0" y="200.0" />
+        </projectionBase>
+    </diagram>
+    <diagram title="GrdSca_ProductionLoad_x_ThermalStress">
+        <node id="0">
+            <position x="-552.0" y="2320.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;3.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.1))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>8.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="1">
+            <position x="-596.0" y="1320.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;0.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=1.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>6.0</coordinate>
             </ndimVector>
         </node>
         <node id="2">
@@ -5650,7 +4653,7 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;0.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=1.0)) AND ((RUL_SCALED&gt;0.0) AND (RUL_SCALED&lt;=1.0))</object>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-7.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-6.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=3.0))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
@@ -5660,7 +4663,7 @@
             </ndimVector>
         </node>
         <node id="3">
-            <position x="-116.0" y="1080.0" />
+            <position x="-284.0" y="2040.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -5675,17 +4678,17 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-1.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=0.0)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;0.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=1.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;4.1))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
             <ndimVector>
-                <coordinate>4.0</coordinate>
-                <coordinate>3.0</coordinate>
+                <coordinate>7.0</coordinate>
+                <coordinate>6.0</coordinate>
             </ndimVector>
         </node>
         <node id="4">
-            <position x="-384.0" y="1360.0" />
+            <position x="148.0" y="1240.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -5700,399 +4703,16 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-3.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-1.5)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-6.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-4.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;4.1))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
             <ndimVector>
-                <coordinate>3.0</coordinate>
-                <coordinate>5.0</coordinate>
+                <coordinate>7.0</coordinate>
+                <coordinate>2.0</coordinate>
             </ndimVector>
         </node>
         <node id="5">
-            <position x="-224.0" y="1280.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-1.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=0.0)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>4.0</coordinate>
-                <coordinate>4.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="6">
-            <position x="-12.0" y="1320.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;1.0)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>6.0</coordinate>
-                <coordinate>3.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="7">
-            <position x="-492.0" y="1560.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-3.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-1.5)) AND ((RUL_SCALED&gt;5.0) AND (RUL_SCALED&lt;=6.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>3.0</coordinate>
-                <coordinate>6.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="8">
-            <position x="-272.0" y="720.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-6.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-4.5)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>1.0</coordinate>
-                <coordinate>3.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="9">
-            <position x="-332.0" y="1480.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-1.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=0.0)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>4.0</coordinate>
-                <coordinate>5.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="10">
-            <position x="-548.0" y="1880.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-1.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=0.0)) AND ((RUL_SCALED&gt;6.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>4.0</coordinate>
-                <coordinate>7.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="11">
-            <position x="96.0" y="1120.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;1.0)) AND ((RUL_SCALED&gt;1.0) AND (RUL_SCALED&lt;=2.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>6.0</coordinate>
-                <coordinate>2.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="12">
-            <position x="-704.0" y="1520.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-6.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-4.5)) AND ((RUL_SCALED&gt;6.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>1.0</coordinate>
-                <coordinate>7.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="13">
-            <position x="-600.0" y="1760.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-3.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-1.5)) AND ((RUL_SCALED&gt;6.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>3.0</coordinate>
-                <coordinate>7.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="14">
-            <position x="-216.0" y="400.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-6.0)) AND ((RUL_SCALED&gt;1.0) AND (RUL_SCALED&lt;=2.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>RUL_SCALED &gt;1.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>2.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="15">
-            <position x="104.0" y="240.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-4.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-3.0)) AND ((RUL_SCALED&lt;=0.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>TOTAL_COOLING_CONSUMPTION_SCALED &gt;-4.5</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>2.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="16">
-            <position x="100.0" y="680.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-1.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=0.0)) AND ((RUL_SCALED&gt;0.0) AND (RUL_SCALED&lt;=1.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>4.0</coordinate>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="17">
-            <position x="52.0" y="120.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-6.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-4.5)) AND ((RUL_SCALED&lt;=0.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>TOTAL_COOLING_CONSUMPTION_SCALED &gt;-6.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="18">
-            <position x="-324.0" y="600.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-6.0)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>RUL_SCALED &gt;2.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>3.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="19">
-            <position x="-168.0" y="960.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-3.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-1.5)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>3.0</coordinate>
-                <coordinate>3.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="20">
             <position x="-56.0" y="320.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
@@ -6108,7 +4728,7 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-6.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-4.5)) AND ((RUL_SCALED&gt;0.0) AND (RUL_SCALED&lt;=1.0))</object>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-7.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-6.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=-1.0))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
@@ -6117,57 +4737,7 @@
                 <coordinate>1.0</coordinate>
             </ndimVector>
         </node>
-        <node id="21">
-            <position x="-652.0" y="1640.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-4.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-3.0)) AND ((RUL_SCALED&gt;6.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>2.0</coordinate>
-                <coordinate>7.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="22">
-            <position x="-388.0" y="1800.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;0.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=1.0)) AND ((RUL_SCALED&gt;5.0) AND (RUL_SCALED&lt;=6.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>5.0</coordinate>
-                <coordinate>6.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="23">
+        <node id="6">
             <position x="208.0" y="480.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
@@ -6183,10 +4753,10 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-1.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=0.0)) AND ((RUL_SCALED&lt;=0.0))</object>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&lt;=-7.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0))</object>
                 </objectContingent>
                 <attributeContingent>
-                    <attribute>TOTAL_COOLING_CONSUMPTION_SCALED &gt;-1.5</attribute>
+                    <attribute>TEMPERATURE_DIFFERENCE_SCALED &gt;1.0</attribute>
                 </attributeContingent>
             </concept>
             <ndimVector>
@@ -6194,140 +4764,7 @@
                 <coordinate>0.0</coordinate>
             </ndimVector>
         </node>
-        <node id="24">
-            <position x="-432.0" y="800.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-6.0)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>RUL_SCALED &gt;3.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>4.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="25">
-            <position x="-756.0" y="1400.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-6.0)) AND ((RUL_SCALED&gt;6.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>RUL_SCALED &gt;6.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>7.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="26">
-            <position x="0.0" y="0.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-6.0)) AND ((RUL_SCALED&lt;=0.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="27">
-            <position x="156.0" y="360.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-3.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-1.5)) AND ((RUL_SCALED&lt;=0.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>TOTAL_COOLING_CONSUMPTION_SCALED &gt;-3.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>3.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="28">
-            <position x="-648.0" y="1200.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-6.0)) AND ((RUL_SCALED&gt;5.0) AND (RUL_SCALED&lt;=6.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>RUL_SCALED &gt;5.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>6.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="29">
+        <node id="7">
             <position x="-220.0" y="840.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
@@ -6343,7 +4780,7 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-4.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-3.0)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-4.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-4.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
@@ -6352,34 +4789,7 @@
                 <coordinate>3.0</coordinate>
             </ndimVector>
         </node>
-        <node id="30">
-            <position x="312.0" y="720.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;1.0)) AND ((RUL_SCALED&lt;=0.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>TOTAL_COOLING_CONSUMPTION_SCALED &gt;1.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>6.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="31">
+        <node id="8">
             <position x="48.0" y="560.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
@@ -6395,7 +4805,7 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-3.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-1.5)) AND ((RUL_SCALED&gt;0.0) AND (RUL_SCALED&lt;=1.0))</object>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-7.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-6.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=1.0))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
@@ -6404,7 +4814,619 @@
                 <coordinate>1.0</coordinate>
             </ndimVector>
         </node>
+        <node id="9">
+            <position x="-388.0" y="1800.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;0.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=1.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=3.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>6.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="10">
+            <position x="40.0" y="1440.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-4.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-4.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;4.1))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>7.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="11">
+            <position x="-64.0" y="1200.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-4.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-4.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=3.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="12">
+            <position x="-392.0" y="2240.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;1.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=3.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;4.1))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>7.0</coordinate>
+                <coordinate>7.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="13">
+            <position x="-656.0" y="2080.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;3.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>8.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="14">
+            <position x="104.0" y="240.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&lt;=-7.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>TEMPERATURE_DIFFERENCE_SCALED &gt;-1.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="15">
+            <position x="-164.0" y="520.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-6.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-4.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="16">
+            <position x="364.0" y="840.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&lt;=-7.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;4.1))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>TEMPERATURE_DIFFERENCE_SCALED &gt;4.1</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>7.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="17">
+            <position x="-496.0" y="2000.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;1.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=3.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=3.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>7.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="18">
+            <position x="-704.0" y="1520.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;1.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=3.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>7.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="19">
+            <position x="-328.0" y="1040.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-4.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-1.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="20">
+            <position x="-384.0" y="1360.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-1.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=0.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="21">
+            <position x="260.0" y="600.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&lt;=-7.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=3.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>TEMPERATURE_DIFFERENCE_SCALED &gt;2.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="22">
+            <position x="0.0" y="0.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&lt;=-7.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&lt;=-3.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="23">
+            <position x="-864.0" y="1600.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;3.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&lt;=-3.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>STEEL_WEIGHT_TONN_SCALED &gt;3.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>8.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="24">
+            <position x="256.0" y="1040.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-7.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-6.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;4.1))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>7.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="25">
+            <position x="-216.0" y="400.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-6.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-4.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&lt;=-3.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>STEEL_WEIGHT_TONN_SCALED &gt;-6.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="26">
+            <position x="-600.0" y="1760.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;1.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=3.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>7.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="27">
+            <position x="-648.0" y="1200.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;0.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=1.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&lt;=-3.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>STEEL_WEIGHT_TONN_SCALED &gt;0.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>6.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="28">
+            <position x="-436.0" y="1240.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-1.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=0.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="29">
+            <position x="-280.0" y="1600.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-1.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=0.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=3.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="30">
+            <position x="-176.0" y="1840.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-1.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=0.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;4.1))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>7.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="31">
+            <position x="-116.0" y="1080.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-4.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-4.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
         <node id="32">
+            <position x="-548.0" y="1880.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;1.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=3.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>7.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="33">
             <position x="-488.0" y="1120.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
@@ -6420,7 +5442,7 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-6.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-4.5)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-1.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=0.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=-1.0))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
@@ -6429,33 +5451,8 @@
                 <coordinate>5.0</coordinate>
             </ndimVector>
         </node>
-        <node id="33">
-            <position x="-440.0" y="1680.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-1.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=0.0)) AND ((RUL_SCALED&gt;5.0) AND (RUL_SCALED&lt;=6.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>4.0</coordinate>
-                <coordinate>6.0</coordinate>
-            </ndimVector>
-        </node>
         <node id="34">
-            <position x="-112.0" y="640.0" />
+            <position x="-756.0" y="1400.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -6470,16 +5467,249 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-4.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-3.0)) AND ((RUL_SCALED&gt;1.0) AND (RUL_SCALED&lt;=2.0))</object>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;1.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=3.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&lt;=-3.0))</object>
                 </objectContingent>
-                <attributeContingent />
+                <attributeContingent>
+                    <attribute>STEEL_WEIGHT_TONN_SCALED &gt;1.5</attribute>
+                </attributeContingent>
             </concept>
             <ndimVector>
-                <coordinate>2.0</coordinate>
-                <coordinate>2.0</coordinate>
+                <coordinate>0.0</coordinate>
+                <coordinate>7.0</coordinate>
             </ndimVector>
         </node>
         <node id="35">
+            <position x="-12.0" y="1320.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-4.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-4.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.1))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="36">
+            <position x="-68.0" y="1640.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-4.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-1.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;4.1))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>7.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="37">
+            <position x="312.0" y="720.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&lt;=-7.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.1))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>TEMPERATURE_DIFFERENCE_SCALED &gt;3.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="38">
+            <position x="-540.0" y="1000.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-1.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=0.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&lt;=-3.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>STEEL_WEIGHT_TONN_SCALED &gt;-1.5</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="39">
+            <position x="-432.0" y="800.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-4.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-1.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&lt;=-3.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>STEEL_WEIGHT_TONN_SCALED &gt;-4.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="40">
+            <position x="-652.0" y="1640.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;1.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=3.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>7.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="41">
+            <position x="-228.0" y="1720.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-1.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=0.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.1))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="42">
+            <position x="-604.0" y="2200.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;3.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=3.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>8.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="43">
+            <position x="-760.0" y="1840.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;3.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>8.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="44">
             <position x="-380.0" y="920.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
@@ -6495,7 +5725,7 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-6.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-4.5)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-4.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-1.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=-1.0))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
@@ -6504,7 +5734,82 @@
                 <coordinate>4.0</coordinate>
             </ndimVector>
         </node>
-        <node id="36">
+        <node id="45">
+            <position x="204.0" y="920.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-7.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-6.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.1))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="46">
+            <position x="-112.0" y="640.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-6.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-4.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="47">
+            <position x="96.0" y="1120.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-6.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-4.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.1))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="48">
             <position x="-60.0" y="760.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
@@ -6520,12 +5825,1671 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-3.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-1.5)) AND ((RUL_SCALED&gt;1.0) AND (RUL_SCALED&lt;=2.0))</object>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-6.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-4.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=1.0))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
             <ndimVector>
                 <coordinate>3.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="49">
+            <position x="-332.0" y="1480.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-1.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=0.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="50">
+            <position x="-500.0" y="2440.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;3.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;4.1))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>7.0</coordinate>
+                <coordinate>8.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="51">
+            <position x="-120.0" y="1520.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-4.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-1.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.1))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="52">
+            <position x="100.0" y="680.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-7.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-6.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="53">
+            <position x="-444.0" y="2120.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;1.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=3.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.1))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>7.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="54">
+            <position x="-4.0" y="440.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-7.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-6.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="55">
+            <position x="-224.0" y="1280.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-4.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-1.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="56">
+            <position x="-336.0" y="1920.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;0.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=1.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.1))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>6.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="57">
+            <position x="-172.0" y="1400.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-4.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-1.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=3.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="58">
+            <position x="-168.0" y="960.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-4.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-4.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="59">
+            <position x="-108.0" y="200.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-7.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-6.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&lt;=-3.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>STEEL_WEIGHT_TONN_SCALED &gt;-7.5</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="60">
+            <position x="-324.0" y="600.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-4.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-4.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&lt;=-3.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>STEEL_WEIGHT_TONN_SCALED &gt;-4.5</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="61">
+            <position x="-8.0" y="880.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-6.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-4.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="62">
+            <position x="52.0" y="120.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&lt;=-7.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>TEMPERATURE_DIFFERENCE_SCALED &gt;-3.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="63">
+            <position x="-272.0" y="720.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-4.5) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-4.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="64">
+            <position x="44.0" y="1000.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-6.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-4.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=3.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="65">
+            <position x="-544.0" y="1440.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;0.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=1.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>6.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="66">
+            <position x="-708.0" y="1960.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;3.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>8.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="67">
+            <position x="-276.0" y="1160.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;-4.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=-1.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="68">
+            <position x="-440.0" y="1680.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;0.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=1.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>6.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="69">
+            <position x="-812.0" y="1720.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;3.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>8.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="70">
+            <position x="-492.0" y="1560.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&gt;0.0) AND (STEEL_WEIGHT_TONN_SCALED&lt;=1.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>6.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="71">
+            <position x="156.0" y="360.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((STEEL_WEIGHT_TONN_SCALED&lt;=-7.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=1.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>TEMPERATURE_DIFFERENCE_SCALED &gt;0.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <edge from="42" to="0" />
+        <edge from="53" to="0" />
+        <edge from="27" to="1" />
+        <edge from="33" to="1" />
+        <edge from="21" to="2" />
+        <edge from="52" to="2" />
+        <edge from="30" to="3" />
+        <edge from="56" to="3" />
+        <edge from="47" to="4" />
+        <edge from="24" to="4" />
+        <edge from="59" to="5" />
+        <edge from="62" to="5" />
+        <edge from="71" to="6" />
+        <edge from="63" to="7" />
+        <edge from="46" to="7" />
+        <edge from="71" to="8" />
+        <edge from="54" to="8" />
+        <edge from="29" to="9" />
+        <edge from="68" to="9" />
+        <edge from="4" to="10" />
+        <edge from="35" to="10" />
+        <edge from="64" to="11" />
+        <edge from="31" to="11" />
+        <edge from="3" to="12" />
+        <edge from="53" to="12" />
+        <edge from="66" to="13" />
+        <edge from="32" to="13" />
+        <edge from="62" to="14" />
+        <edge from="5" to="15" />
+        <edge from="25" to="15" />
+        <edge from="37" to="16" />
+        <edge from="9" to="17" />
+        <edge from="32" to="17" />
+        <edge from="1" to="18" />
+        <edge from="34" to="18" />
+        <edge from="7" to="19" />
+        <edge from="44" to="19" />
+        <edge from="28" to="20" />
+        <edge from="67" to="20" />
+        <edge from="6" to="21" />
+        <edge from="34" to="23" />
+        <edge from="45" to="24" />
+        <edge from="16" to="24" />
+        <edge from="59" to="25" />
+        <edge from="40" to="26" />
+        <edge from="70" to="26" />
+        <edge from="38" to="27" />
+        <edge from="33" to="28" />
+        <edge from="19" to="28" />
+        <edge from="49" to="29" />
+        <edge from="57" to="29" />
+        <edge from="36" to="30" />
+        <edge from="41" to="30" />
+        <edge from="58" to="31" />
+        <edge from="61" to="31" />
+        <edge from="26" to="32" />
+        <edge from="68" to="32" />
+        <edge from="38" to="33" />
+        <edge from="44" to="33" />
+        <edge from="27" to="34" />
+        <edge from="11" to="35" />
+        <edge from="47" to="35" />
+        <edge from="10" to="36" />
+        <edge from="51" to="36" />
+        <edge from="21" to="37" />
+        <edge from="39" to="38" />
+        <edge from="60" to="39" />
+        <edge from="18" to="40" />
+        <edge from="65" to="40" />
+        <edge from="51" to="41" />
+        <edge from="29" to="41" />
+        <edge from="13" to="42" />
+        <edge from="17" to="42" />
+        <edge from="40" to="43" />
+        <edge from="69" to="43" />
+        <edge from="39" to="44" />
+        <edge from="63" to="44" />
+        <edge from="2" to="45" />
+        <edge from="37" to="45" />
+        <edge from="54" to="46" />
+        <edge from="15" to="46" />
+        <edge from="64" to="47" />
+        <edge from="45" to="47" />
+        <edge from="8" to="48" />
+        <edge from="46" to="48" />
+        <edge from="20" to="49" />
+        <edge from="55" to="49" />
+        <edge from="0" to="50" />
+        <edge from="12" to="50" />
+        <edge from="57" to="51" />
+        <edge from="35" to="51" />
+        <edge from="6" to="52" />
+        <edge from="8" to="52" />
+        <edge from="17" to="53" />
+        <edge from="56" to="53" />
+        <edge from="5" to="54" />
+        <edge from="14" to="54" />
+        <edge from="31" to="55" />
+        <edge from="67" to="55" />
+        <edge from="9" to="56" />
+        <edge from="41" to="56" />
+        <edge from="11" to="57" />
+        <edge from="55" to="57" />
+        <edge from="7" to="58" />
+        <edge from="48" to="58" />
+        <edge from="22" to="59" />
+        <edge from="25" to="60" />
+        <edge from="48" to="61" />
+        <edge from="52" to="61" />
+        <edge from="22" to="62" />
+        <edge from="60" to="63" />
+        <edge from="15" to="63" />
+        <edge from="2" to="64" />
+        <edge from="61" to="64" />
+        <edge from="1" to="65" />
+        <edge from="28" to="65" />
+        <edge from="43" to="66" />
+        <edge from="26" to="66" />
+        <edge from="58" to="67" />
+        <edge from="19" to="67" />
+        <edge from="49" to="68" />
+        <edge from="70" to="68" />
+        <edge from="18" to="69" />
+        <edge from="23" to="69" />
+        <edge from="20" to="70" />
+        <edge from="65" to="70" />
+        <edge from="14" to="71" />
+        <projectionBase>
+            <vector x="52.0" y="120.0" />
+            <vector x="-108.0" y="200.0" />
+        </projectionBase>
+    </diagram>
+    <diagram title="GriSca_Impurity_x_ThermalStress">
+        <node id="0">
+            <position x="-432.0" y="800.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&lt;=-2.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>TEMPERATURE_DIFFERENCE_SCALED &gt;1.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="1">
+            <position x="152.0" y="800.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;2.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-2.5) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="2">
+            <position x="-116.0" y="1080.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;1.25) AND (IMPURITY_INDEX_SCALED&lt;=2.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="3">
+            <position x="-220.0" y="840.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;-1.25) AND (IMPURITY_INDEX_SCALED&lt;=0.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="4">
+            <position x="208.0" y="480.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;1.25) AND (IMPURITY_INDEX_SCALED&lt;=2.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&lt;=-2.5))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>IMPURITY_INDEX_SCALED &gt;1.25</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="5">
+            <position x="-168.0" y="960.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;0.0) AND (IMPURITY_INDEX_SCALED&lt;=1.25)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="6">
+            <position x="-436.0" y="1240.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;-1.25) AND (IMPURITY_INDEX_SCALED&lt;=0.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=3.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="7">
+            <position x="-548.0" y="1880.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;1.25) AND (IMPURITY_INDEX_SCALED&lt;=2.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;4.1))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>7.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="8">
+            <position x="-496.0" y="2000.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;2.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;4.1))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>7.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="9">
+            <position x="-388.0" y="1800.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;2.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.1))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>6.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="10">
+            <position x="-56.0" y="320.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;-2.5) AND (IMPURITY_INDEX_SCALED&lt;=-1.25)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-2.5) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="11">
+            <position x="-324.0" y="600.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&lt;=-2.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=1.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>TEMPERATURE_DIFFERENCE_SCALED &gt;0.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="12">
+            <position x="-328.0" y="1040.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;-1.25) AND (IMPURITY_INDEX_SCALED&lt;=0.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="13">
+            <position x="-216.0" y="400.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&lt;=-2.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>TEMPERATURE_DIFFERENCE_SCALED &gt;-1.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="14">
+            <position x="-272.0" y="720.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;-2.5) AND (IMPURITY_INDEX_SCALED&lt;=-1.25)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="15">
+            <position x="-8.0" y="880.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;1.25) AND (IMPURITY_INDEX_SCALED&lt;=2.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="16">
+            <position x="-544.0" y="1440.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;-1.25) AND (IMPURITY_INDEX_SCALED&lt;=0.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.1))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>6.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="17">
+            <position x="-648.0" y="1200.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&lt;=-2.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.1))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>TEMPERATURE_DIFFERENCE_SCALED &gt;3.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>6.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="18">
+            <position x="156.0" y="360.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;0.0) AND (IMPURITY_INDEX_SCALED&lt;=1.25)) AND ((TEMPERATURE_DIFFERENCE_SCALED&lt;=-2.5))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>IMPURITY_INDEX_SCALED &gt;0.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="19">
+            <position x="-704.0" y="1520.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;-2.5) AND (IMPURITY_INDEX_SCALED&lt;=-1.25)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;4.1))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>7.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="20">
+            <position x="-172.0" y="1400.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;2.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="21">
+            <position x="-600.0" y="1760.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;0.0) AND (IMPURITY_INDEX_SCALED&lt;=1.25)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;4.1))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>7.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="22">
+            <position x="48.0" y="560.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;0.0) AND (IMPURITY_INDEX_SCALED&lt;=1.25)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-2.5) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="23">
+            <position x="-332.0" y="1480.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;1.25) AND (IMPURITY_INDEX_SCALED&lt;=2.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=3.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="24">
+            <position x="-488.0" y="1120.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;-2.5) AND (IMPURITY_INDEX_SCALED&lt;=-1.25)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=3.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="25">
+            <position x="-164.0" y="520.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;-2.5) AND (IMPURITY_INDEX_SCALED&lt;=-1.25)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="26">
+            <position x="100.0" y="680.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;1.25) AND (IMPURITY_INDEX_SCALED&lt;=2.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-2.5) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="27">
+            <position x="260.0" y="600.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;2.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&lt;=-2.5))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>IMPURITY_INDEX_SCALED &gt;2.5</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="28">
+            <position x="-380.0" y="920.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;-2.5) AND (IMPURITY_INDEX_SCALED&lt;=-1.25)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="29">
+            <position x="-540.0" y="1000.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&lt;=-2.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=3.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>TEMPERATURE_DIFFERENCE_SCALED &gt;2.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="30">
+            <position x="-108.0" y="200.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&lt;=-2.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-2.5) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>TEMPERATURE_DIFFERENCE_SCALED &gt;-2.5</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="31">
+            <position x="-280.0" y="1600.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;2.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=3.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="32">
+            <position x="-596.0" y="1320.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;-2.5) AND (IMPURITY_INDEX_SCALED&lt;=-1.25)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.1))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>6.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="33">
+            <position x="-276.0" y="1160.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;0.0) AND (IMPURITY_INDEX_SCALED&lt;=1.25)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="34">
+            <position x="-60.0" y="760.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;0.0) AND (IMPURITY_INDEX_SCALED&lt;=1.25)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="35">
+            <position x="-492.0" y="1560.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;0.0) AND (IMPURITY_INDEX_SCALED&lt;=1.25)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.1))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>6.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="36">
+            <position x="-112.0" y="640.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;-1.25) AND (IMPURITY_INDEX_SCALED&lt;=0.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
                 <coordinate>2.0</coordinate>
             </ndimVector>
         </node>
@@ -6545,7 +7509,7 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-4.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-3.0)) AND ((RUL_SCALED&gt;0.0) AND (RUL_SCALED&lt;=1.0))</object>
+                    <object>((IMPURITY_INDEX_SCALED&gt;-1.25) AND (IMPURITY_INDEX_SCALED&lt;=0.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-2.5) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=-1.0))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
@@ -6555,6 +7519,185 @@
             </ndimVector>
         </node>
         <node id="38">
+            <position x="52.0" y="120.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;-2.5) AND (IMPURITY_INDEX_SCALED&lt;=-1.25)) AND ((TEMPERATURE_DIFFERENCE_SCALED&lt;=-2.5))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>IMPURITY_INDEX_SCALED &gt;-2.5</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="39">
+            <position x="-224.0" y="1280.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;1.25) AND (IMPURITY_INDEX_SCALED&lt;=2.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=2.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="40">
+            <position x="-652.0" y="1640.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;-1.25) AND (IMPURITY_INDEX_SCALED&lt;=0.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;4.1))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>7.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="41">
+            <position x="-384.0" y="1360.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;0.0) AND (IMPURITY_INDEX_SCALED&lt;=1.25)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;2.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=3.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="42">
+            <position x="0.0" y="0.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&lt;=-2.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&lt;=-2.5))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="43">
+            <position x="-440.0" y="1680.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;1.25) AND (IMPURITY_INDEX_SCALED&lt;=2.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;3.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=4.1))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>6.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="44">
+            <position x="104.0" y="240.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((IMPURITY_INDEX_SCALED&gt;-1.25) AND (IMPURITY_INDEX_SCALED&lt;=0.0)) AND ((TEMPERATURE_DIFFERENCE_SCALED&lt;=-2.5))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>IMPURITY_INDEX_SCALED &gt;-1.25</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="45">
             <position x="-64.0" y="1200.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
@@ -6570,194 +7713,17 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;0.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=1.0)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
+                    <object>((IMPURITY_INDEX_SCALED&gt;2.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;0.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=1.0))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
             <ndimVector>
                 <coordinate>5.0</coordinate>
                 <coordinate>3.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="39">
-            <position x="-544.0" y="1440.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-4.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-3.0)) AND ((RUL_SCALED&gt;5.0) AND (RUL_SCALED&lt;=6.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>2.0</coordinate>
-                <coordinate>6.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="40">
-            <position x="-120.0" y="1520.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;1.0)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>6.0</coordinate>
-                <coordinate>4.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="41">
-            <position x="204.0" y="920.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;1.0)) AND ((RUL_SCALED&gt;0.0) AND (RUL_SCALED&lt;=1.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>6.0</coordinate>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="42">
-            <position x="-164.0" y="520.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-6.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-4.5)) AND ((RUL_SCALED&gt;1.0) AND (RUL_SCALED&lt;=2.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>1.0</coordinate>
-                <coordinate>2.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="43">
-            <position x="-276.0" y="1160.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-3.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-1.5)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>3.0</coordinate>
-                <coordinate>4.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="44">
-            <position x="-8.0" y="880.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-1.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=0.0)) AND ((RUL_SCALED&gt;1.0) AND (RUL_SCALED&lt;=2.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>4.0</coordinate>
-                <coordinate>2.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="45">
-            <position x="260.0" y="600.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;0.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=1.0)) AND ((RUL_SCALED&lt;=0.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>TOTAL_COOLING_CONSUMPTION_SCALED &gt;0.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>5.0</coordinate>
-                <coordinate>0.0</coordinate>
             </ndimVector>
         </node>
         <node id="46">
-            <position x="-172.0" y="1400.0" />
+            <position x="-756.0" y="1400.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -6772,13 +7738,15 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;0.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=1.0)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
+                    <object>((IMPURITY_INDEX_SCALED&lt;=-2.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;4.1))</object>
                 </objectContingent>
-                <attributeContingent />
+                <attributeContingent>
+                    <attribute>TEMPERATURE_DIFFERENCE_SCALED &gt;4.1</attribute>
+                </attributeContingent>
             </concept>
             <ndimVector>
-                <coordinate>5.0</coordinate>
-                <coordinate>4.0</coordinate>
+                <coordinate>0.0</coordinate>
+                <coordinate>7.0</coordinate>
             </ndimVector>
         </node>
         <node id="47">
@@ -6797,7 +7765,7 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;0.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=1.0)) AND ((RUL_SCALED&gt;1.0) AND (RUL_SCALED&lt;=2.0))</object>
+                    <object>((IMPURITY_INDEX_SCALED&gt;2.5)) AND ((TEMPERATURE_DIFFERENCE_SCALED&gt;-1.0) AND (TEMPERATURE_DIFFERENCE_SCALED&lt;=0.0))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
@@ -6806,312 +7774,349 @@
                 <coordinate>2.0</coordinate>
             </ndimVector>
         </node>
-        <node id="48">
-            <position x="-596.0" y="1320.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-6.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-4.5)) AND ((RUL_SCALED&gt;5.0) AND (RUL_SCALED&lt;=6.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>1.0</coordinate>
-                <coordinate>6.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="49">
-            <position x="-496.0" y="2000.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;0.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=1.0)) AND ((RUL_SCALED&gt;6.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>5.0</coordinate>
-                <coordinate>7.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="50">
-            <position x="-328.0" y="1040.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-4.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-3.0)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>2.0</coordinate>
-                <coordinate>4.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="51">
-            <position x="-444.0" y="2120.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;1.0)) AND ((RUL_SCALED&gt;6.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>6.0</coordinate>
-                <coordinate>7.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="52">
-            <position x="-540.0" y="1000.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-6.0)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>RUL_SCALED &gt;4.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>5.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="53">
-            <position x="-336.0" y="1920.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;1.0)) AND ((RUL_SCALED&gt;5.0) AND (RUL_SCALED&lt;=6.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>6.0</coordinate>
-                <coordinate>6.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="54">
-            <position x="-228.0" y="1720.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;1.0)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>6.0</coordinate>
-                <coordinate>5.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="55">
-            <position x="-280.0" y="1600.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;0.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=1.0)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>5.0</coordinate>
-                <coordinate>5.0</coordinate>
-            </ndimVector>
-        </node>
-        <edge from="32" to="0" />
-        <edge from="50" to="0" />
+        <edge from="11" to="0" />
+        <edge from="27" to="1" />
         <edge from="26" to="1" />
-        <edge from="45" to="2" />
-        <edge from="16" to="2" />
-        <edge from="44" to="3" />
-        <edge from="19" to="3" />
-        <edge from="0" to="4" />
-        <edge from="43" to="4" />
+        <edge from="5" to="2" />
+        <edge from="15" to="2" />
+        <edge from="36" to="3" />
+        <edge from="14" to="3" />
+        <edge from="18" to="4" />
         <edge from="3" to="5" />
-        <edge from="43" to="5" />
-        <edge from="38" to="6" />
-        <edge from="11" to="6" />
-        <edge from="4" to="7" />
-        <edge from="39" to="7" />
-        <edge from="42" to="8" />
-        <edge from="18" to="8" />
-        <edge from="4" to="9" />
-        <edge from="5" to="9" />
-        <edge from="33" to="10" />
-        <edge from="13" to="10" />
-        <edge from="47" to="11" />
-        <edge from="41" to="11" />
-        <edge from="48" to="12" />
-        <edge from="25" to="12" />
-        <edge from="7" to="13" />
-        <edge from="21" to="13" />
-        <edge from="1" to="14" />
-        <edge from="17" to="15" />
-        <edge from="31" to="16" />
-        <edge from="23" to="16" />
-        <edge from="26" to="17" />
-        <edge from="14" to="18" />
-        <edge from="29" to="19" />
-        <edge from="36" to="19" />
-        <edge from="1" to="20" />
-        <edge from="17" to="20" />
-        <edge from="39" to="21" />
-        <edge from="12" to="21" />
-        <edge from="33" to="22" />
-        <edge from="55" to="22" />
-        <edge from="27" to="23" />
-        <edge from="18" to="24" />
-        <edge from="28" to="25" />
-        <edge from="15" to="27" />
-        <edge from="52" to="28" />
-        <edge from="34" to="29" />
-        <edge from="8" to="29" />
-        <edge from="45" to="30" />
-        <edge from="27" to="31" />
-        <edge from="37" to="31" />
-        <edge from="35" to="32" />
-        <edge from="52" to="32" />
-        <edge from="7" to="33" />
-        <edge from="9" to="33" />
-        <edge from="42" to="34" />
-        <edge from="37" to="34" />
-        <edge from="8" to="35" />
-        <edge from="24" to="35" />
-        <edge from="31" to="36" />
-        <edge from="34" to="36" />
-        <edge from="20" to="37" />
-        <edge from="15" to="37" />
-        <edge from="3" to="38" />
-        <edge from="47" to="38" />
-        <edge from="48" to="39" />
-        <edge from="0" to="39" />
-        <edge from="6" to="40" />
-        <edge from="46" to="40" />
-        <edge from="30" to="41" />
-        <edge from="2" to="41" />
-        <edge from="20" to="42" />
-        <edge from="14" to="42" />
-        <edge from="50" to="43" />
-        <edge from="19" to="43" />
-        <edge from="36" to="44" />
-        <edge from="16" to="44" />
-        <edge from="23" to="45" />
-        <edge from="38" to="46" />
-        <edge from="5" to="46" />
-        <edge from="44" to="47" />
-        <edge from="2" to="47" />
-        <edge from="28" to="48" />
-        <edge from="32" to="48" />
-        <edge from="10" to="49" />
-        <edge from="22" to="49" />
-        <edge from="29" to="50" />
-        <edge from="35" to="50" />
-        <edge from="49" to="51" />
-        <edge from="53" to="51" />
-        <edge from="24" to="52" />
-        <edge from="22" to="53" />
-        <edge from="54" to="53" />
-        <edge from="40" to="54" />
-        <edge from="55" to="54" />
-        <edge from="9" to="55" />
-        <edge from="46" to="55" />
+        <edge from="34" to="5" />
+        <edge from="12" to="6" />
+        <edge from="24" to="6" />
+        <edge from="21" to="7" />
+        <edge from="43" to="7" />
+        <edge from="7" to="8" />
+        <edge from="9" to="8" />
+        <edge from="31" to="9" />
+        <edge from="43" to="9" />
+        <edge from="30" to="10" />
+        <edge from="38" to="10" />
+        <edge from="13" to="11" />
+        <edge from="3" to="12" />
+        <edge from="28" to="12" />
+        <edge from="30" to="13" />
+        <edge from="11" to="14" />
+        <edge from="25" to="14" />
+        <edge from="34" to="15" />
+        <edge from="26" to="15" />
+        <edge from="32" to="16" />
+        <edge from="6" to="16" />
+        <edge from="29" to="17" />
+        <edge from="44" to="18" />
+        <edge from="32" to="19" />
+        <edge from="46" to="19" />
+        <edge from="39" to="20" />
+        <edge from="45" to="20" />
+        <edge from="35" to="21" />
+        <edge from="40" to="21" />
+        <edge from="18" to="22" />
+        <edge from="37" to="22" />
+        <edge from="39" to="23" />
+        <edge from="41" to="23" />
+        <edge from="28" to="24" />
+        <edge from="29" to="24" />
+        <edge from="10" to="25" />
+        <edge from="13" to="25" />
+        <edge from="4" to="26" />
+        <edge from="22" to="26" />
+        <edge from="4" to="27" />
+        <edge from="0" to="28" />
+        <edge from="14" to="28" />
+        <edge from="0" to="29" />
+        <edge from="42" to="30" />
+        <edge from="20" to="31" />
+        <edge from="23" to="31" />
+        <edge from="17" to="32" />
+        <edge from="24" to="32" />
+        <edge from="5" to="33" />
+        <edge from="12" to="33" />
+        <edge from="36" to="34" />
+        <edge from="22" to="34" />
+        <edge from="16" to="35" />
+        <edge from="41" to="35" />
+        <edge from="25" to="36" />
+        <edge from="37" to="36" />
+        <edge from="10" to="37" />
+        <edge from="44" to="37" />
+        <edge from="42" to="38" />
+        <edge from="2" to="39" />
+        <edge from="33" to="39" />
+        <edge from="16" to="40" />
+        <edge from="19" to="40" />
+        <edge from="6" to="41" />
+        <edge from="33" to="41" />
+        <edge from="23" to="43" />
+        <edge from="35" to="43" />
+        <edge from="38" to="44" />
+        <edge from="2" to="45" />
+        <edge from="47" to="45" />
+        <edge from="17" to="46" />
+        <edge from="1" to="47" />
+        <edge from="15" to="47" />
         <projectionBase>
             <vector x="52.0" y="120.0" />
             <vector x="-108.0" y="200.0" />
         </projectionBase>
     </diagram>
-    <diagram title="GriSca_Shift_x_RUL">
+    <diagram title="GriSca_Cooling_x_RUL">
         <node id="0">
+            <position x="-488.0" y="1120.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-7.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-5.5)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="1">
+            <position x="-760.0" y="1840.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-5.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-4.0)) AND ((RUL_SCALED&gt;6.0) AND (RUL_SCALED&lt;=7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>8.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="2">
+            <position x="-56.0" y="320.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-7.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-5.5)) AND ((RUL_SCALED&gt;-1.0) AND (RUL_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="3">
+            <position x="-388.0" y="1800.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-1.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=0.0)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>6.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="4">
+            <position x="-324.0" y="600.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-7.0)) AND ((RUL_SCALED&gt;1.0) AND (RUL_SCALED&lt;=2.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>RUL_SCALED &gt;1.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="5">
+            <position x="-8.0" y="880.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-2.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-1.0)) AND ((RUL_SCALED&gt;0.0) AND (RUL_SCALED&lt;=1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="6">
+            <position x="-164.0" y="520.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-7.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-5.5)) AND ((RUL_SCALED&gt;0.0) AND (RUL_SCALED&lt;=1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="7">
+            <position x="208.0" y="480.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-2.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-1.0)) AND ((RUL_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>TOTAL_COOLING_CONSUMPTION_SCALED &gt;-2.5</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="8">
+            <position x="100.0" y="680.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-2.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-1.0)) AND ((RUL_SCALED&gt;-1.0) AND (RUL_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="9">
+            <position x="-168.0" y="960.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-4.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-2.5)) AND ((RUL_SCALED&gt;1.0) AND (RUL_SCALED&lt;=2.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="10">
             <position x="-216.0" y="400.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
@@ -7127,10 +8132,10 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((SHIFT_ENCODED&gt;1) AND (SHIFT_ENCODED&lt;=2)) AND ((RUL_SCALED&lt;=0.0))</object>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-7.0)) AND ((RUL_SCALED&gt;0.0) AND (RUL_SCALED&lt;=1.0))</object>
                 </objectContingent>
                 <attributeContingent>
-                    <attribute>SHIFT_ENCODED &gt;1</attribute>
+                    <attribute>RUL_SCALED &gt;0.0</attribute>
                 </attributeContingent>
             </concept>
             <ndimVector>
@@ -7138,7 +8143,338 @@
                 <coordinate>2.0</coordinate>
             </ndimVector>
         </node>
-        <node id="1">
+        <node id="11">
+            <position x="-112.0" y="640.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-5.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-4.0)) AND ((RUL_SCALED&gt;0.0) AND (RUL_SCALED&lt;=1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="12">
+            <position x="-492.0" y="1560.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-4.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-2.5)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>6.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="13">
+            <position x="364.0" y="840.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;1.5)) AND ((RUL_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>TOTAL_COOLING_CONSUMPTION_SCALED &gt;1.5</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>7.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="14">
+            <position x="152.0" y="800.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-1.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=0.0)) AND ((RUL_SCALED&gt;-1.0) AND (RUL_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="15">
+            <position x="96.0" y="1120.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;0.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=1.5)) AND ((RUL_SCALED&gt;0.0) AND (RUL_SCALED&lt;=1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="16">
+            <position x="-604.0" y="2200.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-1.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=0.0)) AND ((RUL_SCALED&gt;6.0) AND (RUL_SCALED&lt;=7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>8.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="17">
+            <position x="52.0" y="120.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-7.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-5.5)) AND ((RUL_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>TOTAL_COOLING_CONSUMPTION_SCALED &gt;-7.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="18">
+            <position x="-432.0" y="800.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-7.0)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>RUL_SCALED &gt;2.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="19">
+            <position x="-708.0" y="1960.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-4.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-2.5)) AND ((RUL_SCALED&gt;6.0) AND (RUL_SCALED&lt;=7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>8.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="20">
+            <position x="-652.0" y="1640.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-5.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-4.0)) AND ((RUL_SCALED&gt;5.0) AND (RUL_SCALED&lt;=6.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>7.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="21">
+            <position x="-868.0" y="2040.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-5.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-4.0)) AND ((RUL_SCALED&gt;7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>9.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="22">
+            <position x="-332.0" y="1480.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-2.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-1.0)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="23">
+            <position x="-272.0" y="720.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-7.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-5.5)) AND ((RUL_SCALED&gt;1.0) AND (RUL_SCALED&lt;=2.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="24">
             <position x="44.0" y="1000.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
@@ -7154,7 +8490,7 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((SHIFT_ENCODED&gt;1) AND (SHIFT_ENCODED&lt;=2)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-1.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=0.0)) AND ((RUL_SCALED&gt;0.0) AND (RUL_SCALED&lt;=1.0))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
@@ -7163,8 +8499,1705 @@
                 <coordinate>2.0</coordinate>
             </ndimVector>
         </node>
-        <node id="2">
+        <node id="25">
+            <position x="-384.0" y="1360.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-4.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-2.5)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="26">
+            <position x="-392.0" y="2240.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;1.5)) AND ((RUL_SCALED&gt;5.0) AND (RUL_SCALED&lt;=6.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>7.0</coordinate>
+                <coordinate>7.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="27">
+            <position x="256.0" y="1040.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;1.5)) AND ((RUL_SCALED&gt;-1.0) AND (RUL_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>7.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="28">
+            <position x="-220.0" y="840.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-5.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-4.0)) AND ((RUL_SCALED&gt;1.0) AND (RUL_SCALED&lt;=2.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="29">
+            <position x="312.0" y="720.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;0.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=1.5)) AND ((RUL_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>TOTAL_COOLING_CONSUMPTION_SCALED &gt;0.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="30">
+            <position x="-64.0" y="1200.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-1.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=0.0)) AND ((RUL_SCALED&gt;1.0) AND (RUL_SCALED&lt;=2.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="31">
+            <position x="-440.0" y="1680.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-2.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-1.0)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>6.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="32">
+            <position x="-108.0" y="200.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-7.0)) AND ((RUL_SCALED&gt;-1.0) AND (RUL_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>RUL_SCALED &gt;-1.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="33">
+            <position x="-756.0" y="1400.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-7.0)) AND ((RUL_SCALED&gt;5.0) AND (RUL_SCALED&lt;=6.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>RUL_SCALED &gt;5.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>7.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="34">
+            <position x="48.0" y="560.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-4.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-2.5)) AND ((RUL_SCALED&gt;-1.0) AND (RUL_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="35">
+            <position x="204.0" y="920.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;0.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=1.5)) AND ((RUL_SCALED&gt;-1.0) AND (RUL_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="36">
+            <position x="-328.0" y="1040.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-5.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-4.0)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="37">
+            <position x="-920.0" y="1920.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-7.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-5.5)) AND ((RUL_SCALED&gt;7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>9.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="38">
+            <position x="-600.0" y="1760.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-4.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-2.5)) AND ((RUL_SCALED&gt;5.0) AND (RUL_SCALED&lt;=6.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>7.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="39">
+            <position x="-116.0" y="1080.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-2.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-1.0)) AND ((RUL_SCALED&gt;1.0) AND (RUL_SCALED&lt;=2.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="40">
+            <position x="-12.0" y="1320.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;0.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=1.5)) AND ((RUL_SCALED&gt;1.0) AND (RUL_SCALED&lt;=2.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="41">
+            <position x="-816.0" y="2160.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-4.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-2.5)) AND ((RUL_SCALED&gt;7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>9.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="42">
+            <position x="-224.0" y="1280.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-2.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-1.0)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="43">
+            <position x="40.0" y="1440.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;1.5)) AND ((RUL_SCALED&gt;1.0) AND (RUL_SCALED&lt;=2.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>7.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="44">
+            <position x="-764.0" y="2280.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-2.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-1.0)) AND ((RUL_SCALED&gt;7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>9.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="45">
+            <position x="156.0" y="360.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-4.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-2.5)) AND ((RUL_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>TOTAL_COOLING_CONSUMPTION_SCALED &gt;-4.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="46">
+            <position x="-656.0" y="2080.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-2.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-1.0)) AND ((RUL_SCALED&gt;6.0) AND (RUL_SCALED&lt;=7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>8.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="47">
+            <position x="104.0" y="240.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-5.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-4.0)) AND ((RUL_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>TOTAL_COOLING_CONSUMPTION_SCALED &gt;-5.5</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="48">
+            <position x="-648.0" y="1200.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-7.0)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>RUL_SCALED &gt;4.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>6.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="49">
+            <position x="0.0" y="0.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-7.0)) AND ((RUL_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="50">
+            <position x="-864.0" y="1600.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-7.0)) AND ((RUL_SCALED&gt;6.0) AND (RUL_SCALED&lt;=7.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>RUL_SCALED &gt;6.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>8.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="51">
+            <position x="-608.0" y="2640.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;1.5)) AND ((RUL_SCALED&gt;7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>7.0</coordinate>
+                <coordinate>9.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="52">
+            <position x="-596.0" y="1320.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-7.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-5.5)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>6.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="53">
+            <position x="-60.0" y="760.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-4.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-2.5)) AND ((RUL_SCALED&gt;0.0) AND (RUL_SCALED&lt;=1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="54">
+            <position x="-276.0" y="1160.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-4.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-2.5)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="55">
+            <position x="-436.0" y="1240.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-5.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-4.0)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="56">
+            <position x="-496.0" y="2000.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-1.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=0.0)) AND ((RUL_SCALED&gt;5.0) AND (RUL_SCALED&lt;=6.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>7.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="57">
+            <position x="-444.0" y="2120.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;0.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=1.5)) AND ((RUL_SCALED&gt;5.0) AND (RUL_SCALED&lt;=6.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>7.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="58">
+            <position x="-812.0" y="1720.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-7.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-5.5)) AND ((RUL_SCALED&gt;6.0) AND (RUL_SCALED&lt;=7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>8.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="59">
+            <position x="-120.0" y="1520.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;0.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=1.5)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="60">
+            <position x="-380.0" y="920.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-7.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-5.5)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="61">
+            <position x="-660.0" y="2520.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;0.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=1.5)) AND ((RUL_SCALED&gt;7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>9.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="62">
+            <position x="-544.0" y="1440.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-5.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-4.0)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>6.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="63">
+            <position x="148.0" y="1240.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;1.5)) AND ((RUL_SCALED&gt;0.0) AND (RUL_SCALED&lt;=1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>7.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="64">
+            <position x="-280.0" y="1600.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-1.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=0.0)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="65">
             <position x="260.0" y="600.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-1.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=0.0)) AND ((RUL_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>TOTAL_COOLING_CONSUMPTION_SCALED &gt;-1.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="66">
+            <position x="-172.0" y="1400.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-1.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=0.0)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="67">
+            <position x="-540.0" y="1000.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-7.0)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>RUL_SCALED &gt;3.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="68">
+            <position x="-68.0" y="1640.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;1.5)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>7.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="69">
+            <position x="-548.0" y="1880.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-2.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-1.0)) AND ((RUL_SCALED&gt;5.0) AND (RUL_SCALED&lt;=6.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>7.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="70">
+            <position x="-228.0" y="1720.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;0.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=1.5)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="71">
+            <position x="-176.0" y="1840.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;1.5)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>7.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="72">
+            <position x="-704.0" y="1520.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-7.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-5.5)) AND ((RUL_SCALED&gt;5.0) AND (RUL_SCALED&lt;=6.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>7.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="73">
+            <position x="-284.0" y="2040.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;1.5)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>7.0</coordinate>
+                <coordinate>6.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="74">
+            <position x="-972.0" y="1800.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-7.0)) AND ((RUL_SCALED&gt;7.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>RUL_SCALED &gt;7.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>9.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="75">
+            <position x="-500.0" y="2440.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;1.5)) AND ((RUL_SCALED&gt;6.0) AND (RUL_SCALED&lt;=7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>7.0</coordinate>
+                <coordinate>8.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="76">
+            <position x="-552.0" y="2320.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;0.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=1.5)) AND ((RUL_SCALED&gt;6.0) AND (RUL_SCALED&lt;=7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>8.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="77">
+            <position x="-336.0" y="1920.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;0.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=1.5)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>6.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="78">
+            <position x="-4.0" y="440.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-5.5) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=-4.0)) AND ((RUL_SCALED&gt;-1.0) AND (RUL_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="79">
+            <position x="-712.0" y="2400.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((TOTAL_COOLING_CONSUMPTION_SCALED&gt;-1.0) AND (TOTAL_COOLING_CONSUMPTION_SCALED&lt;=0.0)) AND ((RUL_SCALED&gt;7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>9.0</coordinate>
+            </ndimVector>
+        </node>
+        <edge from="67" to="0" />
+        <edge from="60" to="0" />
+        <edge from="20" to="1" />
+        <edge from="58" to="1" />
+        <edge from="17" to="2" />
+        <edge from="32" to="2" />
+        <edge from="64" to="3" />
+        <edge from="31" to="3" />
+        <edge from="10" to="4" />
+        <edge from="8" to="5" />
+        <edge from="53" to="5" />
+        <edge from="2" to="6" />
+        <edge from="10" to="6" />
+        <edge from="45" to="7" />
+        <edge from="34" to="8" />
+        <edge from="7" to="8" />
+        <edge from="28" to="9" />
+        <edge from="53" to="9" />
+        <edge from="32" to="10" />
+        <edge from="6" to="11" />
+        <edge from="78" to="11" />
+        <edge from="62" to="12" />
+        <edge from="25" to="12" />
+        <edge from="29" to="13" />
+        <edge from="65" to="14" />
+        <edge from="8" to="14" />
+        <edge from="24" to="15" />
+        <edge from="35" to="15" />
+        <edge from="46" to="16" />
+        <edge from="56" to="16" />
+        <edge from="49" to="17" />
+        <edge from="4" to="18" />
+        <edge from="1" to="19" />
+        <edge from="38" to="19" />
+        <edge from="62" to="20" />
+        <edge from="72" to="20" />
+        <edge from="1" to="21" />
+        <edge from="37" to="21" />
+        <edge from="25" to="22" />
+        <edge from="42" to="22" />
+        <edge from="4" to="23" />
+        <edge from="6" to="23" />
+        <edge from="5" to="24" />
+        <edge from="14" to="24" />
+        <edge from="54" to="25" />
+        <edge from="55" to="25" />
+        <edge from="57" to="26" />
+        <edge from="73" to="26" />
+        <edge from="13" to="27" />
+        <edge from="35" to="27" />
+        <edge from="23" to="28" />
+        <edge from="11" to="28" />
+        <edge from="65" to="29" />
+        <edge from="24" to="30" />
+        <edge from="39" to="30" />
+        <edge from="12" to="31" />
+        <edge from="22" to="31" />
+        <edge from="49" to="32" />
+        <edge from="48" to="33" />
+        <edge from="45" to="34" />
+        <edge from="78" to="34" />
+        <edge from="29" to="35" />
+        <edge from="14" to="35" />
+        <edge from="28" to="36" />
+        <edge from="60" to="36" />
+        <edge from="74" to="37" />
+        <edge from="58" to="37" />
+        <edge from="12" to="38" />
+        <edge from="20" to="38" />
+        <edge from="5" to="39" />
+        <edge from="9" to="39" />
+        <edge from="15" to="40" />
+        <edge from="30" to="40" />
+        <edge from="19" to="41" />
+        <edge from="21" to="41" />
+        <edge from="54" to="42" />
+        <edge from="39" to="42" />
+        <edge from="63" to="43" />
+        <edge from="40" to="43" />
+        <edge from="41" to="44" />
+        <edge from="46" to="44" />
+        <edge from="47" to="45" />
+        <edge from="19" to="46" />
+        <edge from="69" to="46" />
+        <edge from="17" to="47" />
+        <edge from="67" to="48" />
+        <edge from="33" to="50" />
+        <edge from="61" to="51" />
+        <edge from="75" to="51" />
+        <edge from="0" to="52" />
+        <edge from="48" to="52" />
+        <edge from="11" to="53" />
+        <edge from="34" to="53" />
+        <edge from="9" to="54" />
+        <edge from="36" to="54" />
+        <edge from="0" to="55" />
+        <edge from="36" to="55" />
+        <edge from="3" to="56" />
+        <edge from="69" to="56" />
+        <edge from="56" to="57" />
+        <edge from="77" to="57" />
+        <edge from="50" to="58" />
+        <edge from="72" to="58" />
+        <edge from="66" to="59" />
+        <edge from="40" to="59" />
+        <edge from="23" to="60" />
+        <edge from="18" to="60" />
+        <edge from="76" to="61" />
+        <edge from="79" to="61" />
+        <edge from="52" to="62" />
+        <edge from="55" to="62" />
+        <edge from="15" to="63" />
+        <edge from="27" to="63" />
+        <edge from="22" to="64" />
+        <edge from="66" to="64" />
+        <edge from="7" to="65" />
+        <edge from="30" to="66" />
+        <edge from="42" to="66" />
+        <edge from="18" to="67" />
+        <edge from="43" to="68" />
+        <edge from="59" to="68" />
+        <edge from="31" to="69" />
+        <edge from="38" to="69" />
+        <edge from="59" to="70" />
+        <edge from="64" to="70" />
+        <edge from="68" to="71" />
+        <edge from="70" to="71" />
+        <edge from="52" to="72" />
+        <edge from="33" to="72" />
+        <edge from="71" to="73" />
+        <edge from="77" to="73" />
+        <edge from="50" to="74" />
+        <edge from="26" to="75" />
+        <edge from="76" to="75" />
+        <edge from="16" to="76" />
+        <edge from="57" to="76" />
+        <edge from="3" to="77" />
+        <edge from="70" to="77" />
+        <edge from="2" to="78" />
+        <edge from="47" to="78" />
+        <edge from="16" to="79" />
+        <edge from="44" to="79" />
+        <projectionBase>
+            <vector x="52.0" y="120.0" />
+            <vector x="-108.0" y="200.0" />
+        </projectionBase>
+    </diagram>
+    <diagram title="GriSca_Shift_x_RUL">
+        <node id="0">
+            <position x="-12.0" y="1320.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((SHIFT_ENCODED&gt;2)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="1">
+            <position x="360.0" y="1280.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((SHIFT_ENCODED&gt;0) AND (SHIFT_ENCODED&lt;=1)) AND ((RUL_SCALED&gt;7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>9.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="2">
+            <position x="40.0" y="1440.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((SHIFT_ENCODED&gt;2)) AND ((RUL_SCALED&gt;5.0) AND (RUL_SCALED&lt;=6.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>7.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="3">
+            <position x="-108.0" y="200.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((SHIFT_ENCODED&gt;0) AND (SHIFT_ENCODED&lt;=1)) AND ((RUL_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>SHIFT_ENCODED &gt;0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="4">
+            <position x="468.0" y="1080.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((SHIFT_ENCODED&lt;=0)) AND ((RUL_SCALED&gt;7.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>RUL_SCALED &gt;7.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>9.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="5">
+            <position x="-116.0" y="1080.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((SHIFT_ENCODED&gt;2)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="6">
+            <position x="312.0" y="720.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -7186,137 +10219,12 @@
                 </attributeContingent>
             </concept>
             <ndimVector>
-                <coordinate>5.0</coordinate>
+                <coordinate>6.0</coordinate>
                 <coordinate>0.0</coordinate>
             </ndimVector>
         </node>
-        <node id="3">
-            <position x="148.0" y="1240.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((SHIFT_ENCODED&gt;1) AND (SHIFT_ENCODED&lt;=2)) AND ((RUL_SCALED&gt;6.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>7.0</coordinate>
-                <coordinate>2.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="4">
-            <position x="-60.0" y="760.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((SHIFT_ENCODED&gt;1) AND (SHIFT_ENCODED&lt;=2)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>3.0</coordinate>
-                <coordinate>2.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="5">
-            <position x="-64.0" y="1200.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((SHIFT_ENCODED&gt;2)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>5.0</coordinate>
-                <coordinate>3.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="6">
-            <position x="48.0" y="560.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((SHIFT_ENCODED&gt;0) AND (SHIFT_ENCODED&lt;=1)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>3.0</coordinate>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
         <node id="7">
-            <position x="40.0" y="1440.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((SHIFT_ENCODED&gt;2)) AND ((RUL_SCALED&gt;6.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>7.0</coordinate>
-                <coordinate>3.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="8">
-            <position x="96.0" y="1120.0" />
+            <position x="148.0" y="1240.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -7336,37 +10244,12 @@
                 <attributeContingent />
             </concept>
             <ndimVector>
-                <coordinate>6.0</coordinate>
+                <coordinate>7.0</coordinate>
                 <coordinate>2.0</coordinate>
             </ndimVector>
         </node>
-        <node id="9">
-            <position x="-220.0" y="840.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((SHIFT_ENCODED&gt;2)) AND ((RUL_SCALED&gt;1.0) AND (RUL_SCALED&lt;=2.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>2.0</coordinate>
-                <coordinate>3.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="10">
-            <position x="204.0" y="920.0" />
+        <node id="8">
+            <position x="256.0" y="1040.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -7386,140 +10269,61 @@
                 <attributeContingent />
             </concept>
             <ndimVector>
-                <coordinate>6.0</coordinate>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="11">
-            <position x="-272.0" y="720.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((SHIFT_ENCODED&gt;2)) AND ((RUL_SCALED&gt;0.0) AND (RUL_SCALED&lt;=1.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>1.0</coordinate>
-                <coordinate>3.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="12">
-            <position x="208.0" y="480.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((SHIFT_ENCODED&lt;=0)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>RUL_SCALED &gt;3.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>4.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="13">
-            <position x="156.0" y="360.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((SHIFT_ENCODED&lt;=0)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>RUL_SCALED &gt;2.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>3.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="14">
-            <position x="-56.0" y="320.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((SHIFT_ENCODED&gt;0) AND (SHIFT_ENCODED&lt;=1)) AND ((RUL_SCALED&gt;0.0) AND (RUL_SCALED&lt;=1.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="15">
-            <position x="256.0" y="1040.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((SHIFT_ENCODED&gt;0) AND (SHIFT_ENCODED&lt;=1)) AND ((RUL_SCALED&gt;6.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
                 <coordinate>7.0</coordinate>
                 <coordinate>1.0</coordinate>
             </ndimVector>
         </node>
-        <node id="16">
+        <node id="9">
+            <position x="152.0" y="800.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((SHIFT_ENCODED&gt;0) AND (SHIFT_ENCODED&lt;=1)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="10">
+            <position x="-112.0" y="640.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((SHIFT_ENCODED&gt;1) AND (SHIFT_ENCODED&lt;=2)) AND ((RUL_SCALED&gt;0.0) AND (RUL_SCALED&lt;=1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="11">
             <position x="-324.0" y="600.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
@@ -7535,7 +10339,7 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((SHIFT_ENCODED&gt;2)) AND ((RUL_SCALED&lt;=0.0))</object>
+                    <object>((SHIFT_ENCODED&gt;2)) AND ((RUL_SCALED&lt;=-1.0))</object>
                 </objectContingent>
                 <attributeContingent>
                     <attribute>SHIFT_ENCODED &gt;2</attribute>
@@ -7546,8 +10350,8 @@
                 <coordinate>3.0</coordinate>
             </ndimVector>
         </node>
-        <node id="17">
-            <position x="-12.0" y="1320.0" />
+        <node id="12">
+            <position x="48.0" y="560.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -7562,17 +10366,42 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((SHIFT_ENCODED&gt;2)) AND ((RUL_SCALED&gt;5.0) AND (RUL_SCALED&lt;=6.0))</object>
+                    <object>((SHIFT_ENCODED&gt;0) AND (SHIFT_ENCODED&lt;=1)) AND ((RUL_SCALED&gt;1.0) AND (RUL_SCALED&lt;=2.0))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
             <ndimVector>
-                <coordinate>6.0</coordinate>
+                <coordinate>3.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="13">
+            <position x="-64.0" y="1200.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((SHIFT_ENCODED&gt;2)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
                 <coordinate>3.0</coordinate>
             </ndimVector>
         </node>
-        <node id="18">
-            <position x="-112.0" y="640.0" />
+        <node id="14">
+            <position x="-60.0" y="760.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -7592,12 +10421,12 @@
                 <attributeContingent />
             </concept>
             <ndimVector>
-                <coordinate>2.0</coordinate>
+                <coordinate>3.0</coordinate>
                 <coordinate>2.0</coordinate>
             </ndimVector>
         </node>
-        <node id="19">
-            <position x="-8.0" y="880.0" />
+        <node id="15">
+            <position x="-168.0" y="960.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -7612,67 +10441,17 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((SHIFT_ENCODED&gt;1) AND (SHIFT_ENCODED&lt;=2)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
+                    <object>((SHIFT_ENCODED&gt;2)) AND ((RUL_SCALED&gt;1.0) AND (RUL_SCALED&lt;=2.0))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
             <ndimVector>
-                <coordinate>4.0</coordinate>
-                <coordinate>2.0</coordinate>
+                <coordinate>3.0</coordinate>
+                <coordinate>3.0</coordinate>
             </ndimVector>
         </node>
-        <node id="20">
-            <position x="152.0" y="800.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((SHIFT_ENCODED&gt;0) AND (SHIFT_ENCODED&lt;=1)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>5.0</coordinate>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="21">
-            <position x="0.0" y="0.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((SHIFT_ENCODED&lt;=0)) AND ((RUL_SCALED&lt;=0.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="22">
-            <position x="312.0" y="720.0" />
+        <node id="16">
+            <position x="364.0" y="840.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -7694,66 +10473,116 @@
                 </attributeContingent>
             </concept>
             <ndimVector>
-                <coordinate>6.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="23">
-            <position x="104.0" y="240.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((SHIFT_ENCODED&lt;=0)) AND ((RUL_SCALED&gt;1.0) AND (RUL_SCALED&lt;=2.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>RUL_SCALED &gt;1.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>2.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="24">
-            <position x="364.0" y="840.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((SHIFT_ENCODED&lt;=0)) AND ((RUL_SCALED&gt;6.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>RUL_SCALED &gt;6.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
                 <coordinate>7.0</coordinate>
                 <coordinate>0.0</coordinate>
             </ndimVector>
         </node>
-        <node id="25">
+        <node id="17">
             <position x="52.0" y="120.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((SHIFT_ENCODED&lt;=0)) AND ((RUL_SCALED&gt;-1.0) AND (RUL_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>RUL_SCALED &gt;-1.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="18">
+            <position x="44.0" y="1000.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((SHIFT_ENCODED&gt;1) AND (SHIFT_ENCODED&lt;=2)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="19">
+            <position x="208.0" y="480.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((SHIFT_ENCODED&lt;=0)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>RUL_SCALED &gt;2.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="20">
+            <position x="252.0" y="1480.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((SHIFT_ENCODED&gt;1) AND (SHIFT_ENCODED&lt;=2)) AND ((RUL_SCALED&gt;7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>9.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="21">
+            <position x="104.0" y="240.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -7775,61 +10604,11 @@
                 </attributeContingent>
             </concept>
             <ndimVector>
-                <coordinate>1.0</coordinate>
+                <coordinate>2.0</coordinate>
                 <coordinate>0.0</coordinate>
             </ndimVector>
         </node>
-        <node id="26">
-            <position x="-4.0" y="440.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((SHIFT_ENCODED&gt;0) AND (SHIFT_ENCODED&lt;=1)) AND ((RUL_SCALED&gt;1.0) AND (RUL_SCALED&lt;=2.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>2.0</coordinate>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="27">
-            <position x="-168.0" y="960.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((SHIFT_ENCODED&gt;2)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>3.0</coordinate>
-                <coordinate>3.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="28">
+        <node id="22">
             <position x="-164.0" y="520.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
@@ -7845,7 +10624,7 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((SHIFT_ENCODED&gt;1) AND (SHIFT_ENCODED&lt;=2)) AND ((RUL_SCALED&gt;0.0) AND (RUL_SCALED&lt;=1.0))</object>
+                    <object>((SHIFT_ENCODED&gt;1) AND (SHIFT_ENCODED&lt;=2)) AND ((RUL_SCALED&gt;-1.0) AND (RUL_SCALED&lt;=0.0))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
@@ -7854,8 +10633,8 @@
                 <coordinate>2.0</coordinate>
             </ndimVector>
         </node>
-        <node id="29">
-            <position x="100.0" y="680.0" />
+        <node id="23">
+            <position x="156.0" y="360.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -7870,256 +10649,19 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((SHIFT_ENCODED&gt;0) AND (SHIFT_ENCODED&lt;=1)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>4.0</coordinate>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="30">
-            <position x="-108.0" y="200.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((SHIFT_ENCODED&gt;0) AND (SHIFT_ENCODED&lt;=1)) AND ((RUL_SCALED&lt;=0.0))</object>
+                    <object>((SHIFT_ENCODED&lt;=0)) AND ((RUL_SCALED&gt;1.0) AND (RUL_SCALED&lt;=2.0))</object>
                 </objectContingent>
                 <attributeContingent>
-                    <attribute>SHIFT_ENCODED &gt;0</attribute>
+                    <attribute>RUL_SCALED &gt;1.0</attribute>
                 </attributeContingent>
             </concept>
             <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="31">
-            <position x="-116.0" y="1080.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((SHIFT_ENCODED&gt;2)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>4.0</coordinate>
                 <coordinate>3.0</coordinate>
-            </ndimVector>
-        </node>
-        <edge from="30" to="0" />
-        <edge from="19" to="1" />
-        <edge from="20" to="1" />
-        <edge from="12" to="2" />
-        <edge from="8" to="3" />
-        <edge from="15" to="3" />
-        <edge from="6" to="4" />
-        <edge from="18" to="4" />
-        <edge from="1" to="5" />
-        <edge from="31" to="5" />
-        <edge from="26" to="6" />
-        <edge from="13" to="6" />
-        <edge from="3" to="7" />
-        <edge from="17" to="7" />
-        <edge from="1" to="8" />
-        <edge from="10" to="8" />
-        <edge from="18" to="9" />
-        <edge from="11" to="9" />
-        <edge from="20" to="10" />
-        <edge from="22" to="10" />
-        <edge from="28" to="11" />
-        <edge from="16" to="11" />
-        <edge from="13" to="12" />
-        <edge from="23" to="13" />
-        <edge from="25" to="14" />
-        <edge from="30" to="14" />
-        <edge from="24" to="15" />
-        <edge from="10" to="15" />
-        <edge from="0" to="16" />
-        <edge from="5" to="17" />
-        <edge from="8" to="17" />
-        <edge from="26" to="18" />
-        <edge from="28" to="18" />
-        <edge from="4" to="19" />
-        <edge from="29" to="19" />
-        <edge from="2" to="20" />
-        <edge from="29" to="20" />
-        <edge from="2" to="22" />
-        <edge from="25" to="23" />
-        <edge from="22" to="24" />
-        <edge from="21" to="25" />
-        <edge from="14" to="26" />
-        <edge from="23" to="26" />
-        <edge from="4" to="27" />
-        <edge from="9" to="27" />
-        <edge from="14" to="28" />
-        <edge from="0" to="28" />
-        <edge from="12" to="29" />
-        <edge from="6" to="29" />
-        <edge from="21" to="30" />
-        <edge from="19" to="31" />
-        <edge from="27" to="31" />
-        <projectionBase>
-            <vector x="52.0" y="120.0" />
-            <vector x="-108.0" y="200.0" />
-        </projectionBase>
-    </diagram>
-    <diagram title="GriSca_Crystalizer_x_RUL">
-        <node id="0">
-            <position x="-540.0" y="1000.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&gt;24)) AND ((RUL_SCALED&lt;=-0.161448))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>NUM_CRYSTALLIZER &gt;24</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>5.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="1">
-            <position x="-4.0" y="440.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&gt;1) AND (NUM_CRYSTALLIZER&lt;=6)) AND ((RUL_SCALED&gt;1.0) AND (RUL_SCALED&lt;=2.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>2.0</coordinate>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="2">
-            <position x="-332.0" y="1480.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&gt;24)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>4.0</coordinate>
-                <coordinate>5.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="3">
-            <position x="-120.0" y="1520.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&gt;18) AND (NUM_CRYSTALLIZER&lt;=24)) AND ((RUL_SCALED&gt;5.0) AND (RUL_SCALED&lt;=6.44552))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>6.0</coordinate>
-                <coordinate>4.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="4">
-            <position x="260.0" y="600.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&lt;=1)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>RUL_SCALED &gt;4.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>5.0</coordinate>
                 <coordinate>0.0</coordinate>
             </ndimVector>
         </node>
-        <node id="5">
-            <position x="-60.0" y="760.0" />
+        <node id="24">
+            <position x="200.0" y="1360.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -8134,66 +10676,16 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&gt;6) AND (NUM_CRYSTALLIZER&lt;=12)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
+                    <object>((SHIFT_ENCODED&gt;1) AND (SHIFT_ENCODED&lt;=2)) AND ((RUL_SCALED&gt;6.0) AND (RUL_SCALED&lt;=7.0))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
             <ndimVector>
-                <coordinate>3.0</coordinate>
+                <coordinate>8.0</coordinate>
                 <coordinate>2.0</coordinate>
             </ndimVector>
         </node>
-        <node id="6">
-            <position x="-116.0" y="1080.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&gt;12) AND (NUM_CRYSTALLIZER&lt;=18)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>4.0</coordinate>
-                <coordinate>3.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="7">
-            <position x="-112.0" y="640.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&gt;6) AND (NUM_CRYSTALLIZER&lt;=12)) AND ((RUL_SCALED&gt;1.0) AND (RUL_SCALED&lt;=2.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>2.0</coordinate>
-                <coordinate>2.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="8">
+        <node id="25">
             <position x="-220.0" y="840.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
@@ -8209,7 +10701,7 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&gt;12) AND (NUM_CRYSTALLIZER&lt;=18)) AND ((RUL_SCALED&gt;1.0) AND (RUL_SCALED&lt;=2.0))</object>
+                    <object>((SHIFT_ENCODED&gt;2)) AND ((RUL_SCALED&gt;0.0) AND (RUL_SCALED&lt;=1.0))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
@@ -8218,8 +10710,8 @@
                 <coordinate>3.0</coordinate>
             </ndimVector>
         </node>
-        <node id="9">
-            <position x="40.0" y="1440.0" />
+        <node id="26">
+            <position x="96.0" y="1120.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -8234,7 +10726,435 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&gt;12) AND (NUM_CRYSTALLIZER&lt;=18)) AND ((RUL_SCALED&gt;6.44552))</object>
+                    <object>((SHIFT_ENCODED&gt;1) AND (SHIFT_ENCODED&lt;=2)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="27">
+            <position x="-216.0" y="400.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((SHIFT_ENCODED&gt;1) AND (SHIFT_ENCODED&lt;=2)) AND ((RUL_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>SHIFT_ENCODED &gt;1</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="28">
+            <position x="-56.0" y="320.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((SHIFT_ENCODED&gt;0) AND (SHIFT_ENCODED&lt;=1)) AND ((RUL_SCALED&gt;-1.0) AND (RUL_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="29">
+            <position x="308.0" y="1160.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((SHIFT_ENCODED&gt;0) AND (SHIFT_ENCODED&lt;=1)) AND ((RUL_SCALED&gt;6.0) AND (RUL_SCALED&lt;=7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>8.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="30">
+            <position x="0.0" y="0.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((SHIFT_ENCODED&lt;=0)) AND ((RUL_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="31">
+            <position x="100.0" y="680.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((SHIFT_ENCODED&gt;0) AND (SHIFT_ENCODED&lt;=1)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="32">
+            <position x="-4.0" y="440.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((SHIFT_ENCODED&gt;0) AND (SHIFT_ENCODED&lt;=1)) AND ((RUL_SCALED&gt;0.0) AND (RUL_SCALED&lt;=1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="33">
+            <position x="92.0" y="1560.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((SHIFT_ENCODED&gt;2)) AND ((RUL_SCALED&gt;6.0) AND (RUL_SCALED&lt;=7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>8.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="34">
+            <position x="260.0" y="600.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((SHIFT_ENCODED&lt;=0)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>RUL_SCALED &gt;3.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="35">
+            <position x="-8.0" y="880.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((SHIFT_ENCODED&gt;1) AND (SHIFT_ENCODED&lt;=2)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="36">
+            <position x="144.0" y="1680.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((SHIFT_ENCODED&gt;2)) AND ((RUL_SCALED&gt;7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>9.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="37">
+            <position x="-272.0" y="720.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((SHIFT_ENCODED&gt;2)) AND ((RUL_SCALED&gt;-1.0) AND (RUL_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="38">
+            <position x="204.0" y="920.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((SHIFT_ENCODED&gt;0) AND (SHIFT_ENCODED&lt;=1)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="39">
+            <position x="416.0" y="960.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((SHIFT_ENCODED&lt;=0)) AND ((RUL_SCALED&gt;6.0) AND (RUL_SCALED&lt;=7.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>RUL_SCALED &gt;6.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>8.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <edge from="13" to="0" />
+        <edge from="26" to="0" />
+        <edge from="4" to="1" />
+        <edge from="29" to="1" />
+        <edge from="0" to="2" />
+        <edge from="7" to="2" />
+        <edge from="30" to="3" />
+        <edge from="39" to="4" />
+        <edge from="35" to="5" />
+        <edge from="15" to="5" />
+        <edge from="34" to="6" />
+        <edge from="8" to="7" />
+        <edge from="26" to="7" />
+        <edge from="16" to="8" />
+        <edge from="38" to="8" />
+        <edge from="31" to="9" />
+        <edge from="34" to="9" />
+        <edge from="22" to="10" />
+        <edge from="32" to="10" />
+        <edge from="27" to="11" />
+        <edge from="23" to="12" />
+        <edge from="32" to="12" />
+        <edge from="5" to="13" />
+        <edge from="18" to="13" />
+        <edge from="10" to="14" />
+        <edge from="12" to="14" />
+        <edge from="25" to="15" />
+        <edge from="14" to="15" />
+        <edge from="6" to="16" />
+        <edge from="30" to="17" />
+        <edge from="9" to="18" />
+        <edge from="35" to="18" />
+        <edge from="23" to="19" />
+        <edge from="1" to="20" />
+        <edge from="24" to="20" />
+        <edge from="17" to="21" />
+        <edge from="27" to="22" />
+        <edge from="28" to="22" />
+        <edge from="21" to="23" />
+        <edge from="7" to="24" />
+        <edge from="29" to="24" />
+        <edge from="10" to="25" />
+        <edge from="37" to="25" />
+        <edge from="18" to="26" />
+        <edge from="38" to="26" />
+        <edge from="3" to="27" />
+        <edge from="3" to="28" />
+        <edge from="17" to="28" />
+        <edge from="8" to="29" />
+        <edge from="39" to="29" />
+        <edge from="12" to="31" />
+        <edge from="19" to="31" />
+        <edge from="28" to="32" />
+        <edge from="21" to="32" />
+        <edge from="2" to="33" />
+        <edge from="24" to="33" />
+        <edge from="19" to="34" />
+        <edge from="31" to="35" />
+        <edge from="14" to="35" />
+        <edge from="20" to="36" />
+        <edge from="33" to="36" />
+        <edge from="11" to="37" />
+        <edge from="22" to="37" />
+        <edge from="6" to="38" />
+        <edge from="9" to="38" />
+        <edge from="16" to="39" />
+        <projectionBase>
+            <vector x="52.0" y="120.0" />
+            <vector x="-108.0" y="200.0" />
+        </projectionBase>
+    </diagram>
+    <diagram title="GriSca_Crystalizer_x_RUL">
+        <node id="0">
+            <position x="-600.0" y="1760.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;12) AND (NUM_CRYSTALLIZER&lt;=18)) AND ((RUL_SCALED&gt;5.0) AND (RUL_SCALED&lt;=6.0))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
@@ -8243,8 +11163,83 @@
                 <coordinate>3.0</coordinate>
             </ndimVector>
         </node>
-        <node id="10">
-            <position x="208.0" y="480.0" />
+        <node id="1">
+            <position x="-440.0" y="1680.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;18) AND (NUM_CRYSTALLIZER&lt;=24)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="2">
+            <position x="-712.0" y="2400.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;24)) AND ((RUL_SCALED&gt;7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>9.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="3">
+            <position x="-164.0" y="520.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;1) AND (NUM_CRYSTALLIZER&lt;=6)) AND ((RUL_SCALED&gt;0.0) AND (RUL_SCALED&lt;=1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="4">
+            <position x="-540.0" y="1000.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -8266,343 +11261,12 @@
                 </attributeContingent>
             </concept>
             <ndimVector>
-                <coordinate>4.0</coordinate>
+                <coordinate>5.0</coordinate>
                 <coordinate>0.0</coordinate>
             </ndimVector>
         </node>
-        <node id="11">
-            <position x="-384.0" y="1360.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&gt;24)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>3.0</coordinate>
-                <coordinate>5.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="12">
-            <position x="96.0" y="1120.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&gt;6) AND (NUM_CRYSTALLIZER&lt;=12)) AND ((RUL_SCALED&gt;5.0) AND (RUL_SCALED&lt;=6.44552))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>6.0</coordinate>
-                <coordinate>2.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="13">
-            <position x="-64.0" y="1200.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&gt;12) AND (NUM_CRYSTALLIZER&lt;=18)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>5.0</coordinate>
-                <coordinate>3.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="14">
-            <position x="-176.0" y="1840.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&gt;24)) AND ((RUL_SCALED&gt;6.44552))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>7.0</coordinate>
-                <coordinate>5.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="15">
-            <position x="364.0" y="840.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&lt;=1)) AND ((RUL_SCALED&gt;6.44552))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>RUL_SCALED &gt;6.44552</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>7.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="16">
-            <position x="-380.0" y="920.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&gt;18) AND (NUM_CRYSTALLIZER&lt;=24)) AND ((RUL_SCALED&gt;-0.161448) AND (RUL_SCALED&lt;=1.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>1.0</coordinate>
-                <coordinate>4.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="17">
-            <position x="-216.0" y="400.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&gt;6) AND (NUM_CRYSTALLIZER&lt;=12)) AND ((RUL_SCALED&lt;=-0.161448))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>NUM_CRYSTALLIZER &gt;6</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>2.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="18">
-            <position x="-280.0" y="1600.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&gt;24)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>5.0</coordinate>
-                <coordinate>5.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="19">
-            <position x="-8.0" y="880.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&gt;6) AND (NUM_CRYSTALLIZER&lt;=12)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>4.0</coordinate>
-                <coordinate>2.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="20">
-            <position x="-488.0" y="1120.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&gt;24)) AND ((RUL_SCALED&gt;-0.161448) AND (RUL_SCALED&lt;=1.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>1.0</coordinate>
-                <coordinate>5.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="21">
-            <position x="-168.0" y="960.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&gt;12) AND (NUM_CRYSTALLIZER&lt;=18)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>3.0</coordinate>
-                <coordinate>3.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="22">
-            <position x="-108.0" y="200.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&gt;1) AND (NUM_CRYSTALLIZER&lt;=6)) AND ((RUL_SCALED&lt;=-0.161448))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>NUM_CRYSTALLIZER &gt;1</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="23">
-            <position x="-172.0" y="1400.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&gt;18) AND (NUM_CRYSTALLIZER&lt;=24)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>5.0</coordinate>
-                <coordinate>4.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="24">
-            <position x="-328.0" y="1040.0" />
+        <node id="5">
+            <position x="-116.0" y="1080.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -8622,12 +11286,12 @@
                 <attributeContingent />
             </concept>
             <ndimVector>
-                <coordinate>2.0</coordinate>
+                <coordinate>3.0</coordinate>
                 <coordinate>4.0</coordinate>
             </ndimVector>
         </node>
-        <node id="25">
-            <position x="156.0" y="360.0" />
+        <node id="6">
+            <position x="-220.0" y="840.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -8642,44 +11306,17 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&lt;=1)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>RUL_SCALED &gt;2.0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>3.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="26">
-            <position x="-276.0" y="1160.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&gt;18) AND (NUM_CRYSTALLIZER&lt;=24)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
+                    <object>((NUM_CRYSTALLIZER&gt;6) AND (NUM_CRYSTALLIZER&lt;=12)) AND ((RUL_SCALED&gt;1.0) AND (RUL_SCALED&lt;=2.0))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
             <ndimVector>
                 <coordinate>3.0</coordinate>
-                <coordinate>4.0</coordinate>
+                <coordinate>2.0</coordinate>
             </ndimVector>
         </node>
-        <node id="27">
-            <position x="312.0" y="720.0" />
+        <node id="7">
+            <position x="-436.0" y="1240.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -8694,46 +11331,271 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&lt;=1)) AND ((RUL_SCALED&gt;5.0) AND (RUL_SCALED&lt;=6.44552))</object>
+                    <object>((NUM_CRYSTALLIZER&gt;6) AND (NUM_CRYSTALLIZER&lt;=12)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="8">
+            <position x="44.0" y="1000.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;24)) AND ((RUL_SCALED&gt;0.0) AND (RUL_SCALED&lt;=1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="9">
+            <position x="-112.0" y="640.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;6) AND (NUM_CRYSTALLIZER&lt;=12)) AND ((RUL_SCALED&gt;0.0) AND (RUL_SCALED&lt;=1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="10">
+            <position x="-168.0" y="960.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;12) AND (NUM_CRYSTALLIZER&lt;=18)) AND ((RUL_SCALED&gt;1.0) AND (RUL_SCALED&lt;=2.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="11">
+            <position x="-328.0" y="1040.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;6) AND (NUM_CRYSTALLIZER&lt;=12)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="12">
+            <position x="-704.0" y="1520.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;1) AND (NUM_CRYSTALLIZER&lt;=6)) AND ((RUL_SCALED&gt;5.0) AND (RUL_SCALED&lt;=6.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>7.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="13">
+            <position x="100.0" y="680.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;18) AND (NUM_CRYSTALLIZER&lt;=24)) AND ((RUL_SCALED&gt;-1.0) AND (RUL_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="14">
+            <position x="-868.0" y="2040.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;6) AND (NUM_CRYSTALLIZER&lt;=12)) AND ((RUL_SCALED&gt;7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>9.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="15">
+            <position x="-64.0" y="1200.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;24)) AND ((RUL_SCALED&gt;1.0) AND (RUL_SCALED&lt;=2.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="16">
+            <position x="104.0" y="240.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;6) AND (NUM_CRYSTALLIZER&lt;=12)) AND ((RUL_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>NUM_CRYSTALLIZER &gt;6</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="17">
+            <position x="-756.0" y="1400.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&lt;=1)) AND ((RUL_SCALED&gt;5.0) AND (RUL_SCALED&lt;=6.0))</object>
                 </objectContingent>
                 <attributeContingent>
                     <attribute>RUL_SCALED &gt;5.0</attribute>
                 </attributeContingent>
             </concept>
             <ndimVector>
-                <coordinate>6.0</coordinate>
+                <coordinate>7.0</coordinate>
                 <coordinate>0.0</coordinate>
             </ndimVector>
         </node>
-        <node id="28">
-            <position x="52.0" y="120.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&lt;=1)) AND ((RUL_SCALED&gt;-0.161448) AND (RUL_SCALED&lt;=1.0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>RUL_SCALED &gt;-0.161448</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="29">
-            <position x="104.0" y="240.0" />
+        <node id="18">
+            <position x="-324.0" y="600.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -8755,12 +11617,12 @@
                 </attributeContingent>
             </concept>
             <ndimVector>
-                <coordinate>2.0</coordinate>
+                <coordinate>3.0</coordinate>
                 <coordinate>0.0</coordinate>
             </ndimVector>
         </node>
-        <node id="30">
-            <position x="-272.0" y="720.0" />
+        <node id="19">
+            <position x="-4.0" y="440.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -8775,17 +11637,17 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&gt;12) AND (NUM_CRYSTALLIZER&lt;=18)) AND ((RUL_SCALED&gt;-0.161448) AND (RUL_SCALED&lt;=1.0))</object>
+                    <object>((NUM_CRYSTALLIZER&gt;6) AND (NUM_CRYSTALLIZER&lt;=12)) AND ((RUL_SCALED&gt;-1.0) AND (RUL_SCALED&lt;=0.0))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
             <ndimVector>
                 <coordinate>1.0</coordinate>
-                <coordinate>3.0</coordinate>
+                <coordinate>2.0</coordinate>
             </ndimVector>
         </node>
-        <node id="31">
-            <position x="-324.0" y="600.0" />
+        <node id="20">
+            <position x="-216.0" y="400.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -8800,19 +11662,19 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&gt;12) AND (NUM_CRYSTALLIZER&lt;=18)) AND ((RUL_SCALED&lt;=-0.161448))</object>
+                    <object>((NUM_CRYSTALLIZER&lt;=1)) AND ((RUL_SCALED&gt;0.0) AND (RUL_SCALED&lt;=1.0))</object>
                 </objectContingent>
                 <attributeContingent>
-                    <attribute>NUM_CRYSTALLIZER &gt;12</attribute>
+                    <attribute>RUL_SCALED &gt;0.0</attribute>
                 </attributeContingent>
             </concept>
             <ndimVector>
+                <coordinate>2.0</coordinate>
                 <coordinate>0.0</coordinate>
-                <coordinate>3.0</coordinate>
             </ndimVector>
         </node>
-        <node id="32">
-            <position x="-228.0" y="1720.0" />
+        <node id="21">
+            <position x="-172.0" y="1400.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -8827,17 +11689,71 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&gt;24)) AND ((RUL_SCALED&gt;5.0) AND (RUL_SCALED&lt;=6.44552))</object>
+                    <object>((NUM_CRYSTALLIZER&gt;24)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
                 </objectContingent>
                 <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="22">
+            <position x="-108.0" y="200.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&lt;=1)) AND ((RUL_SCALED&gt;-1.0) AND (RUL_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>RUL_SCALED &gt;-1.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="23">
+            <position x="-648.0" y="1200.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&lt;=1)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>RUL_SCALED &gt;4.0</attribute>
+                </attributeContingent>
             </concept>
             <ndimVector>
                 <coordinate>6.0</coordinate>
-                <coordinate>5.0</coordinate>
+                <coordinate>0.0</coordinate>
             </ndimVector>
         </node>
-        <node id="33">
-            <position x="-436.0" y="1240.0" />
+        <node id="24">
+            <position x="-864.0" y="1600.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -8852,41 +11768,18 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&gt;24)) AND ((RUL_SCALED&gt;1.0) AND (RUL_SCALED&lt;=2.0))</object>
+                    <object>((NUM_CRYSTALLIZER&lt;=1)) AND ((RUL_SCALED&gt;6.0) AND (RUL_SCALED&lt;=7.0))</object>
                 </objectContingent>
-                <attributeContingent />
+                <attributeContingent>
+                    <attribute>RUL_SCALED &gt;6.0</attribute>
+                </attributeContingent>
             </concept>
             <ndimVector>
-                <coordinate>2.0</coordinate>
-                <coordinate>5.0</coordinate>
+                <coordinate>8.0</coordinate>
+                <coordinate>0.0</coordinate>
             </ndimVector>
         </node>
-        <node id="34">
-            <position x="-224.0" y="1280.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&gt;18) AND (NUM_CRYSTALLIZER&lt;=24)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>4.0</coordinate>
-                <coordinate>4.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="35">
+        <node id="25">
             <position x="-56.0" y="320.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
@@ -8902,7 +11795,7 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&gt;1) AND (NUM_CRYSTALLIZER&lt;=6)) AND ((RUL_SCALED&gt;-0.161448) AND (RUL_SCALED&lt;=1.0))</object>
+                    <object>((NUM_CRYSTALLIZER&gt;1) AND (NUM_CRYSTALLIZER&lt;=6)) AND ((RUL_SCALED&gt;-1.0) AND (RUL_SCALED&lt;=0.0))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
@@ -8911,8 +11804,8 @@
                 <coordinate>1.0</coordinate>
             </ndimVector>
         </node>
-        <node id="36">
-            <position x="-164.0" y="520.0" />
+        <node id="26">
+            <position x="-8.0" y="880.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -8927,44 +11820,17 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&gt;6) AND (NUM_CRYSTALLIZER&lt;=12)) AND ((RUL_SCALED&gt;-0.161448) AND (RUL_SCALED&lt;=1.0))</object>
+                    <object>((NUM_CRYSTALLIZER&gt;18) AND (NUM_CRYSTALLIZER&lt;=24)) AND ((RUL_SCALED&gt;0.0) AND (RUL_SCALED&lt;=1.0))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
             <ndimVector>
-                <coordinate>1.0</coordinate>
                 <coordinate>2.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="37">
-            <position x="-432.0" y="800.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&gt;18) AND (NUM_CRYSTALLIZER&lt;=24)) AND ((RUL_SCALED&lt;=-0.161448))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute>NUM_CRYSTALLIZER &gt;18</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
                 <coordinate>4.0</coordinate>
             </ndimVector>
         </node>
-        <node id="38">
-            <position x="152.0" y="800.0" />
+        <node id="27">
+            <position x="-276.0" y="1160.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -8979,117 +11845,17 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&gt;1) AND (NUM_CRYSTALLIZER&lt;=6)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
+                    <object>((NUM_CRYSTALLIZER&gt;12) AND (NUM_CRYSTALLIZER&lt;=18)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
             <ndimVector>
-                <coordinate>5.0</coordinate>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="39">
-            <position x="-68.0" y="1640.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&gt;18) AND (NUM_CRYSTALLIZER&lt;=24)) AND ((RUL_SCALED&gt;6.44552))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>7.0</coordinate>
                 <coordinate>4.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="40">
-            <position x="148.0" y="1240.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&gt;6) AND (NUM_CRYSTALLIZER&lt;=12)) AND ((RUL_SCALED&gt;6.44552))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>7.0</coordinate>
-                <coordinate>2.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="41">
-            <position x="204.0" y="920.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&gt;1) AND (NUM_CRYSTALLIZER&lt;=6)) AND ((RUL_SCALED&gt;5.0) AND (RUL_SCALED&lt;=6.44552))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>6.0</coordinate>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="42">
-            <position x="-12.0" y="1320.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&gt;12) AND (NUM_CRYSTALLIZER&lt;=18)) AND ((RUL_SCALED&gt;5.0) AND (RUL_SCALED&lt;=6.44552))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>6.0</coordinate>
                 <coordinate>3.0</coordinate>
             </ndimVector>
         </node>
-        <node id="43">
-            <position x="48.0" y="560.0" />
+        <node id="28">
+            <position x="-380.0" y="920.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -9109,12 +11875,12 @@
                 <attributeContingent />
             </concept>
             <ndimVector>
-                <coordinate>3.0</coordinate>
+                <coordinate>4.0</coordinate>
                 <coordinate>1.0</coordinate>
             </ndimVector>
         </node>
-        <node id="44">
-            <position x="256.0" y="1040.0" />
+        <node id="29">
+            <position x="-604.0" y="2200.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -9129,17 +11895,629 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&gt;1) AND (NUM_CRYSTALLIZER&lt;=6)) AND ((RUL_SCALED&gt;6.44552))</object>
+                    <object>((NUM_CRYSTALLIZER&gt;24)) AND ((RUL_SCALED&gt;6.0) AND (RUL_SCALED&lt;=7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>8.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="30">
+            <position x="-652.0" y="1640.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;6) AND (NUM_CRYSTALLIZER&lt;=12)) AND ((RUL_SCALED&gt;5.0) AND (RUL_SCALED&lt;=6.0))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
             <ndimVector>
                 <coordinate>7.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="31">
+            <position x="-60.0" y="760.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;12) AND (NUM_CRYSTALLIZER&lt;=18)) AND ((RUL_SCALED&gt;0.0) AND (RUL_SCALED&lt;=1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="32">
+            <position x="-548.0" y="1880.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;18) AND (NUM_CRYSTALLIZER&lt;=24)) AND ((RUL_SCALED&gt;5.0) AND (RUL_SCALED&lt;=6.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>7.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="33">
+            <position x="208.0" y="480.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;18) AND (NUM_CRYSTALLIZER&lt;=24)) AND ((RUL_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>NUM_CRYSTALLIZER &gt;18</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="34">
+            <position x="52.0" y="120.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;1) AND (NUM_CRYSTALLIZER&lt;=6)) AND ((RUL_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>NUM_CRYSTALLIZER &gt;1</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
                 <coordinate>1.0</coordinate>
             </ndimVector>
         </node>
+        <node id="35">
+            <position x="-224.0" y="1280.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;18) AND (NUM_CRYSTALLIZER&lt;=24)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="36">
+            <position x="-764.0" y="2280.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;18) AND (NUM_CRYSTALLIZER&lt;=24)) AND ((RUL_SCALED&gt;7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>9.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="37">
+            <position x="-920.0" y="1920.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;1) AND (NUM_CRYSTALLIZER&lt;=6)) AND ((RUL_SCALED&gt;7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>9.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="38">
+            <position x="156.0" y="360.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;12) AND (NUM_CRYSTALLIZER&lt;=18)) AND ((RUL_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>NUM_CRYSTALLIZER &gt;12</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="39">
+            <position x="-388.0" y="1800.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;24)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="40">
+            <position x="260.0" y="600.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;24)) AND ((RUL_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>NUM_CRYSTALLIZER &gt;24</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="41">
+            <position x="-708.0" y="1960.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;12) AND (NUM_CRYSTALLIZER&lt;=18)) AND ((RUL_SCALED&gt;6.0) AND (RUL_SCALED&lt;=7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>8.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="42">
+            <position x="-496.0" y="2000.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;24)) AND ((RUL_SCALED&gt;5.0) AND (RUL_SCALED&lt;=6.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>7.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="43">
+            <position x="-384.0" y="1360.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;12) AND (NUM_CRYSTALLIZER&lt;=18)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="44">
+            <position x="-492.0" y="1560.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;12) AND (NUM_CRYSTALLIZER&lt;=18)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
         <node id="45">
-            <position x="100.0" y="680.0" />
+            <position x="-812.0" y="1720.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;1) AND (NUM_CRYSTALLIZER&lt;=6)) AND ((RUL_SCALED&gt;6.0) AND (RUL_SCALED&lt;=7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>8.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="46">
+            <position x="-332.0" y="1480.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;18) AND (NUM_CRYSTALLIZER&lt;=24)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="47">
+            <position x="-272.0" y="720.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;1) AND (NUM_CRYSTALLIZER&lt;=6)) AND ((RUL_SCALED&gt;1.0) AND (RUL_SCALED&lt;=2.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="48">
+            <position x="-760.0" y="1840.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;6) AND (NUM_CRYSTALLIZER&lt;=12)) AND ((RUL_SCALED&gt;6.0) AND (RUL_SCALED&lt;=7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>8.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="49">
+            <position x="-972.0" y="1800.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&lt;=1)) AND ((RUL_SCALED&gt;7.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>RUL_SCALED &gt;7.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>9.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="50">
+            <position x="0.0" y="0.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&lt;=1)) AND ((RUL_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="51">
+            <position x="-432.0" y="800.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&lt;=1)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>RUL_SCALED &gt;2.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="52">
+            <position x="152.0" y="800.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;24)) AND ((RUL_SCALED&gt;-1.0) AND (RUL_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="53">
+            <position x="-656.0" y="2080.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;18) AND (NUM_CRYSTALLIZER&lt;=24)) AND ((RUL_SCALED&gt;6.0) AND (RUL_SCALED&lt;=7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>8.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="54">
+            <position x="-488.0" y="1120.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -9159,12 +12537,37 @@
                 <attributeContingent />
             </concept>
             <ndimVector>
-                <coordinate>4.0</coordinate>
+                <coordinate>5.0</coordinate>
                 <coordinate>1.0</coordinate>
             </ndimVector>
         </node>
-        <node id="46">
-            <position x="44.0" y="1000.0" />
+        <node id="55">
+            <position x="48.0" y="560.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;12) AND (NUM_CRYSTALLIZER&lt;=18)) AND ((RUL_SCALED&gt;-1.0) AND (RUL_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="56">
+            <position x="-544.0" y="1440.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
                 <backgroundColor>#ffffffff</backgroundColor>
@@ -9184,11 +12587,727 @@
                 <attributeContingent />
             </concept>
             <ndimVector>
-                <coordinate>5.0</coordinate>
+                <coordinate>6.0</coordinate>
                 <coordinate>2.0</coordinate>
             </ndimVector>
         </node>
-        <node id="47">
+        <node id="57">
+            <position x="-816.0" y="2160.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;12) AND (NUM_CRYSTALLIZER&lt;=18)) AND ((RUL_SCALED&gt;7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>9.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="58">
+            <position x="-280.0" y="1600.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;24)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="59">
+            <position x="-596.0" y="1320.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_CRYSTALLIZER&gt;1) AND (NUM_CRYSTALLIZER&lt;=6)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <edge from="30" to="0" />
+        <edge from="44" to="0" />
+        <edge from="44" to="1" />
+        <edge from="46" to="1" />
+        <edge from="29" to="2" />
+        <edge from="36" to="2" />
+        <edge from="25" to="3" />
+        <edge from="20" to="3" />
+        <edge from="51" to="4" />
+        <edge from="10" to="5" />
+        <edge from="26" to="5" />
+        <edge from="47" to="6" />
+        <edge from="9" to="6" />
+        <edge from="11" to="7" />
+        <edge from="54" to="7" />
+        <edge from="26" to="8" />
+        <edge from="52" to="8" />
+        <edge from="3" to="9" />
+        <edge from="19" to="9" />
+        <edge from="31" to="10" />
+        <edge from="6" to="10" />
+        <edge from="6" to="11" />
+        <edge from="28" to="11" />
+        <edge from="17" to="12" />
+        <edge from="59" to="12" />
+        <edge from="33" to="13" />
+        <edge from="55" to="13" />
+        <edge from="37" to="14" />
+        <edge from="48" to="14" />
+        <edge from="5" to="15" />
+        <edge from="8" to="15" />
+        <edge from="34" to="16" />
+        <edge from="23" to="17" />
+        <edge from="20" to="18" />
+        <edge from="25" to="19" />
+        <edge from="16" to="19" />
+        <edge from="22" to="20" />
+        <edge from="35" to="21" />
+        <edge from="15" to="21" />
+        <edge from="50" to="22" />
+        <edge from="4" to="23" />
+        <edge from="17" to="24" />
+        <edge from="34" to="25" />
+        <edge from="22" to="25" />
+        <edge from="31" to="26" />
+        <edge from="13" to="26" />
+        <edge from="10" to="27" />
+        <edge from="11" to="27" />
+        <edge from="51" to="28" />
+        <edge from="47" to="28" />
+        <edge from="42" to="29" />
+        <edge from="53" to="29" />
+        <edge from="12" to="30" />
+        <edge from="56" to="30" />
+        <edge from="9" to="31" />
+        <edge from="55" to="31" />
+        <edge from="0" to="32" />
+        <edge from="1" to="32" />
+        <edge from="38" to="33" />
+        <edge from="50" to="34" />
+        <edge from="5" to="35" />
+        <edge from="27" to="35" />
+        <edge from="53" to="36" />
+        <edge from="57" to="36" />
+        <edge from="45" to="37" />
+        <edge from="49" to="37" />
+        <edge from="16" to="38" />
+        <edge from="1" to="39" />
+        <edge from="58" to="39" />
+        <edge from="33" to="40" />
+        <edge from="0" to="41" />
+        <edge from="48" to="41" />
+        <edge from="32" to="42" />
+        <edge from="39" to="42" />
+        <edge from="7" to="43" />
+        <edge from="27" to="43" />
+        <edge from="43" to="44" />
+        <edge from="56" to="44" />
+        <edge from="24" to="45" />
+        <edge from="12" to="45" />
+        <edge from="35" to="46" />
+        <edge from="43" to="46" />
+        <edge from="3" to="47" />
+        <edge from="18" to="47" />
+        <edge from="30" to="48" />
+        <edge from="45" to="48" />
+        <edge from="24" to="49" />
+        <edge from="18" to="51" />
+        <edge from="40" to="52" />
+        <edge from="13" to="52" />
+        <edge from="32" to="53" />
+        <edge from="41" to="53" />
+        <edge from="4" to="54" />
+        <edge from="28" to="54" />
+        <edge from="19" to="55" />
+        <edge from="38" to="55" />
+        <edge from="7" to="56" />
+        <edge from="59" to="56" />
+        <edge from="41" to="57" />
+        <edge from="14" to="57" />
+        <edge from="46" to="58" />
+        <edge from="21" to="58" />
+        <edge from="23" to="59" />
+        <edge from="54" to="59" />
+        <projectionBase>
+            <vector x="-108.0" y="200.0" />
+            <vector x="52.0" y="120.0" />
+        </projectionBase>
+    </diagram>
+    <diagram title="GriSca_Stream_x_RUL">
+        <node id="0">
+            <position x="-492.0" y="1560.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;3) AND (NUM_STREAM&lt;=4)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="1">
+            <position x="-280.0" y="1600.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;5) AND (NUM_STREAM&lt;=6)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="2">
+            <position x="-548.0" y="1880.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;4) AND (NUM_STREAM&lt;=5)) AND ((RUL_SCALED&gt;5.0) AND (RUL_SCALED&lt;=6.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>7.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="3">
+            <position x="-324.0" y="600.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&lt;=1)) AND ((RUL_SCALED&gt;1.0) AND (RUL_SCALED&lt;=2.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>RUL_SCALED &gt;1.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="4">
+            <position x="-336.0" y="1920.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;6)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>6.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="5">
+            <position x="-816.0" y="2160.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;3) AND (NUM_STREAM&lt;=4)) AND ((RUL_SCALED&gt;7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>9.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="6">
+            <position x="96.0" y="1120.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;6)) AND ((RUL_SCALED&gt;0.0) AND (RUL_SCALED&lt;=1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>6.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="7">
+            <position x="-812.0" y="1720.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;1) AND (NUM_STREAM&lt;=2)) AND ((RUL_SCALED&gt;6.0) AND (RUL_SCALED&lt;=7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>8.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="8">
+            <position x="-656.0" y="2080.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;4) AND (NUM_STREAM&lt;=5)) AND ((RUL_SCALED&gt;6.0) AND (RUL_SCALED&lt;=7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>8.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="9">
+            <position x="-544.0" y="1440.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;2) AND (NUM_STREAM&lt;=3)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="10">
+            <position x="-708.0" y="1960.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;3) AND (NUM_STREAM&lt;=4)) AND ((RUL_SCALED&gt;6.0) AND (RUL_SCALED&lt;=7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>8.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="11">
+            <position x="-332.0" y="1480.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;4) AND (NUM_STREAM&lt;=5)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="12">
+            <position x="-604.0" y="2200.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;5) AND (NUM_STREAM&lt;=6)) AND ((RUL_SCALED&gt;6.0) AND (RUL_SCALED&lt;=7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>8.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="13">
+            <position x="-380.0" y="920.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;1) AND (NUM_STREAM&lt;=2)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="14">
+            <position x="-112.0" y="640.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;2) AND (NUM_STREAM&lt;=3)) AND ((RUL_SCALED&gt;0.0) AND (RUL_SCALED&lt;=1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="15">
+            <position x="52.0" y="120.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;1) AND (NUM_STREAM&lt;=2)) AND ((RUL_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>NUM_STREAM &gt;1</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="16">
+            <position x="-596.0" y="1320.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;1) AND (NUM_STREAM&lt;=2)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="17">
+            <position x="-756.0" y="1400.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&lt;=1)) AND ((RUL_SCALED&gt;5.0) AND (RUL_SCALED&lt;=6.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>RUL_SCALED &gt;5.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>7.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="18">
+            <position x="-388.0" y="1800.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;5) AND (NUM_STREAM&lt;=6)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="19">
+            <position x="-704.0" y="1520.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;1) AND (NUM_STREAM&lt;=2)) AND ((RUL_SCALED&gt;5.0) AND (RUL_SCALED&lt;=6.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>7.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="20">
+            <position x="-552.0" y="2320.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;6)) AND ((RUL_SCALED&gt;6.0) AND (RUL_SCALED&lt;=7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>8.0</coordinate>
+                <coordinate>6.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="21">
             <position x="0.0" y="0.0" />
             <attributeLabelStyle>
                 <offset x="0.0" y="0.0" />
@@ -9204,7 +13323,7 @@
             </objectLabelStyle>
             <concept>
                 <objectContingent>
-                    <object>((NUM_CRYSTALLIZER&lt;=1)) AND ((RUL_SCALED&lt;=-0.161448))</object>
+                    <object>((NUM_STREAM&lt;=1)) AND ((RUL_SCALED&lt;=-1.0))</object>
                 </objectContingent>
                 <attributeContingent />
             </concept>
@@ -9213,91 +13332,1356 @@
                 <coordinate>0.0</coordinate>
             </ndimVector>
         </node>
-        <edge from="37" to="0" />
-        <edge from="29" to="1" />
-        <edge from="35" to="1" />
-        <edge from="11" to="2" />
-        <edge from="34" to="2" />
-        <edge from="23" to="3" />
-        <edge from="42" to="3" />
-        <edge from="10" to="4" />
-        <edge from="7" to="5" />
-        <edge from="43" to="5" />
-        <edge from="19" to="6" />
-        <edge from="21" to="6" />
-        <edge from="1" to="7" />
-        <edge from="36" to="7" />
-        <edge from="7" to="8" />
-        <edge from="30" to="8" />
-        <edge from="40" to="9" />
-        <edge from="42" to="9" />
-        <edge from="25" to="10" />
+        <node id="22">
+            <position x="204.0" y="920.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;6)) AND ((RUL_SCALED&gt;-1.0) AND (RUL_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>6.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="23">
+            <position x="-120.0" y="1520.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;6)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>6.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="24">
+            <position x="-972.0" y="1800.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&lt;=1)) AND ((RUL_SCALED&gt;7.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>RUL_SCALED &gt;7.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>9.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="25">
+            <position x="-228.0" y="1720.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;6)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>6.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="26">
+            <position x="-384.0" y="1360.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;3) AND (NUM_STREAM&lt;=4)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="27">
+            <position x="-868.0" y="2040.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;2) AND (NUM_STREAM&lt;=3)) AND ((RUL_SCALED&gt;7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>9.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="28">
+            <position x="-56.0" y="320.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;1) AND (NUM_STREAM&lt;=2)) AND ((RUL_SCALED&gt;-1.0) AND (RUL_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="29">
+            <position x="104.0" y="240.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;2) AND (NUM_STREAM&lt;=3)) AND ((RUL_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>NUM_STREAM &gt;2</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="30">
+            <position x="-540.0" y="1000.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&lt;=1)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>RUL_SCALED &gt;3.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="31">
+            <position x="-712.0" y="2400.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;5) AND (NUM_STREAM&lt;=6)) AND ((RUL_SCALED&gt;7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>9.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="32">
+            <position x="48.0" y="560.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;3) AND (NUM_STREAM&lt;=4)) AND ((RUL_SCALED&gt;-1.0) AND (RUL_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="33">
+            <position x="-4.0" y="440.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;2) AND (NUM_STREAM&lt;=3)) AND ((RUL_SCALED&gt;-1.0) AND (RUL_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="34">
+            <position x="-276.0" y="1160.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;3) AND (NUM_STREAM&lt;=4)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="35">
+            <position x="-920.0" y="1920.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;1) AND (NUM_STREAM&lt;=2)) AND ((RUL_SCALED&gt;7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>9.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="36">
+            <position x="-216.0" y="400.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&lt;=1)) AND ((RUL_SCALED&gt;0.0) AND (RUL_SCALED&lt;=1.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>RUL_SCALED &gt;0.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="37">
+            <position x="-496.0" y="2000.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;5) AND (NUM_STREAM&lt;=6)) AND ((RUL_SCALED&gt;5.0) AND (RUL_SCALED&lt;=6.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>7.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="38">
+            <position x="-272.0" y="720.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;1) AND (NUM_STREAM&lt;=2)) AND ((RUL_SCALED&gt;1.0) AND (RUL_SCALED&lt;=2.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="39">
+            <position x="-864.0" y="1600.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&lt;=1)) AND ((RUL_SCALED&gt;6.0) AND (RUL_SCALED&lt;=7.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>RUL_SCALED &gt;6.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>8.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="40">
+            <position x="-64.0" y="1200.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;5) AND (NUM_STREAM&lt;=6)) AND ((RUL_SCALED&gt;1.0) AND (RUL_SCALED&lt;=2.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="41">
+            <position x="-488.0" y="1120.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;1) AND (NUM_STREAM&lt;=2)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="42">
+            <position x="-440.0" y="1680.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;4) AND (NUM_STREAM&lt;=5)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="43">
+            <position x="-116.0" y="1080.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;4) AND (NUM_STREAM&lt;=5)) AND ((RUL_SCALED&gt;1.0) AND (RUL_SCALED&lt;=2.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="44">
+            <position x="-12.0" y="1320.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;6)) AND ((RUL_SCALED&gt;1.0) AND (RUL_SCALED&lt;=2.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>6.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="45">
+            <position x="-172.0" y="1400.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;5) AND (NUM_STREAM&lt;=6)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="46">
+            <position x="-224.0" y="1280.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;4) AND (NUM_STREAM&lt;=5)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="47">
+            <position x="-600.0" y="1760.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;3) AND (NUM_STREAM&lt;=4)) AND ((RUL_SCALED&gt;5.0) AND (RUL_SCALED&lt;=6.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>7.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="48">
+            <position x="312.0" y="720.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;6)) AND ((RUL_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>NUM_STREAM &gt;6</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>6.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="49">
+            <position x="-764.0" y="2280.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;4) AND (NUM_STREAM&lt;=5)) AND ((RUL_SCALED&gt;7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>9.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="50">
+            <position x="-8.0" y="880.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;4) AND (NUM_STREAM&lt;=5)) AND ((RUL_SCALED&gt;0.0) AND (RUL_SCALED&lt;=1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="51">
+            <position x="-436.0" y="1240.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;2) AND (NUM_STREAM&lt;=3)) AND ((RUL_SCALED&gt;3.0) AND (RUL_SCALED&lt;=4.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>5.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="52">
+            <position x="152.0" y="800.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;5) AND (NUM_STREAM&lt;=6)) AND ((RUL_SCALED&gt;-1.0) AND (RUL_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="53">
+            <position x="44.0" y="1000.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;5) AND (NUM_STREAM&lt;=6)) AND ((RUL_SCALED&gt;0.0) AND (RUL_SCALED&lt;=1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="54">
+            <position x="-432.0" y="800.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&lt;=1)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>RUL_SCALED &gt;2.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="55">
+            <position x="-168.0" y="960.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;3) AND (NUM_STREAM&lt;=4)) AND ((RUL_SCALED&gt;1.0) AND (RUL_SCALED&lt;=2.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="56">
+            <position x="-648.0" y="1200.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&lt;=1)) AND ((RUL_SCALED&gt;4.0) AND (RUL_SCALED&lt;=5.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>RUL_SCALED &gt;4.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>6.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="57">
+            <position x="-164.0" y="520.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;1) AND (NUM_STREAM&lt;=2)) AND ((RUL_SCALED&gt;0.0) AND (RUL_SCALED&lt;=1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="58">
+            <position x="208.0" y="480.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;4) AND (NUM_STREAM&lt;=5)) AND ((RUL_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>NUM_STREAM &gt;4</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="59">
+            <position x="-652.0" y="1640.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;2) AND (NUM_STREAM&lt;=3)) AND ((RUL_SCALED&gt;5.0) AND (RUL_SCALED&lt;=6.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>7.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="60">
+            <position x="100.0" y="680.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;4) AND (NUM_STREAM&lt;=5)) AND ((RUL_SCALED&gt;-1.0) AND (RUL_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>4.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="61">
+            <position x="-60.0" y="760.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;3) AND (NUM_STREAM&lt;=4)) AND ((RUL_SCALED&gt;0.0) AND (RUL_SCALED&lt;=1.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="62">
+            <position x="156.0" y="360.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;3) AND (NUM_STREAM&lt;=4)) AND ((RUL_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>NUM_STREAM &gt;3</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>3.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="63">
+            <position x="-328.0" y="1040.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;2) AND (NUM_STREAM&lt;=3)) AND ((RUL_SCALED&gt;2.0) AND (RUL_SCALED&lt;=3.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>4.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="64">
+            <position x="-444.0" y="2120.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;6)) AND ((RUL_SCALED&gt;5.0) AND (RUL_SCALED&lt;=6.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>7.0</coordinate>
+                <coordinate>6.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="65">
+            <position x="-220.0" y="840.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;2) AND (NUM_STREAM&lt;=3)) AND ((RUL_SCALED&gt;1.0) AND (RUL_SCALED&lt;=2.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="66">
+            <position x="-760.0" y="1840.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;2) AND (NUM_STREAM&lt;=3)) AND ((RUL_SCALED&gt;6.0) AND (RUL_SCALED&lt;=7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>8.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="67">
+            <position x="-660.0" y="2520.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;6)) AND ((RUL_SCALED&gt;7.0))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>9.0</coordinate>
+                <coordinate>6.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="68">
+            <position x="260.0" y="600.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&gt;5) AND (NUM_STREAM&lt;=6)) AND ((RUL_SCALED&lt;=-1.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>NUM_STREAM &gt;5</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>5.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="69">
+            <position x="-108.0" y="200.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((NUM_STREAM&lt;=1)) AND ((RUL_SCALED&gt;-1.0) AND (RUL_SCALED&lt;=0.0))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>RUL_SCALED &gt;-1.0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <edge from="9" to="0" />
+        <edge from="26" to="0" />
+        <edge from="45" to="1" />
+        <edge from="11" to="1" />
+        <edge from="42" to="2" />
+        <edge from="47" to="2" />
+        <edge from="36" to="3" />
+        <edge from="18" to="4" />
+        <edge from="25" to="4" />
+        <edge from="10" to="5" />
+        <edge from="27" to="5" />
+        <edge from="53" to="6" />
+        <edge from="22" to="6" />
+        <edge from="19" to="7" />
+        <edge from="39" to="7" />
+        <edge from="2" to="8" />
+        <edge from="10" to="8" />
+        <edge from="16" to="9" />
+        <edge from="51" to="9" />
+        <edge from="47" to="10" />
+        <edge from="66" to="10" />
+        <edge from="46" to="11" />
         <edge from="26" to="11" />
-        <edge from="33" to="11" />
-        <edge from="41" to="12" />
-        <edge from="46" to="12" />
-        <edge from="6" to="13" />
-        <edge from="46" to="13" />
-        <edge from="39" to="14" />
-        <edge from="32" to="14" />
-        <edge from="27" to="15" />
-        <edge from="37" to="16" />
-        <edge from="30" to="16" />
-        <edge from="22" to="17" />
-        <edge from="2" to="18" />
-        <edge from="23" to="18" />
-        <edge from="5" to="19" />
-        <edge from="45" to="19" />
-        <edge from="0" to="20" />
-        <edge from="16" to="20" />
-        <edge from="5" to="21" />
-        <edge from="8" to="21" />
-        <edge from="47" to="22" />
-        <edge from="13" to="23" />
-        <edge from="34" to="23" />
-        <edge from="8" to="24" />
-        <edge from="16" to="24" />
-        <edge from="29" to="25" />
-        <edge from="21" to="26" />
-        <edge from="24" to="26" />
-        <edge from="4" to="27" />
-        <edge from="47" to="28" />
-        <edge from="28" to="29" />
-        <edge from="36" to="30" />
-        <edge from="31" to="30" />
-        <edge from="17" to="31" />
-        <edge from="3" to="32" />
-        <edge from="18" to="32" />
-        <edge from="20" to="33" />
-        <edge from="24" to="33" />
-        <edge from="6" to="34" />
-        <edge from="26" to="34" />
-        <edge from="28" to="35" />
-        <edge from="22" to="35" />
-        <edge from="17" to="36" />
-        <edge from="35" to="36" />
-        <edge from="31" to="37" />
-        <edge from="4" to="38" />
-        <edge from="45" to="38" />
-        <edge from="3" to="39" />
-        <edge from="9" to="39" />
-        <edge from="12" to="40" />
-        <edge from="44" to="40" />
-        <edge from="27" to="41" />
-        <edge from="38" to="41" />
-        <edge from="12" to="42" />
-        <edge from="13" to="42" />
-        <edge from="1" to="43" />
-        <edge from="25" to="43" />
-        <edge from="15" to="44" />
-        <edge from="41" to="44" />
-        <edge from="43" to="45" />
-        <edge from="10" to="45" />
-        <edge from="38" to="46" />
-        <edge from="19" to="46" />
+        <edge from="8" to="12" />
+        <edge from="37" to="12" />
+        <edge from="54" to="13" />
+        <edge from="38" to="13" />
+        <edge from="33" to="14" />
+        <edge from="57" to="14" />
+        <edge from="21" to="15" />
+        <edge from="56" to="16" />
+        <edge from="41" to="16" />
+        <edge from="56" to="17" />
+        <edge from="1" to="18" />
+        <edge from="42" to="18" />
+        <edge from="16" to="19" />
+        <edge from="17" to="19" />
+        <edge from="12" to="20" />
+        <edge from="64" to="20" />
+        <edge from="52" to="22" />
+        <edge from="48" to="22" />
+        <edge from="44" to="23" />
+        <edge from="45" to="23" />
+        <edge from="39" to="24" />
+        <edge from="1" to="25" />
+        <edge from="23" to="25" />
+        <edge from="34" to="26" />
+        <edge from="51" to="26" />
+        <edge from="35" to="27" />
+        <edge from="66" to="27" />
+        <edge from="15" to="28" />
+        <edge from="69" to="28" />
+        <edge from="15" to="29" />
+        <edge from="54" to="30" />
+        <edge from="12" to="31" />
+        <edge from="49" to="31" />
+        <edge from="33" to="32" />
+        <edge from="62" to="32" />
+        <edge from="28" to="33" />
+        <edge from="29" to="33" />
+        <edge from="55" to="34" />
+        <edge from="63" to="34" />
+        <edge from="7" to="35" />
+        <edge from="24" to="35" />
+        <edge from="69" to="36" />
+        <edge from="2" to="37" />
+        <edge from="18" to="37" />
+        <edge from="3" to="38" />
+        <edge from="57" to="38" />
+        <edge from="17" to="39" />
+        <edge from="43" to="40" />
+        <edge from="53" to="40" />
+        <edge from="13" to="41" />
+        <edge from="30" to="41" />
+        <edge from="0" to="42" />
+        <edge from="11" to="42" />
+        <edge from="55" to="43" />
+        <edge from="50" to="43" />
+        <edge from="40" to="44" />
+        <edge from="6" to="44" />
+        <edge from="40" to="45" />
+        <edge from="46" to="45" />
+        <edge from="34" to="46" />
+        <edge from="43" to="46" />
+        <edge from="0" to="47" />
+        <edge from="59" to="47" />
+        <edge from="68" to="48" />
+        <edge from="5" to="49" />
+        <edge from="8" to="49" />
+        <edge from="60" to="50" />
+        <edge from="61" to="50" />
+        <edge from="41" to="51" />
+        <edge from="63" to="51" />
+        <edge from="60" to="52" />
+        <edge from="68" to="52" />
+        <edge from="52" to="53" />
+        <edge from="50" to="53" />
+        <edge from="3" to="54" />
+        <edge from="61" to="55" />
+        <edge from="65" to="55" />
+        <edge from="30" to="56" />
+        <edge from="36" to="57" />
+        <edge from="28" to="57" />
+        <edge from="62" to="58" />
+        <edge from="9" to="59" />
+        <edge from="19" to="59" />
+        <edge from="32" to="60" />
+        <edge from="58" to="60" />
+        <edge from="32" to="61" />
+        <edge from="14" to="61" />
+        <edge from="29" to="62" />
+        <edge from="65" to="63" />
+        <edge from="13" to="63" />
+        <edge from="4" to="64" />
+        <edge from="37" to="64" />
+        <edge from="38" to="65" />
+        <edge from="14" to="65" />
+        <edge from="7" to="66" />
+        <edge from="59" to="66" />
+        <edge from="20" to="67" />
+        <edge from="31" to="67" />
+        <edge from="58" to="68" />
+        <edge from="21" to="69" />
         <projectionBase>
-            <vector x="52.0" y="120.0" />
             <vector x="-108.0" y="200.0" />
+            <vector x="52.0" y="120.0" />
         </projectionBase>
     </diagram>
 </conceptualSchema>
