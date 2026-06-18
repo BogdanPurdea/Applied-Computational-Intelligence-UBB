@@ -276,18 +276,19 @@ def get_column_types(X: pd.DataFrame):
 def build_preprocessor(X: pd.DataFrame):
     numeric_cols, categorical_cols = get_column_types(X)
 
-    numeric_pipeline = Pipeline(
-        steps=[
-            ("imputer", SimpleImputer(strategy="median")),
-            ("scaler", StandardScaler()),
-        ]
-    )
-    categorical_pipeline = Pipeline(
-        steps=[
-            ("imputer", SimpleImputer(strategy="most_frequent")),
-            ("encoder", OneHotEncoder(handle_unknown="ignore")),
-        ]
-    )
+    # HARDENING STEP (critical fix)
+    X[categorical_cols] = X[categorical_cols].astype(str)
+
+    numeric_pipeline = Pipeline(steps=[
+        ("imputer", SimpleImputer(strategy="median")),
+        ("scaler", StandardScaler()),
+    ])
+
+    categorical_pipeline = Pipeline(steps=[
+        ("imputer", SimpleImputer(strategy="most_frequent")),
+        ("encoder", OneHotEncoder(handle_unknown="ignore")),
+    ])
+
     preprocessor = ColumnTransformer(
         transformers=[
             ("num", numeric_pipeline, numeric_cols),
@@ -295,6 +296,7 @@ def build_preprocessor(X: pd.DataFrame):
         ],
         remainder="drop",
     )
+
     return preprocessor, numeric_cols, categorical_cols
 
 def export_feature_importance(pipeline: Pipeline, output_path: str) -> pd.DataFrame:

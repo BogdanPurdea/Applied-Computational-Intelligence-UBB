@@ -41,9 +41,6 @@ import pandas as pd
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-import matplotlib.cm as cm
-import matplotlib.colors as mcolors
-from matplotlib.patches import Patch
 from mpl_toolkits.mplot3d import Axes3D  # noqa: F401
 from sklearn.model_selection import train_test_split
 from sklearn.compose import ColumnTransformer
@@ -93,7 +90,7 @@ TOP_N_CORRELATIONS = 25
 TOP_N_ASSOCIATION_RULES = 20
 
 # K-Means search range for elbow / silhouette curves
-KMEANS_K_RANGE = range(2, 11)
+KMEANS_K_RANGE = range(2, 10)
 # Final K chosen for the main clustering run
 KMEANS_N_CLUSTERS = 4
 
@@ -241,14 +238,20 @@ def get_column_types(X: pd.DataFrame):
 
 def build_preprocessor(X: pd.DataFrame):
     numeric_cols, categorical_cols = get_column_types(X)
+
+    # HARDENING STEP (critical fix)
+    X[categorical_cols] = X[categorical_cols].astype(str)
+
     numeric_pipeline = Pipeline(steps=[
         ("imputer", SimpleImputer(strategy="median")),
-        ("scaler",  StandardScaler()),
+        ("scaler", StandardScaler()),
     ])
+
     categorical_pipeline = Pipeline(steps=[
         ("imputer", SimpleImputer(strategy="most_frequent")),
         ("encoder", OneHotEncoder(handle_unknown="ignore")),
     ])
+
     preprocessor = ColumnTransformer(
         transformers=[
             ("num", numeric_pipeline, numeric_cols),
@@ -256,6 +259,7 @@ def build_preprocessor(X: pd.DataFrame):
         ],
         remainder="drop",
     )
+
     return preprocessor, numeric_cols, categorical_cols
 
 def export_feature_importance(pipeline: Pipeline, output_path: str) -> pd.DataFrame:
