@@ -1875,7 +1875,7 @@ def generate_first_layer_knowledge_report(df: pd.DataFrame, output_dir: str):
 # ============================================================
 if __name__ == "__main__":
     SCRIPT_DIR = Path(__file__).resolve().parent
-    INPUT_FILE = SCRIPT_DIR / "Dataset2" / "Final_Processed_Steel_Data.csv"
+    INPUT_FILE = SCRIPT_DIR / "Dataset2" / "Final_Processed_Steel_Data_Clean.csv"
     OUTPUT_DIR = SCRIPT_DIR / "Analysis1_Outputs_Claude_V7_2"
 
     # Set True to remove resistance columns for a cleaner prognostic experiment
