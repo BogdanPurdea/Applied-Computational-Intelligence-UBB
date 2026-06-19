@@ -1,39 +1,47 @@
 """
-CCM Knowledge Discovery / Data Mining Pipeline  –  Claude V7
-Changes from V6:
-  - Adapted to the new dataset schema:
-      * TARGET_REGRESSION:     "RUL"       → "calculated_RUL_tons"
-      * TARGET_CLASSIFICATION: "RUL_class" → "RUL_FCA_BIN"
-      * Leakage columns updated:
-          Old: ["RUL_scaled", "RUL_fca_bin"]
-          New: ["RUL_FCA_ENCODED", "RUL_percentage"]
-          (RUL_percentage is a linear transform of calculated_RUL_tons;
-           RUL_FCA_ENCODED is an ordinal encoding of the classification target.)
-      * Datetime column: "timestamp" → "datetime_combined"
-      * Geometry column: "workpiece_slice_geometry_encoded" (numeric)
-                       → "workpiece_slice_geometry" (categorical string)
-      * Removed all references to the absent "shift" column.
-      * Scatter-plot candidates updated from "_scaled" columns to raw
-        sensor/measurement columns present in the new schema.
-      * EDA extended with new categorical columns: steel_type, alloy_type,
-        workpiece_slice_geometry.
-      * Association rule mining: filter changed from "_fca_bin" suffix
-        to "_BIN" suffix to match the new naming convention.
-      * First-layer knowledge report updated to reflect new column names
-        and schema semantics.
-      * Output folder: Analysis1_Outputs_Claude_V7
-  - All other sections (regression, classification, decision tree, PCA,
-    K-Means, DBSCAN, Isolation Forest) retain the full V6 logic.
+CCM Knowledge Discovery / Data Mining Pipeline  –  Claude V9
+Changes from V7:
+  - Adapted to the new dataset schema (same column names as V7).
+  - _BIN and _ENCODED columns are now explicitly excluded from:
+      * ALL plots (EDA scatter, correlation, histograms of derived columns)
+      * PCA (prepare_unsupervised_matrix already excluded targets, now also
+             excludes any column whose name ends with "_BIN" or "_ENCODED")
+      * Clustering (K-Means, DBSCAN) feature matrix
+      * Anomaly detection feature matrix
+      * EDA correlation computation
+      * Decision-tree numeric feature set
+  - All numeric values are scaled (StandardScaler) before any analysis that
+    uses distances or linear algebra (PCA, K-Means, DBSCAN, Isolation Forest).
+    The EDA scatter / correlation plots still operate on raw values so the
+    axis labels remain interpretable, but a note is included in the report.
+  - A helper ``_get_analysis_cols(df)`` centralises the logic of selecting
+    the raw sensor / process columns (no targets, no _BIN, no _ENCODED,
+    no datetime, no categorical ids).
+  - Output folder: Analysis_Outputs_Claude_V9
+
+RUL LEAKAGE FIX (applied throughout this file):
+  ANY column whose name contains the substring "rul" (case-insensitive) is a
+  direct transformation of either the regression target (calculated_RUL_tons)
+  or the classification target (RUL_Class) and therefore constitutes target
+  leakage.  Examples that are excluded from every supervised feature matrix:
+      calculated_RUL_tons  (regression target itself  – kept only for regression)
+      RUL_Class            (classification target      – kept only for classification)
+      RUL_Class_ENCODED    (ordinal encoding of RUL_Class)
+      RUL_percentage       (linear transform of calculated_RUL_tons)
+      <any future *RUL* column added to the dataset>
+  The same columns are also excluded from EDA correlation analysis and all
+  unsupervised feature matrices so that "easy" RUL-derived signals cannot
+  inflate correlation scores or dominate PCA axes.
 
 Expected folder structure:
     script_folder/
-    ├── Analysis_Claude_V7.py
+    ├── Analysis_Claude_V9.py
     ├── Dataset2/
     │   └── Final_Processed_Steel_Data.csv  ← new schema
-    └── Analysis1_Outputs_Claude_V7/
+    └── Analysis_Outputs_Claude_V9/
         └── plots/
 Run:
-    python Analysis_Claude_V7.py
+    python Analysis_Claude_V9.py
 """
 
 from pathlib import Path
@@ -87,9 +95,8 @@ except ImportError:
 # ============================================================
 # Global configuration
 # ============================================================
-# --- V7: updated targets to match new schema ---
-TARGET_REGRESSION    = "calculated_RUL_tons"   # was "RUL"
-TARGET_CLASSIFICATION = "RUL_FCA_BIN"           # was "RUL_class"
+TARGET_REGRESSION    = "calculated_RUL_tons"
+TARGET_CLASSIFICATION = "RUL_Class"
 
 RANDOM_STATE = 42
 PLOT_DPI     = 160
@@ -119,6 +126,35 @@ APRIORI_MIN_SUPPORT = 0.15
 APRIORI_MAX_LEN     = 3
 
 # ============================================================
+# V9: columns always excluded from numeric analysis/plots
+# ============================================================
+# Any column whose name ends with one of these suffixes is a derived/encoded
+# column and must NOT appear in plots, PCA, clustering or correlation analysis.
+_DERIVED_SUFFIXES = ("_BIN", "_ENCODED")
+
+# Additional leakage columns that are always excluded from feature matrices.
+# NOTE: these are also caught by the broader _RUL_LEAKAGE_SUBSTR pattern below,
+# but are listed here explicitly for documentation clarity.
+_LEAKAGE_ALWAYS = [
+    "RUL_Class_ENCODED",   # ordinal encoding of classification target
+    "RUL_percentage",      # percentage transform of regression target
+]
+
+# ============================================================
+# RUL LEAKAGE FIX
+# ============================================================
+# Every column whose name contains this substring (matched case-insensitively)
+# is a direct transformation of either supervised target and must therefore be
+# excluded from ALL supervised feature matrices and EDA correlation analyses.
+# The only exception is the single target column required by the current task
+# (handled inside remove_leakage_columns and _get_analysis_cols).
+_RUL_LEAKAGE_SUBSTR = "rul"
+
+def _is_rul_leakage(col_name: str) -> bool:
+    """Return True if the column name contains 'rul' (case-insensitive)."""
+    return (_RUL_LEAKAGE_SUBSTR in col_name.lower())
+
+# ============================================================
 # Colour palettes (consistent across all cluster plots)
 # ============================================================
 _CLUSTER_CMAP  = "tab10"
@@ -128,6 +164,36 @@ def _cluster_colours(n_colours: int):
     """Return a list of *n_colours* distinct colours from the qualitative tab10 cmap."""
     cmap = plt.get_cmap(_CLUSTER_CMAP)
     return [cmap(i % 10) for i in range(n_colours)]
+
+# ============================================================
+# V9: central helper – raw analysis columns
+# ============================================================
+def _is_derived_col(col_name: str) -> bool:
+    """Return True if the column is a _BIN or _ENCODED derived column."""
+    return any(col_name.endswith(sfx) for sfx in _DERIVED_SUFFIXES)
+
+
+def _get_analysis_cols(df: pd.DataFrame) -> list:
+    """
+    Return the list of numeric columns that are suitable for EDA / unsupervised
+    analysis in V9.  Excluded:
+        * Target columns (regression + classification)
+        * Always-leakage columns (RUL_percentage, RUL_Class_ENCODED)
+        * Any column ending in _BIN or _ENCODED
+        * Any column whose name contains "rul" (case-insensitive) — these are
+          all direct transformations of one of the two supervised targets and
+          would inflate correlations or dominate PCA axes if included.
+        * Non-numeric columns (datetime, object / categorical)
+    """
+    exclude = set(
+        [TARGET_REGRESSION, TARGET_CLASSIFICATION]
+        + _LEAKAGE_ALWAYS
+        + [c for c in df.columns if _is_derived_col(c)]
+        + [c for c in df.columns if _is_rul_leakage(c)]  # RUL leakage fix
+    )
+    numeric_cols = df.select_dtypes(include=[np.number]).columns.tolist()
+    return [c for c in numeric_cols if c not in exclude]
+
 
 # ============================================================
 # Utility functions
@@ -177,48 +243,62 @@ def remove_leakage_columns(
     strict_no_resistance: bool = False,
 ) -> pd.DataFrame:
     """
-    Removes target leakage columns for the new V7 schema.
+    Removes target leakage columns for the V9 schema.
 
-    New schema leakage notes:
-        - RUL_FCA_ENCODED  : ordinal encoding of RUL_FCA_BIN (classification
-                             target) → always dropped from features.
-        - RUL_percentage   : calculated_RUL_tons expressed as a percentage of
-                             the sleeve's total capacity → always dropped from
-                             features (linear transform of the regression target).
-        - RUL_FCA_BIN      : the classification target itself → dropped when the
-                             task is "regression".
-        - calculated_RUL_tons: the regression target → dropped when the task is
-                             "classification".
+    RUL LEAKAGE FIX
+    ---------------
+    Every column whose name contains the substring "rul" (case-insensitive) is
+    a direct transformation of either supervised target and constitutes leakage:
+
+        • calculated_RUL_tons  – regression target (kept only when task="regression")
+        • RUL_Class            – classification target (kept only when task="classification")
+        • RUL_Class_ENCODED    – ordinal encoding of RUL_Class
+        • RUL_percentage       – linear transform of calculated_RUL_tons
+        • <any future *RUL* column in the dataset>
+
+    Only the single target column required by the current task survives in the
+    returned dataframe; all other RUL-named columns are dropped.
+
+    Additional V9 exclusions:
+        - All *_BIN and *_ENCODED derived columns are dropped from every
+          supervised feature matrix to prevent indirect leakage.
         - strict_no_resistance=True additionally removes all columns whose name
-          contains "resistance" (including *_BIN and *_ENCODED variants) because
-          RUL is derived from cumulative resistance.
+          contains "resistance" (use this when a clean prognostic experiment is
+          required, since RUL is derived from cumulative resistance).
     """
     cols_to_drop = []
 
-    # --- V7: direct leakage columns irrespective of task ---
-    leakage_exact = [
-        "RUL_FCA_ENCODED",    # ordinal encoding of classification target
-        "RUL_percentage",     # percentage transform of regression target
-    ]
+    # --- always-explicit leakage columns (subset of the RUL pattern, listed
+    #     here for documentation clarity even though the RUL pattern catches them) ---
     for col in df.columns:
-        if col in leakage_exact:
+        if col in _LEAKAGE_ALWAYS:
             cols_to_drop.append(col)
 
-    if task == "regression":
-        if TARGET_CLASSIFICATION in df.columns:
-            cols_to_drop.append(TARGET_CLASSIFICATION)
+    # --- V9: drop all _BIN and _ENCODED derived columns ---
+    for col in df.columns:
+        if _is_derived_col(col):
+            cols_to_drop.append(col)
 
-    if task == "classification":
-        if TARGET_REGRESSION in df.columns:
-            cols_to_drop.append(TARGET_REGRESSION)
+    # --- RUL LEAKAGE FIX: drop every column whose name contains "rul"
+    #     (case-insensitive) except the single target for the current task.
+    #     This is the primary guard against all forms of RUL-related leakage. ---
+    current_task_target = (
+        TARGET_REGRESSION if task == "regression" else TARGET_CLASSIFICATION
+    )
+    for col in df.columns:
+        if _is_rul_leakage(col) and col != current_task_target:
+            cols_to_drop.append(col)
 
     if strict_no_resistance:
         for col in df.columns:
-            c = col.lower()
-            if "resistance" in c:
+            if "resistance" in col.lower():
                 cols_to_drop.append(col)
 
     cols_to_drop = sorted(set([c for c in cols_to_drop if c in df.columns]))
+
+    if cols_to_drop:
+        print(f"[INFO]   Leakage columns removed for {task}: {cols_to_drop}")
+
     return df.drop(columns=cols_to_drop, errors="ignore")
 
 def split_features_target(df: pd.DataFrame, target: str):
@@ -240,18 +320,19 @@ def get_column_types(X: pd.DataFrame):
 def build_preprocessor(X: pd.DataFrame):
     numeric_cols, categorical_cols = get_column_types(X)
 
-    numeric_pipeline = Pipeline(
-        steps=[
-            ("imputer", SimpleImputer(strategy="median")),
-            ("scaler", StandardScaler()),
-        ]
-    )
-    categorical_pipeline = Pipeline(
-        steps=[
-            ("imputer", SimpleImputer(strategy="most_frequent")),
-            ("encoder", OneHotEncoder(handle_unknown="ignore")),
-        ]
-    )
+    # HARDENING STEP (critical fix)
+    X[categorical_cols] = X[categorical_cols].astype(str)
+
+    numeric_pipeline = Pipeline(steps=[
+        ("imputer", SimpleImputer(strategy="median")),
+        ("scaler", StandardScaler()),
+    ])
+
+    categorical_pipeline = Pipeline(steps=[
+        ("imputer", SimpleImputer(strategy="most_frequent")),
+        ("encoder", OneHotEncoder(handle_unknown="ignore")),
+    ])
+
     preprocessor = ColumnTransformer(
         transformers=[
             ("num", numeric_pipeline, numeric_cols),
@@ -259,6 +340,7 @@ def build_preprocessor(X: pd.DataFrame):
         ],
         remainder="drop",
     )
+
     return preprocessor, numeric_cols, categorical_cols
 
 def export_feature_importance(pipeline: Pipeline, output_path: str) -> pd.DataFrame:
@@ -361,7 +443,7 @@ def plot_line_from_dataframe(
     save_current_plot(path)
 
 # ============================================================
-# EDA plots  (V7: updated column names and new categoricals)
+# EDA plots  (V9: _BIN/_ENCODED columns excluded from all analyses)
 # ============================================================
 def generate_eda_plots(df: pd.DataFrame, output_dir: str):
     print("\n[INFO] Generating EDA plots...")
@@ -377,7 +459,7 @@ def generate_eda_plots(df: pd.DataFrame, output_dir: str):
             path=os.path.join(plot_dir, "eda_rul_distribution.png"),
         )
 
-    # --- RUL_percentage distribution ---
+    # --- RUL_percentage distribution (informational only, not used in models) ---
     if "RUL_percentage" in df.columns:
         plot_histogram(
             df["RUL_percentage"],
@@ -392,13 +474,13 @@ def generate_eda_plots(df: pd.DataFrame, output_dir: str):
         class_counts = df[TARGET_CLASSIFICATION].astype(str).value_counts()
         plot_bar_from_series(
             class_counts,
-            title="RUL_FCA_BIN Class Distribution",
+            title="RUL_Class Class Distribution",
             xlabel="Count",
             ylabel="RUL FCA Bin",
             path=os.path.join(plot_dir, "eda_rul_class_distribution.png"),
         )
 
-    # --- V7: workpiece_slice_geometry (categorical, was encoded in old schema) ---
+    # --- workpiece_slice_geometry ---
     if "workpiece_slice_geometry" in df.columns and TARGET_REGRESSION in df.columns:
         geom_rul = (
             df.groupby("workpiece_slice_geometry")[TARGET_REGRESSION]
@@ -413,7 +495,7 @@ def generate_eda_plots(df: pd.DataFrame, output_dir: str):
             path=os.path.join(plot_dir, "eda_average_rul_by_geometry.png"),
         )
 
-    # --- V7: steel_type (new categorical) ---
+    # --- steel_type ---
     if "steel_type" in df.columns and TARGET_REGRESSION in df.columns:
         steel_rul = (
             df.groupby("steel_type")[TARGET_REGRESSION]
@@ -428,7 +510,7 @@ def generate_eda_plots(df: pd.DataFrame, output_dir: str):
             path=os.path.join(plot_dir, "eda_average_rul_by_steel_type.png"),
         )
 
-    # --- V7: alloy_type (new categorical) ---
+    # --- alloy_type ---
     if "alloy_type" in df.columns and TARGET_REGRESSION in df.columns:
         alloy_rul = (
             df.groupby("alloy_type")[TARGET_REGRESSION]
@@ -443,7 +525,7 @@ def generate_eda_plots(df: pd.DataFrame, output_dir: str):
             path=os.path.join(plot_dir, "eda_average_rul_by_alloy_type.png"),
         )
 
-    # --- num_stream, num_crystallizer, sleeve (unchanged) ---
+    # --- num_stream ---
     if "num_stream" in df.columns and TARGET_REGRESSION in df.columns:
         stream_rul = (
             df.groupby("num_stream")[TARGET_REGRESSION]
@@ -458,6 +540,7 @@ def generate_eda_plots(df: pd.DataFrame, output_dir: str):
             path=os.path.join(plot_dir, "eda_average_rul_by_stream.png"),
         )
 
+    # --- num_crystallizer ---
     if "num_crystallizer" in df.columns and TARGET_REGRESSION in df.columns:
         cryst_rul = (
             df.groupby("num_crystallizer")[TARGET_REGRESSION]
@@ -472,6 +555,7 @@ def generate_eda_plots(df: pd.DataFrame, output_dir: str):
             path=os.path.join(plot_dir, "eda_average_rul_by_crystallizer.png"),
         )
 
+    # --- sleeve ---
     if "sleeve" in df.columns and TARGET_REGRESSION in df.columns:
         sleeve_rul = (
             df.groupby("sleeve")[TARGET_REGRESSION]
@@ -487,26 +571,34 @@ def generate_eda_plots(df: pd.DataFrame, output_dir: str):
             top_n=25,
         )
 
-    # --- Numerical correlations with RUL ---
+    # --- V9: Numerical correlations with RUL —
+    #     _BIN/_ENCODED excluded AND all other RUL-named columns excluded ---
     if TARGET_REGRESSION in df.columns:
-        numeric_df = df.select_dtypes(include=[np.number])
-        if TARGET_REGRESSION in numeric_df.columns:
-            corr = (
-                numeric_df.corr(numeric_only=True)[TARGET_REGRESSION]
-                .drop(TARGET_REGRESSION)
-            )
-            corr = corr.reindex(
-                corr.abs().sort_values(ascending=False).index
-            ).head(TOP_N_CORRELATIONS)
-            plot_bar_from_series(
-                corr,
-                title=f"Top {TOP_N_CORRELATIONS} Numerical Correlations with RUL (tons)",
-                xlabel="Correlation with RUL",
-                ylabel="Feature",
-                path=os.path.join(plot_dir, "eda_top_correlations_with_rul.png"),
-            )
+        # Use only the curated analysis columns (no _BIN, no _ENCODED, no *rul*)
+        analysis_cols = _get_analysis_cols(df)
+        if analysis_cols:
+            corr_df = df[analysis_cols + [TARGET_REGRESSION]].copy()
+            corr_df = corr_df.select_dtypes(include=[np.number])
+            if TARGET_REGRESSION in corr_df.columns:
+                corr = (
+                    corr_df.corr(numeric_only=True)[TARGET_REGRESSION]
+                    .drop(TARGET_REGRESSION, errors="ignore")
+                )
+                corr = corr.reindex(
+                    corr.abs().sort_values(ascending=False).index
+                ).head(TOP_N_CORRELATIONS)
+                plot_bar_from_series(
+                    corr,
+                    title=(
+                        f"Top {TOP_N_CORRELATIONS} Numerical Correlations with RUL (tons)\n"
+                        "(Raw sensor/process columns only — no _BIN/_ENCODED, no RUL-derived)"
+                    ),
+                    xlabel="Correlation with RUL",
+                    ylabel="Feature",
+                    path=os.path.join(plot_dir, "eda_top_correlations_with_rul.png"),
+                )
 
-    # --- V7: scatter candidates — raw sensor columns (no longer _scaled) ---
+    # --- V9: scatter candidates — raw sensor columns only (no _BIN/_ENCODED) ---
     candidate_scatter_cols = [
         "resistance, tonn",
         "water_consumption, liter/minute",
@@ -518,10 +610,11 @@ def generate_eda_plots(df: pd.DataFrame, output_dir: str):
         "steel_weight, tonn",
         "temperature_measurement1, Celsius deg.",
         "temperature_measurement2, Celsius deg.",
+        "cast_in_row",
     ]
     if TARGET_REGRESSION in df.columns:
         for col in candidate_scatter_cols:
-            if col in df.columns:
+            if col in df.columns and not _is_derived_col(col):
                 plot_scatter(
                     df[col],
                     df[TARGET_REGRESSION],
@@ -534,7 +627,7 @@ def generate_eda_plots(df: pd.DataFrame, output_dir: str):
                     ),
                 )
 
-    # --- V7: time-series trend using "datetime_combined" ---
+    # --- time-series trend using "datetime_combined" ---
     if "datetime_combined" in df.columns and TARGET_REGRESSION in df.columns:
         temp = df.copy()
         temp["datetime_combined"] = pd.to_datetime(
@@ -573,6 +666,8 @@ def run_rul_regression(
     print("\n[INFO] Running supervised RUL regression...")
     plot_dir = create_plot_dir(output_dir)
 
+    # RUL LEAKAGE FIX: remove_leakage_columns now drops every column containing
+    # "rul" except calculated_RUL_tons, plus all _BIN/_ENCODED columns.
     df_model = remove_leakage_columns(
         df, task="regression", strict_no_resistance=strict_no_resistance
     )
@@ -672,9 +767,27 @@ def run_rul_classification(
     print("\n[INFO] Running supervised RUL_FCA_BIN classification...")
     plot_dir = create_plot_dir(output_dir)
 
+    # Normalize column names (prevents hidden whitespace drift)
+    df.columns = df.columns.str.strip()
+
+    # RUL LEAKAGE FIX: remove_leakage_columns now drops every column containing
+    # "rul" except RUL_Class, plus all _BIN/_ENCODED columns.
     df_model = remove_leakage_columns(
         df, task="classification", strict_no_resistance=strict_no_resistance
     )
+
+    # CRITICAL FIX: re-apply normalization after leakage removal
+    df_model.columns = df_model.columns.str.strip()
+
+    # HARD GUARANTEE: validate target existence before proceeding
+    if TARGET_CLASSIFICATION not in df_model.columns:
+        raise ValueError(
+            f"Missing target column '{TARGET_CLASSIFICATION}'. "
+            f"Available columns: {df_model.columns.tolist()}\n"
+            f"[DIAGNOSTIC] Columns containing 'RUL': "
+            f"{[c for c in df_model.columns if 'RUL' in c.upper()]}"
+        )
+
     X, y = split_features_target(df_model, TARGET_CLASSIFICATION)
 
     valid_idx = y.notna()
@@ -686,22 +799,30 @@ def run_rul_classification(
         return
 
     preprocessor, _, _ = build_preprocessor(X)
+
     model = RandomForestClassifier(
         n_estimators=300,
         random_state=RANDOM_STATE,
         n_jobs=-1,
         class_weight="balanced",
     )
+
     pipeline = Pipeline(
         steps=[
             ("preprocess", preprocessor),
             ("model", model),
         ]
     )
+
     stratify = y if y.value_counts().min() >= 2 else None
+
     X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=0.25, random_state=RANDOM_STATE, stratify=stratify
+        X, y,
+        test_size=0.25,
+        random_state=RANDOM_STATE,
+        stratify=stratify
     )
+
     pipeline.fit(X_train, y_train)
     preds = pipeline.predict(X_test)
 
@@ -716,42 +837,52 @@ def run_rul_classification(
             ],
         }
     )
+
     metrics.to_csv(
         os.path.join(output_dir, "rul_classification_metrics.csv"), index=False
     )
+
     print("[RESULT] RUL_FCA_BIN Classification Metrics")
     print(metrics)
 
     report = classification_report(y_test, preds, zero_division=0)
+
     with open(
-        os.path.join(output_dir, "rul_classification_report.txt"), "w", encoding="utf-8"
+        os.path.join(output_dir, "rul_classification_report.txt"),
+        "w",
+        encoding="utf-8",
     ) as f:
         f.write(report)
 
     labels = sorted(y.unique())
+
     cm = pd.DataFrame(
         confusion_matrix(y_test, preds, labels=labels),
         index=labels,
         columns=labels,
     )
+
     cm.to_csv(
         os.path.join(output_dir, "rul_classification_confusion_matrix.csv")
     )
 
     predictions_df = pd.DataFrame(
         {
-            "actual_RUL_FCA_BIN":    y_test.values,
+            "actual_RUL_FCA_BIN": y_test.values,
             "predicted_RUL_FCA_BIN": preds,
         }
     )
+
     predictions_df.to_csv(
-        os.path.join(output_dir, "rul_classification_predictions.csv"), index=False
+        os.path.join(output_dir, "rul_classification_predictions.csv"),
+        index=False,
     )
 
     importance_df = export_feature_importance(
         pipeline=pipeline,
         output_path=os.path.join(
-            output_dir, "rul_classification_feature_importance.csv"
+            output_dir,
+            "rul_classification_feature_importance.csv"
         ),
     )
 
@@ -763,40 +894,55 @@ def run_rul_classification(
     plt.ylabel("Actual Class")
     plt.xticks(np.arange(len(labels)), labels, rotation=45, ha="right")
     plt.yticks(np.arange(len(labels)), labels)
+
     for i in range(cm.shape[0]):
         for j in range(cm.shape[1]):
             plt.text(j, i, str(cm.values[i, j]), ha="center", va="center")
+
     plt.colorbar()
-    save_current_plot(os.path.join(plot_dir, "classification_confusion_matrix.png"))
+
+    save_current_plot(
+        os.path.join(plot_dir, "classification_confusion_matrix.png")
+    )
 
     if not importance_df.empty:
         top_features = (
-            importance_df.head(TOP_N_FEATURES).set_index("feature")["importance"]
+            importance_df.head(TOP_N_FEATURES)
+            .set_index("feature")["importance"]
         )
+
         plot_bar_from_series(
             top_features,
             title=f"Top {TOP_N_FEATURES} Features for RUL_FCA_BIN Classification",
             xlabel="Importance",
             ylabel="Feature",
             path=os.path.join(
-                plot_dir, "classification_feature_importance_top25.png"
+                plot_dir,
+                "classification_feature_importance_top25.png",
             ),
         )
 
     # Plot: actual vs predicted class counts
-    actual_counts    = pd.Series(y_test.values).value_counts().sort_index()
+    actual_counts = pd.Series(y_test.values).value_counts().sort_index()
     predicted_counts = pd.Series(preds).value_counts().sort_index()
+
     combined = pd.DataFrame(
         {"actual": actual_counts, "predicted": predicted_counts}
     ).fillna(0)
+
     plt.figure(figsize=(10, 6))
     combined.plot(kind="bar")
+
     plt.title("Actual vs Predicted RUL_FCA_BIN Distribution")
     plt.xlabel("RUL FCA Bin Class")
     plt.ylabel("Count")
     plt.xticks(rotation=45, ha="right")
+
     save_current_plot(
-        os.path.join(plot_dir, "classification_actual_vs_predicted_distribution.png")
+        os.path.join(
+            plot_dir,
+            "classification_actual_vs_predicted_distribution.png"
+        )
     )
 
 # ============================================================
@@ -810,6 +956,8 @@ def run_decision_tree_rules(
     print("\n[INFO] Extracting decision-tree rules...")
     plot_dir = create_plot_dir(output_dir)
 
+    # RUL LEAKAGE FIX: remove_leakage_columns now drops every column containing
+    # "rul" except RUL_Class, plus all _BIN/_ENCODED columns.
     df_model = remove_leakage_columns(
         df, task="classification", strict_no_resistance=strict_no_resistance
     )
@@ -819,6 +967,7 @@ def run_decision_tree_rules(
     X = X.loc[valid_idx]
     y = y.loc[valid_idx].astype(str)
 
+    # V9: only pure numeric columns (no _BIN/_ENCODED after leakage removal)
     numeric_cols = X.select_dtypes(include=[np.number]).columns.tolist()
     if len(numeric_cols) == 0:
         print("[WARNING] No numeric columns available for decision tree rule extraction.")
@@ -827,13 +976,21 @@ def run_decision_tree_rules(
     X_num = X[numeric_cols].replace([np.inf, -np.inf], np.nan)
     X_num = X_num.fillna(X_num.median(numeric_only=True))
 
+    # V9: scale numeric features before fitting decision tree
+    scaler = StandardScaler()
+    X_num_scaled = pd.DataFrame(
+        scaler.fit_transform(X_num),
+        columns=numeric_cols,
+        index=X_num.index,
+    )
+
     clf = DecisionTreeClassifier(
         max_depth=4,
         min_samples_leaf=10,
         random_state=RANDOM_STATE,
         class_weight="balanced",
     )
-    clf.fit(X_num, y)
+    clf.fit(X_num_scaled, y)
 
     rules = export_text(clf, feature_names=numeric_cols)
     with open(
@@ -860,29 +1017,40 @@ def run_decision_tree_rules(
         )
 
 # ============================================================
-# Unsupervised matrix preparation
+# V9: Unsupervised matrix preparation
+#     _BIN and _ENCODED columns are now explicitly excluded.
+#     All values are scaled (StandardScaler) before analysis.
 # ============================================================
 def prepare_unsupervised_matrix(df: pd.DataFrame):
     """
     Builds the numeric feature matrix used for clustering, PCA and anomaly
-    detection.  V7: leakage columns updated to match new schema naming.
+    detection.
+
+    V9 changes:
+        - Explicitly excludes ALL columns ending with _BIN or _ENCODED via
+          ``_get_analysis_cols()``, in addition to the target/leakage exclusions
+          from V7.
+        - Excludes ALL columns containing "rul" (case-insensitive) via the
+          shared _get_analysis_cols() helper so that no RUL-derived signal
+          dominates PCA axes or clustering distances.
+        - Returns a StandardScaler-scaled matrix (as before) and also the
+          plain DataFrame of raw column values so callers can inspect feature
+          names.
     """
-    exclude_cols = [
-        TARGET_REGRESSION,          # "calculated_RUL_tons"
-        TARGET_CLASSIFICATION,      # "RUL_FCA_BIN"
-        "RUL_FCA_ENCODED",          # ordinal encoding of classification target
-        "RUL_percentage",           # percentage transform of regression target
-        "sleeve",
-        "num_crystallizer",
-        "num_stream",
-    ]
-    X = df.drop(
-        columns=[c for c in exclude_cols if c in df.columns], errors="ignore"
-    )
-    X = X.select_dtypes(include=[np.number])
+    # Use the V9 central helper – returns only raw sensor/process numeric cols,
+    # with RUL-related columns already excluded.
+    analysis_cols = _get_analysis_cols(df)
+
+    # Also exclude equipment-id columns that are not process signals
+    id_cols = {"sleeve", "num_crystallizer", "num_stream"}
+    analysis_cols = [c for c in analysis_cols if c not in id_cols]
+
+    if not analysis_cols:
+        empty = np.empty((len(df), 0))
+        return pd.DataFrame(index=df.index), empty
+
+    X = df[analysis_cols].copy()
     X = X.replace([np.inf, -np.inf], np.nan)
-    if X.shape[1] == 0:
-        return X, np.empty((len(df), 0))
 
     imputer = SimpleImputer(strategy="median")
     scaler  = StandardScaler()
@@ -1085,7 +1253,7 @@ def _plot_kmeans_centroid_heatmap(
         "K-Means Centroid Heatmap\n(Top features by inter-cluster variance)",
         fontsize=13, fontweight="bold",
     )
-    plt.colorbar(im, ax=ax, label="Normalised mean value")
+    plt.colorbar(im, ax=ax, label="Normalised mean value (scaled)")
     save_current_plot(os.path.join(plot_dir, "kmeans_centroid_heatmap.png"))
 
 def _plot_kmeans_rul_boxplot(
@@ -1670,7 +1838,7 @@ def run_clustering(df: pd.DataFrame, output_dir: str):
     print("[RESULT] Clustering results and plots exported.")
 
 # ============================================================
-# PCA
+# PCA  (V9: _BIN/_ENCODED and all *RUL* columns excluded from feature matrix)
 # ============================================================
 def run_pca(df: pd.DataFrame, output_dir: str):
     print("\n[INFO] Running PCA dimensionality reduction...")
@@ -1707,7 +1875,10 @@ def run_pca(df: pd.DataFrame, output_dir: str):
         plt.legend(title="RUL_FCA_BIN")
     else:
         plt.scatter(pca_df["PC1"], pca_df["PC2"], s=18, alpha=0.7)
-    plt.title("PCA 2D Projection")
+    plt.title(
+        "PCA 2D Projection\n"
+        "(raw sensor/process columns only — no _BIN/_ENCODED, no RUL-derived)"
+    )
     plt.xlabel(f"PC1 ({pca.explained_variance_ratio_[0]:.2%} variance)")
     plt.ylabel(f"PC2 ({pca.explained_variance_ratio_[1]:.2%} variance)")
     save_current_plot(os.path.join(plot_dir, "pca_2d_projection.png"))
@@ -1720,7 +1891,7 @@ def run_pca(df: pd.DataFrame, output_dir: str):
     print("[RESULT] PCA results and plots exported.")
 
 # ============================================================
-# Anomaly detection
+# Anomaly detection  (V9: _BIN/_ENCODED and all *RUL* columns excluded)
 # ============================================================
 def run_anomaly_detection(df: pd.DataFrame, output_dir: str):
     print(
@@ -1804,7 +1975,7 @@ def run_anomaly_detection(df: pd.DataFrame, output_dir: str):
     print("[RESULT] Anomaly detection results and plots exported.")
 
 # ============================================================
-# Association rule mining  (V7: updated to "_BIN" suffix)
+# Association rule mining  (V9: _BIN suffix, unchanged from V7)
 # ============================================================
 def run_association_rule_mining(df: pd.DataFrame, output_dir: str):
     print("\n[INFO] Running association rule mining on _BIN columns...")
@@ -1815,8 +1986,8 @@ def run_association_rule_mining(df: pd.DataFrame, output_dir: str):
         print("Install it with: pip install mlxtend")
         return
 
-    # V7: new schema uses "_BIN" suffix (was "_fca_bin" in old schema).
-    # RUL_FCA_BIN is already a _BIN column so it is included automatically.
+    # Association rules intentionally operate on the _BIN discretised columns —
+    # that is their purpose.  All other analyses exclude _BIN/_ENCODED.
     bin_cols = [c for c in df.columns if c.endswith("_BIN")]
 
     if len(bin_cols) < 2:
@@ -1920,16 +2091,66 @@ def run_association_rule_mining(df: pd.DataFrame, output_dir: str):
     print("[RESULT] Association rules and plots exported.")
 
 # ============================================================
-# First-layer text report  (V7: updated column references)
+# First-layer text report  (V9: updated column references)
 # ============================================================
 def generate_first_layer_knowledge_report(df: pd.DataFrame, output_dir: str):
     print("\n[INFO] Generating first-layer knowledge report...")
     report_path = os.path.join(output_dir, "first_layer_knowledge_report.txt")
     lines = []
-    lines.append("FIRST-LAYER KNOWLEDGE DISCOVERY REPORT  (V7 schema)")
+    lines.append("FIRST-LAYER KNOWLEDGE DISCOVERY REPORT  (V9 schema)")
     lines.append("=" * 70)
     lines.append("")
     lines.append(f"Dataset size: {df.shape[0]} rows, {df.shape[1]} columns")
+    lines.append("")
+    lines.append("V9 Analysis Notes")
+    lines.append("-" * 70)
+    lines.append(
+        "All _BIN and _ENCODED columns are excluded from numeric analysis, "
+        "PCA, clustering, anomaly detection, and correlation plots."
+    )
+    lines.append(
+        "All numeric features are scaled with StandardScaler before "
+        "distance-based or linear-algebraic analyses (PCA, K-Means, DBSCAN, "
+        "Isolation Forest, Decision Tree)."
+    )
+    lines.append(
+        "Association rule mining intentionally uses _BIN columns — that is "
+        "their purpose."
+    )
+    lines.append("")
+    lines.append("RUL LEAKAGE FIX (applied to all supervised tasks)")
+    lines.append("-" * 70)
+    lines.append(
+        "Every column whose name contains 'rul' (case-insensitive) is a direct "
+        "transformation of either supervised target and is therefore removed from "
+        "all supervised feature matrices and EDA correlation analyses."
+    )
+    lines.append(
+        "  Regression  (task='regression')  : all *rul* cols dropped except "
+        "calculated_RUL_tons"
+    )
+    lines.append(
+        "  Classification (task='classification'): all *rul* cols dropped except "
+        "RUL_Class"
+    )
+    lines.append(
+        "  EDA correlation / unsupervised    : all *rul* cols excluded from "
+        "_get_analysis_cols()"
+    )
+
+    # Show which RUL-related columns were found in this dataset
+    rul_cols_found = [c for c in df.columns if _is_rul_leakage(c)]
+    lines.append(
+        f"  RUL-related columns found in this dataset ({len(rul_cols_found)}): "
+        + (", ".join(rul_cols_found) if rul_cols_found else "none")
+    )
+    lines.append("")
+
+    analysis_cols = _get_analysis_cols(df)
+    lines.append(
+        f"Raw sensor/process columns used in analysis ({len(analysis_cols)}):"
+    )
+    lines.append("  " + ", ".join(analysis_cols))
     lines.append("")
 
     if TARGET_REGRESSION in df.columns:
@@ -1950,7 +2171,6 @@ def generate_first_layer_knowledge_report(df: pd.DataFrame, output_dir: str):
         lines.append(str(df[TARGET_CLASSIFICATION].value_counts(dropna=False)))
         lines.append("")
 
-    # V7: workpiece_slice_geometry is now a categorical string column
     if "workpiece_slice_geometry" in df.columns and TARGET_REGRESSION in df.columns:
         lines.append("Average RUL by Workpiece Geometry")
         lines.append("-" * 70)
@@ -1963,7 +2183,6 @@ def generate_first_layer_knowledge_report(df: pd.DataFrame, output_dir: str):
         )
         lines.append("")
 
-    # V7: steel_type and alloy_type are new categoricals
     if "steel_type" in df.columns and TARGET_REGRESSION in df.columns:
         lines.append("Average RUL by Steel Type")
         lines.append("-" * 70)
@@ -2021,27 +2240,31 @@ def generate_first_layer_knowledge_report(df: pd.DataFrame, output_dir: str):
         )
         lines.append("")
 
-    if TARGET_REGRESSION in df.columns:
-        numeric_df = df.select_dtypes(include=[np.number])
-        if TARGET_REGRESSION in numeric_df.columns:
+    if TARGET_REGRESSION in df.columns and analysis_cols:
+        corr_df = df[analysis_cols + [TARGET_REGRESSION]].copy()
+        corr_df = corr_df.select_dtypes(include=[np.number])
+        if TARGET_REGRESSION in corr_df.columns:
             corr = (
-                numeric_df.corr(numeric_only=True)[TARGET_REGRESSION]
-                .drop(TARGET_REGRESSION)
+                corr_df.corr(numeric_only=True)[TARGET_REGRESSION]
+                .drop(TARGET_REGRESSION, errors="ignore")
             )
             corr = corr.sort_values(key=lambda x: x.abs(), ascending=False).head(30)
-            lines.append("Top Numerical Correlations with RUL (tons)")
+            lines.append(
+                "Top Numerical Correlations with RUL (tons)  "
+                "[raw sensor/process columns only — no _BIN/_ENCODED, no RUL-derived]"
+            )
             lines.append("-" * 70)
             lines.append(str(corr))
             lines.append("")
 
-    lines.append("Interpretable First-Layer Knowledge  (V7)")
+    lines.append("Interpretable First-Layer Knowledge  (V9)")
     lines.append("-" * 70)
     lines.append(
         "1.  calculated_RUL_tons can be modeled as a supervised regression "
         "target."
     )
     lines.append(
-        "2.  RUL_FCA_BIN can be modeled as a supervised classification target "
+        "2.  RUL_Class can be modeled as a supervised classification target "
         "(ordinal health bins)."
     )
     lines.append(
@@ -2075,6 +2298,20 @@ def generate_first_layer_knowledge_report(df: pd.DataFrame, output_dir: str):
         "10. Feature-importance and decision-tree rules convert predictive models "
         "into interpretable industrial knowledge."
     )
+    lines.append(
+        "11. (V9) All _BIN and _ENCODED columns are excluded from numeric analysis "
+        "to avoid inflating correlations and PCA axes with derived/redundant signals."
+    )
+    lines.append(
+        "12. (V9) StandardScaler is applied to all numeric features before "
+        "distance-based analyses to give equal weight to each sensor dimension."
+    )
+    lines.append(
+        "13. (V9 RUL leakage fix) Every column whose name contains 'rul' "
+        "(case-insensitive) is excluded from supervised feature matrices and EDA "
+        "correlation analyses.  This catches RUL_Class_ENCODED, RUL_percentage, "
+        "and any future RUL-named columns added to the dataset."
+    )
     lines.append("")
     lines.append("Leakage Warning")
     lines.append("-" * 70)
@@ -2085,9 +2322,18 @@ def generate_first_layer_knowledge_report(df: pd.DataFrame, output_dir: str):
         "experiment (STRICT_NO_RESISTANCE = True)."
     )
     lines.append(
-        "RUL_FCA_ENCODED and RUL_percentage are always removed as leakage "
+        "RUL_Class_ENCODED and RUL_percentage are always removed as leakage "
         "because they are direct transforms of the regression and classification "
         "targets."
+    )
+    lines.append(
+        "All *_BIN and *_ENCODED columns are removed from supervised model "
+        "feature matrices in V9 to prevent indirect leakage through encoded targets."
+    )
+    lines.append(
+        "ALL columns containing 'rul' (case-insensitive) are removed from "
+        "supervised feature matrices (RUL leakage fix).  Only the specific target "
+        "column for the current task is retained."
     )
     lines.append("")
 
@@ -2100,8 +2346,8 @@ def generate_first_layer_knowledge_report(df: pd.DataFrame, output_dir: str):
 # ============================================================
 if __name__ == "__main__":
     SCRIPT_DIR = Path(__file__).resolve().parent
-    INPUT_FILE = SCRIPT_DIR / "Dataset2" / "Final_Processed_Steel_Data.csv"
-    OUTPUT_DIR = SCRIPT_DIR / "Analysis_Outputs_Claude_V7"
+    INPUT_FILE = SCRIPT_DIR / "Dataset2" / "Final_Processed_Steel_Data_Clean.csv"
+    OUTPUT_DIR = SCRIPT_DIR / "Analysis_Outputs_Claude_V9"
 
     # Set True to remove resistance columns (RUL is derived from resistance):
     STRICT_NO_RESISTANCE = False

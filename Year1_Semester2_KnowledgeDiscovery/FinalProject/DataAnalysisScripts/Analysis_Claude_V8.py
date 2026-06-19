@@ -116,12 +116,12 @@ APRIORI_MAX_LEN     = 3
 # ============================================================
 # Any column whose name ends with one of these suffixes is a derived/encoded
 # column and must NOT appear in plots, PCA, clustering or correlation analysis.
-_DERIVED_SUFFIXES = ("_BIN", "_ENCODED")
+_DERIVED_SUFFIXES = ("_BIN", "_ENCODED", "_Percentage", "_Class", "sleeve")
 
 # Additional leakage columns that are always excluded from feature matrices
 _LEAKAGE_ALWAYS = [
     "RUL_Class_ENCODED",   # ordinal encoding of classification target
-    "RUL_percentage",    # percentage transform of regression target
+    "RUL_Percentage",    # percentage transform of regression target
 ]
 
 # ============================================================
