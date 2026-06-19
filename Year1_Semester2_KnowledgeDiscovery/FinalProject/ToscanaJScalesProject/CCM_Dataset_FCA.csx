@@ -1317,378 +1317,6 @@
             <vector x="-56.0" y="240.0" />
         </projectionBase>
     </diagram>
-    <diagram title="GridScale_RULEncoded_x_WaterCooling">
-        <node id="0">
-            <position x="766.0364837646538" y="199.1962890625012" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="4">((RUL_CLASS_ENCODED&gt;2)) AND ((CAST_IN_ROW&gt;0) AND (CAST_IN_ROW&lt;=1))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="1">
-            <position x="528.0243225097644" y="172.79752604166652" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="9">((RUL_CLASS_ENCODED&gt;1) AND (RUL_CLASS_ENCODED&lt;=2)) AND ((CAST_IN_ROW&gt;0) AND (CAST_IN_ROW&lt;=1))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="2">
-            <position x="714.0364837646538" y="79.1962890625012" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="1">((RUL_CLASS_ENCODED&gt;2)) AND ((CAST_IN_ROW&lt;=0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute contextPosition="0">RUL_CLASS_ENCODED &gt;2</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="3">
-            <position x="52.0" y="120.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="6">((RUL_CLASS_ENCODED&lt;=0)) AND ((CAST_IN_ROW&gt;0) AND (CAST_IN_ROW&lt;=1))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute contextPosition="3">CAST_IN_ROW &gt;0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="4">
-            <position x="476.0243225097644" y="52.797526041666515" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="11">((RUL_CLASS_ENCODED&gt;1) AND (RUL_CLASS_ENCODED&lt;=2)) AND ((CAST_IN_ROW&lt;=0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute contextPosition="4">RUL_CLASS_ENCODED &gt;1</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="5">
-            <position x="238.01216125488315" y="26.398763020833357" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="2">((RUL_CLASS_ENCODED&gt;0) AND (RUL_CLASS_ENCODED&lt;=1)) AND ((CAST_IN_ROW&lt;=0))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute contextPosition="1">RUL_CLASS_ENCODED &gt;0</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="6">
-            <position x="0.0" y="0.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="10">((RUL_CLASS_ENCODED&lt;=0)) AND ((CAST_IN_ROW&lt;=0))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="7">
-            <position x="104.0" y="240.0" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="3">((RUL_CLASS_ENCODED&lt;=0)) AND ((CAST_IN_ROW&gt;1))</object>
-                </objectContingent>
-                <attributeContingent>
-                    <attribute contextPosition="2">CAST_IN_ROW &gt;1</attribute>
-                </attributeContingent>
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="8">
-            <position x="290.01216125488315" y="146.39876302083337" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="0">((RUL_CLASS_ENCODED&gt;0) AND (RUL_CLASS_ENCODED&lt;=1)) AND ((CAST_IN_ROW&gt;0) AND (CAST_IN_ROW&lt;=1))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="9">
-            <position x="818.0364837646538" y="319.1962890625012" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="7">((RUL_CLASS_ENCODED&gt;2)) AND ((CAST_IN_ROW&gt;1))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="10">
-            <position x="580.0243225097644" y="292.7975260416665" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="8">((RUL_CLASS_ENCODED&gt;1) AND (RUL_CLASS_ENCODED&lt;=2)) AND ((CAST_IN_ROW&gt;1))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <node id="11">
-            <position x="342.01216125488315" y="266.39876302083337" />
-            <attributeLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </attributeLabelStyle>
-            <objectLabelStyle>
-                <offset x="0.0" y="0.0" />
-                <backgroundColor>#ffffffff</backgroundColor>
-                <textColor>#ff000000</textColor>
-                <textAlignment>left</textAlignment>
-            </objectLabelStyle>
-            <concept>
-                <objectContingent>
-                    <object contextPosition="5">((RUL_CLASS_ENCODED&gt;0) AND (RUL_CLASS_ENCODED&lt;=1)) AND ((CAST_IN_ROW&gt;1))</object>
-                </objectContingent>
-                <attributeContingent />
-            </concept>
-            <ndimVector>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>0.0</coordinate>
-                <coordinate>1.0</coordinate>
-                <coordinate>1.0</coordinate>
-            </ndimVector>
-        </node>
-        <edge from="1" to="0" />
-        <edge from="2" to="0" />
-        <edge from="4" to="1" />
-        <edge from="8" to="1" />
-        <edge from="4" to="2" />
-        <edge from="6" to="3" />
-        <edge from="5" to="4" />
-        <edge from="6" to="5" />
-        <edge from="3" to="7" />
-        <edge from="3" to="8" />
-        <edge from="5" to="8" />
-        <edge from="10" to="9" />
-        <edge from="0" to="9" />
-        <edge from="1" to="10" />
-        <edge from="11" to="10" />
-        <edge from="7" to="11" />
-        <edge from="8" to="11" />
-        <projectionBase>
-            <vector x="238.0121612548894" y="26.39876302083468" />
-            <vector x="52.0" y="120.0" />
-            <vector x="238.01216125488122" y="26.398763020833158" />
-            <vector x="238.01216125488315" y="26.398763020833357" />
-            <vector x="52.0" y="120.0" />
-        </projectionBase>
-    </diagram>
     <diagram title="GridScale_RULEncoded_x_SteelTemperature">
         <node id="0">
             <position x="703.9184977213545" y="317.8191150029504" />
@@ -4669,6 +4297,339 @@
             <vector x="52.0" y="120.0" />
             <vector x="373.5170288085936" y="39.49326070149746" />
             <vector x="373.5170288085917" y="39.493260701497775" />
+        </projectionBase>
+    </diagram>
+    <diagram title="GridScale_RULEncoded_x_CastInRow">
+        <node id="0">
+            <position x="306.9596659342449" y="30.916689554850223" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((RUL_CLASS_ENCODED&gt;0) AND (RUL_CLASS_ENCODED&lt;=1)) AND ((CAST_IN_ROW&lt;=20))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>RUL_CLASS_ENCODED &gt;0</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="1">
+            <position x="1024.8789978027341" y="332.75006866455044" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((RUL_CLASS_ENCODED&gt;2)) AND ((CAST_IN_ROW&gt;40))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="2">
+            <position x="972.8789978027344" y="212.750068664551" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((RUL_CLASS_ENCODED&gt;2)) AND ((CAST_IN_ROW&gt;20) AND (CAST_IN_ROW&lt;=40))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="3">
+            <position x="358.9596659342448" y="150.91668955485034" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((RUL_CLASS_ENCODED&gt;0) AND (RUL_CLASS_ENCODED&lt;=1)) AND ((CAST_IN_ROW&gt;20) AND (CAST_IN_ROW&lt;=40))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="4">
+            <position x="665.9193318684897" y="181.83337910970067" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((RUL_CLASS_ENCODED&gt;1) AND (RUL_CLASS_ENCODED&lt;=2)) AND ((CAST_IN_ROW&gt;20) AND (CAST_IN_ROW&lt;=40))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="5">
+            <position x="717.9193318684894" y="301.8333791097002" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((RUL_CLASS_ENCODED&gt;1) AND (RUL_CLASS_ENCODED&lt;=2)) AND ((CAST_IN_ROW&gt;40))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="6">
+            <position x="613.919331868489" y="61.833379109700616" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((RUL_CLASS_ENCODED&gt;1) AND (RUL_CLASS_ENCODED&lt;=2)) AND ((CAST_IN_ROW&lt;=20))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>RUL_CLASS_ENCODED &gt;1</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>2.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="7">
+            <position x="52.0" y="120.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((RUL_CLASS_ENCODED&lt;=0)) AND ((CAST_IN_ROW&gt;20) AND (CAST_IN_ROW&lt;=40))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>CAST_IN_ROW &gt;20</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>1.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="8">
+            <position x="0.0" y="0.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((RUL_CLASS_ENCODED&lt;=0)) AND ((CAST_IN_ROW&lt;=20))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="9">
+            <position x="410.9596659342448" y="270.9166895548503" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((RUL_CLASS_ENCODED&gt;0) AND (RUL_CLASS_ENCODED&lt;=1)) AND ((CAST_IN_ROW&gt;40))</object>
+                </objectContingent>
+                <attributeContingent />
+            </concept>
+            <ndimVector>
+                <coordinate>1.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="10">
+            <position x="104.0" y="240.0" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((RUL_CLASS_ENCODED&lt;=0)) AND ((CAST_IN_ROW&gt;40))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>CAST_IN_ROW &gt;40</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>0.0</coordinate>
+                <coordinate>2.0</coordinate>
+            </ndimVector>
+        </node>
+        <node id="11">
+            <position x="920.8789978027344" y="92.75006866455021" />
+            <attributeLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </attributeLabelStyle>
+            <objectLabelStyle>
+                <offset x="0.0" y="0.0" />
+                <backgroundColor>#ffffffff</backgroundColor>
+                <textColor>#ff000000</textColor>
+                <textAlignment>left</textAlignment>
+            </objectLabelStyle>
+            <concept>
+                <objectContingent>
+                    <object>((RUL_CLASS_ENCODED&gt;2)) AND ((CAST_IN_ROW&lt;=20))</object>
+                </objectContingent>
+                <attributeContingent>
+                    <attribute>RUL_CLASS_ENCODED &gt;2</attribute>
+                </attributeContingent>
+            </concept>
+            <ndimVector>
+                <coordinate>3.0</coordinate>
+                <coordinate>0.0</coordinate>
+            </ndimVector>
+        </node>
+        <edge from="8" to="0" />
+        <edge from="2" to="1" />
+        <edge from="5" to="1" />
+        <edge from="4" to="2" />
+        <edge from="11" to="2" />
+        <edge from="0" to="3" />
+        <edge from="7" to="3" />
+        <edge from="3" to="4" />
+        <edge from="6" to="4" />
+        <edge from="4" to="5" />
+        <edge from="9" to="5" />
+        <edge from="0" to="6" />
+        <edge from="8" to="7" />
+        <edge from="3" to="9" />
+        <edge from="10" to="9" />
+        <edge from="7" to="10" />
+        <edge from="6" to="11" />
+        <projectionBase>
+            <vector x="-108.0" y="200.0" />
+            <vector x="52.0" y="120.0" />
         </projectionBase>
     </diagram>
 </conceptualSchema>
