@@ -82,7 +82,7 @@ except ImportError:
 # Global configuration
 # ============================================================
 TARGET_REGRESSION    = "calculated_RUL_tons"
-TARGET_CLASSIFICATION = "RUL_FCA_BIN"
+TARGET_CLASSIFICATION = "RUL_Class"
 
 RANDOM_STATE = 42
 PLOT_DPI     = 160
@@ -120,7 +120,7 @@ _DERIVED_SUFFIXES = ("_BIN", "_ENCODED")
 
 # Additional leakage columns that are always excluded from feature matrices
 _LEAKAGE_ALWAYS = [
-    "RUL_FCA_ENCODED",   # ordinal encoding of classification target
+    "RUL_Class_ENCODED",   # ordinal encoding of classification target
     "RUL_percentage",    # percentage transform of regression target
 ]
 
@@ -148,7 +148,7 @@ def _get_analysis_cols(df: pd.DataFrame) -> list:
     Return the list of numeric columns that are suitable for EDA / unsupervised
     analysis in V8.  Excluded:
         * Target columns (regression + classification)
-        * Always-leakage columns (RUL_percentage, RUL_FCA_ENCODED)
+        * Always-leakage columns (RUL_percentage, RUL_Class_ENCODED)
         * Any column ending in _BIN or _ENCODED
         * Non-numeric columns (datetime, object / categorical)
     """
@@ -216,13 +216,13 @@ def remove_leakage_columns(
     the learned weights.
 
     Leakage notes:
-        - RUL_FCA_ENCODED  : ordinal encoding of RUL_FCA_BIN (classification
-                             target) → always dropped from features.
-        - RUL_percentage   : calculated_RUL_tons expressed as a percentage of
-                             the sleeve's total capacity → always dropped from
-                             features (linear transform of the regression target).
-        - RUL_FCA_BIN      : the classification target itself → dropped when the
-                             task is "regression".
+        - RUL_Class_ENCODED : ordinal encoding of RUL_Class (classification
+                               target) → always dropped from features.
+        - RUL_percentage    : calculated_RUL_tons expressed as a percentage of
+                              the sleeve's total capacity → always dropped from
+                              features (linear transform of the regression target).
+        - RUL_Class         : the classification target itself → dropped when the
+                              task is "regression".
         - calculated_RUL_tons: the regression target → dropped when the task is
                              "classification".
         - All *_BIN and *_ENCODED columns → dropped from features in V8.
@@ -430,7 +430,7 @@ def generate_eda_plots(df: pd.DataFrame, output_dir: str):
         class_counts = df[TARGET_CLASSIFICATION].astype(str).value_counts()
         plot_bar_from_series(
             class_counts,
-            title="RUL_FCA_BIN Class Distribution",
+            title="RUL_Class Class Distribution",
             xlabel="Count",
             ylabel="RUL FCA Bin",
             path=os.path.join(plot_dir, "eda_rul_class_distribution.png"),
