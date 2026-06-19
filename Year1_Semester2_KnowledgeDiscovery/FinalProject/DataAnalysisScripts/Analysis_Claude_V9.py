@@ -152,7 +152,7 @@ _RUL_LEAKAGE_SUBSTR = "rul"
 
 def _is_rul_leakage(col_name: str) -> bool:
     """Return True if the column name contains 'rul' (case-insensitive)."""
-    return (_RUL_LEAKAGE_SUBSTR in col_name.lower())
+    return (_RUL_LEAKAGE_SUBSTR in col_name.lower() or "sleeve" in col_name.lower())
 
 # ============================================================
 # Colour palettes (consistent across all cluster plots)
