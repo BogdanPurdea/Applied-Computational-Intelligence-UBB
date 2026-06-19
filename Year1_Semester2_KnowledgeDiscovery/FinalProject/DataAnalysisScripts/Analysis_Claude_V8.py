@@ -718,10 +718,26 @@ def run_rul_classification(
     print("\n[INFO] Running supervised RUL_FCA_BIN classification...")
     plot_dir = create_plot_dir(output_dir)
 
+    # Normalize column names (prevents hidden whitespace drift)
+    df.columns = df.columns.str.strip()
+
     # V8: remove_leakage_columns now also drops all _BIN/_ENCODED columns
     df_model = remove_leakage_columns(
         df, task="classification", strict_no_resistance=strict_no_resistance
     )
+
+    # CRITICAL FIX: re-apply normalization after leakage removal
+    df_model.columns = df_model.columns.str.strip()
+
+    # HARD GUARANTEE: validate target existence before proceeding
+    if TARGET_CLASSIFICATION not in df_model.columns:
+        raise ValueError(
+            f"Missing target column '{TARGET_CLASSIFICATION}'. "
+            f"Available columns: {df_model.columns.tolist()}\n"
+            f"[DIAGNOSTIC] Columns containing 'RUL': "
+            f"{[c for c in df_model.columns if 'RUL' in c.upper()]}"
+        )
+
     X, y = split_features_target(df_model, TARGET_CLASSIFICATION)
 
     valid_idx = y.notna()
@@ -733,22 +749,30 @@ def run_rul_classification(
         return
 
     preprocessor, _, _ = build_preprocessor(X)
+
     model = RandomForestClassifier(
         n_estimators=300,
         random_state=RANDOM_STATE,
         n_jobs=-1,
         class_weight="balanced",
     )
+
     pipeline = Pipeline(
         steps=[
             ("preprocess", preprocessor),
             ("model", model),
         ]
     )
+
     stratify = y if y.value_counts().min() >= 2 else None
+
     X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=0.25, random_state=RANDOM_STATE, stratify=stratify
+        X, y,
+        test_size=0.25,
+        random_state=RANDOM_STATE,
+        stratify=stratify
     )
+
     pipeline.fit(X_train, y_train)
     preds = pipeline.predict(X_test)
 
@@ -763,42 +787,52 @@ def run_rul_classification(
             ],
         }
     )
+
     metrics.to_csv(
         os.path.join(output_dir, "rul_classification_metrics.csv"), index=False
     )
+
     print("[RESULT] RUL_FCA_BIN Classification Metrics")
     print(metrics)
 
     report = classification_report(y_test, preds, zero_division=0)
+
     with open(
-        os.path.join(output_dir, "rul_classification_report.txt"), "w", encoding="utf-8"
+        os.path.join(output_dir, "rul_classification_report.txt"),
+        "w",
+        encoding="utf-8",
     ) as f:
         f.write(report)
 
     labels = sorted(y.unique())
+
     cm = pd.DataFrame(
         confusion_matrix(y_test, preds, labels=labels),
         index=labels,
         columns=labels,
     )
+
     cm.to_csv(
         os.path.join(output_dir, "rul_classification_confusion_matrix.csv")
     )
 
     predictions_df = pd.DataFrame(
         {
-            "actual_RUL_FCA_BIN":    y_test.values,
+            "actual_RUL_FCA_BIN": y_test.values,
             "predicted_RUL_FCA_BIN": preds,
         }
     )
+
     predictions_df.to_csv(
-        os.path.join(output_dir, "rul_classification_predictions.csv"), index=False
+        os.path.join(output_dir, "rul_classification_predictions.csv"),
+        index=False,
     )
 
     importance_df = export_feature_importance(
         pipeline=pipeline,
         output_path=os.path.join(
-            output_dir, "rul_classification_feature_importance.csv"
+            output_dir,
+            "rul_classification_feature_importance.csv"
         ),
     )
 
@@ -810,40 +844,55 @@ def run_rul_classification(
     plt.ylabel("Actual Class")
     plt.xticks(np.arange(len(labels)), labels, rotation=45, ha="right")
     plt.yticks(np.arange(len(labels)), labels)
+
     for i in range(cm.shape[0]):
         for j in range(cm.shape[1]):
             plt.text(j, i, str(cm.values[i, j]), ha="center", va="center")
+
     plt.colorbar()
-    save_current_plot(os.path.join(plot_dir, "classification_confusion_matrix.png"))
+
+    save_current_plot(
+        os.path.join(plot_dir, "classification_confusion_matrix.png")
+    )
 
     if not importance_df.empty:
         top_features = (
-            importance_df.head(TOP_N_FEATURES).set_index("feature")["importance"]
+            importance_df.head(TOP_N_FEATURES)
+            .set_index("feature")["importance"]
         )
+
         plot_bar_from_series(
             top_features,
             title=f"Top {TOP_N_FEATURES} Features for RUL_FCA_BIN Classification",
             xlabel="Importance",
             ylabel="Feature",
             path=os.path.join(
-                plot_dir, "classification_feature_importance_top25.png"
+                plot_dir,
+                "classification_feature_importance_top25.png",
             ),
         )
 
     # Plot: actual vs predicted class counts
-    actual_counts    = pd.Series(y_test.values).value_counts().sort_index()
+    actual_counts = pd.Series(y_test.values).value_counts().sort_index()
     predicted_counts = pd.Series(preds).value_counts().sort_index()
+
     combined = pd.DataFrame(
         {"actual": actual_counts, "predicted": predicted_counts}
     ).fillna(0)
+
     plt.figure(figsize=(10, 6))
     combined.plot(kind="bar")
+
     plt.title("Actual vs Predicted RUL_FCA_BIN Distribution")
     plt.xlabel("RUL FCA Bin Class")
     plt.ylabel("Count")
     plt.xticks(rotation=45, ha="right")
+
     save_current_plot(
-        os.path.join(plot_dir, "classification_actual_vs_predicted_distribution.png")
+        os.path.join(
+            plot_dir,
+            "classification_actual_vs_predicted_distribution.png"
+        )
     )
 
 # ============================================================
